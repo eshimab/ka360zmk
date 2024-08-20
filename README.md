@@ -1,5 +1,6 @@
 # Kinesis Advantage 360 Pro ZMK Config
 
+
 ## Modifying the keymap
 
 [The ZMK documentation](https://zmk.dev/docs) covers both basic and advanced functionality and has a table of OS compatibility for keycodes. Please note that the RGB Underglow, Backlight and Power Management sections are not relevant to the Advantage 360 Pro's custom ZMK fork. For more information see [this note](#note)
