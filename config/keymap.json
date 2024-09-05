@@ -35,11 +35,11 @@
         "&none",        "&none",        "&none",          "&none",      "&macro_ver",        "&none",                                     "&none",                          "&none",                                              "&none",          "&none",        "&none",        "&none",  "&none",  "&none",
         "&none",        "&none",        "&none", "&kp LEFT_ARROW", "&kp RIGHT_ARROW",                                 "&none",  "&none",  "&none",                          "&none", "&bl BL_TOG",        "&rgb_ug RGB_TOG",               "&kp DOWN_ARROW", "&kp UP_ARROW",        "&none",  "&none",  "&none"
     ], [
-             "&kp ESCAPE", "&trans", "&trans", "&trans", "&trans", "&trans",           "&trans",                                                             "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",
-                "&kp TAB", "&trans", "&trans", "&trans", "&trans", "&trans",           "&trans",                                                             "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",
-       "&kp LEFT_CONTROL", "&trans", "&trans", "&trans", "&trans", "&trans",           "&trans", "&trans", "&trans",                     "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",
-                 "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",                               "&trans",                     "&trans",                     "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",
-                 "&trans", "&trans", "&trans", "&trans", "&trans",                     "&trans", "&trans", "&trans",                     "&trans", "&trans", "&trans",           "&trans", "&trans", "&trans", "&trans", "&trans"
+             "&kp ESCAPE", "&trans", "&trans",         "&trans",          "&trans", "&trans",           "&trans",                                                             "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",
+                "&kp TAB", "&trans", "&trans",         "&trans",          "&trans", "&trans",           "&trans",                                                             "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",
+       "&kp LEFT_CONTROL", "&trans", "&trans",         "&trans",          "&trans", "&trans",           "&trans", "&trans", "&trans",                     "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",
+                 "&trans", "&trans", "&trans",         "&trans",          "&trans", "&trans",                               "&trans",                     "&trans",                     "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",
+                 "&trans", "&trans", "&trans", "&kp LEFT_ARROW", "&kp RIGHT_ARROW",                     "&trans", "&trans", "&trans",                     "&trans", "&trans", "&trans",           "&trans", "&trans", "&trans", "&trans", "&trans"
     ]
   ]
 }

@@ -80,11 +80,11 @@
 
         layer_Warcraft {
             bindings = <
-       &kp ESCAPE  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-          &kp TAB  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+       &kp ESCAPE  &trans  &trans          &trans           &trans  &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+          &kp TAB  &trans  &trans          &trans           &trans  &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &kp LEFT_CONTROL  &trans  &trans          &trans           &trans  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans          &trans           &trans  &trans                            &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &kp LEFT_ARROW  &kp RIGHT_ARROW                    &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
