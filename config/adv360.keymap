@@ -43,7 +43,7 @@
   &kp EQUAL     &kp N1     &kp N2          &kp N3           &kp N4  &kp N5               &mo 2                                                                                &mo 2  &kp N6          &kp N7        &kp N8    &kp N9    &kp N0  &kp BACKSLASH
  &kp ESCAPE      &kp Q      &kp W           &kp E            &kp R   &kp T               &none                                                                                &none   &kp Y           &kp U         &kp I     &kp O     &kp P      &kp MINUS
     &kp TAB      &kp A      &kp S           &kp D            &kp F   &kp G               &none  &kp LEFT_ALT     &mo 3                              &mo 3  &kp RIGHT_ALT      &none   &kp H           &kp J         &kp K     &kp L  &kp SEMI        &kp SQT
-  &kp LSHFT      &kp Z      &kp X           &kp C            &kp V   &kp B                                      &tog 5                             &tog 1                             &kp N           &kp M     &kp COMMA   &kp DOT  &kp FSLH      &kp RSHFT
+  &kp LSHFT      &kp Z      &kp X           &kp C            &kp V   &kp B                                      &tog 5                             &tog 6                             &kp N           &kp M     &kp COMMA   &kp DOT  &kp FSLH      &kp RSHFT
   &kp LCTRL  &kp GRAVE  &kp EQUAL  &kp LEFT_ARROW  &kp RIGHT_ARROW                    &kp BSPC      &kp LCMD  &kp LCMD                  &kp RIGHT_COMMAND      &kp ENTER  &kp SPACE          &kp DOWN_ARROW  &kp UP_ARROW  &kp LBKT  &kp RBKT      &kp RCTRL
             >;
         };
@@ -95,6 +95,16 @@
        &trans  &trans  &trans  &trans  &trans  &trans                   &kp H            &trans            &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
        &trans  &trans  &trans  &trans  &trans  &trans                                                      &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
  &kp LEFT_ALT  &trans  &trans  &trans  &trans                          &trans  &kp LEFT_CONTROL  &kp LEFT_COMMAND                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_Neovim {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans   &none   &none                    &trans  &trans  &trans                  &trans  &trans  &trans           &none   &none  &trans  &trans  &trans
             >;
         };
 
