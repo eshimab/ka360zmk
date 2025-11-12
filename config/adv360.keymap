@@ -67,11 +67,11 @@
 
         layer_mod {
             bindings = <
-&bootloader  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3     &bt BT_SEL 4  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS                                       &bl BL_DEC       &bl BL_INC  &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP  &none  &bootloader
-&none        &none         &none         &none           &none            &none         &none                                                                   &none            &none       &none           &none           &none         &none  &none
-&none        &none         &none         &none           &none            &none         &none                              &none  &none      &none  &none       &none            &none       &none           &none           &none         &none  &none
-&none        &none         &none         &none           &trans           &none                                                   &none      &none                               &none       &none           &none           &none         &none  &none
-&none        &none         &none         &msc SCRL_LEFT  &msc SCRL_RIGHT                &none                              &none  &none      &none  &bl BL_TOG  &rgb_ug RGB_TOG              &msc SCRL_DOWN  &msc SCRL_DOWN  &none         &none  &none
+&bootloader  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                       &bl BL_DEC       &bl BL_INC  &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP  &none  &bootloader
+&none        &none         &none         &none         &none         &none         &none                                       &none            &none       &none           &none           &none         &none  &none
+&none        &none         &none         &none         &none         &none         &none  &none  &none      &none  &none       &none            &none       &none           &none           &none         &none  &none
+&none        &none         &none         &none         &trans        &none                       &none      &none                               &none       &none           &none           &none         &none  &none
+&none        &none         &none         &none         &none                       &none  &none  &none      &none  &bl BL_TOG  &rgb_ug RGB_TOG              &msc SCRL_DOWN  &msc SCRL_DOWN  &none         &none  &none
             >;
         };
 
