@@ -31,6 +31,14 @@
         };
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+            tri_layer {
+                if-layers = <4 5>;
+                then-layer = <6>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -86,11 +94,24 @@
 
         layer_Neovim {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &kp EXCLAMATION &kp AT_SIGN &kp HASH  &kp DOLLAR &kp PERCENT  &trans                                      &trans  &kp CARET  &kp AMPS  &kp ASTERISK  &kp LPAR  &kp RPAR &trans
+&trans  &trans          &trans      &trans    &trans     &trans       &trans                                      &trans  &trans     &trans    &trans        &trans    &trans   &trans
+&trans  &trans          &trans      &trans    &trans     &trans       &trans  &trans  &trans      &trans  &trans  &trans  &trans     &trans    &trans        &trans    &trans   &trans
+&trans  &trans          &trans      &trans    &trans     &trans                       &trans      &trans                  &trans     &trans    &trans        &trans    &trans   &trans
+&trans  &trans          &trans      &trans    &trans                  &trans  &trans  &trans      &trans  &trans  &trans             &trans    &trans        &trans    &trans   &trans
+
+            >;
+        };
+    };
+};
+
+        layer_NeovimShift {
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans                                      &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N10  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans   &trans
             >;
         };
     };
