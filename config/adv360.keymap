@@ -35,8 +35,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <4 5>;
-            then-layer = <6>;
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 
@@ -45,21 +45,11 @@
 
         default_layer {
             bindings = <
-&none       &kp N1     &kp N2     &kp N3          &kp N4           &kp N5  &tog 5                                                                        &tog 0     &kp N6  &kp N7          &kp N8        &kp N9    &kp N0    &kp BACKSLASH
-&kp ESCAPE  &kp Q      &kp W      &kp E           &kp R            &kp T   &mo 2                                                                         &mo 2      &kp Y   &kp U           &kp I         &kp O     &kp P     &kp MINUS
-&kp TAB     &kp A      &kp S      &kp D           &kp F            &kp G   &mo 3     &kp LEFT_ALT  &kp LCTRL           &kp RCTRL          &kp RIGHT_ALT  &mo 3      &kp H   &kp J           &kp K         &kp L     &kp SEMI  &kp SQT
+&none       &kp N1     &kp N2     &kp N3          &kp N4           &kp N5  &tog 4                                                                        &tog 0     &kp N6  &kp N7          &kp N8        &kp N9    &kp N0    &kp BACKSLASH
+&kp ESCAPE  &kp Q      &kp W      &kp E           &kp R            &kp T   &mo 1                                                                         &mo 1      &kp Y   &kp U           &kp I         &kp O     &kp P     &kp MINUS
+&kp TAB     &kp A      &kp S      &kp D           &kp F            &kp G   &mo 2     &kp LEFT_ALT  &kp LCTRL           &kp RCTRL          &kp RIGHT_ALT  &mo 2      &kp H   &kp J           &kp K         &kp L     &kp SEMI  &kp SQT
 &kp LSHFT   &kp Z      &kp X      &kp C           &kp V            &kp B                           &kp LG(LSHIFT)      &kp RG(RSHIFT)                               &kp N   &kp M           &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
 &kp LCTRL   &kp GRAVE  &kp EQUAL  &kp LEFT_ARROW  &kp RIGHT_ARROW          &kp BSPC  &kp ESCAPE    &kp LCMD            &kp RIGHT_COMMAND  &kp ENTER      &kp SPACE          &kp DOWN_ARROW  &kp UP_ARROW  &kp LBKT  &kp RBKT  &kp RCTRL
-            >;
-        };
-
-        layer_keypad {
-            bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans                                      &trans    &kp N6         &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&trans  &trans  &trans  &kp E   &kp R   &kp T   &none                                       &kp HOME  &kp PAGE_UP    &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&trans  &kp A   &kp S   &kp D   &kp F   &kp G   &none   &trans  &trans      &trans  &trans  &kp END   &kp PAGE_DOWN  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
-&trans  &kp Z   &kp X   &kp C   &kp V   &kp B                   &trans      &trans                    &kp BACKSPACE  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans                   &kp KP_N0   &trans        &kp KP_DOT     &kp KP_ENTER     &trans
             >;
         };
 
