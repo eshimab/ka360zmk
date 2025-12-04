@@ -119,6 +119,33 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        vim_SEMI: vim_SEMI {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_SEMI";
+            bindings = <&kp COLON>, <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vim_MINUS: vim_MINUS {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_MINUS";
+            bindings = <&kp UNDER>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vim_QUOTE: vim_QUOTE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_QUOTE";
+            bindings = <&kp DOUBLE_QUOTES>, <&kp SINGLE_QUOTE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -178,11 +205,11 @@
 
         layer_Neovim {
             bindings = <
-&trans  &vim_N1  &vim_N2  &vim_N3  &vim_N4  &vim_N5  &trans                                      &trans  &vim_N6  &vim_N7  &vim_N8  &vim_N9  &vim_N0  &trans
-&trans  &trans   &trans   &trans   &trans   &trans   &trans                                      &trans  &trans   &trans   &trans   &trans   &trans   &trans
-&trans  &trans   &trans   &trans   &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans   &trans   &trans   &trans   &trans   &trans
-&trans  &trans   &trans   &trans   &trans   &trans                   &trans      &trans                  &trans   &trans   &trans   &trans   &trans   &trans
-&trans  &trans   &trans   &trans   &trans            &trans  &trans  &trans      &trans  &trans  &trans           &trans   &trans   &trans   &trans   &trans
+&trans  &vim_N1  &vim_N2  &vim_N3  &vim_N4  &vim_N5  &trans                                      &trans  &vim_N6  &vim_N7  &vim_N8  &vim_N9  &vim_N0    &trans
+&trans  &trans   &trans   &trans   &trans   &trans   &trans                                      &trans  &trans   &trans   &trans   &trans   &trans     &vim_MINUS
+&trans  &trans   &trans   &trans   &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans   &trans   &trans   &trans   &vim_SEMI  &vim_QUOTE
+&trans  &trans   &trans   &trans   &trans   &trans                   &trans      &trans                  &trans   &trans   &trans   &trans   &trans     &trans
+&trans  &trans   &trans   &trans   &trans            &trans  &trans  &trans      &trans  &trans  &trans           &trans   &trans   &trans   &trans     &trans
             >;
         };
     };
