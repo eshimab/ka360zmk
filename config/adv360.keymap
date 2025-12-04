@@ -34,7 +34,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N1";
             bindings = <&kp EXCL>, <&kp N1>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -43,7 +42,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N2";
             bindings = <&kp AT>, <&kp N2>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
