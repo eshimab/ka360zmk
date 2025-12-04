@@ -34,55 +34,70 @@
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N1";
             bindings = <&kp EXCL>, <&kp N1>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         vim_N2: vim_N2 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N2";
             bindings = <&kp AT>, <&kp N2>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         vim_N3: vim_N3 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N3";
             bindings = <&kp HASH>, <&kp N3>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         vim_N4: vim_N4 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N4";
             bindings = <&kp DOLLAR>, <&kp N4>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         vim_N5: vim_N5 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N5";
             bindings = <&kp PERCENT>, <&kp N5>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         vim_N6: vim_N6 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N6";
             bindings = <&kp CARET>, <&kp N6>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         vim_N7: vim_N7 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N7";
             bindings = <&kp AMPS>, <&kp N7>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         vim_N8: vim_N8 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N8";
             bindings = <&kp ASTERISK>, <&kp N8>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -91,6 +106,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N9";
             bindings = <&kp LPAR>, <&kp N9>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -99,27 +115,20 @@
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N0";
             bindings = <&kp RPAR>, <&kp N0>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <3 4>;
-            then-layer = <5>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&none       &kp N1     &kp N2     &kp N3          &kp N4           &kp N5  &tog 4                                                                        &tog 0     &kp N6  &kp N7          &kp N8        &kp N9    &kp N0    &kp BACKSLASH
+&none       &kp N1     &kp N2     &kp N3          &kp N4           &kp N5  &tog 5                                                                        &tog 0     &kp N6  &kp N7          &kp N8        &kp N9    &kp N0    &kp BACKSLASH
 &kp ESCAPE  &kp Q      &kp W      &kp E           &kp R            &kp T   &mo 1                                                                         &mo 1      &kp Y   &kp U           &kp I         &kp O     &kp P     &kp MINUS
 &kp TAB     &kp A      &kp S      &kp D           &kp F            &kp G   &mo 2     &kp LEFT_ALT  &kp LCTRL           &kp RCTRL          &kp RIGHT_ALT  &mo 2      &kp H   &kp J           &kp K         &kp L     &kp SEMI  &kp SQT
 &kp LSHFT   &kp Z      &kp X      &kp C           &kp V            &kp B                           &kp LG(LSHIFT)      &kp RG(RSHIFT)                               &kp N   &kp M           &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
@@ -157,23 +166,23 @@
             >;
         };
 
-        layer_Neovim {
-            bindings = <
-&trans  &vim_N1  &vim_N2 &vim_N3 &vim_N4  &vim_N5  &trans                                      &trans  &vim_N6  &vim_N7  &vim_N8  &vim_N9  &vim_N0  &trans
-&trans  &trans   &trans  &trans  &trans   &trans   &trans                                      &trans  &trans   &trans   &trans   &trans   &trans   &trans
-&trans  &trans   &trans  &trans  &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans   &trans   &trans   &trans   &trans   &trans
-&trans  &trans   &trans  &trans  &trans   &trans                   &trans      &trans                  &trans   &trans   &trans   &trans   &trans   &trans
-&trans  &trans   &trans  &trans  &trans            &trans  &trans  &trans      &trans  &trans  &trans           &trans   &trans   &trans   &trans   &trans
-            >;
-        };
-
         layer_NeovimShift {
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans                                      &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_Neovim {
+            bindings = <
+&trans  &vim_N1  &vim_N2  &vim_N3  &vim_N4  &vim_N5  &trans                                      &trans  &vim_N6  &vim_N7  &vim_N8  &vim_N9  &vim_N0  &trans
+&trans  &trans   &trans   &trans   &trans   &trans   &trans                                      &trans  &trans   &trans   &trans   &trans   &trans   &trans
+&trans  &trans   &trans   &trans   &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans   &trans   &trans   &trans   &trans   &trans
+&trans  &trans   &trans   &trans   &trans   &trans                   &trans      &trans                  &trans   &trans   &trans   &trans   &trans   &trans
+&trans  &trans   &trans   &trans   &trans            &trans  &trans  &trans      &trans  &trans  &trans           &trans   &trans   &trans   &trans   &trans
             >;
         };
     };
