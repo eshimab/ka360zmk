@@ -37,7 +37,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         vim_N2: vim_N2 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N2";
@@ -45,7 +44,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         vim_N3: vim_N3 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N3";
@@ -53,7 +51,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         vim_N4: vim_N4 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N4";
@@ -61,7 +58,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         vim_N5: vim_N5 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N5";
@@ -69,7 +65,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         vim_N6: vim_N6 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N6";
@@ -77,7 +72,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         vim_N7: vim_N7 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N7";
@@ -85,7 +79,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         vim_N8: vim_N8 {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_N8";
@@ -96,7 +89,7 @@
 
         vim_N9: vim_N9 {
             compatible = "zmk,behavior-mod-morph";
-            label = "VIM_N8";
+            label = "VIM_N9";
             bindings = <&kp LPAR>, <&kp N9>;
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
