@@ -29,6 +29,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        vim_N1: vim_N1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_N1";
+            bindings = <&kp EXCL>, <&kp N1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     conditional_layers {
@@ -85,11 +94,11 @@
 
         layer_Neovim {
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT  &trans                                      &trans  &kp CARET  &kp AMPS  &kp ASTERISK  &kp LPAR  &kp RPAR  &trans
-&trans  &trans           &trans       &trans    &trans      &trans       &trans                                      &trans  &trans     &trans    &trans        &trans    &trans    &trans
-&trans  &trans           &trans       &trans    &trans      &trans       &trans  &trans  &trans      &trans  &trans  &trans  &trans     &trans    &trans        &trans    &trans    &trans
-&trans  &trans           &trans       &trans    &trans      &trans                       &trans      &trans                  &trans     &trans    &trans        &trans    &trans    &trans
-&trans  &trans           &trans       &trans    &trans                   &trans  &trans  &trans      &trans  &trans  &trans             &trans    &trans        &trans    &trans    &trans
+&trans  &vim_N1  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT  &trans                                      &trans  &kp CARET  &kp AMPS  &kp ASTERISK  &kp LPAR  &kp RPAR  &trans
+&trans  &trans   &trans       &trans    &trans      &trans       &trans                                      &trans  &trans     &trans    &trans        &trans    &trans    &trans
+&trans  &trans   &trans       &trans    &trans      &trans       &trans  &trans  &trans      &trans  &trans  &trans  &trans     &trans    &trans        &trans    &trans    &trans
+&trans  &trans   &trans       &trans    &trans      &trans                       &trans      &trans                  &trans     &trans    &trans        &trans    &trans    &trans
+&trans  &trans   &trans       &trans    &trans                   &trans  &trans  &trans      &trans  &trans  &trans             &trans    &trans        &trans    &trans    &trans
             >;
         };
 
