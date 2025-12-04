@@ -45,6 +45,71 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        vim_N3: vim_N3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_N3";
+            bindings = <&kp HASH>, <&kp N3>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vim_N4: vim_N4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_N4";
+            bindings = <&kp DOLLAR>, <&kp N4>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vim_N5: vim_N5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_N5";
+            bindings = <&kp PERCENT>, <&kp N5>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vim_N6: vim_N6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_N6";
+            bindings = <&kp CARET>, <&kp N6>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vim_N7: vim_N7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_N7";
+            bindings = <&kp AMPS>, <&kp N7>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vim_N8: vim_N8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_N8";
+            bindings = <&kp ASTERISK>, <&kp N8>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vim_N9: vim_N9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_N8";
+            bindings = <&kp LPAR>, <&kp N9>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vim_N0: vim_N0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_N0";
+            bindings = <&kp RPAR>, <&kp N0>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
     };
 
     conditional_layers {
@@ -101,11 +166,11 @@
 
         layer_Neovim {
             bindings = <
-&trans  &vim_N1  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT  &trans                                      &trans  &kp CARET  &kp AMPS  &kp ASTERISK  &kp LPAR  &kp RPAR  &trans
-&trans  &trans   &trans       &trans    &trans      &trans       &trans                                      &trans  &trans     &trans    &trans        &trans    &trans    &trans
-&trans  &trans   &trans       &trans    &trans      &trans       &trans  &trans  &trans      &trans  &trans  &trans  &trans     &trans    &trans        &trans    &trans    &trans
-&trans  &trans   &trans       &trans    &trans      &trans                       &trans      &trans                  &trans     &trans    &trans        &trans    &trans    &trans
-&trans  &trans   &trans       &trans    &trans                   &trans  &trans  &trans      &trans  &trans  &trans             &trans    &trans        &trans    &trans    &trans
+&trans  &vim_N1  &vim_N2 &vim_N3 &vim_N4  &vim_N5  &trans                                      &trans  &vim_N6  &vim_N7  &vim_N8  &vim_N9  &vim_N0  &trans
+&trans  &trans   &trans  &trans  &trans   &trans   &trans                                      &trans  &trans   &trans   &trans   &trans   &trans   &trans
+&trans  &trans   &trans  &trans  &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans   &trans   &trans   &trans   &trans   &trans
+&trans  &trans   &trans  &trans  &trans   &trans                   &trans      &trans                  &trans   &trans   &trans   &trans   &trans   &trans
+&trans  &trans   &trans  &trans  &trans            &trans  &trans  &trans      &trans  &trans  &trans           &trans   &trans   &trans   &trans   &trans
             >;
         };
 
