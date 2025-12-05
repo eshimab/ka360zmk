@@ -165,11 +165,11 @@
 
         layer_Neovim {
             bindings = <
-&trans     &vim_N1  &vim_N2  &vim_N3  &vim_N4  &vim_N5  &trans                                      &trans  &vim_N6  &vim_N7  &vim_N8  &vim_N9  &vim_N0    &trans
-&kp MINUS  &trans   &trans   &trans   &trans   &trans   &trans                                      &trans  &trans   &trans   &trans   &trans   &trans     &vim_MINUS
-&trans     &trans   &trans   &trans   &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans   &trans   &trans   &trans   &vim_SEMI  &vim_QUOTE
-&trans     &trans   &trans   &trans   &trans   &trans                   &trans      &trans                  &trans   &trans   &trans   &trans   &trans     &trans
-&trans     &trans   &trans   &trans   &trans            &trans  &trans  &trans      &trans  &trans  &trans           &trans   &trans   &trans   &trans     &trans
+&kp BACKSLASH  &vim_N1  &vim_N2  &vim_N3  &vim_N4  &vim_N5  &trans                                      &trans  &vim_N6  &vim_N7  &vim_N8  &vim_N9  &vim_N0    &trans
+&kp MINUS      &trans   &trans   &trans   &trans   &trans   &trans                                      &trans  &trans   &trans   &trans   &trans   &trans     &vim_MINUS
+&trans         &trans   &trans   &trans   &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans   &trans   &trans   &trans   &vim_SEMI  &vim_QUOTE
+&trans         &trans   &trans   &trans   &trans   &trans                   &trans      &trans                  &trans   &trans   &trans   &trans   &trans     &trans
+&trans         &trans   &trans   &trans   &trans            &trans  &trans  &trans      &trans  &trans  &trans           &trans   &trans   &trans   &trans     &trans
             >;
         };
 
