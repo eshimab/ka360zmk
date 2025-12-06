@@ -150,26 +150,35 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
+    macros {
+        Mac_screenshot: Mac_screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "MAC_SCREENSHOT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&none       &kp N1     &kp N2     &kp N3          &kp N4           &kp N5  &tog 1                                                                        &tog 0     &kp N6  &kp N7          &kp N8        &kp N9    &kp N0    &kp BACKSLASH
-&kp ESCAPE  &kp Q      &kp W      &kp E           &kp R            &kp T   &mo 2                                                                         &mo 2      &kp Y   &kp U           &kp I         &kp O     &kp P     &kp MINUS
-&kp TAB     &kp A      &kp S      &kp D           &kp F            &kp G   &mo 3     &kp LEFT_ALT  &kp LCTRL           &kp RCTRL          &kp RIGHT_ALT  &mo 3      &kp H   &kp J           &kp K         &kp L     &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z      &kp X      &kp C           &kp V            &kp B                           &kp LG(LSHIFT)      &kp RG(RSHIFT)                               &kp N   &kp M           &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
-&kp LCTRL   &kp GRAVE  &kp EQUAL  &kp LEFT_ARROW  &kp RIGHT_ARROW          &kp BSPC  &kp ESCAPE    &kp LCMD            &kp RIGHT_COMMAND  &kp ENTER      &kp SPACE          &kp DOWN_ARROW  &kp UP_ARROW  &kp LBKT  &kp RBKT  &kp RCTRL
+&kp RS(RG(N4))  &kp N1     &kp N2     &kp N3          &kp N4           &kp N5  &tog 1                                                                        &tog 0     &kp N6  &kp N7          &kp N8        &kp N9    &kp N0    &kp BACKSLASH
+&kp ESCAPE      &kp Q      &kp W      &kp E           &kp R            &kp T   &mo 2                                                                         &mo 2      &kp Y   &kp U           &kp I         &kp O     &kp P     &kp MINUS
+&kp TAB         &kp A      &kp S      &kp D           &kp F            &kp G   &mo 3     &kp LEFT_ALT  &kp LCTRL           &kp RCTRL          &kp RIGHT_ALT  &mo 3      &kp H   &kp J           &kp K         &kp L     &kp SEMI  &kp SQT
+&kp LSHFT       &kp Z      &kp X      &kp C           &kp V            &kp B                           &kp LG(LSHIFT)      &kp RG(RSHIFT)                               &kp N   &kp M           &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
+&kp LCTRL       &kp GRAVE  &kp EQUAL  &kp LEFT_ARROW  &kp RIGHT_ARROW          &kp BSPC  &kp ESCAPE    &kp LCMD            &kp RIGHT_COMMAND  &kp ENTER      &kp SPACE          &kp DOWN_ARROW  &kp UP_ARROW  &kp LBKT  &kp RBKT  &kp RCTRL
             >;
         };
 
         layer_Neovim {
             bindings = <
-&kp BACKSLASH  &vim_N1  &vim_N2  &vim_N3  &vim_N4  &vim_N5  &trans                                      &trans  &vim_N6  &vim_N7  &vim_N8  &vim_N9  &vim_N0    &trans
-&kp MINUS      &trans   &trans   &trans   &trans   &trans   &trans                                      &trans  &trans   &trans   &trans   &trans   &trans     &vim_MINUS
-&trans         &trans   &trans   &trans   &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans   &trans   &trans   &trans   &vim_SEMI  &vim_QUOTE
-&trans         &trans   &trans   &trans   &trans   &trans                   &trans      &trans                  &trans   &trans   &trans   &trans   &trans     &trans
-&trans         &trans   &trans   &trans   &trans            &trans  &trans  &trans      &trans  &trans  &trans           &trans   &trans   &trans   &trans     &trans
+&trans     &vim_N1  &vim_N2  &vim_N3  &vim_N4  &vim_N5  &trans                                      &trans  &vim_N6  &vim_N7  &vim_N8  &vim_N9  &vim_N0    &trans
+&kp MINUS  &trans   &trans   &trans   &trans   &trans   &trans                                      &trans  &trans   &trans   &trans   &trans   &trans     &vim_MINUS
+&trans     &trans   &trans   &trans   &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans   &trans   &trans   &trans   &vim_SEMI  &vim_QUOTE
+&trans     &trans   &trans   &trans   &trans   &trans                   &trans      &trans                  &trans   &trans   &trans   &trans   &trans     &trans
+&trans     &trans   &trans   &trans   &trans            &trans  &trans  &trans      &trans  &trans  &trans           &trans   &trans   &trans   &trans     &trans
             >;
         };
 
