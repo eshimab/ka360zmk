@@ -165,11 +165,11 @@
 
         layer_Neovim {
             bindings = <
-&kp GRAVE          &v_EXCL    &v_AT           &v_HASH           &v_DOLLAR  &v_PERCENT  &kp CAPS                                              &none      &v_CARET  &v_AMPS   &v_ASTRK           &v_LPAR          &v_RPAR        &kp BACKSLASH
-&kp TAB            &trans     &trans          &trans            &trans     &trans      &kp SLASH                                             &kp MINUS  &trans    &trans    &trans             &trans           &trans         &v_UNDER
-&kp DOUBLE_QUOTES  &trans     &trans          &trans            &trans     &trans      &kp PLUS   &kp LEFT  &kp RIGHT      &kp DOWN  &kp UP  &kp COLON  &trans    &trans    &trans             &trans           &kp SEMICOLON  &kp SINGLE_QUOTE
-&kp LSHFT          &trans     &trans          &trans            &trans     &trans                           &mo 3          &tog 1                       &trans    &trans    &kp COMMA          &kp PERIOD       &kp SLASH      &kp RSHIFT
-&kp LCTRL          &kp EQUAL  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LPAR               &trans     &kp ESC   &trans         &trans    &trans  &trans               &kp RPAR  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans         &kp RCTRL
+&kp GRAVE          &v_EXCL    &v_AT           &v_HASH           &v_DOLLAR  &v_PERCENT  &kp CAPS                                                  &none      &v_CARET  &v_AMPS   &v_ASTRK           &v_LPAR          &v_RPAR        &kp BACKSLASH
+&kp TAB            &trans     &trans          &trans            &trans     &trans      &kp BACKSLASH                                             &kp MINUS  &trans    &trans    &trans             &trans           &trans         &v_UNDER
+&kp DOUBLE_QUOTES  &trans     &trans          &trans            &trans     &trans      &kp PLUS       &kp LEFT  &kp RIGHT      &kp DOWN  &kp UP  &kp COLON  &trans    &trans    &trans             &trans           &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp LSHFT          &trans     &trans          &trans            &trans     &trans                               &mo 3          &tog 1                       &trans    &trans    &kp COMMA          &kp PERIOD       &kp SLASH      &kp RSHIFT
+&kp LCTRL          &kp EQUAL  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LPAR               &trans         &kp ESC   &trans         &trans    &trans  &trans               &kp RPAR  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS      &kp RCTRL
             >;
         };
 
