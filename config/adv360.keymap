@@ -177,7 +177,7 @@
         v_eq_n2: v_eq_n2 {
             compatible = "zmk,behavior-mod-morph";
             label = "V_EQ_N2";
-            bindings = <&kp EQUAL>, <&kp RS(N2)>;
+            bindings = <&kp EQUAL>, <&kp N2>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
