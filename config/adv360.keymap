@@ -146,6 +146,87 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        v_Lpar_n4: v_Lpar_n4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_LPAR_N4";
+            bindings = <&kp LPAR>, <&kp N4>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        v_Rpar_n7: v_Rpar_n7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_RPAR_N7";
+            bindings = <&kp RPAR>, <&kp N7>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        v_Lbrace_n3: v_Lbrace_n3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_LBRACE_N3";
+            bindings = <&kp LEFT_BRACE>, <&kp N3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        v_Lbrack_n2: v_Lbrack_n2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_LBRACK_N2";
+            bindings = <&kp LEFT_BRACKET>, <&kp RS(N2)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        v_EQ_n5: v_EQ_n5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_EQ_N5";
+            bindings = <&kp EQUAL>, <&kp RS(N5)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        v_dblQ_n6: v_dblQ_n6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_DBLQ_N6";
+            bindings = <&kp DOUBLE_QUOTES>, <&kp N6>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        v_Rbrace_n8: v_Rbrace_n8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_RBRACE_N8";
+            bindings = <&kp RIGHT_BRACE>, <&kp N8>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        v_perct_n0: v_perct_n0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_PERCT_N0";
+            bindings = <&kp PERCENT>, <&kp N0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        v_Rbrack_n9: v_Rbrack_n9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_RBRACK_N9";
+            bindings = <&kp RIGHT_BRACKET>, <&kp N9>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -155,17 +236,17 @@
 
         default_layer {
             bindings = <
-&none      &kp N1     &kp N2          &kp N3            &kp N4                &kp N5  &mo 3                                                              &mo 3      &kp N6  &kp N7                 &kp N8             &kp N9           &kp N0    &kp BACKSLASH
+&none      &kp N1     &kp N2          &kp N3            &kp N4                &kp N5  &mo 6                                                              &mo 6      &kp N6  &kp N7                 &kp N8             &kp N9           &kp N0    &kp BACKSLASH
 &kp TAB    &kp Q      &kp W           &kp E             &kp R                 &kp T   &mo 2                                                              &mo 2      &kp Y   &kp U                  &kp I              &kp O            &kp P     &kp MINUS
 &kp ESC    &kp A      &kp S           &kp D             &kp F                 &kp G   &tog 1    &kp LEFT    &kp RIGHT      &kp DOWN           &kp UP     &tog 1     &kp H   &kp J                  &kp K              &kp L            &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X           &kp C             &kp V                 &kp B                         &mo 3          &tog 1                                   &kp N   &kp M                  &kp COMMA          &kp DOT          &kp FSLH  &kp RSHFT
+&kp LSHFT  &kp Z      &kp X           &kp C             &kp V                 &kp B                         &mo 6          &tog 1                                   &kp N   &kp M                  &kp COMMA          &kp DOT          &kp FSLH  &kp RSHFT
 &kp LCTRL  &kp GRAVE  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS          &kp BSPC  &kp ESCAPE  &kp LCMD       &kp RIGHT_COMMAND  &kp ENTER  &kp SPACE          &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RBKT  &kp RCTRL
             >;
         };
 
-        layer_Neovim {
+        L_Neovim {
             bindings = <
-&kp BACKSLASH      &v_EXCL    &v_AT     &v_HASH           &v_DOLLAR       &v_PERCENT  &mo 3                                                                 &mo 3      &v_CARET  &v_AMPS          &v_ASTRK           &v_LPAR     &v_RPAR        &kp BACKSLASH
+&kp BACKSLASH      &v_EXCL    &v_AT     &v_HASH           &v_DOLLAR       &v_PERCENT  &mo 6                                                                 &mo 6      &v_CARET  &v_AMPS          &v_ASTRK           &v_LPAR     &v_RPAR        &kp BACKSLASH
 &kp TAB            &trans     &trans    &trans            &trans          &trans      &kp GRAVE                                                             &kp SLASH  &trans    &trans           &trans             &trans      &trans         &v_UNDER
 &kp DOUBLE_QUOTES  &trans     &trans    &trans            &trans          &trans      &kp MINUS  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &kp COLON  &trans    &trans           &trans             &trans      &kp SEMICOLON  &kp SINGLE_QUOTE
 &kp LSHFT          &trans     &trans    &trans            &trans          &trans                           &kp CAPS              &tog 1                                &trans    &trans           &kp COMMA          &kp PERIOD  &kp SLASH      &kp RSHIFT
@@ -183,16 +264,6 @@
             >;
         };
 
-        layer_mod {
-            bindings = <
-&bootloader  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LS(LG(N4))  &kp LG(LS(N5))  &trans                                            &trans           &bl BL_INC  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &bootloader
-&none        &none         &none         &none         &none           &none           &none                                             &bl BL_TOG       &none       &none       &none         &none         &none  &none
-&none        &none         &none         &none         &none           &none           &tog 1  &none  &none      &none  &rgb_ug RGB_HUI  &tog 1           &none       &none       &none         &none         &none  &none
-&none        &none         &none         &none         &trans          &none                          &none      &none                                    &none       &none       &none         &none         &none  &none
-&none        &none         &none         &none         &none                           &none   &none  &none      &none  &bl BL_TOG       &rgb_ug RGB_TOG              &none       &none         &none         &none  &none
-            >;
-        };
-
         layer_SHIFT {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -203,13 +274,33 @@
             >;
         };
 
-        layer_NeovimShift {
+        nvim_test {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&kp BACKSLASH  &kp EXCL   &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LPAR  &kp EQUAL  &mo 6                                                                 &mo 6      &kp DOUBLE_QUOTES  &kp RPAR   &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp PERCENT    &kp AMPS
+&kp TAB        &trans     &trans            &trans          &trans    &trans     &kp PIPE                                                              &kp SLASH  &trans             &trans     &trans           &trans             &trans         &kp MINUS
+&kp UNDER      &kp A      &kp S             &kp D           &kp F     &trans     &kp MINUS  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &kp PLUS   &trans             &kp J      &kp K            &kp L              &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp LSHFT      &trans     &trans            &trans          &trans    &trans                          &kp CAPS              &tog 1                                &trans             &trans     &kp COMMA        &kp PERIOD         &kp SLASH      &kp RSHIFT
+&kp LCTRL      &kp COLON  &kp GRAVE         &kp HASH        &kp PLUS             &trans     &kp ESC   &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &trans  &trans                        &kp CARET  &kp ASTRK        &kp DOLLAR         &kp AT         &kp RCTRL
+            >;
+        };
+
+        L_neovim_2 {
+            bindings = <
+&kp BACKSLASH  &v_EXCL    &v_Lbrack_n2  &v_Lbrace_n3  &v_Lpar_n4  &v_EQ_n5  &mo 6                                                                 &mo 6      &v_dblQ_n6  &v_Rpar_n7  &v_Rbrace_n8  &v_Rbrack_n9  &v_perct_n0    &kp AMPS
+&kp TAB        &trans     &trans        &trans        &trans      &trans    &kp PIPE                                                              &kp SLASH  &trans      &trans      &trans        &trans        &trans         &kp MINUS
+&kp UNDER      &kp A      &kp S         &kp D         &kp F       &trans    &kp MINUS  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &kp PLUS   &trans      &kp J       &kp K         &kp L         &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp LSHFT      &trans     &trans        &trans        &trans      &trans                         &kp CAPS              &tog 1                                &trans      &trans      &kp COMMA     &kp PERIOD    &kp SLASH      &kp RSHIFT
+&kp LCTRL      &kp COLON  &kp GRAVE     &kp HASH      &kp PLUS              &trans     &kp ESC   &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &trans  &trans                 &kp CARET   &kp ASTRK     &kp DOLLAR    &kp AT         &kp RCTRL
+            >;
+        };
+
+        layer_mod {
+            bindings = <
+&bootloader  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LS(LG(N4))  &kp LG(LS(N5))  &trans                                            &trans           &bl BL_INC  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &bootloader
+&none        &none         &none         &none         &none           &none           &tog 5                                            &tog 5           &none       &none       &none         &none         &none  &none
+&none        &none         &none         &none         &none           &none           &tog 1  &none  &none      &none  &rgb_ug RGB_HUI  &tog 1           &none       &none       &none         &none         &none  &none
+&none        &none         &none         &none         &trans          &none                          &none      &none                                    &none       &none       &none         &none         &none  &none
+&none        &none         &none         &none         &none                           &none   &none  &none      &none  &bl BL_TOG       &rgb_ug RGB_TOG              &none       &none         &none         &none  &none
             >;
         };
     };
