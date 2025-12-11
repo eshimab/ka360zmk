@@ -147,28 +147,28 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_Lbrace_n4: v_Lbrace_n4 {
+        v_Lparen_n4: v_Lparen_n4 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_LBRACE_N4";
-            bindings = <&kp LEFT_BRACE>, <&kp N4>;
+            label = "V_LPAREN_N4";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp N4>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_Rbrace_n7: v_Rbrace_n7 {
+        v_Rpar_n7: v_Rpar_n7 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_RBRACE_N7";
-            bindings = <&kp RIGHT_BRACE>, <&kp N7>;
+            label = "V_RPAR_N7";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp N7>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_Lpar_n3: v_Lpar_n3 {
+        v_Lbrace_n3: v_Lbrace_n3 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_LPAR_N3";
-            bindings = <&kp LPAR>, <&kp N3>;
+            label = "V_LBRACE_N3";
+            bindings = <&kp LEFT_BRACE>, <&kp N3>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -201,10 +201,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_Rpar_n8: v_Rpar_n8 {
+        v_Rbrace_n8: v_Rbrace_n8 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_RPAR_N8";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp N8>;
+            label = "V_RBRACE_N8";
+            bindings = <&kp RIGHT_BRACE>, <&kp N8>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -285,21 +285,21 @@
 
         nvim_test {
             bindings = <
-&kp BACKSLASH      &kp PLUS  &kp UNDER  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE  &kp LEFT_BRACKET  &mo 6                                                                 &mo 6      &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp COLON   &kp PERCENT    &kp AMPS
-&kp TAB            &trans    &trans     &trans                &trans          &trans            &kp PIPE                                                              &kp SLASH  &trans             &trans           &trans                 &trans      &trans         &kp MINUS
-&kp DOUBLE_QUOTES  &kp A     &kp S      &kp D                 &kp F           &trans            &kp MINUS  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &kp PLUS   &trans             &kp J            &kp K                  &kp L       &kp SEMICOLON  &kp SINGLE_QUOTE
-&kp LSHFT          &trans    &trans     &trans                &trans          &trans                                 &kp CAPS              &tog 1                                &trans             &trans           &kp COMMA              &kp PERIOD  &kp SLASH      &kp RSHIFT
-&kp LCTRL          &kp EXCL  &kp GRAVE  &kp HASH              &kp EQUAL                         &trans     &kp ESC   &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &trans  &trans                        &kp CARET        &kp ASTRK              &kp DOLLAR  &kp AT         &kp RCTRL
+&kp BACKSLASH      &kp PLUS  &kp UNDER  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &mo 6                                                                 &mo 6      &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp COLON   &kp PERCENT    &kp AMPS
+&kp TAB            &trans    &trans     &trans          &trans                &trans            &kp PIPE                                                              &kp SLASH  &trans             &trans                 &trans           &trans      &trans         &kp MINUS
+&kp DOUBLE_QUOTES  &kp A     &kp S      &kp D           &kp F                 &trans            &kp MINUS  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &kp PLUS   &trans             &kp J                  &kp K            &kp L       &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp LSHFT          &trans    &trans     &trans          &trans                &trans                                 &kp CAPS              &tog 1                                &trans             &trans                 &kp COMMA        &kp PERIOD  &kp SLASH      &kp RSHIFT
+&kp LCTRL          &kp EXCL  &kp GRAVE  &kp HASH        &kp EQUAL                               &trans     &kp ESC   &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &trans  &trans                        &kp CARET              &kp ASTRK        &kp DOLLAR  &kp AT         &kp RCTRL
             >;
         };
 
         L_neovim_2 {
             bindings = <
-&kp BACKSLASH      &v_plus_n1  &v_under_n2  &v_Lpar_n3  &v_Lbrace_n4  &v_Lbrack_n5  &mo 6                                                                 &mo 6      &v_Rbrack_n6  &v_Rbrace_n7  &v_Rpar_n8  &v_colon_n9  &v_perct_n0    &kp AMPS
-&kp TAB            &trans      &trans       &trans      &trans        &trans        &kp PIPE                                                              &kp SLASH  &trans        &trans        &trans      &trans       &trans         &kp MINUS
-&kp DOUBLE_QUOTES  &kp A       &kp S        &kp D       &kp F         &trans        &kp MINUS  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &kp PLUS   &trans        &kp J         &kp K       &kp L        &kp SEMICOLON  &kp SINGLE_QUOTE
-&kp LSHFT          &trans      &trans       &trans      &trans        &trans                             &kp CAPS              &tog 1                                &trans        &trans        &kp COMMA   &kp PERIOD   &kp SLASH      &kp RSHIFT
-&kp LCTRL          &kp EXCL    &kp GRAVE    &kp HASH    &kp EQUAL                   &trans     &kp ESC   &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &trans  &trans                   &kp CARET     &kp ASTRK   &kp DOLLAR   &kp AT         &kp RCTRL
+&kp BACKSLASH      &v_plus_n1  &v_under_n2  &v_Lbrace_n3  &v_Lparen_n4  &v_Lbrack_n5  &mo 6                                                                 &mo 6      &v_Rbrack_n6  &v_Rpar_n7  &v_Rbrace_n8  &v_colon_n9  &v_perct_n0    &kp AMPS
+&kp TAB            &trans      &trans       &trans        &trans        &trans        &kp PIPE                                                              &kp SLASH  &trans        &trans      &trans        &trans       &trans         &kp MINUS
+&kp DOUBLE_QUOTES  &kp A       &kp S        &kp D         &kp F         &trans        &kp MINUS  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &kp PLUS   &trans        &kp J       &kp K         &kp L        &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp LSHFT          &trans      &trans       &trans        &trans        &trans                             &kp CAPS              &tog 1                                &trans        &trans      &kp COMMA     &kp PERIOD   &kp SLASH      &kp RSHIFT
+&kp LCTRL          &kp EXCL    &kp GRAVE    &kp HASH      &kp EQUAL                   &trans     &kp ESC   &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &trans  &trans                   &kp CARET   &kp ASTRK     &kp DOLLAR   &kp AT         &kp RCTRL
             >;
         };
 
