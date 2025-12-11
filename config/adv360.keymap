@@ -299,7 +299,7 @@
 &kp TAB            &trans      &trans     &trans      &trans      &trans      &kp PIPE                                                             &kp SLASH         &trans      &trans      &trans      &trans      &trans         &kp MINUS
 &kp DOUBLE_QUOTES  &kp A       &kp S      &kp D       &kp F       &trans      &kp PLUS  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &kp GREATER_THAN  &trans      &kp J       &kp K       &kp L       &kp SEMICOLON  &kp SINGLE_QUOTE
 &kp LSHFT          &trans      &trans     &trans      &trans      &trans                          &kp CAPS              &tog 1                                       &trans      &trans      &kp COMMA   &kp PERIOD  &kp SLASH      &kp RSHIFT
-&kp LCTRL          &kp EXCL    &kp GRAVE  &kp EQUAL   &kp MINUS               &trans    &kp ESC   &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &trans  &trans                        &kp CARET   &kp ASTRK   &kp DOLLAR  &kp AT         &kp RCTRL
+&kp LCTRL          &kp EXCL    &kp HASH   &kp EQUAL   &kp MINUS               &trans    &kp ESC   &kp LEFT_COMMAND      &kp RIGHT_COMMAND  &trans  &trans                        &kp CARET   &kp ASTRK   &kp DOLLAR  &kp AT         &kp RCTRL
             >;
         };
 
