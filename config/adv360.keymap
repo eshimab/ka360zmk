@@ -174,10 +174,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_under_n2: v_under_n2 {
+        v_minus_n2: v_minus_n2 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_UNDER_N2";
-            bindings = <&kp UNDER>, <&kp RS(N2)>;
+            label = "V_MINUS_N2";
+            bindings = <&kp MINUS>, <&kp RS(N2)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
@@ -285,7 +285,7 @@
 
         nvim_test {
             bindings = <
-&kp BACKSLASH      &kp COLON  &kp UNDER  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &mo 6                                                                 &mo 6      &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp UNDER   &kp PERCENT    &kp AMPS
+&kp BACKSLASH      &kp COLON  &kp MINUS  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &mo 6                                                                 &mo 6      &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp UNDER   &kp PERCENT    &kp AMPS
 &kp TAB            &trans     &trans     &trans          &trans                &trans            &kp PIPE                                                              &kp SLASH  &trans             &trans                 &trans           &trans      &trans         &kp MINUS
 &kp DOUBLE_QUOTES  &kp A      &kp S      &kp D           &kp F                 &trans            &kp MINUS  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &kp PLUS   &trans             &kp J                  &kp K            &kp L       &kp SEMICOLON  &kp SINGLE_QUOTE
 &kp LSHFT          &trans     &trans     &trans          &trans                &trans                                 &kp CAPS              &tog 1                                &trans             &trans                 &kp COMMA        &kp PERIOD  &kp SLASH      &kp RSHIFT
@@ -295,7 +295,7 @@
 
         L_neovim_2 {
             bindings = <
-&kp BACKSLASH      &v_colon_n1  &v_under_n2  &v_Lbrace_n3  &v_Lparen_n4  &v_Lbrack_n5  &mo 6                                                                 &mo 6      &v_Rbrack_n6  &v_Rpar_n7  &v_Rbrace_n8  &v_under_n9  &v_perct_n0    &kp AMPS
+&kp BACKSLASH      &v_colon_n1  &v_minus_n2  &v_Lbrace_n3  &v_Lparen_n4  &v_Lbrack_n5  &mo 6                                                                 &mo 6      &v_Rbrack_n6  &v_Rpar_n7  &v_Rbrace_n8  &v_under_n9  &v_perct_n0    &kp AMPS
 &kp TAB            &trans       &trans       &trans        &trans        &trans        &kp PIPE                                                              &kp SLASH  &trans        &trans      &trans        &trans       &trans         &kp MINUS
 &kp DOUBLE_QUOTES  &kp A        &kp S        &kp D         &kp F         &trans        &kp MINUS  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &kp PLUS   &trans        &kp J       &kp K         &kp L        &kp SEMICOLON  &kp SINGLE_QUOTE
 &kp LSHFT          &trans       &trans       &trans        &trans        &trans                             &kp CAPS              &tog 1                                &trans        &trans      &kp COMMA     &kp PERIOD   &kp SLASH      &kp RSHIFT
