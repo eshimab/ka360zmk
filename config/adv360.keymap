@@ -246,10 +246,19 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_pct_carat: v_pct_carat {
+        v_pipe_carat: v_pipe_carat {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_PCT_CARAT";
-            bindings = <&kp PERCENT>, <&kp CARET>;
+            label = "V_PIPE_CARAT";
+            bindings = <&kp PIPE>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        v_pct_tilde: v_pct_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_PCT_TILDE";
+            bindings = <&kp PERCENT>, <&kp TILDE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -313,11 +322,11 @@
 
         L_neovim_2 {
             bindings = <
-&kp GRAVE          &v_under_n1  &v_eq_n2       &v_Lpar_n3  &v_Lbrc_n4  &v_Lbrk_n5  &mo 6                                                                        &mo 6              &v_Rbrk_n6  &v_Rbrc_n7  &v_Rpar_n8    &v_colon_n9    &v_hash_n0        &none
-&kp ASTRK          &trans       &trans         &trans      &trans      &trans      &none                                                                        &none              &trans      &trans      &trans        &trans         &trans            &kp MINUS
-&kp DOUBLE_QUOTES  &kp A        &kp S          &kp D       &kp F       &trans      &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &trans      &kp J       &kp K         &kp L          &kp SINGLE_QUOTE  &kp SEMI
-&sk LSHFT          &trans       &trans         &trans      &trans      &trans                                  &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &trans      &trans      &kp COMMA     &kp PERIOD     &kp SLASH         &sk RSHIFT
-&kp TAB            &kp EXCL     &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans            &kp ESC   &sk LEFT_CONTROL      &sk RIGHT_CONTROL  &trans  &trans                         &none       &v_pct_carat  &v_amp_dollar  &kp AT            &kp CAPS
+&kp GRAVE          &v_under_n1  &v_eq_n2       &v_Lpar_n3  &v_Lbrc_n4  &v_Lbrk_n5  &mo 6                                                                        &mo 6              &v_Rbrk_n6  &v_Rbrc_n7    &v_Rpar_n8     &v_colon_n9    &v_hash_n0        &none
+&kp ASTRK          &trans       &trans         &trans      &trans      &trans      &none                                                                        &none              &trans      &trans        &trans         &trans         &trans            &kp MINUS
+&kp DOUBLE_QUOTES  &kp A        &kp S          &kp D       &kp F       &trans      &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &trans      &kp J         &kp K          &kp L          &kp SINGLE_QUOTE  &kp SEMI
+&sk LSHFT          &trans       &trans         &trans      &trans      &trans                                  &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &trans      &trans        &kp COMMA      &kp PERIOD     &kp SLASH         &sk RSHIFT
+&kp TAB            &kp EXCL     &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans            &kp ESC   &sk LEFT_CONTROL      &sk RIGHT_CONTROL  &trans  &trans                         &v_pct_tilde  &v_pipe_carat  &v_amp_dollar  &kp AT            &kp CAPS
             >;
         };
 
