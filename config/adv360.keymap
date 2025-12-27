@@ -15,6 +15,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&caps_word {
+};
+
 / {
     behaviors {
         #include "macros.dtsi"
@@ -151,6 +154,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V_UNDER_N1";
             bindings = <&kp UNDER>, <&kp N1>;
+
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
@@ -158,7 +162,8 @@
         n_n1_under: n_n1_under {
             compatible = "zmk,behavior-mod-morph";
             label = "N_N1_UNDER";
-            bindings =<&kp N1>, <&kp UNDER>;
+            bindings = <&kp N1>, <&kp UNDER>;
+
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
@@ -167,6 +172,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V_EQ_N2";
             bindings = <&kp EQUAL>, <&kp N2>;
+
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
@@ -174,7 +180,8 @@
         n_n2_eq: n_n2_eq {
             compatible = "zmk,behavior-mod-morph";
             label = "N_N2_EQ";
-            bindings =<&kp N2>, <&kp EQUAL>;
+            bindings = <&kp N2>, <&kp EQUAL>;
+
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
@@ -183,6 +190,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V_LPAR_N3";
             bindings = <&kp LPAR>, <&kp N3>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -191,6 +199,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "N_N3_LPAR";
             bindings = <&kp N3>, <&kp LPAR>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -199,6 +208,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V_LBRC_N4";
             bindings = <&kp LEFT_BRACE>, <&kp N4>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -215,7 +225,8 @@
         v_Lbrk_n5: v_Lbrk_n5 {
             compatible = "zmk,behavior-mod-morph";
             label = "V_LBRK_N5";
-            bindings =<&kp LEFT_BRACKET>,<&kp N5>;
+            bindings = <&kp LEFT_BRACKET>, <&kp N5>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -223,15 +234,17 @@
         n_n5_Lbrk: n_n5_Lbrk {
             compatible = "zmk,behavior-mod-morph";
             label = "N_N5_LBRK";
-            bindings =<&kp N5>, <&kp LEFT_BRACKET>;
+            bindings = <&kp N5>, <&kp LEFT_BRACKET>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        n_Rbrk_n6: n_Rbrk_n6 {
+        v_Rbrk_n6: v_Rbrk_n6 {
             compatible = "zmk,behavior-mod-morph";
-            label = "N_RBRK_N6";
+            label = "V_RBRK_N6";
             bindings = <&kp RIGHT_BRACKET>, <&kp N6>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -239,7 +252,8 @@
         n_n6_Rbrk: n_n6_Rbrk {
             compatible = "zmk,behavior-mod-morph";
             label = "N_N6_RBRK";
-            bindings =<&kp N6>, <&kp RIGHT_BRACKET>;
+            bindings = <&kp N6>, <&kp RIGHT_BRACKET>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -248,6 +262,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V_RBRC_N7";
             bindings = <&kp RIGHT_BRACE>, <&kp N7>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -256,6 +271,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "N_N7_RBRC";
             bindings = <&kp N7>, <&kp RIGHT_BRACE>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -264,6 +280,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V_RPAR_N8";
             bindings = <&kp RPAR>, <&kp N8>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -271,7 +288,8 @@
         n_n8_Rpar: n_n8_Rpar {
             compatible = "zmk,behavior-mod-morph";
             label = "N_N8_RPAR";
-            bindings =<&kp N8>, <&kp RPAR>;
+            bindings = <&kp N8>, <&kp RPAR>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -280,6 +298,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V_COLON_N9";
             bindings = <&kp COLON>, <&kp N9>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -287,7 +306,8 @@
         n_n9_colon: n_n9_colon {
             compatible = "zmk,behavior-mod-morph";
             label = "N_N9_COLON";
-            bindings =<&kp N9>, <&kp COLON>;
+            bindings = <&kp N9>, <&kp COLON>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -296,6 +316,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V_HASH_N0";
             bindings = <&kp HASH>, <&kp N0>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -303,7 +324,8 @@
         n_n0_hash: n_n0_hash {
             compatible = "zmk,behavior-mod-morph";
             label = "N_N0_HASH";
-            bindings =<&kp N0>, <&kp HASH>;
+            bindings = <&kp N0>, <&kp HASH>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -371,11 +393,11 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        td_mod_vimNum: td_mod_vimNum {
+        td_capsword_tognum: td_capsword_tognum {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_MOD_VIMNUM";
+            label = "TD_CAPSWORD_TOGNUM";
             #binding-cells = <0>;
-            bindings = <&sl 6>, <&none>;
+            bindings = <&caps_word>, <&tog 6>;
         };
     };
 
@@ -386,21 +408,21 @@
 
         default_layer {
             bindings = <
-&none      &kp N1     &kp N2          &kp N3            &kp N4                &kp N5  &sl 6                                                              &sl 6      &kp N6  &kp N7                 &kp N8             &kp N9           &kp N0    &kp BACKSLASH
+&none      &kp N1     &kp N2          &kp N3            &kp N4                &kp N5  &sl 8                                                              &sl 8      &kp N6  &kp N7                 &kp N8             &kp N9           &kp N0    &kp BACKSLASH
 &kp TAB    &kp Q      &kp W           &kp E             &kp R                 &kp T   &mo 2                                                              &mo 2      &kp Y   &kp U                  &kp I              &kp O            &kp P     &kp MINUS
 &kp ESC    &kp A      &kp S           &kp D             &kp F                 &kp G   &tog 0    &kp LEFT    &kp RIGHT      &kp DOWN           &kp UP     &tog 0     &kp H   &kp J                  &kp K              &kp L            &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X           &kp C             &kp V                 &kp B                         &mo 6          &tog 0                                   &kp N   &kp M                  &kp COMMA          &kp DOT          &kp FSLH  &kp RSHFT
+&kp LSHFT  &kp Z      &kp X           &kp C             &kp V                 &kp B                         &mo 7          &tog 0                                   &kp N   &kp M                  &kp COMMA          &kp DOT          &kp FSLH  &kp RSHFT
 &kp LCTRL  &kp GRAVE  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS          &kp BSPC  &kp ESCAPE  &kp LCMD       &kp RIGHT_COMMAND  &kp ENTER  &kp SPACE          &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RBKT  &kp RCTRL
             >;
         };
 
-        L_nvimNum {
+        layer_8 {
             bindings = <
-&kp GRAVE          &v_under_n1  &v_eq_n2       &v_Lpar_n3  &v_Lbrc_n4  &v_Lbrk_n5  &sl 6                                                                        &sl 6              &v_Rbrk_n6  &v_Rbrc_n7    &v_Rpar_n8     &v_colon_n9    &v_hash_n0        &none
-&kp ASTRK          &trans       &trans         &trans      &trans      &trans      &sl 7                                                                        &sl 7              &trans      &trans        &trans         &trans         &trans            &kp MINUS
-&kp DOUBLE_QUOTES  &kp A        &kp S          &kp D       &kp F       &trans      &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &trans      &kp J         &kp K          &kp L          &kp SINGLE_QUOTE  &kp SEMI
-&sk LSHFT          &trans       &trans         &trans      &trans      &trans                                  &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &trans      &trans        &kp COMMA      &kp PERIOD     &kp SLASH         &sk RSHIFT
-&kp TAB            &kp EXCL     &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans            &kp ESC   &sk LEFT_CONTROL      &sk RIGHT_CONTROL  &trans  &trans                         &v_pct_tilde  &v_pipe_carat  &v_amp_dollar  &kp AT            &kp CAPS
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -426,31 +448,31 @@
 
         L_nvimGR {
             bindings = <
-&kp GRAVE          &v_under_n1  &v_eq_n2       &v_Lpar_n3  &v_Lbrc_n4  &v_Lbrk_n5  &sl 6                                                                        &sl 6              &v_Rbrk_n6      &v_Rbrc_n7    &v_Rpar_n8     &v_colon_n9    &v_hash_n0     &none
+&kp GRAVE          &v_under_n1  &v_eq_n2       &v_Lpar_n3  &v_Lbrc_n4  &v_Lbrk_n5  &sl 8                                                                        &sl 8              &v_Rbrk_n6      &v_Rbrc_n7    &v_Rpar_n8     &v_colon_n9    &v_hash_n0     &none
 &kp ASTRK          &kp B        &kp L          &kp D       &kp W       &kp Z       &sl 7                                                                        &sl 7              &g_quote_under  &kp F         &kp O          &kp U          &kp J          &kp SEMI
 &kp DOUBLE_QUOTES  &kp N        &kp R          &kp T       &kp S       &kp G       &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &kp Y           &kp H         &kp A          &kp E          &kp I          &g_comma_qmark
 &sk LSHFT          &kp Q        &kp X          &kp M       &kp C       &kp V                                   &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &kp K           &kp P         &kp DOT        &g_minus_dblq  &g_slash_less  &sk RSHIFT
-&kp TAB            &kp EXCL     &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans            &kp ESC   &sk LEFT_CONTROL      &sk RIGHT_CONTROL  &trans  &trans                             &v_pct_tilde  &v_pipe_carat  &v_amp_dollar  &kp AT         &kp CAPS
+&kp TAB            &kp EXCL     &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans            &kp ESC   &sk LEFT_CONTROL      &sk RIGHT_CONTROL  &trans  &trans                             &v_pct_tilde  &v_pipe_carat  &v_amp_dollar  &kp AT         &td_capsword_tognum
             >;
         };
 
         L_nvimQW {
             bindings = <
-&kp GRAVE          &v_under_n1  &v_eq_n2       &v_Lpar_n3  &v_Lbrc_n4  &v_Lbrk_n5  &sl 6                                                                        &sl 6              &v_Rbrk_n6  &v_Rbrc_n7    &v_Rpar_n8     &v_colon_n9    &v_hash_n0        &none
-&kp ASTRK          &trans       &trans         &trans      &trans      &trans      &sl 7                                                                        &sl 7              &trans      &trans        &trans         &trans         &trans            &kp MINUS
-&kp DOUBLE_QUOTES  &kp A        &kp S          &kp D       &kp F       &trans      &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &trans      &kp J         &kp K          &kp L          &kp SINGLE_QUOTE  &kp SEMI
-&sk LSHFT          &trans       &trans         &trans      &trans      &trans                                  &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &trans      &trans        &kp COMMA      &kp PERIOD     &kp SLASH         &sk RSHIFT
-&kp TAB            &kp EXCL     &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans            &kp ESC   &sk LEFT_CONTROL      &sk RIGHT_CONTROL  &trans  &trans                         &v_pct_tilde  &v_pipe_carat  &v_amp_dollar  &kp AT            &kp CAPS
+&kp GRAVE          &v_under_n1  &v_eq_n2       &v_Lpar_n3  &v_Lbrc_n4  &v_Lbrk_n5  &sl 8                                                                        &sl 8              &v_Rbrk_n6  &v_Rbrc_n7    &v_Rpar_n8     &v_colon_n9    &v_hash_n0        &none
+&kp ASTRK          &kp Q        &kp W          &kt E       &kp R       &kp T       &sl 7                                                                        &sl 7              &kp Y       &kp U         &kp I          &kp O          &kp P             &kp MINUS
+&kp DOUBLE_QUOTES  &kp A        &kp S          &kp D       &kp F       &kp G       &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &kp H       &kp J         &kp K          &kp L          &kp SINGLE_QUOTE  &kp SEMI
+&sk LSHFT          &kp Z        &kp X          &kp C       &kp V       &kp B                                   &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &kp N       &kp M         &kp COMMA      &kp PERIOD     &kp SLASH         &sk RSHIFT
+&kp TAB            &kp EXCL     &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans            &kp ESC   &sk LEFT_CONTROL      &sk RIGHT_CONTROL  &trans  &trans                         &v_pct_tilde  &v_pipe_carat  &v_amp_dollar  &kp AT            &td_capsword_tognum
             >;
         };
 
-        layer_mod {
+        L_nvimNum {
             bindings = <
-&bootloader  &none         &none         &kp LC(UP_ARROW)  &kp LS(LG(N4))  &kp LG(LS(N5))  &trans                                            &trans           &bl BL_TOG  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &bootloader
-&none        &none         &none         &none             &none           &none           &tog 4                                            &tog 4           &none       &none       &none         &none         &none  &none
-&none        &none         &none         &none             &none           &none           &tog 5  &none  &none      &none  &rgb_ug RGB_HUI  &tog 5           &none       &none       &none         &none         &none  &none
-&none        &none         &none         &none             &trans          &none                          &none      &none                                    &none       &none       &none         &none         &none  &none
-&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &none                           &none   &none  &none      &none  &bl BL_TOG       &rgb_ug RGB_TOG              &none       &none         &none         &none  &none
+&trans  &n_n1_under  &n_n2_eq  &n_n3_Lpar  &n_n4_Lbrc  &n_n5_Lbrk  &sl 7                                       &sl 7   &n_n6_Rbrk  &n_n7_Rbrc  &n_n8_Rpar  &n_n9_colon  &n_n0_hash  &trans
+&trans  &trans       &trans    &trans      &trans      &trans      &sl 7                                       &sl 7   &trans      &trans      &trans      &trans       &trans      &trans
+&trans  &trans       &trans    &trans      &trans      &trans      &trans  &trans  &trans      &trans  &trans  &trans  &trans      &trans      &trans      &trans       &trans      &trans
+&trans  &trans       &trans    &trans      &trans      &trans                      &trans      &trans                  &trans      &trans      &trans      &trans       &trans      &trans
+&trans  &trans       &trans    &trans      &trans                  &trans  &trans  &trans      &trans  &trans  &trans              &trans      &trans      &trans       &trans      &trans
             >;
         };
 
@@ -461,6 +483,16 @@
 &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
 &trans   &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans   &trans
 &trans   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans   &trans
+            >;
+        };
+
+        layer_mod {
+            bindings = <
+&bootloader  &none         &none         &kp LC(UP_ARROW)  &kp LS(LG(N4))  &kp LG(LS(N5))  &trans                                            &trans           &bl BL_TOG  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &bootloader
+&none        &none         &none         &none             &none           &none           &tog 4                                            &tog 4           &none       &none       &none         &none         &none  &none
+&none        &none         &none         &none             &none           &none           &tog 5  &none  &none      &none  &rgb_ug RGB_HUI  &tog 5           &none       &none       &none         &none         &none  &none
+&none        &none         &none         &none             &trans          &none                          &none      &none                                    &none       &none       &none         &none         &none  &none
+&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &none                           &none   &none  &none      &none  &bl BL_TOG       &rgb_ug RGB_TOG              &none       &none         &none         &none  &none
             >;
         };
     };
