@@ -468,8 +468,8 @@
 
         L_nvimNum {
             bindings = <
-&trans  &n_n1_under  &n_n2_eq  &n_n3_Lpar  &n_n4_Lbrc  &n_n5_Lbrk  &sl 7                                       &sl 7   &n_n6_Rbrk  &n_n7_Rbrc  &n_n8_Rpar  &n_n9_colon  &n_n0_hash  &trans
-&trans  &trans       &trans    &trans      &trans      &trans      &sl 7                                       &sl 7   &trans      &trans      &trans      &trans       &trans      &trans
+&trans  &n_n1_under  &n_n2_eq  &n_n3_Lpar  &n_n4_Lbrc  &n_n5_Lbrk  &trans                                      &trans  &n_n6_Rbrk  &n_n7_Rbrc  &n_n8_Rpar  &n_n9_colon  &n_n0_hash  &trans
+&trans  &trans       &trans    &trans      &trans      &trans      &trans                                      &trans  &trans      &trans      &trans      &trans       &trans      &trans
 &trans  &trans       &trans    &trans      &trans      &trans      &trans  &trans  &trans      &trans  &trans  &trans  &trans      &trans      &trans      &trans       &trans      &trans
 &trans  &trans       &trans    &trans      &trans      &trans                      &trans      &trans                  &trans      &trans      &trans      &trans       &trans      &trans
 &trans  &trans       &trans    &trans      &trans                  &trans  &trans  &trans      &trans  &trans  &trans              &trans      &trans      &trans       &trans      &trans
