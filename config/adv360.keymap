@@ -554,7 +554,7 @@
 &none         &none         &none         &none             &none           &none           &tog 4                                            &tog 4           &none       &none       &none         &none         &none  &none
 &none         &none         &none         &none             &none           &none           &tog 5  &none  &none      &none  &rgb_ug RGB_HUI  &tog 5           &none       &none       &none         &none         &none  &none
 &none         &none         &none         &none             &trans          &none                          &none      &none                                    &none       &none       &none         &none         &none  &none
-&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &none                           &none   &none  &none      &none  &bl BL_TOG       &rgb_ug RGB_TOG              &none       &none         &none         &none  &none
+&out OUT_USB  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &none                           &none   &none  &none      &none  &bl BL_TOG       &rgb_ug RGB_TOG              &none       &none         &none         &none  &none
             >;
         };
 
