@@ -463,6 +463,61 @@
             key-positions = <41 42>;
             layers = <5>;
         };
+
+        cb_topleft {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 6>;
+        };
+
+        bot_left {
+            bindings = <&kp TAB>;
+            key-positions = <60 64>;
+        };
+
+        top_right {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <7 13>;
+        };
+
+        bot_right {
+            bindings = <&kp PERCENT>;
+            key-positions = <71 75>;
+        };
+
+        thumb_left {
+            bindings = <&kp LEFT>;
+            key-positions = <35 67>;
+        };
+
+        thumb_right {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <38 68>;
+        };
+
+        mid_left {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <28 34>;
+        };
+
+        mid_right {
+            bindings = <&kp H>;
+            key-positions = <39 45>;
+        };
+
+        thumb_mid {
+            bindings = <&kp A>;
+            key-positions = <52 53>;
+        };
+
+        thumb_outer {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <65 70>;
+        };
+
+        thumb_top {
+            bindings = <&kp RIGHT>;
+            key-positions = <36 37>;
+        };
     };
 
     keymap {
