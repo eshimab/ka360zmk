@@ -458,12 +458,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_j {
-            bindings = <&kp J>;
-            key-positions = <41 42>;
-            layers = <5>;
-        };
-
         cb_topleft {
             bindings = <&kp GRAVE>;
             key-positions = <0 6>;
