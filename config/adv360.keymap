@@ -484,7 +484,7 @@
         };
 
         cb_xcv_cmd-shift {
-            bindings = <&kp LS(LGUI)>;
+            bindings = <&sk LS(LGUI)>;
             key-positions = <48 49 50>;
         };
     };
