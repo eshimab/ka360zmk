@@ -483,9 +483,9 @@
             key-positions = <48 49>;
         };
 
-        cb_xcv_cmd-shift {
+        cb_sdf_cmd-shift {
             bindings = <&sk LS(LGUI)>;
-            key-positions = <48 49 50>;
+            key-positions = <30 31 32>;
         };
 
         cb_er_ctrl {
@@ -501,6 +501,21 @@
         cb_jk_cmd {
             bindings = <&sk RGUI>;
             key-positions = <41 42>;
+        };
+
+        cb_sd_shift {
+            bindings = <&sk LSHIFT>;
+            key-positions = <31 30>;
+        };
+
+        cb_kl_shift {
+            bindings = <&sk RSHIFT>;
+            key-positions = <42 43>;
+        };
+
+        cb_jkl_cmd-shift {
+            bindings = <&sk RS(RGUI)>;
+            key-positions = <41 42 43>;
         };
     };
 
