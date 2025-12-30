@@ -487,6 +487,16 @@
             bindings = <&sk LS(LGUI)>;
             key-positions = <48 49 50>;
         };
+
+        cb_er_ctrl {
+            bindings = <&sk LCTRL>;
+            key-positions = <18 17>;
+        };
+
+        cb_ui_ctrl {
+            bindings = <&sk RCTRL>;
+            key-positions = <23 24>;
+        };
     };
 
     keymap {
