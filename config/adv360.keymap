@@ -482,6 +482,11 @@
             bindings = <&kp LEFT>;
             key-positions = <30 31>;
         };
+
+        cb_xcv_cmd-shift {
+            bindings = <&kp LS(LGUI)>;
+            key-positions = <48 49 50>;
+        };
     };
 
     keymap {
