@@ -527,6 +527,11 @@
             bindings = <&kp DOWN>;
             key-positions = <48 50>;
         };
+
+        cb_we_tab {
+            bindings = <&kp TAB>;
+            key-positions = <16 17>;
+        };
     };
 
     keymap {
