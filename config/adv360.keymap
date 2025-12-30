@@ -517,6 +517,16 @@
             bindings = <&sk RS(RGUI)>;
             key-positions = <41 42 43>;
         };
+
+        cb_sf_up {
+            bindings = <&kp UP>;
+            key-positions = <30 32>;
+        };
+
+        cb_xv_down {
+            bindings = <&kp DOWN>;
+            key-positions = <48 50>;
+        };
     };
 
     keymap {
