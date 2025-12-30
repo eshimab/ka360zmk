@@ -460,12 +460,12 @@
 
         cb_cv_cmd {
             bindings = <&sk LGUI>;
-            key-positions = <49 50>;
+            key-positions = <31 32>;
         };
 
-        cb_jk_up {
+        cb_comdot_up {
             bindings = <&kp UP>;
-            key-positions = <41 42>;
+            key-positions = <56 57>;
         };
 
         cb_m_down {
@@ -473,14 +473,14 @@
             key-positions = <55 56>;
         };
 
-        cb_df_right {
+        cb_cv_right {
             bindings = <&kp RIGHT>;
-            key-positions = <31 32>;
+            key-positions = <49 50>;
         };
 
-        cb_sd_left {
+        cb_xc_left {
             bindings = <&kp LEFT>;
-            key-positions = <30 31>;
+            key-positions = <48 49>;
         };
 
         cb_xcv_cmd-shift {
@@ -496,6 +496,11 @@
         cb_ui_ctrl {
             bindings = <&sk RCTRL>;
             key-positions = <23 24>;
+        };
+
+        cb_jk_cmd {
+            bindings = <&sk RGUI>;
+            key-positions = <41 42>;
         };
     };
 
