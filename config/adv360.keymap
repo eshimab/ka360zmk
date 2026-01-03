@@ -549,13 +549,13 @@
         };
 
         cb_wer_shft-ctrl {
-            bindings = <&kp LS(LCTRL)>;
+            bindings = <&kp LC(LSHIFT)>;
             key-positions = <16 17 18>;
             timeout-ms = <75>;
         };
 
         cb_uio_shft-ctrl {
-            bindings = <&kp RS(RCTRL)>;
+            bindings = <&kp RC(RSHIFT)>;
             key-positions = <23 24 25>;
             timeout-ms = <75>;
         };
