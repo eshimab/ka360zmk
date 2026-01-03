@@ -532,6 +532,26 @@
             bindings = <&kp TAB>;
             key-positions = <16 17>;
         };
+
+        cb_wer_shft-ctrl {
+            bindings = <&kp LS(LCTRL)>;
+            key-positions = <16 17 18>;
+        };
+
+        cb_uio_shft-ctrl {
+            bindings = <&kp RS(RCTRL)>;
+            key-positions = <23 24 25>;
+        };
+
+        cb_62-63_lalt {
+            bindings = <&kp LALT>;
+            key-positions = <62 63>;
+        };
+
+        cb_72-73_ralt {
+            bindings = <&kp RALT>;
+            key-positions = <72 73>;
+        };
     };
 
     keymap {
@@ -589,11 +609,11 @@
 
         L_nvimQW {
             bindings = <
-&kp GRAVE             &v_under_n1  &v_eq_n2       &v_Lpar_n3  &v_Lbrc_n4  &v_Lbrk_n5  &td_mod_QW                                                                &td_mod_QW  &v_Rbrk_n6  &v_Rbrc_n7    &v_Rpar_n8     &v_colon_n9    &v_hash_n0        &none
-&kp SLASH             &kp Q        &kp W          &kp E       &kp R       &kp T       &sl 7                                                                     &sl 7       &kp Y       &kp U         &kp I          &kp O          &kp P             &kp ASTRK
-&kp DOUBLE_QUOTES     &kp A        &kp S          &kp D       &kp F       &kp G       &none       &kp LEFT  &kp RIGHT               &kp DOWN            &kp UP  &none       &kp H       &kp J         &kp K          &kp L          &kp SINGLE_QUOTE  &kp SEMI
-&td_Lshift_capswords  &kp Z        &kp X          &kp C       &kp V       &kp B                             &td_Lgui_Lalt           &td_Rgui_Ralt                           &kp N       &kp M         &kp COMMA      &kp PERIOD     &kp SLASH         &td_Rshift_Ralt
-&kp TAB               &kp EXCL     &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans      &kp ESC   &td_Lctrl_capsnums      &td_Rctrl_capsnums  &trans  &trans                  &v_pct_tilde  &v_pipe_carat  &v_amp_dollar  &kp AT            &td_capsword_tognum
+&kp GRAVE             &v_under_n1  &v_eq_n2       &v_Lpar_n3  &v_Lbrc_n4  &v_Lbrk_n5  &td_mod_QW                                                &td_mod_QW  &v_Rbrk_n6  &v_Rbrc_n7    &v_Rpar_n8     &v_colon_n9    &v_hash_n0        &none
+&kp SLASH             &kp Q        &kp W          &kp E       &kp R       &kp T       &sl 7                                                     &sl 7       &kp Y       &kp U         &kp I          &kp O          &kp P             &kp ASTRK
+&kp DOUBLE_QUOTES     &kp A        &kp S          &kp D       &kp F       &kp G       &none       &kp LEFT  &kp RIGHT       &kp DOWN    &kp UP  &none       &kp H       &kp J         &kp K          &kp L          &kp SINGLE_QUOTE  &kp SEMI
+&td_Lshift_capswords  &kp Z        &kp X          &kp C       &kp V       &kp B                             &caps_word      &caps_word                      &kp N       &kp M         &kp COMMA      &kp PERIOD     &kp SLASH         &td_Rshift_Ralt
+&kp TAB               &kp EXCL     &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans      &kp ESC   &tog 6          &tog 6      &trans  &trans                  &v_pct_tilde  &v_pipe_carat  &v_amp_dollar  &kp AT            &td_capsword_tognum
             >;
         };
 
