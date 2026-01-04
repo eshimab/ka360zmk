@@ -421,7 +421,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NUMS_LCMD";
             #binding-cells = <0>;
-            bindings = <&sl 6>, <&sk LGUI>;
+            bindings = <&tog 6>, <&sk LGUI>;
         };
 
         td_Rctrl_capsnums: td_Rctrl_capsnums {
@@ -463,7 +463,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NUMS_RCMD";
             #binding-cells = <0>;
-            bindings = <&sl 6>, <&sk RGUI>;
+            bindings = <&tog 6>, <&sk RGUI>;
         };
     };
 
