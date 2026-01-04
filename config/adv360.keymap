@@ -585,6 +585,16 @@
             key-positions = <72 73>;
             timeout-ms = <75>;
         };
+
+        cb_r5l_spc {
+            bindings = <&kp SPACE>;
+            key-positions = <62 63 64>;
+        };
+
+        cb_r5r_spc {
+            bindings = <&kp SPACE>;
+            key-positions = <71 72 73>;
+        };
     };
 
     keymap {
