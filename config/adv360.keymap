@@ -458,9 +458,9 @@
     combos {
         compatible = "zmk,combos";
 
-        cb_cv_cmd {
-            bindings = <&sk LGUI>;
-            key-positions = <31 32>;
+        cb_df_shift {
+            bindings = <&sk LSHIFT>;
+            key-positions = <>;
             timeout-ms = <75>;
         };
 
@@ -494,32 +494,32 @@
             timeout-ms = <75>;
         };
 
-        cb_er_ctrl {
-            bindings = <&sk LCTRL>;
+        cb_er_tab {
+            bindings = <&kp TAB>;
             key-positions = <18 17>;
             timeout-ms = <75>;
         };
 
-        cb_ui_ctrl {
+        cb_io_ctrl {
             bindings = <&sk RCTRL>;
-            key-positions = <23 24>;
+            key-positions = <24 25>;
             timeout-ms = <75>;
         };
 
-        cb_jk_cmd {
-            bindings = <&sk RGUI>;
-            key-positions = <41 42>;
+        cb_jk_rshift {
+            bindings = <&sk RSHIFT>;
+            key-positions = <>;
             timeout-ms = <75>;
         };
 
-        cb_sd_shift {
-            bindings = <&sk LSHIFT>;
+        cb_sd_lcmd {
+            bindings = <&sk LCMD>;
             key-positions = <31 30>;
             timeout-ms = <75>;
         };
 
-        cb_kl_shift {
-            bindings = <&sk RSHIFT>;
+        cb_kl_rcmd {
+            bindings = <&sk RGUI>;
             key-positions = <42 43>;
             timeout-ms = <75>;
         };
@@ -542,8 +542,8 @@
             timeout-ms = <75>;
         };
 
-        cb_we_tab {
-            bindings = <&kp TAB>;
+        cb_we_rctrl {
+            bindings = <&sk RCTRL>;
             key-positions = <16 17>;
             timeout-ms = <75>;
         };
