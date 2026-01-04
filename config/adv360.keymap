@@ -461,7 +461,7 @@
         cb_df_shift {
             bindings = <&sk LSHIFT>;
             key-positions = <>;
-            timeout-ms = <50>;
+            timeout-ms = <35>;
         };
 
         cb_comdot_up {
@@ -509,19 +509,19 @@
         cb_jk_rshift {
             bindings = <&sk RSHIFT>;
             key-positions = <>;
-            timeout-ms = <50>;
+            timeout-ms = <35>;
         };
 
         cb_sd_lcmd {
             bindings = <&sk LCMD>;
             key-positions = <31 30>;
-            timeout-ms = <50>;
+            timeout-ms = <35>;
         };
 
         cb_kl_rcmd {
             bindings = <&sk RGUI>;
             key-positions = <42 43>;
-            timeout-ms = <50>;
+            timeout-ms = <35>;
         };
 
         cb_jkl_cmd-shift {
@@ -545,7 +545,7 @@
         cb_we_rctrl {
             bindings = <&sk RCTRL>;
             key-positions = <16 17>;
-            timeout-ms = <75>;
+            timeout-ms = <50>;
         };
 
         cb_wer_shft-ctrl {
