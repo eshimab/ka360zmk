@@ -515,7 +515,7 @@
         cb_sd_lcmd {
             bindings = <&sk LCMD>;
             key-positions = <31 30>;
-            timeout-ms = <35>;
+            timeout-ms = <25>;
         };
 
         cb_kl_rcmd {
