@@ -491,46 +491,46 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_excl_tilde: v_excl_tilde {
+        v_P_tilde: v_P_tilde {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_EXCL_TILDE";
+            label = "V_P_TILDE";
             bindings = <&kp EXCL>, <&kp TILDE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_grave_0: v_grave_0 {
+        v_plus_0: v_plus_0 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_GRAVE_0";
-            bindings = <&kp GRAVE>, <&kp N0>;
+            label = "V_PLUS_0";
+            bindings = <&kp PLUS>, <&kp N0>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_slash_at: v_slash_at {
+        v_qmark_at: v_qmark_at {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_SLASH_AT";
+            label = "V_QMARK_AT";
             bindings = <&kp SLASH>, <&kp AT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_plus_pct: v_plus_pct {
+        v_grave_pct: v_grave_pct {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_PLUS_PCT";
-            bindings = <&kp PLUS>, <&kp PERCENT>;
+            label = "V_GRAVE_PCT";
+            bindings = <&kp GRAVE>, <&kp PERCENT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_minus_bkslash: v_minus_bkslash {
+        v_slash_bslash: v_slash_bslash {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_MINUS_BKSLASH";
-            bindings = <&kp MINUS>, <&kp BACKSLASH>;
+            label = "V_SLASH_BSLASH";
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -544,6 +544,24 @@
             #binding-cells = <2>;
             hold-trigger-key-positions = <13>;
             tapping-term-ms = <50>;
+        };
+
+        ht_cmd_vsqtsemi: ht_cmd_vsqtsemi {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_CMD_VSQTSEMI";
+            bindings = <&kp>, <&v_sqt_semi>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <75>;
+        };
+
+        v_minus_excl: v_minus_excl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_MINUS_EXCL";
+            bindings = <&kp MINUS>, <&kp EXCL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
     };
 
@@ -732,11 +750,11 @@
 
         L_nvimQW {
             bindings = <
-&v_grave_0            &v_under_n1    &v_eq_n2     &v_Lbrc_n3   &v_Lpar_n4        &v_Lbrk_n5  &trans                                                      &trans  &v_Rbrk_n6  &v_Rpar_n7  &v_Rbrc_n8     &v_colon_n9    &v_hash_n0  &ht_cmd_tdls RIGHT_GUI 0
-&kp SLASH             &kp Q          &kp W        &kp E        &kp R             &kp T       &none                                                       &none   &kp Y       &kp U       &kp I          &kp O          &kp P       &kp ASTRK
-&v_dqt_astrk          &kp A          &kp S        &kp D        &kp F             &kp G       &none   &kp LEFT  &kp RIGHT        &kp DOWN         &kp UP  &none   &kp H       &kp J       &kp K          &kp L          &kp P       &kp SEMI
-&td_Lshift_capswords  &kp Z          &kp X        &kp C        &kp V             &kp B                         &td_nums_fn      &td_nums_fn                      &kp N       &kp M       &kp COMMA      &kp PERIOD     &kp SLASH   &td_Rshift_Ralt
-&v_sqt_semi           &v_excl_tilde  &v_slash_at  &v_plus_pct  &v_minus_bkslash              &trans  &kp ESC   &kp TAB          &td_rshift_rcmd  &trans  &trans              &kp HASH    &v_pipe_carat  &v_amp_dollar  &kp AT      &td_nums_fn
+&v_plus_0                    &v_under_n1  &v_eq_n2     &v_Lbrc_n3    &v_Lpar_n4       &v_Lbrk_n5  &trans                                                      &trans  &v_Rbrk_n6  &v_Rpar_n7  &v_Rbrc_n8     &v_colon_n9    &v_hash_n0  &ht_cmd_tdls RIGHT_GUI 0
+&v_minus_excl                &kp Q        &kp W        &kp E         &kp R            &kp T       &none                                                       &none   &kp Y       &kp U       &kp I          &kp O          &kp P       &none
+&v_dqt_astrk                 &kp A        &kp S        &kp D         &kp F            &kp G       &none   &kp LEFT  &kp RIGHT        &kp DOWN         &kp UP  &none   &kp H       &kp J       &kp K          &kp L          &kp P       &none
+&td_Lshift_capswords         &kp Z        &kp X        &kp C         &kp V            &kp B                         &td_nums_fn      &td_nums_fn                      &kp N       &kp M       &kp COMMA      &kp PERIOD     &none       &td_Rshift_Ralt
+&ht_cmd_vsqtsemi LEFT_GUI 0  &v_P_tilde   &v_qmark_at  &v_grave_pct  &v_slash_bslash              &trans  &kp ESC   &kp TAB          &td_rshift_rcmd  &trans  &trans              &kp HASH    &v_pipe_carat  &v_amp_dollar  &none       &none
             >;
         };
 
