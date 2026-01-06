@@ -491,10 +491,46 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_excl_at: v_excl_at {
+        v_excl_tilde: v_excl_tilde {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_EXCL_AT";
-            bindings = <&kp EXCL>, <&kp AT>;
+            label = "V_EXCL_TILDE";
+            bindings = <&kp EXCL>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        v_grave_0: v_grave_0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_GRAVE_0";
+            bindings = <&kp GRAVE>, <&kp N0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        v_slash_at: v_slash_at {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_SLASH_AT";
+            bindings = <&kp SLASH>, <&kp AT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        v_plus_pct: v_plus_pct {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_PLUS_PCT";
+            bindings = <&kp PLUS>, <&kp PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        v_minus_bkslash: v_minus_bkslash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_MINUS_BKSLASH";
+            bindings = <&kp MINUS>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -686,11 +722,11 @@
 
         L_nvimQW {
             bindings = <
-&kp GRAVE             &v_under_n1  &v_eq_n2       &v_Lbrc_n3  &v_Lpar_n4  &v_Lbrk_n5  &trans                                                      &trans  &v_Rbrk_n6  &v_Rpar_n7    &v_Rbrc_n8     &v_colon_n9    &v_hash_n0        &none
-&kp SLASH             &kp Q        &kp W          &kp E       &kp R       &kp T       &none                                                       &none   &kp Y       &kp U         &kp I          &kp O          &kp P             &kp ASTRK
-&v_dqt_astrk          &kp A        &kp S          &kp D       &kp F       &kp G       &none   &kp LEFT  &kp RIGHT        &kp DOWN         &kp UP  &none   &kp H       &kp J         &kp K          &kp L          &kp SINGLE_QUOTE  &kp SEMI
-&td_Lshift_capswords  &kp Z        &kp X          &kp C       &kp V       &kp B                         &td_nums_fn      &td_nums_fn                      &kp N       &kp M         &kp COMMA      &kp PERIOD     &kp SLASH         &td_Rshift_Ralt
-&v_sqt_semi           &v_excl_at   &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans  &kp ESC   &kp TAB          &td_rshift_rcmd  &trans  &trans              &v_pct_tilde  &v_pipe_carat  &v_amp_dollar  &kp AT            &td_nums_fn
+&v_grave_0            &v_under_n1    &v_eq_n2     &v_Lbrc_n3   &v_Lpar_n4        &v_Lbrk_n5  &trans                                                      &trans  &v_Rbrk_n6  &v_Rpar_n7  &v_Rbrc_n8     &v_colon_n9    &v_hash_n0  &none
+&kp SLASH             &kp Q          &kp W        &kp E        &kp R             &kp T       &none                                                       &none   &kp Y       &kp U       &kp I          &kp O          &kp P       &kp ASTRK
+&v_dqt_astrk          &kp A          &kp S        &kp D        &kp F             &kp G       &none   &kp LEFT  &kp RIGHT        &kp DOWN         &kp UP  &none   &kp H       &kp J       &kp K          &kp L          &kp P       &kp SEMI
+&td_Lshift_capswords  &kp Z          &kp X        &kp C        &kp V             &kp B                         &td_nums_fn      &td_nums_fn                      &kp N       &kp M       &kp COMMA      &kp PERIOD     &kp SLASH   &td_Rshift_Ralt
+&v_sqt_semi           &v_excl_tilde  &v_slash_at  &v_plus_pct  &v_minus_bkslash              &trans  &kp ESC   &kp TAB          &td_rshift_rcmd  &trans  &trans              &kp HASH    &v_pipe_carat  &v_amp_dollar  &kp AT      &td_nums_fn
             >;
         };
 
