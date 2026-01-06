@@ -544,7 +544,7 @@
 
         cb_er_tab {
             bindings = <&kp TAB>;
-            key-positions = <18 17>;
+            key-positions = <>;
             timeout-ms = <75>;
         };
 
