@@ -67,7 +67,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             // ====== interupt flavor
-            flavor = "tap-prefferred"; // blanced = 
+            flavor = "tap-preferred"; // blanced = 
             // ====== behavior bindings
             bindings = <&mc_sk_ctrl>, <&kp>;
         };
@@ -82,7 +82,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             // ====== interupt flavor
-            flavor = "tap-prefferred"; // 
+            flavor = "tap-preferred"; // 
             // ====== behavior bindings
             bindings = <&mc_sk_gui>, <&kp>; 
         };
@@ -97,7 +97,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             // ====== interupt flavor
-            flavor = "tap-prefferred"; // blanced = 
+            flavor = "tap-preferred"; // blanced = 
             // ====== behavior bindings
             bindings = <&mc_sk_shift>, <&kp>;
         };
@@ -112,7 +112,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             // ====== interupt flavor
-            flavor = "tap-prefferred"; // blanced = 
+            flavor = "tap-preferred"; // blanced = 
             // ====== behavior bindings
             bindings = <&mc_sk_alt>, <&kp>;
         };
