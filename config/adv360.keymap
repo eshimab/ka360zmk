@@ -48,6 +48,7 @@
             //retro-tap; // defaut: not set (false) | tap on release if not interupted
         };
 
+        /*
         hm_ctrl: homerow_mods_ctrl {
             label = "HOMEROW_MODS_CTRL";
             // ====== dont edit
@@ -60,7 +61,7 @@
             // ====== interupt flavor
             flavor = "tap-prefferred"; // blanced = 
             // ====== behavior bindings
-            bindings = <&kp>, <&sk LCTRL>;
+            bindings = <&kp>, <&kp>;
         };
 
         hm_gui: homerow_mods_gui {
@@ -75,7 +76,7 @@
             // ====== interupt flavor
             flavor = "tap-prefferred"; // 
             // ====== behavior bindings
-            bindings = <&kp>, <&sk LGUI>;
+            bindings = <&kp>, <&kp>; 
         };
 
         hm_shift: homerow_mods_shift {
@@ -90,8 +91,9 @@
             // ====== interupt flavor
             flavor = "tap-prefferred"; // blanced = 
             // ====== behavior bindings
-            bindings = <&kp>, <&sk LSHIFT>;
+            bindings = <&kp>, <&kp>;
         };
+        */
 
         /*
         v_EXCL: v_EXCL {
