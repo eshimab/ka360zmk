@@ -27,26 +27,70 @@
     #include "version.dtsi"
 
         hm: homerow_mods {
-            // config
-            compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
+            // ====== dont edit
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            // timing properties
-            tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
+            // ====== timing properties
+            tapping-term-ms = <200>; // hold time, this needs to be largest timing prop
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            // ====== interupt flavor
             flavor = "tap-preferred";
+            // ====== behavior bindings
             bindings = <&kp>, <&kp>;
+            // ====== positional hold-tap
+            //hold-trigger-key-positions = <1 2 3>; // default: not set 
+            //hold-trigger-on-release; // default: not set (false)
+            // ====== special behaviors
+            //hold-while-undecided; // defaut: not set (false) | holds modifier immediately on press (bad for fast typing)
+            //hold-while-undecided-linger; // defaut: not set (false) | continues hold during sticky key transition (no effect on typing speed)
+            //retro-tap; // defaut: not set (false) | tap on release if not interupted
         };
 
         hm_ctrl: homerow_mods_ctrl {
             label = "HOMEROW_MODS_CTRL";
+            // ====== dont edit
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            // timing properties
-            tapping-term-ms = <100>; // time to determine hold vs tap
-            quick_tap_ms = <175>;
+            // ====== timing properties
+            tapping-term-ms = <200>; // time to determine hold vs tap
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            // ====== interupt flavor
             flavor = "tap-prefferred"; // blanced = 
+            // ====== behavior bindings
             bindings = <&kp>, <&sk LCTRL>;
+        };
+
+        hm_gui: homerow_mods_gui {
+            label = "HOMEROW_MODS_GUI";
+            // ====== dont edit
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            // ====== timing properties
+            tapping-term-ms = <200>; // time to determine hold vs tap
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            // ====== interupt flavor
+            flavor = "tap-prefferred"; // 
+            // ====== behavior bindings
+            bindings = <&kp>, <&sk LGUI>;
+        };
+
+        hm_shift: homerow_mods_shift {
+            label = "HOMEROW_MODS_SHIFT";
+            // ====== dont edit
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            // ====== timing properties
+            tapping-term-ms = <200>; // time to determine hold vs tap
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            // ====== interupt flavor
+            flavor = "tap-prefferred"; // blanced = 
+            // ====== behavior bindings
+            bindings = <&kp>, <&sk LSHIFT>;
         };
 
         /*
