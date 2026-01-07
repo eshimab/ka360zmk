@@ -790,28 +790,28 @@
     macros {
 
         mc_sk_ctrl: mc_sk_ctrl {
-            label = "MC_SK_CTRL";
+            //label = "MC_SK_CTRL";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LCTRL>;
         };
 
         mc_sk_gui: mc_sk_gui {
-            label = "MC_SK_GUI";
+            //label = "MC_SK_GUI";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LGUI>;
         };
 
         mc_sk_shift: mc_sk_shift {
-            label = "MC_SK_SHIFT";
+            //label = "MC_SK_SHIFT";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT>;
         };
 
         mc_sk_alt: mc_sk_alt {
-            label = "MC_SK_ALT";
+            //label = "MC_SK_ALT";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LALT>;
