@@ -36,6 +36,7 @@
             bindings = <&kp>, <&kp>;
         };
 
+        /*
         v_EXCL: v_EXCL {
             compatible = "zmk,behavior-mod-morph";
             label = "V_EXCL";
@@ -44,6 +45,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        
 
         v_AT: v_AT {
             compatible = "zmk,behavior-mod-morph";
@@ -125,7 +127,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
+        */
         v_COLON: v_COLON {
             compatible = "zmk,behavior-mod-morph";
             label = "COLON";
