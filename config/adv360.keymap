@@ -127,7 +127,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        */
         v_COLON: v_COLON {
             compatible = "zmk,behavior-mod-morph";
             label = "COLON";
@@ -154,7 +153,8 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
+        */
+    
         v_under_n1: v_under_n1 {
             compatible = "zmk,behavior-mod-morph";
             label = "V_UNDER_N1";
