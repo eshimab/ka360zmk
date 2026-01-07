@@ -27,9 +27,11 @@
     #include "version.dtsi"
 
         hm: homerow_mods {
+            // config
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
+            // timing properties
             tapping-term-ms = <200>;
             quick_tap_ms = <175>;
             flavor = "tap-preferred";
@@ -37,12 +39,13 @@
         };
 
         hm_ctrl: homerow_mods_ctrl {
-            compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_CTRL";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            // timing properties
+            tapping-term-ms = <100>; // time to determine hold vs tap
             quick_tap_ms = <175>;
-            flavor = "tap-preferred";
+            flavor = "tap-prefferred"; // blanced = 
             bindings = <&kp>, <&sk LCTRL>;
         };
 
