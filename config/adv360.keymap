@@ -24,7 +24,7 @@
 / {
     behaviors {
         #include "macros.dtsi"
-    #include "version.dtsi"
+        #include "version.dtsi"
 
         hm: homerow_mods {
             label = "HOMEROW_MODS";
@@ -56,9 +56,9 @@
             //retro-tap; // defaut: not set (false) | tap on release if not interupted
         };
 
-        /*
-        hm_ctrl: homerow_mods_ctrl {
-            label = "HOMEROW_MODS_CTRL";
+        
+        hm_sk_ctrl: homerow_sk_ctrl {
+            label = "HOMEROW_SK_CTRL";
             // ====== dont edit
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -69,11 +69,11 @@
             // ====== interupt flavor
             flavor = "tap-prefferred"; // blanced = 
             // ====== behavior bindings
-            bindings = <&kp>, <&kp>;
+            bindings = <&mc_sk_ctrl>, <&kp>;
         };
-
-        hm_gui: homerow_mods_gui {
-            label = "HOMEROW_MODS_GUI";
+        
+        hm_sk_gui: homerow_sk_gui {
+            label = "HOMEROW_SK_GUI";
             // ====== dont edit
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -84,11 +84,11 @@
             // ====== interupt flavor
             flavor = "tap-prefferred"; // 
             // ====== behavior bindings
-            bindings = <&kp>, <&kp>; 
+            bindings = <&mc_sk_gui>, <&kp>; 
         };
 
-        hm_shift: homerow_mods_shift {
-            label = "HOMEROW_MODS_SHIFT";
+        hm_sk_shift: homerow_sk_shift {
+            label = "HOMEROW_SK_SHIFT";
             // ====== dont edit
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -99,9 +99,24 @@
             // ====== interupt flavor
             flavor = "tap-prefferred"; // blanced = 
             // ====== behavior bindings
-            bindings = <&kp>, <&kp>;
+            bindings = <&mc_sk_shift>, <&kp>;
         };
-        */
+
+        hm_sk_alt: homerow_sk_alt {
+            label = "HOMEROW_SK_ALT";
+            // ====== dont edit
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            // ====== timing properties
+            tapping-term-ms = <200>; // time to determine hold vs tap
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            // ====== interupt flavor
+            flavor = "tap-prefferred"; // blanced = 
+            // ====== behavior bindings
+            bindings = <&mc_sk_alt>, <&kp>;
+        };
+        
         /*
         v_EXCL: v_EXCL {
             compatible = "zmk,behavior-mod-morph";
@@ -773,13 +788,35 @@
     };
 
     macros {
-        new_macro: new_macro {
+
+        mc_sk_ctrl: mc_sk_ctrl {
+            label = "MC_SK_CTRL";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LCTRL>, <&macro_press>;
-
-            label = "NEW_MACRO";
+            bindings = <&sk LCTRL>;
         };
+
+        mc_sk_gui: mc_sk_gui {
+            label = "MC_SK_GUI";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LGUI>;
+        };
+
+        mc_sk_shift: mc_sk_shift {
+            label = "MC_SK_SHIFT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT>;
+        };
+
+        mc_sk_alt: mc_sk_alt {
+            label = "MC_SK_ALT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LALT>;
+        };
+
     };
 
     keymap {
