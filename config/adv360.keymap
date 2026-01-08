@@ -29,7 +29,7 @@
         hm: homerow_mods {
             label = "HOMEROW_MODS";
 
-            // ====== dont edit
+            // ====== dont edit ok
 
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
