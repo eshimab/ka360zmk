@@ -514,7 +514,7 @@
         v_qmark_at: v_qmark_at {
             compatible = "zmk,behavior-mod-morph";
             label = "V_QMARK_AT";
-            bindings = <&kp SLASH>, <&kp AT>;
+            bindings = <&kp QUESTION>, <&kp AT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
