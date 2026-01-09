@@ -108,7 +108,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
-            bindings = <&mc_sk_ctrl>, <&v_sqt_semi>;
+            bindings = <&mc_sk_ctrl>, <&v_qmark_at>;
         };
 
         hm_sk_ctrl_v_amp: homerow_sk_ctrl_v_amp {
