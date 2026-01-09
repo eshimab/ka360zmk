@@ -58,86 +58,101 @@
 
         hm_sk_ctrl: homerow_sk_ctrl {
             label = "HOMEROW_SK_CTRL";
-
-            // ====== dont edit
-
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-
-            // ====== timing properties
-
             tapping-term-ms = <185>; // time to determine hold vs tap
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
-            // ====== interupt flavor
-
             flavor = "tap-preferred"; // blanced = 
-            // ====== behavior bindings
-
             bindings = <&mc_sk_ctrl>, <&kp>;
         };
 
         hm_sk_gui: homerow_sk_gui {
             label = "HOMEROW_SK_GUI";
-
-            // ====== dont edit
-
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-
-            // ====== timing properties
-
             tapping-term-ms = <175>; // time to determine hold vs tap
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
-            // ====== interupt flavor
-
             flavor = "tap-preferred"; // 
-            // ====== behavior bindings
-
             bindings = <&mc_sk_gui>, <&kp>;
         };
 
         hm_sk_shift: homerow_sk_shift {
             label = "HOMEROW_SK_SHIFT";
-
-            // ====== dont edit
-
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-
-            // ====== timing properties
-
             tapping-term-ms = <185>; // time to determine hold vs tap
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
-            // ====== interupt flavor
-
             flavor = "tap-preferred"; // blanced = 
-            // ====== behavior bindings
-
             bindings = <&mc_sk_shift>, <&kp>;
         };
 
         hm_sk_alt: homerow_sk_alt {
             label = "HOMEROW_SK_ALT";
-
-            // ====== dont edit
-
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-
-            // ====== timing properties
-
             tapping-term-ms = <185>; // time to determine hold vs tap
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
-            // ====== interupt flavor
-
             flavor = "tap-preferred"; // blanced = 
-            // ====== behavior bindings
-
             bindings = <&mc_sk_alt>, <&kp>;
+        };
+
+        hm_sk_ctrl_v_qmark: homerow_sk_ctrl_v_qmark {
+            label = "HOMEROW_SK_CTRL_V_QMARK";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <185>; // time to determine hold vs tap
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; // blanced = 
+            bindings = <&mc_sk_ctrl>, <&v_sqt_semi>;
+        };
+
+        hm_sk_ctrl_v_amp: homerow_sk_ctrl_v_amp {
+            label = "HOMEROW_SK_CTRL_V_AMP";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <185>; // time to determine hold vs tap
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; // blanced = 
+            bindings = <&mc_sk_ctrl>, <&v_amp_dollar>;
+        };
+
+        hm_sk_gui_grave: homerow_sk_gui_grave {
+            label = "HOMEROW_SK_GUI_GRAVE";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>; // time to determine hold vs tap
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; // 
+            bindings = <&mc_sk_gui>, <&v_grave_pct>;
+        };
+
+        hm_sk_gui_pipe: homerow_sk_gui_pipe {
+            label = "HOMEROW_SK_GUI_PIPE";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>; // time to determine hold vs tap
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; // 
+            bindings = <&mc_sk_gui>, <&v_pipe_carat>;
+        };
+
+        hm_sk_alt_sqt: homerow_sk_alt_sqt {
+            label = "HOMEROW_SK_ALT_SQT";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <185>; // time to determine hold vs tap
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; // blanced = 
+            bindings = <&mc_sk_alt>, <&v_sqt_tilde>;
         };
 
         /*
