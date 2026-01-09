@@ -597,10 +597,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_P_tilde: v_P_tilde {
+        v_sqt_tilde: v_sqt_tilde {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_P_TILDE";
-            bindings = <&kp EXCL>, <&kp TILDE>;
+            label = "V_SQT_TILDE";
+            bindings = <&kp SQT>, <&kp TILDE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -913,11 +913,11 @@
 
         L_nvimQW {
             bindings = <
-&v_plus_n0            &v_under_n1  &v_eq_n2          &v_Lbrc_n3      &v_Lpar_n4       &v_Lbrk_n5      &trans                                                      &trans  &v_Rbrk_n6      &v_Rpar_n7       &v_Rbrc_n8      &v_colon_n9       &v_hash_n0  &mc_rcmdx2
-&v_minus_excl         &kp Q        &hm_sk_shift 0 W  &hm_sk_gui 0 E  &hm_sk_ctrl 0 R  &hm_sk_alt 0 T  &none                                                       &none   &hm_sk_alt 0 Y  &hm_sk_ctrl 0 U  &hm_sk_gui 0 I  &hm_sk_shift 0 O  &kp P       &mc_spc_shift
-&v_dqt_astrk          &kp A        &kp S             &kp D           &kp F            &kp G           &none   &kp LEFT  &kp RIGHT        &kp DOWN         &kp UP  &none   &kp H           &kp J            &kp K           &kp L             &kp P       &sk RGUI
-&td_Lshift_capswords  &kp Z        &kp X             &kp C           &kp V            &kp B                             &td_nums_fn      &td_nums_fn                      &kp N           &kp M            &kp COMMA       &kp PERIOD        &none       &sk RG(RSHIFT)
-&v_sqt_semi           &v_P_tilde   &v_qmark_at       &v_grave_pct    &v_slash_bslash                  &trans  &kp ESC   &kp TAB          &td_rshift_rcmd  &trans  &trans                  &kp HASH         &v_pipe_carat   &v_amp_dollar     &none       &sk RC(RSHIFT)
+&v_plus_n0            &v_under_n1   &v_eq_n2          &v_Lbrc_n3      &v_Lpar_n4       &v_Lbrk_n5      &trans                                                      &trans  &v_Rbrk_n6      &v_Rpar_n7       &v_Rbrc_n8      &v_colon_n9       &v_hash_n0  &mc_rcmdx2
+&v_minus_excl         &kp Q         &hm_sk_shift 0 W  &hm_sk_gui 0 E  &hm_sk_ctrl 0 R  &hm_sk_alt 0 T  &none                                                       &none   &hm_sk_alt 0 Y  &hm_sk_ctrl 0 U  &hm_sk_gui 0 I  &hm_sk_shift 0 O  &kp P       &mc_spc_shift
+&v_dqt_astrk          &kp A         &kp S             &kp D           &kp F            &kp G           &none   &kp LEFT  &kp RIGHT        &kp DOWN         &kp UP  &none   &kp H           &kp J            &kp K           &kp L             &kp SQT     &kp SQT
+&td_Lshift_capswords  &kp Z         &kp X             &kp C           &kp V            &kp B                             &td_nums_fn      &td_nums_fn                      &kp N           &kp M            &kp COMMA       &kp PERIOD        &none       &sk RSHIFT
+&v_sqt_semi           &v_sqt_tilde  &v_qmark_at       &v_grave_pct    &v_slash_bslash                  &trans  &kp ESC   &kp TAB          &td_rshift_rcmd  &trans  &trans                  &kp HASH         &v_pipe_carat   &v_amp_dollar     &none       &sk RC(RSHIFT)
             >;
         };
 
