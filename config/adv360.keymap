@@ -317,19 +317,19 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_hash_n0: v_hash_n0 {
+        v_semi_n0: v_semi_n0 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_HASH_N0";
-            bindings = <&kp HASH>, <&kp N0>;
+            label = "V_SEMI_N0";
+            bindings = <&kp SEMICOLON>, <&kp N0>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        n_n0_hash: n_n0_hash {
+        n_n0_semi: n_n0_semi {
             compatible = "zmk,behavior-mod-morph";
-            label = "N_N0_HASH";
-            bindings = <&kp N0>, <&kp HASH>;
+            label = "N_N0_SEMI";
+            bindings = <&kp N0>, <&kp SEMI>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -799,7 +799,7 @@
 
         L_nvimGR {
             bindings = <
-&kp GRAVE             &v_under_n1  &v_eq_n2       &v_Lbrc_n3  &v_Lpar_n4  &v_Lbrk_n5  &trans                                                                       &trans             &v_Rbrk_n6      &v_Rpar_n7    &v_Rbrc_n8     &v_colon_n9    &v_hash_n0     &none
+&kp GRAVE             &v_under_n1  &v_eq_n2       &v_Lbrc_n3  &v_Lpar_n4  &v_Lbrk_n5  &trans                                                                       &trans             &v_Rbrk_n6      &v_Rpar_n7    &v_Rbrc_n8     &v_colon_n9    &v_semi_n0     &none
 &kp ASTRK             &kp B        &kp L          &kp D       &kp W       &kp Z       &sl 7                                                                        &sl 7              &g_quote_under  &kp F         &kp O          &kp U          &kp J          &kp SEMI
 &kp DOUBLE_QUOTES     &kp N        &kp R          &kp T       &kp S       &kp G       &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &kp Y           &kp H         &kp A          &kp E          &kp I          &g_comma_qmark
 &td_Lshift_capswords  &kp Q        &kp X          &kp M       &kp C       &kp V                                   &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &kp K           &kp P         &kp DOT        &g_minus_dblq  &g_slash_less  &td_Rshift_Ralt
@@ -809,7 +809,7 @@
 
         L_nvimQW {
             bindings = <
-&v_plus_n0            &v_under_n1         &v_eq_n2                 &v_Lbrc_n3            &v_Lpar_n4       &v_Lbrk_n5  &trans                                                      &trans  &v_Rbrk_n6  &v_Rpar_n7  &v_Rbrc_n8           &v_colon_n9            &v_hash_n0  &mc_rcmdx2
+&v_plus_n0            &v_under_n1         &v_eq_n2                 &v_Lbrc_n3            &v_Lpar_n4       &v_Lbrk_n5  &trans                                                      &trans  &v_Rbrk_n6  &v_Rpar_n7  &v_Rbrc_n8           &v_colon_n9            &v_semi_n0  &mc_rcmdx2
 &v_minus_excl         &kp Q               &kp W                    &kp E                 &kp R            &kp T       &none                                                       &none   &kp Y       &kp U       &kp I                &kp O                  &kp P       &sk LEFT_GUI
 &v_dqt_astrk          &kp A               &kp S                    &kp D                 &kp F            &kp G       &none   &kp LEFT  &kp RIGHT        &kp DOWN         &kp UP  &none   &kp H       &kp J       &kp K                &kp L                  &kp SQT     &kp SQT
 &td_Lshift_capswords  &kp Z               &kp X                    &kp C                 &kp V            &kp B                         &td_nums_fn      &td_nums_fn                      &kp N       &kp M       &kp COMMA            &kp PERIOD             &none       &sk RSHIFT
@@ -819,7 +819,7 @@
 
         L_nvimNum {
             bindings = <
-&n_n0_plus  &n_n1_under  &n_n2_eq  &n_n3_Lbrc  &n_n4_Lpar  &n_n5_Lbrk  &trans                                      &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_hash  &trans
+&n_n0_plus  &n_n1_under  &n_n2_eq  &n_n3_Lbrc  &n_n4_Lpar  &n_n5_Lbrk  &trans                                      &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_semi  &trans
 &trans      &trans       &trans    &trans      &trans      &trans      &trans                                      &trans  &trans      &trans      &trans      &trans       &trans      &trans
 &trans      &trans       &trans    &trans      &trans      &trans      &trans  &trans  &trans      &trans  &trans  &trans  &trans      &trans      &trans      &trans       &trans      &trans
 &trans      &trans       &trans    &trans      &trans      &trans                      &tog 6      &tog 6                  &trans      &trans      &trans      &trans       &trans      &trans
