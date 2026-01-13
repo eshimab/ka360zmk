@@ -38,7 +38,7 @@
 
             tapping-term-ms = <200>; // hold time, this needs to be largest timing prop
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             // ====== interupt flavor
 
             flavor = "tap-preferred";
@@ -70,7 +70,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <185>; // time to determine hold vs tap
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
             bindings = <&mcskq_lctrl>, <&kp>;
         };
@@ -81,7 +81,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>; // time to determine hold vs tap
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // 
             bindings = <&mcskq_lgui>, <&kp>;
         };
@@ -92,7 +92,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <185>; // time to determine hold vs tap
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
             bindings = <&mcskq_lshift>, <&kp>;
         };
@@ -103,7 +103,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <185>; // time to determine hold vs tap
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
             bindings = <&mcskq_lalt>, <&kp>;
         };
@@ -114,7 +114,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <185>; // time to determine hold vs tap
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
             bindings = <&mcskq_lalt>, <&v61>;
         };
@@ -134,7 +134,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <185>; // time to determine hold vs tap
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
             bindings = <&mcskq_lctrl>, <&v62>;
         };
@@ -154,7 +154,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>; // time to determine hold vs tap
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // 
             bindings = <&mcskq_lgui>, <&v63>;
         };
@@ -174,7 +174,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>; // time to determine hold vs tap
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // 
             bindings = <&mcskq_lshift>, <&v64>;
         };
@@ -194,7 +194,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>; // time to determine hold vs tap
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // 
             bindings = <&mcskq_rshift>, <&v71>;
         };
@@ -214,7 +214,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>; // time to determine hold vs tap
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // 
             bindings = <&mcskq_rgui>, <&v72>;
         };
@@ -234,7 +234,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <185>; // time to determine hold vs tap
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
             bindings = <&mcskq_rctrl>, <&v73>;
         };
@@ -254,7 +254,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <185>; // time to determine hold vs tap
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
             bindings = <&mcskq_ralt>, <&v74>;
         };
