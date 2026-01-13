@@ -57,12 +57,13 @@
         };
 
         skq: sticky_key_quick_release {
-          compatible = "zmk,behavior-sticky-key";
-          #binding-cells = <1>;
-          bindings = <&kp>;
-          release-after-ms = <500>;
-          quick-release = false;
-          ignore-modifiers;
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <500>;
+            quick-release =
+            false;
+            ignore-modifiers;
         };
 
         hm_sk_ctrl: homerow_sk_ctrl {
@@ -124,6 +125,7 @@
             label = "V61";
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp GRAVE>, <&kp TILDE>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -143,6 +145,7 @@
             label = "V62";
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp QUESTION>, <&kp AT>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -162,6 +165,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V63";
             bindings = <&kp MINUS>, <&kp PERCENT>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -181,6 +185,7 @@
             label = "V72";
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp PIPE>, <&kp CARET>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -200,6 +205,7 @@
             label = "V73";
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp AMPS>, <&kp DOLLAR>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -219,6 +225,7 @@
             label = "V74";
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp GRAVE>, <&kp TILDE>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -765,7 +772,6 @@
     };
 
     macros {
-
         mcskq_lctrl: mcskq_lctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -884,11 +890,11 @@
 
         L_nvimQW {
             bindings = <
-&v_plus_n0            &v_under_n1               &v_eq_n2                 &v_Lbrc_n3            &v_Lpar_n4       &v_Lbrk_n5  &trans                                                                             &trans  &v_Rbrk_n6  &v_Rpar_n7  &v_Rbrc_n8           &v_colon_n9            &v_minus_n0  &mc_rcmdx2
-&kp EXCL              &kp Q                     &kp W                    &kp E                 &kp R            &kp T       &none                                                                              &none   &kp Y       &kp U       &kp I                &kp O                  &kp P        &sk LEFT_GUI
-&v_dqt_astrk          &kp A                     &kp S                    &kp D                 &kp F            &kp G       &none   &kp LEFT  &kp RIGHT                        &kp DOWN                &kp UP  &none   &kp H       &kp J       &kp K                &kp L                  &kp SQT      &kp SEMICOLON
-&td_Lshift_capswords  &kp Z                     &kp X                    &kp C                 &kp V            &kp B                         &td_nums_fn                      &td_nums_fn                             &kp N       &kp M       &kp COMMA            &kp PERIOD             &v_qmark_x   &sk RSHIFT
-&v_semi_semi          &hm_sk_alt_grave 0 GRAVE  &hm_sk_ctrl_v_qmark 0 0  &hm_sk_gui_minus 0 0  &v_slash_bslash              &trans  &kp ESC   &ht_tab_mic_cmd RIGHT_GUI 0      &ht_tab_mic_cmd RGUI 0  &trans  &trans              &kp HASH    &hm_sk_gui_pipe 0 0  &hm_sk_ctrl_v_amp 0 0  &sk RALT     &sk LG(RIGHT_SHIFT)
+&v_plus_n0            &v_under_n1   &v_eq_n2      &v_Lbrc_n3    &v_Lpar_n4       &v_Lbrk_n5  &trans                                                                             &trans  &v_Rbrk_n6  &v_Rpar_n7  &v_Rbrc_n8    &v_colon_n9   &v_minus_n0   &mc_rcmdx2
+&kp EXCL              &kp Q         &kp W         &kp E         &kp R            &kp T       &none                                                                              &none   &kp Y       &kp U       &kp I         &kp O         &kp P         &sk LEFT_GUI
+&v_dqt_astrk          &kp A         &kp S         &kp D         &kp F            &kp G       &none   &kp LEFT  &kp RIGHT                        &kp DOWN                &kp UP  &none   &kp H       &kp J       &kp K         &kp L         &kp SQT       &kp SEMICOLON
+&td_Lshift_capswords  &kp Z         &kp X         &kp C         &kp V            &kp B                         &td_nums_fn                      &td_nums_fn                             &kp N       &kp M       &kp COMMA     &kp PERIOD    &v_qmark_x    &sk RSHIFT
+&v_semi_semi          &hmskq61 0 0  &hmskq62 0 0  &hmskq63 0 0  &v_slash_bslash              &trans  &kp ESC   &ht_tab_mic_cmd RIGHT_GUI 0      &ht_tab_mic_cmd RGUI 0  &trans  &trans              &kp HASH    &hmskq72 0 0  &hmskq73 0 0  &hmskq74 0 0  &sk LG(RIGHT_SHIFT)
             >;
         };
 
