@@ -56,6 +56,15 @@
             //retro-tap; // defaut: not set (false) | tap on release if not interupted
         };
 
+        skq: sticky_key_quick_release {
+          compatible = "zmk,behavior-sticky-key";
+          #binding-cells = <1>;
+          bindings = <&kp>;
+          release-after-ms = <500>;
+          quick-release = false;
+          ignore-modifiers;
+        };
+
         hm_sk_ctrl: homerow_sk_ctrl {
             label = "HOMEROW_SK_CTRL";
             compatible = "zmk,behavior-hold-tap";
@@ -64,7 +73,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
-            bindings = <&mc_sk_ctrl>, <&kp>;
+            bindings = <&mcskq_lctrl>, <&kp>;
         };
 
         hm_sk_gui: homerow_sk_gui {
@@ -75,7 +84,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // 
-            bindings = <&mc_sk_gui>, <&kp>;
+            bindings = <&mcskq_lgui>, <&kp>;
         };
 
         hm_sk_shift: homerow_sk_shift {
@@ -86,7 +95,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
-            bindings = <&mc_sk_shift>, <&kp>;
+            bindings = <&mcskq_lshift>, <&kp>;
         };
 
         hm_sk_alt: homerow_sk_alt {
@@ -97,62 +106,121 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
-            bindings = <&mc_sk_alt>, <&kp>;
+            bindings = <&mcskq_lalt>, <&kp>;
         };
 
-        hm_sk_ctrl_v_qmark: homerow_sk_ctrl_v_qmark {
-            label = "HOMEROW_SK_CTRL_V_QMARK";
+        hmskq61: hmskq61 {
+            label = "HMSKQ61";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <185>; // time to determine hold vs tap
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
-            bindings = <&mc_sk_ctrl>, <&v_qmark_at>;
+            bindings = <&mcskq_lalt>, <&v61>;
         };
 
-        hm_sk_ctrl_v_amp: homerow_sk_ctrl_v_amp {
-            label = "HOMEROW_SK_CTRL_V_AMP";
+        v61: v61 {
+            label = "V61";
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp GRAVE>, <&kp TILDE>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        hmskq62: hmskq62 {
+            label = "HMSKQ62";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <185>; // time to determine hold vs tap
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
-            bindings = <&mc_sk_ctrl>, <&v_amp_dollar>;
+            bindings = <&mcskq_lctrl>, <&v62>;
         };
 
-        hm_sk_gui_minus: homerow_sk_gui_grave {
-            label = "HOMEROW_SK_GUI_GRAVE";
+        v62: v62 {
+            label = "V62";
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp QUESTION>, <&kp AT>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        hmskq63: hmskq63 {
+            label = "HMSKQ63";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <175>; // time to determine hold vs tap
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // 
-            bindings = <&mc_sk_gui>, <&v_minus_pct>;
+            bindings = <&mcskq_lgui>, <&v63>;
         };
 
-        hm_sk_gui_pipe: homerow_sk_gui_pipe {
-            label = "HOMEROW_SK_GUI_PIPE";
+        v63: v63 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V63";
+            bindings = <&kp MINUS>, <&kp PERCENT>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        hmskq72: hmskq72 {
+            label = "HMSKQ72";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <175>; // time to determine hold vs tap
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // 
-            bindings = <&mc_sk_gui>, <&v_pipe_carat>;
+            bindings = <&mcskq_rgui>, <&v72>;
         };
 
-        hm_sk_alt_grave: homerow_sk_alt_sqt {
-            label = "HOMEROW_SK_ALT_SQT";
+        v72: v72 {
+            label = "V72";
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp PIPE>, <&kp CARET>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        hmskq73: hmskq73 {
+            label = "HMSKQ73";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <185>; // time to determine hold vs tap
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
-            bindings = <&mc_sk_alt>, <&kp>;
+            bindings = <&mcskq_rctrl>, <&v73>;
+        };
+
+        v73: v73 {
+            label = "V73";
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp AMPS>, <&kp DOLLAR>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        hmskq74: hmskq74 {
+            label = "HMSKQ74";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <185>; // time to determine hold vs tap
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; // blanced = 
+            bindings = <&mcskq_ralt>, <&v74>;
+        };
+
+        v74: v74 {
+            label = "V74";
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp GRAVE>, <&kp TILDE>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         v_under_n1: v_under_n1 {
@@ -335,24 +403,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_amp_dollar: v_amp_dollar {
-            compatible = "zmk,behavior-mod-morph";
-            label = "V_AMP_DOLLAR";
-            bindings = <&kp AMPS>, <&kp DOLLAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        v_pipe_carat: v_pipe_carat {
-            compatible = "zmk,behavior-mod-morph";
-            label = "V_PIPE_CARAT";
-            bindings = <&kp PIPE>, <&kp CARET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         v_pct_tilde: v_pct_tilde {
             compatible = "zmk,behavior-mod-morph";
             label = "V_PCT_TILDE";
@@ -506,24 +556,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V_PLUS_N0";
             bindings = <&kp PLUS>, <&kp N0>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        v_qmark_at: v_qmark_at {
-            compatible = "zmk,behavior-mod-morph";
-            label = "V_QMARK_AT";
-            bindings = <&kp QUESTION>, <&kp AT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        v_minus_pct: v_minus_pct {
-            compatible = "zmk,behavior-mod-morph";
-            label = "V_MINUS_PCT";
-            bindings = <&kp MINUS>, <&kp PERCENT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -733,36 +765,53 @@
     };
 
     macros {
-        mc_sk_ctrl: mc_sk_ctrl {
-            //label = "MC_SK_CTRL";
 
+        mcskq_lctrl: mcskq_lctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LCTRL>;
+            bindings = <&skq LCTRL>;
         };
 
-        mc_sk_gui: mc_sk_gui {
-            //label = "MC_SK_GUI";
-
+        mcskq_rctrl: mcskq_rctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LGUI>;
+            bindings = <&skq RCTRL>;
         };
 
-        mc_sk_shift: mc_sk_shift {
-            //label = "MC_SK_SHIFT";
-
+        mcskq_lgui: mcskq_lgui {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LSHIFT>;
+            bindings = <&skq LGUI>;
         };
 
-        mc_sk_alt: mc_sk_alt {
-            //label = "MC_SK_ALT";
-
+        mcskq_rgui: mcskq_rgui {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LALT>;
+            bindings = <&skq RGUI>;
+        };
+
+        mcskq_lshift: mcskq_lshift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&skq LSHIFT>;
+        };
+
+        mcskq_rshift: mcskq_rshift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&skq RSHIFT>;
+        };
+
+        mcskq_lalt: mcskq_lalt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&skq LALT>;
+        };
+
+        mcskq_ralt: mcskq_ralt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&skq RALT>;
         };
 
         mc_rcmdx2: mc_rcmdx2 {
