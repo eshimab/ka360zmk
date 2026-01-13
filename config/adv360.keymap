@@ -170,6 +170,44 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        hmskq64: hmskq64 {
+            label = "HMSKQ64";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>; // time to determine hold vs tap
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; // 
+            bindings = <&mcskq_lshift>, <&v64>;
+        };
+
+        v64: v64 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V64";
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        hmskq71: hmskq71 {
+            label = "HMSKQ71";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>; // time to determine hold vs tap
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; // 
+            bindings = <&mcskq_rshift>, <&v71>;
+        };
+
+        v71: v71 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V71";
+            bindings = <&kp HASH>, <&kp BACKSLASH>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         hmskq72: hmskq72 {
             label = "HMSKQ72";
             compatible = "zmk,behavior-hold-tap";
@@ -572,7 +610,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V_SLASH_BSLASH";
             bindings = <&kp SLASH>, <&kp BACKSLASH>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
