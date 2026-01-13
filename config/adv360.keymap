@@ -928,11 +928,11 @@
 
         L_nvimQW {
             bindings = <
-&v_plus_n0            &v_under_n1   &v_eq_n2      &v_Lbrc_n3    &v_Lpar_n4       &v_Lbrk_n5  &trans                                                                             &trans  &v_Rbrk_n6  &v_Rpar_n7  &v_Rbrc_n8    &v_colon_n9   &v_minus_n0   &mc_rcmdx2
-&kp EXCL              &kp Q         &kp W         &kp E         &kp R            &kp T       &none                                                                              &none   &kp Y       &kp U       &kp I         &kp O         &kp P         &sk LEFT_GUI
-&v_dqt_astrk          &kp A         &kp S         &kp D         &kp F            &kp G       &none   &kp LEFT  &kp RIGHT                        &kp DOWN                &kp UP  &none   &kp H       &kp J       &kp K         &kp L         &kp SQT       &kp SEMICOLON
-&td_Lshift_capswords  &kp Z         &kp X         &kp C         &kp V            &kp B                         &td_nums_fn                      &td_nums_fn                             &kp N       &kp M       &kp COMMA     &kp PERIOD    &v_qmark_x    &sk RSHIFT
-&v_semi_semi          &hmskq61 0 0  &hmskq62 0 0  &hmskq63 0 0  &v_slash_bslash              &trans  &kp ESC   &ht_tab_mic_cmd RIGHT_GUI 0      &ht_tab_mic_cmd RGUI 0  &trans  &trans              &kp HASH    &hmskq72 0 0  &hmskq73 0 0  &hmskq74 0 0  &sk LG(RIGHT_SHIFT)
+&v_plus_n0            &v_under_n1   &v_eq_n2      &v_Lbrc_n3    &v_Lpar_n4    &v_Lbrk_n5  &trans                                                                             &trans  &v_Rbrk_n6  &v_Rpar_n7    &v_Rbrc_n8    &v_colon_n9   &v_minus_n0   &mc_rcmdx2
+&kp EXCL              &kp Q         &kp W         &kp E         &kp R         &kp T       &none                                                                              &none   &kp Y       &kp U         &kp I         &kp O         &kp P         &sk LEFT_GUI
+&v_dqt_astrk          &kp A         &kp S         &kp D         &kp F         &kp G       &none   &kp LEFT  &kp RIGHT                        &kp DOWN                &kp UP  &none   &kp H       &kp J         &kp K         &kp L         &kp SQT       &kp SEMICOLON
+&td_Lshift_capswords  &kp Z         &kp X         &kp C         &kp V         &kp B                         &td_nums_fn                      &td_nums_fn                             &kp N       &kp M         &kp COMMA     &kp PERIOD    &v_qmark_x    &sk RSHIFT
+&v_semi_semi          &hmskq61 0 0  &hmskq62 0 0  &hmskq63 0 0  &hmskq64 0 0              &trans  &kp ESC   &ht_tab_mic_cmd RIGHT_GUI 0      &ht_tab_mic_cmd RGUI 0  &trans  &trans              &hmskq71 0 0  &hmskq72 0 0  &hmskq73 0 0  &hmskq74 0 0  &sk LG(RIGHT_SHIFT)
             >;
         };
 
