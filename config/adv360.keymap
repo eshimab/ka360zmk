@@ -61,7 +61,9 @@
             #binding-cells = <1>;
             bindings = <&kp>;
             release-after-ms = <500>;
+
             /delete-property/ quick-release;
+
             ignore-modifiers;
         };
 
@@ -766,7 +768,6 @@
     };
 
     macros {
-
         mc_rcmdx2: mc_rcmdx2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -794,7 +795,6 @@
 &kp LCTRL             &kp GRAVE  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS          &kp BSPC       &kp ESCAPE  &td_lshift_lcmd      &td_Rctrl_capsnums  &kp ENTER  &kp SPACE              &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RBKT  &kp RCTRL
             >;
         };
-
 
         layer_1 {
             bindings = <
@@ -838,11 +838,11 @@
 
         L_nvimQW {
             bindings = <
-&v_plus_n0            &v_under_n1   &v_eq_n2      &v_Lbrc_n3    &v_Lpar_n4    &v_Lbrk_n5  &trans                                                                             &trans  &v_Rbrk_n6  &v_Rpar_n7    &v_Rbrc_n8    &v_colon_n9   &v_minus_n0   &mc_rcmdx2
-&kp EXCL              &kp Q         &kp W         &kp E         &kp R         &kp T       &none                                                                              &none   &kp Y       &kp U         &kp I         &kp O         &kp P         &sk LEFT_GUI
-&v_dqt_astrk          &kp A         &kp S         &kp D         &kp F         &kp G       &none   &kp LEFT  &kp RIGHT                        &kp DOWN                &kp UP  &none   &kp H       &kp J         &kp K         &kp L         &kp SQT       &kp SEMICOLON
-&td_Lshift_capswords  &kp Z         &kp X         &kp C         &kp V         &kp B                         &td_nums_fn                      &td_nums_fn                             &kp N       &kp M         &kp COMMA     &kp PERIOD    &v_qmark_x    &sk RSHIFT
-&v_semi_semi          &htmod61 LSHIFT 0  &htmod62 LCTRL 0  &htmod63 LGUI 0  &htmod64 LALT 0              &trans  &kp ESC   &ht_tab_mic_cmd RIGHT_GUI 0      &ht_tab_mic_cmd RGUI 0  &trans  &trans              &htmod71 RALT 0  &htmod72 RGUI 0  &htmod73 RCTRL 0  &htmod74 RSHIFT 0  &sk LG(RIGHT_SHIFT)
+&v_plus_n0            &v_under_n1        &v_eq_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                                                  &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8       &v_colon_n9       &v_minus_n0        &mc_rcmdx2
+&kp EXCL              &kp Q              &kp W             &kp E            &kp R            &kp T       &none                                                                                   &none      &kp Y       &kp U            &kp I            &kp O             &kp P              &sk LEFT_GUI
+&v_dqt_astrk          &kp A              &kp S             &kp D            &kp F            &kp G       &none     &kp LEFT  &kp RIGHT                        &kp DOWN                &kp UP     &none      &kp H       &kp J            &kp K            &kp L             &kp SQT            &kp SEMICOLON
+&td_Lshift_capswords  &kp Z              &kp X             &kp C            &kp V            &kp B                           &td_nums_fn                      &td_nums_fn                                   &kp N       &kp M            &kp COMMA        &kp PERIOD        &v_qmark_x         &sk RSHIFT
+&v_semi_semi          &htmod61 LSHIFT 0  &htmod62 LCTRL 0  &htmod63 LGUI 0  &htmod64 LALT 0              &kp BSPC  &kp ESC   &ht_tab_mic_cmd RIGHT_GUI 0      &ht_tab_mic_cmd RGUI 0  &kp ENTER  &kp SPACE              &htmod71 RALT 0  &htmod72 RGUI 0  &htmod73 RCTRL 0  &htmod74 RSHIFT 0  &sk LG(RIGHT_SHIFT)
             >;
         };
 
