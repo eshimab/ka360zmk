@@ -767,7 +767,6 @@
 
     macros {
 
-
         mc_rcmdx2: mc_rcmdx2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -794,6 +793,7 @@
 &td_Lshift_capswords  &kp Z      &kp X           &kp C             &kp V                 &kp B                              &td_Lgui_Lalt        &td_Rgui_Ralt                                 &kp N   &kp M                  &kp COMMA          &kp DOT          &kp FSLH  &td_Lshift_capswords
 &kp LCTRL             &kp GRAVE  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS          &kp BSPC       &kp ESCAPE  &td_lshift_lcmd      &td_Rctrl_capsnums  &kp ENTER  &kp SPACE              &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RBKT  &kp RCTRL
             >;
+        };
 
 
         layer_1 {
