@@ -1,11 +1,74 @@
 
+<!-- vim: ts=4 sw=4 sts=4 et -->
+
 # Keymapping for the Kinesis Advantage 360 Pro with ZMK
 
-<!-- vim: ts=4 sw=4 sts=4 et -->
+-   the kineses advantage 360 pro (henceforth "the keyboard" or "the kb") is a split keyboard with left and right sides
+
+## Syntax Hints
+
+-   to remove a property that defaults to enabled, prepend the property with `/delete-property/`
+-   here is an example of property disabling with sticky key (`&sk`), which by default has  `ignore-modifiers` enabled
+```
+
+&sk {
+    release-after-ms = <2000>;
+    // quick-release; // property default is disabled if not explicitly listed
+    ignore-modifiers; // property default is enabled 
+}
+
+&sk {
+    release-after-ms = <2000>;
+    quick-release; // property is now enabled
+    /delete-property/ ignore-modifiers; // property is now disabled
+}
+
+```
+
+## Behaviors
+
+### Hold-Tap 
+
+-   here is an example hold-tap behavior with all properties listed
+
+```
+hm: homerow_mods {
+    label = "HOMEROW_MODS";
+    // ====== dont edit ok
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    // ====== timing properties
+    tapping-term-ms = <200>; // hold time, this needs to be largest timing prop
+    quick-tap-ms = <150>;
+    require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+    // ====== interupt flavor
+    flavor = "tap-preferred";
+    // ====== behavior bindings
+    bindings = <&kp>, <&kp>; // the first binding is the hold behavior
+    // ====== positional hold-tap
+    hold-trigger-key-positions = <1 2 3>; // default: not set 
+    hold-trigger-on-release; // default: not set (false)
+    // ====== special behaviors
+    hold-while-undecided; // defaut: not set (false) | holds modifier immediately on press (bad for fast typing)
+    hold-while-undecided-linger; // defaut: not set (false) | continues hold during sticky key transition (no effect on typing speed)
+    retro-tap; // defaut: not set (false) | tap on release if not interupted
+};
+
+```
+
+#### Hold-Tap Limitations
+
+-   the hold-tap behavior has some limitations 
+    -   the hold behavior cannot roll directly into a &sk modifier
+    -   you can get around this by putting a &sk inside of a macro
+        -   but that will prevent stacking &sk modifiers
+
+
+## Advantage 360 Details
 
 ### Key Positions/Numbers
 
--   the kineses advantage 360 pro (henceforth "keyboard" or "kb") is a split keyboard with left and right sides
+-   the kineses advantage 360 pro is a split keyboard with left and right sides
 -   for the purposes of zmk, the key positions/numbers are in the code block below
 -   the keyboard has thumb clusters, one on each side. 
     -   the left thumb cluster contains key numbers 35, 36, 52, 65, 66, 67
@@ -25,32 +88,3 @@ bindings = <
 };
 ```
 
-### Hold-Tap 
-
--   here is an example hold-tap behavior with all properties listed
-
-```
-
-hm: homerow_mods {
-    label = "HOMEROW_MODS";
-    // ====== dont edit ok
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    // ====== timing properties
-    tapping-term-ms = <200>; // hold time, this needs to be largest timing prop
-    quick-tap-ms = <150>;
-    require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
-    // ====== interupt flavor
-    flavor = "tap-preferred";
-    // ====== behavior bindings
-    bindings = <&kp>, <&kp>; // the first binding is the hold behavior
-    // ====== positional hold-tap
-    //hold-trigger-key-positions = <1 2 3>; // default: not set 
-    //hold-trigger-on-release; // default: not set (false)
-    // ====== special behaviors
-    //hold-while-undecided; // defaut: not set (false) | holds modifier immediately on press (bad for fast typing)
-    //hold-while-undecided-linger; // defaut: not set (false) | continues hold during sticky key transition (no effect on typing speed)
-    //retro-tap; // defaut: not set (false) | tap on release if not interupted
-};
-
-```
