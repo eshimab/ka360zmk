@@ -842,7 +842,7 @@
 &kp EXCL              &kp Q         &kp W         &kp E         &kp R         &kp T       &none                                                                              &none   &kp Y       &kp U         &kp I         &kp O         &kp P         &sk LEFT_GUI
 &v_dqt_astrk          &kp A         &kp S         &kp D         &kp F         &kp G       &none   &kp LEFT  &kp RIGHT                        &kp DOWN                &kp UP  &none   &kp H       &kp J         &kp K         &kp L         &kp SQT       &kp SEMICOLON
 &td_Lshift_capswords  &kp Z         &kp X         &kp C         &kp V         &kp B                         &td_nums_fn                      &td_nums_fn                             &kp N       &kp M         &kp COMMA     &kp PERIOD    &v_qmark_x    &sk RSHIFT
-&v_semi_semi          &htmod61 LALT 0  &htmod62 LCTRL 0  &htmod63 LGUI 0  &htmod64 LSHIFT 0              &trans  &kp ESC   &ht_tab_mic_cmd RIGHT_GUI 0      &ht_tab_mic_cmd RGUI 0  &trans  &trans              &htmod71 RSHIFT 0  &htmod72 RGUI 0  &htmod73 RCTRL 0  &htmod74 RALT 0  &sk LG(RIGHT_SHIFT)
+&v_semi_semi          &htmod61 LSHIFT 0  &htmod62 LCTRL 0  &htmod63 LGUI 0  &htmod64 LALT 0              &trans  &kp ESC   &ht_tab_mic_cmd RIGHT_GUI 0      &ht_tab_mic_cmd RGUI 0  &trans  &trans              &htmod71 RALT 0  &htmod72 RGUI 0  &htmod73 RCTRL 0  &htmod74 RSHIFT 0  &sk LG(RIGHT_SHIFT)
             >;
         };
 
