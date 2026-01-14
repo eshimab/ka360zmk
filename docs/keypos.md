@@ -1,6 +1,7 @@
 
+# Keymapping for the Kinesis Advantage 360 Pro with ZMK
 
-
+<!-- vim: ts=4 sw=4 sts=4 et -->
 
 ### Key Positions/Numbers
 
@@ -24,3 +25,32 @@ bindings = <
 };
 ```
 
+### Hold-Tap 
+
+-   here is an example hold-tap behavior with all properties listed
+
+```
+
+hm: homerow_mods {
+    label = "HOMEROW_MODS";
+    // ====== dont edit ok
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    // ====== timing properties
+    tapping-term-ms = <200>; // hold time, this needs to be largest timing prop
+    quick-tap-ms = <150>;
+    require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+    // ====== interupt flavor
+    flavor = "tap-preferred";
+    // ====== behavior bindings
+    bindings = <&kp>, <&kp>; // the first binding is the hold behavior
+    // ====== positional hold-tap
+    //hold-trigger-key-positions = <1 2 3>; // default: not set 
+    //hold-trigger-on-release; // default: not set (false)
+    // ====== special behaviors
+    //hold-while-undecided; // defaut: not set (false) | holds modifier immediately on press (bad for fast typing)
+    //hold-while-undecided-linger; // defaut: not set (false) | continues hold during sticky key transition (no effect on typing speed)
+    //retro-tap; // defaut: not set (false) | tap on release if not interupted
+};
+
+```
