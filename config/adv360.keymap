@@ -216,7 +216,8 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // 
-            bindings = <&mcskq_rgui>, <&v72>;
+            //bindings = <&mcskq_rgui>, <&v72>;
+            bindings = <&skq RGUI>, <&v72>;
         };
 
         v72: v72 {
@@ -236,7 +237,8 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced = 
-            bindings = <&mcskq_rctrl>, <&v73>;
+            //bindings = <&mcskq_rctrl>, <&v73>;
+            bindings = <&skq RCTRL>, <&v73>;
         };
 
         v73: v73 {
