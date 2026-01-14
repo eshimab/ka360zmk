@@ -26,36 +26,6 @@
         #include "macros.dtsi"
         #include "version.dtsi"
 
-        hm: homerow_mods {
-            label = "HOMEROW_MODS";
-
-            // ====== dont edit ok
-
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-
-            // ====== timing properties
-
-            tapping-term-ms = <200>; // hold time, this needs to be largest timing prop
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
-            // ====== interupt flavor
-
-            flavor = "tap-preferred";
-
-            // ====== behavior bindings
-
-            bindings = <&kp>, <&kp>;
-
-            // ====== positional hold-tap
-            //hold-trigger-key-positions = <1 2 3>; // default: not set 
-            //hold-trigger-on-release; // default: not set (false)
-            // ====== special behaviors
-            //hold-while-undecided; // defaut: not set (false) | holds modifier immediately on press (bad for fast typing)
-            //hold-while-undecided-linger; // defaut: not set (false) | continues hold during sticky key transition (no effect on typing speed)
-            //retro-tap; // defaut: not set (false) | tap on release if not interupted
-        };
-
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
