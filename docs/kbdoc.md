@@ -75,6 +75,15 @@ skq: sticky_key_quick_release {
 
 ![tapping-term-ms example](img/zmk-hold-tap.svg)
 
+#### Hold-Tap Limitations
+-   the hold-tap behavior has some limitations 
+    -   the hold behavior cannot roll directly into a &sk modifier
+    -   you can get around this by putting a &sk inside of a macro
+        -   but that will prevent stacking &sk modifiers
+
+
+#### Hold-tap properties
+
 -   here is an example hold-tap behavior with all properties listed
 
 ```
@@ -110,7 +119,7 @@ hm: homerow_mods {
 
 ```
 
-#### Hold-Tap Interrupt Flavors
+#### Hold-Tap Interrupt `flavor`
 
 -   `hold-preferred` flavor triggers the hold behavior when the `tapping-term-ms` has expired or another key is pressed.
 -   `balanced` flavor will trigger the hold behavior when the `tapping-term-ms` has expired or another key is pressed and released while the hold-tap is held.
@@ -118,14 +127,6 @@ hm: homerow_mods {
 -   `tap-unless-interrupted` flavor triggers a hold behavior only when another key is pressed before tapping-term-ms has expired. It triggers the tap behavior in all other situations. Note that this flavor inverts the decision logic with respect to the tapping term.
 
 ![hold-tap flavors](img/zmk-hold-tap-flavors.svg)
-
-#### Hold-Tap Limitations
-
--   the hold-tap behavior has some limitations 
-    -   the hold behavior cannot roll directly into a &sk modifier
-    -   you can get around this by putting a &sk inside of a macro
-        -   but that will prevent stacking &sk modifiers
-
 
 
 
