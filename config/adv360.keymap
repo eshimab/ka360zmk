@@ -130,7 +130,9 @@
             #binding-cells = <1>;
             bindings = <&kp>;
             release-after-ms = <500>;
+
             //delete-property/ quick-release;
+
             lazy;
             ignore-modifiers;
         };
@@ -424,7 +426,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NUMS_FN";
             #binding-cells = <0>;
-            bindings = <&tog 6>, <&sl 7>;
+            bindings = <&tog 7>, <&sl 7>;
         };
 
         td_Lshift_capswords: td_Lshift_capswords {
@@ -473,7 +475,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MOD_QW_QR";
             #binding-cells = <0>;
-            bindings = <&sl 8>, <&tog 5>, <&tog 6>;
+            bindings = <&sl 8>, <&tog 6>, <&tog 7>;
         };
 
         td_caps_rcmd: td_caps_rcmd {
@@ -609,7 +611,6 @@
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
-
         mcskl_rgui: mc_skl_rgui {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -637,26 +638,28 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        combo_r_72x73 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <73 72>;
+            timeout-ms = <150>;
+            require-prior-idle-ms = <50>;
+            layers = <4>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
 &none                 &kp N1     &kp N2          &kp N3            &kp N4                &kp N5  &td_mod_QW_QR                                                                  &td_mod_QW_QR  &kp N6  &kp N7                 &kp N8             &kp N9           &kp N0    &kp BACKSLASH
-&kp TAB               &kp Q      &kp W           &kp E             &kp R                 &kp T   &mo 2                                                                          &mo 2          &kp Y   &kp U                  &kp I              &kp O            &kp P     &kp MINUS
+&kp TAB               &kp Q      &kp W           &kp E             &kp R                 &kp T   &tog 4                                                                         &mo 1          &kp Y   &kp U                  &kp I              &kp O            &kp P     &kp MINUS
 &kp ESC               &kp A      &kp S           &kp D             &kp F                 &kp G   &sk LGUI       &kp LEFT    &kp RIGHT            &kp DOWN            &kp UP     &sk RGUI       &kp H   &kp J                  &kp K              &kp L            &kp SEMI  &kp SQT
 &td_Lshift_capswords  &kp Z      &kp X           &kp C             &kp V                 &kp B                              &td_Lgui_Lalt        &td_Rgui_Ralt                                 &kp N   &kp M                  &kp COMMA          &kp DOT          &kp FSLH  &td_Lshift_capswords
 &kp LCTRL             &kp GRAVE  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS          &kp BSPC       &kp ESCAPE  &td_lshift_lcmd      &td_Rctrl_capsnums  &kp ENTER  &kp SPACE              &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RBKT  &kp RCTRL
-            >;
-        };
-
-        layer_1 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -690,6 +693,16 @@
             >;
         };
 
+        nvim_test {
+            bindings = <
+&v_astrk_n0           &v_under_n1        &v_eq_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                             &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8       &v_colon_n9       &v_minus_n0        &mc_rcmdx2
+&kp EXCL              &kp Q              &kp W             &kp E            &kp R            &kp T       &none                                                              &none      &kp Y       &kp U            &kp I            &kp O             &kp P              &kp HASH
+&v_dqt_astrk          &kp A              &kp S             &kp D            &kp F            &kp G       &none     &kp LEFT  &kp RIGHT             &kp DOWN      &kp UP     &none      &kp H       &kp J            &kp K            &kp L             &kp SQT            &kp SEMICOLON
+&td_Lshift_capswords  &kp Z              &kp X             &kp C            &kp V            &kp B                           &td_nums_fn           &td_nums_fn                         &kp N       &kp M            &kp COMMA        &kp PERIOD        &v_qmark_x         &sk RSHIFT
+&caps_word            &htmod61 LSHIFT 0  &htmod62 LCTRL 0  &htmod63 LGUI 0  &htmod64 LALT 0              &kp BSPC  &kp ESC   &mt LEFT_GUI TAB      &mt RGUI TAB  &kp ENTER  &kp SPACE              &htmod71 RALT 0  &htmod72 RGUI 0  &htmod73 RCTRL 0  &htmod74 RSHIFT 0  &sk LG(RIGHT_SHIFT)
+            >;
+        };
+
         L_nvimQW {
             bindings = <
 &v_astrk_n0           &v_under_n1        &v_eq_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                             &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8       &v_colon_n9       &v_minus_n0        &mc_rcmdx2
@@ -705,7 +718,7 @@
 &n_n0_astrk  &n_n1_under  &n_n2_eq  &n_n3_Lbrc  &n_n4_Lpar  &n_n5_Lbrk  &trans                                      &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
 &trans       &trans       &trans    &trans      &trans      &trans      &trans                                      &trans  &trans      &trans      &trans      &trans       &trans       &trans
 &trans       &trans       &trans    &trans      &trans      &trans      &trans  &trans  &trans      &trans  &trans  &trans  &trans      &trans      &trans      &trans       &trans       &trans
-&trans       &trans       &trans    &trans      &trans      &trans                      &tog 6      &tog 6                  &trans      &trans      &trans      &trans       &trans       &trans
+&trans       &trans       &trans    &trans      &trans      &trans                      &tog 7      &tog 7                  &trans      &trans      &trans      &trans       &trans       &trans
 &trans       &trans       &trans    &trans      &trans                  &trans  &trans  &trans      &trans  &trans  &trans              &trans      &trans      &trans       &trans       &trans
             >;
         };
@@ -727,16 +740,6 @@
 &none         &none         &none         &none             &none           &none           &none   &none  &none      &none  &rgb_ug RGB_HUI  &none            &none       &none       &none         &none         &none  &none
 &none         &none         &none         &none             &trans          &none                          &none      &none                                    &none       &none       &none         &none         &none  &none
 &out OUT_USB  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &none                           &none   &none  &none      &none  &bl BL_TOG       &rgb_ug RGB_TOG              &none       &none         &none         &none  &none
-            >;
-        };
-
-        layer_9 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
