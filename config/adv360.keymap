@@ -691,7 +691,7 @@
 
     };
 
-};
+
 
     keymap {
         compatible = "zmk,keymap";
