@@ -475,7 +475,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MOD_QW_QR";
             #binding-cells = <0>;
-            bindings = <&sl 8>, <&tog 6>, <&tog 7>;
+            bindings = <&sl 8>, <&tog 5>, <&tog 4>;
         };
 
         td_caps_rcmd: td_caps_rcmd {
