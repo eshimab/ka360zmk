@@ -639,43 +639,43 @@
     combos {
         compatible = "zmk,combos";
 
+        combo_r_10x11 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <10 11>;
+            timeout-ms = <150>;
+            require-prior-idle-ms = <50>;
+            layers = <4>;
+        };
+
+        combo_r_24x25 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <24 25>;
+            timeout-ms = <125>;
+            require-prior-idle-ms = <50>;
+            layers = <4>;
+        };
+
         combo_r_42x43 {
             bindings = <&sk RG(RALT)>;
             key-positions = <42 43>;
-            timeout-ms = <250>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <25>;
             layers = <4>;
         };
 
         combo_r_56x57 {
             bindings = <&sk RG(RALT)>;
             key-positions = <56 57>;
-            timeout-ms = <200>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <75>;
+            require-prior-idle-ms = <25>;
             layers = <4>;
         };
 
         combo_r_72x73 {
             bindings = <&sk RG(RALT)>;
             key-positions = <73 72>;
-            timeout-ms = <150>;
-            require-prior-idle-ms = <50>;
-            layers = <4>;
-        };
-
-        combo_r_30x31 {
-            bindings = <&sk RG(RALT)>;
-            key-positions = <30 31>;
-            timeout-ms = <250>;
-            require-prior-idle-ms = <50>;
-            layers = <4>;
-        };
-
-        combo_r_48x49 {
-            bindings = <&sk RG(RALT)>;
-            key-positions = <48 49>;
-            timeout-ms = <200>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <25>;
             layers = <4>;
         };
 
