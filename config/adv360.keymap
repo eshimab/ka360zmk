@@ -648,6 +648,53 @@
             require-prior-idle-ms = <50>;
             layers = <4>;
         };
+
+        combo_r_56x57 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <56 57>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <50>;
+            layers = <4>;
+        };
+
+        combo_r_42x43 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <42 43>;
+            timeout-ms = <250>;
+            require-prior-idle-ms = <50>;
+            layers = <4>;
+        };
+
+        combo_r_62x63 {
+            bindings = <&skl RG(RALT)>;
+            key-positions = <62 63>;
+            timeout-ms = <150>;
+            require-prior-idle-ms = <50>;
+            layers = <4>;
+        };
+
+        combo_r_48x49 {
+            bindings = <&skl RG(RALT)>;
+            key-positions = <48 49>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <50>;
+            layers = <4>;
+        };
+
+        combo_r_30x31 {
+            bindings = <&skl RG(RALT)>50>;
+            require-prior-idle-ms = <50>;
+            layers = <4>;
+        };
+
+
+
+
+
+
+
+    };
+
     };
 
     keymap {
