@@ -666,7 +666,7 @@
         };
 
         combo_r_62x63 {
-            bindings = <&skl RG(RALT)>;
+            bindings = <&sk RG(RALT)>;
             key-positions = <62 63>;
             timeout-ms = <150>;
             require-prior-idle-ms = <50>;
@@ -674,7 +674,7 @@
         };
 
         combo_r_48x49 {
-            bindings = <&skl RG(RALT)>;
+            bindings = <&sk RG(RALT)>;
             key-positions = <48 49>;
             timeout-ms = <200>;
             require-prior-idle-ms = <50>;
@@ -682,7 +682,7 @@
         };
 
         combo_r_30x31 {
-            bindings = <&skl RG(RALT)>50>;
+            bindings = <&sk RG(RALT)>50>;
             key-positions = <30 31>;
             timeout-ms = <250>;
             require-prior-idle-ms = <50>;
