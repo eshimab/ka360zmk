@@ -110,8 +110,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <175>; // time to determine hold vs tap
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            //quick-tap-ms = <150>;
+            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
             bindings = <&kp>, <&v71>;
         };
@@ -139,8 +139,8 @@
             label = "HTMOD72";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <175>; // time to determine hold vs tap
-            quick-tap-ms = <150>;
+            //tapping-term-ms = <175>; // time to determine hold vs tap
+            //quick-tap-ms = <150>;
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
             bindings = <&kp>, <&v72>;
@@ -160,7 +160,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <185>; // time to determine hold vs tap
-            quick-tap-ms = <150>;
+            //quick-tap-ms = <150>;
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced =
             bindings = <&kp>, <&v73>;
@@ -604,6 +604,112 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
+
+        htmod42: htmod42 {
+            label = "HTMOD42";
+            tapping-term-ms = <125>; // time to determine hold vs tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            //quick-tap-ms = <150>;
+            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; //
+            bindings = <&kp>, <&v72>;
+        };
+        htmod43: htmod43 {
+            label = "HTMOD43";
+            tapping-term-ms = <125>; // time to determine hold vs tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            //quick-tap-ms = <150>;
+            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; //
+            bindings = <&kp>, <&v72>;
+        };
+
+        htmod56: htmod56 {
+            label = "HTMOD56";
+            tapping-term-ms = <100>; // time to determine hold vs tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            //quick-tap-ms = <150>;
+            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; //
+            bindings = <&kp>, <&v72>;
+        };
+        htmod57: htmod57 {
+            label = "HTMOD57";
+            tapping-term-ms = <100>; // time to determine hold vs tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            //quick-tap-ms = <150>;
+            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; //
+            bindings = <&kp>, <&v72>;
+        };
+
+        htmod72t: htmod72t {
+            label = "HTMOD72T";
+            tapping-term-ms = <75>; // time to determine hold vs tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            //quick-tap-ms = <150>;
+            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; //
+            bindings = <&kp>, <&v72>;
+        };
+        htmod73t: htmod73t {
+            label = "HTMOD73T";
+            tapping-term-ms = <75>; // time to determine hold vs tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            //quick-tap-ms = <150>;
+            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; //
+            bindings = <&kp>, <&v72>;
+        };
+
+        htmod24: htmod24 {
+            label = "HTMOD24";
+            tapping-term-ms = <50>; // time to determine hold vs tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            //quick-tap-ms = <150>;
+            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; //
+            bindings = <&kp>, <&v72>;
+        };
+        htmod25: htmod25 {
+            label = "HTMOD25";
+            tapping-term-ms = <50>; // time to determine hold vs tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            //quick-tap-ms = <150>;
+            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; //
+            bindings = <&kp>, <&v72>;
+        };
+
+        htmod10: htmod10 {
+            label = "HTMOD10";
+            tapping-term-ms = <75>; // time to determine hold vs tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            //quick-tap-ms = <150>;
+            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; //
+            bindings = <&kp>, <&v72>;
+        };
+        htmod11: htmod11 {
+            label = "HTMOD11";
+            tapping-term-ms = <75>; // time to determine hold vs tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            //quick-tap-ms = <150>;
+            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; //
+            bindings = <&kp>, <&v72>;
+        };
+
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -639,6 +745,30 @@
     combos {
         compatible = "zmk,combos";
 
+        combo_r_42x43 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <42 43>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <0>;
+            layers = <4>;
+        };
+
+        combo_r_56x57 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <56 57>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <0>;
+            layers = <4>;
+        };
+
+        combo_r_72x73 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <73 72>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <0>;
+            layers = <4>;
+        };
+
         combo_r_10x11 {
             bindings = <&sk RG(RALT)>;
             key-positions = <10 11>;
@@ -655,30 +785,6 @@
             layers = <4>;
         };
 
-        combo_r_42x43 {
-            bindings = <&sk RG(RALT)>;
-            key-positions = <42 43>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <0>;
-            layers = <4>;
-        };
-
-        combo_r_56x57 {
-            bindings = <&sk RG(RALT)>;
-            key-positions = <56 57>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <0>;
-            layers = <4>;
-        };
-
-        combo_r_72x73 {
-            bindings = <&sk RG(RALT)>;
-            key-positions = <73 72>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <0>;
-            layers = <4>;
-        };
-
         combo_r_62x63 {
             bindings = <&sk RG(RALT)>;
             key-positions = <62 63>;
@@ -686,6 +792,7 @@
             require-prior-idle-ms = <0>;
             layers = <4>;
         };
+
     };
 
     keymap {
