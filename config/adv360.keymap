@@ -613,13 +613,13 @@
         mcskl_rgui: mc_skl_rgui {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&skq RGUI>;
+            bindings = <&skl RGUI>;
         };
 
         mcskl_rshift: mc_skl_rshift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&skq RSHIFT>;
+            bindings = <&skl RSHIFT>;
         };
 
         mc_rcmdx2: mc_rcmdx2 {
