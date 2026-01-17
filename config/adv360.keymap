@@ -617,7 +617,7 @@
             #binding-cells = <2>;
 
             //quick-tap-ms = <150>;
-            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
 
             flavor = "tap-preferred"; //
             bindings = <&kp>, <&v72>;
@@ -630,7 +630,7 @@
             #binding-cells = <2>;
 
             //quick-tap-ms = <150>;
-            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
 
             flavor = "tap-preferred"; //
             bindings = <&kp>, <&v72>;
@@ -643,7 +643,7 @@
             #binding-cells = <2>;
 
             //quick-tap-ms = <150>;
-            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
 
             flavor = "tap-preferred"; //
             bindings = <&kp>, <&v72>;
@@ -656,7 +656,7 @@
             #binding-cells = <2>;
 
             //quick-tap-ms = <150>;
-            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
 
             flavor = "tap-preferred"; //
             bindings = <&kp>, <&v72>;
@@ -669,7 +669,7 @@
             #binding-cells = <2>;
 
             //quick-tap-ms = <150>;
-            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
 
             flavor = "tap-preferred"; //
             bindings = <&kp>, <&v72>;
@@ -682,7 +682,7 @@
             #binding-cells = <2>;
 
             //quick-tap-ms = <150>;
-            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
 
             flavor = "tap-preferred"; //
             bindings = <&kp>, <&v72>;
@@ -695,7 +695,7 @@
             #binding-cells = <2>;
 
             //quick-tap-ms = <150>;
-            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
 
             flavor = "tap-preferred"; //
             bindings = <&kp>, <&v72>;
@@ -708,7 +708,7 @@
             #binding-cells = <2>;
 
             //quick-tap-ms = <150>;
-            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
 
             flavor = "tap-preferred"; //
             bindings = <&kp>, <&v72>;
@@ -721,7 +721,7 @@
             #binding-cells = <2>;
 
             //quick-tap-ms = <150>;
-            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
 
             flavor = "tap-preferred"; //
             bindings = <&kp>, <&v72>;
@@ -734,7 +734,7 @@
             #binding-cells = <2>;
 
             //quick-tap-ms = <150>;
-            //require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
 
             flavor = "tap-preferred"; //
             bindings = <&kp>, <&v72>;
@@ -744,6 +744,7 @@
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
+
         mcskl_rgui: mc_skl_rgui {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
