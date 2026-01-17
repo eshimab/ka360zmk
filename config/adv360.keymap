@@ -643,7 +643,7 @@
             bindings = <&sk RG(RALT)>;
             key-positions = <10 11>;
             timeout-ms = <150>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <0>;
             layers = <4>;
         };
 
@@ -651,7 +651,7 @@
             bindings = <&sk RG(RALT)>;
             key-positions = <24 25>;
             timeout-ms = <125>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <0>;
             layers = <4>;
         };
 
@@ -659,7 +659,7 @@
             bindings = <&sk RG(RALT)>;
             key-positions = <42 43>;
             timeout-ms = <100>;
-            require-prior-idle-ms = <25>;
+            require-prior-idle-ms = <0>;
             layers = <4>;
         };
 
@@ -667,7 +667,7 @@
             bindings = <&sk RG(RALT)>;
             key-positions = <56 57>;
             timeout-ms = <75>;
-            require-prior-idle-ms = <25>;
+            require-prior-idle-ms = <0>;
             layers = <4>;
         };
 
@@ -675,7 +675,7 @@
             bindings = <&sk RG(RALT)>;
             key-positions = <73 72>;
             timeout-ms = <50>;
-            require-prior-idle-ms = <25>;
+            require-prior-idle-ms = <0>;
             layers = <4>;
         };
 
@@ -683,7 +683,7 @@
             bindings = <&sk RG(RALT)>;
             key-positions = <62 63>;
             timeout-ms = <150>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <0>;
             layers = <4>;
         };
     };
