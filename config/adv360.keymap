@@ -658,7 +658,7 @@
         combo_r_42x43 {
             bindings = <&sk RG(RALT)>;
             key-positions = <42 43>;
-            timeout-ms = <100>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <0>;
             layers = <4>;
         };
@@ -666,7 +666,7 @@
         combo_r_56x57 {
             bindings = <&sk RG(RALT)>;
             key-positions = <56 57>;
-            timeout-ms = <75>;
+            timeout-ms = <40>;
             require-prior-idle-ms = <0>;
             layers = <4>;
         };
