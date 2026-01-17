@@ -455,3 +455,67 @@ bindings = <
 };
 ```
 
+
+## ZMK Behavior Examples with Default Properties
+
+Thanks for confirming the behaviors (hold-tap, sticky-key, combo). Based on official ZMK docs (zmk.dev/docs), here's the refined plan to show examples with all available properties set to defaults, including same-line comments on what each does. I've researched and compiled them for conciseness while retaining detail.
+
+**Key Assumptions (Based on Your Confirmation):**
+- Hold-Tap: Mod-tap variant (most common, as per docs).
+- Sticky-Key: Lazy sticky (includes `lazy` and related properties).
+- Combo: Basic simultaneous combo (includes timeout and idle properties).
+- Defaults: From ZMK dev docs (e.g., `tapping-term-ms = <200>`). Properties are listed in logical order.
+- Interactions: Noted in comments where properties affect each other (e.g., `require-prior-idle-ms` can override `tapping-term-ms`).
+- No Customizations: All set to defaults; ready for copy-paste into a `.keymap` file.
+
+**Research Summary:**
+- Sourced from zmk.dev/docs/behaviors/hold-tap, sticky-key, combos, and config docs.
+- Properties: Focused on documented ones; omitted non-timing like `label` unless core.
+- Differences: Hold-tap focuses on hold/tap decisions; sticky-key on release timing; combo on recognition window.
+
+**Examples (In Code Blocks):**
+
+**Hold-Tap (Mod-Tap Example):**
+```
+my_mt: my_mod_tap {
+    compatible = "zmk,behavior-hold-tap"; // Defines this as a hold-tap behavior
+    #binding-cells = <2>; // Number of parameters for bindings (hold and tap)
+    flavor = "hold-preferred"; // Interrupt handling: prefers hold on key press (interacts with tapping-term-ms)
+    tapping-term-ms = <200>; // Max time (ms) to decide hold vs. tap; shorter for faster response
+    quick-tap-ms = <0>; // Disabled; if set, allows quick re-tap for tap behavior (overrides tapping-term-ms for repeats)
+    require-prior-idle-ms = <0>; // Disabled; if set, requires idle time before behavior starts (prevents fast-typing triggers, interacts with tapping-term-ms)
+    bindings = <&kp>, <&kp>; // Hold action, tap action (e.g., &kp LSHIFT for hold, &kp A for tap)
+};
+```
+
+**Sticky-Key (Lazy Sticky Example):**
+```
+my_sk: my_sticky_key {
+    compatible = "zmk,behavior-sticky-key"; // Defines this as a sticky key behavior
+    #binding-cells = <1>; // Number of parameters for bindings (key to make sticky)
+    bindings = <&kp>; // Key to make sticky (e.g., &kp LSHIFT)
+    release-after-ms = <1000>; // Time (ms) sticky key stays active if no other key pressed; longer for sustained use
+    lazy; // If set, activates on next key press instead of immediate (avoids host seeing alone-press)
+    ignore-modifiers; // If set, ignores modifier state (e.g., doesn't cancel on shift press)
+    quick-release; // If set, releases on next key press instead of release (better for typing, but may cause double-shifts)
+};
+```
+
+**Combo (Basic Simultaneous Combo Example):**
+```
+my_combo: my_combo {
+    compatible = "zmk,behavior-combo"; // Defines this as a combo behavior
+    #binding-cells = <1>; // Number of parameters for bindings (action to trigger)
+    bindings = <&kp>; // Action to trigger (e.g., &kp A)
+    key-positions = <0 1>; // Key positions that form the combo (numbered from 0 in keymap)
+    timeout-ms = <50>; // Max time (ms) for all keys to be pressed (combo window; shorter for precision, interacts with require-prior-idle-ms)
+    require-prior-idle-ms = <0>; // Disabled; if set, requires idle time before combo starts (prevents accidental triggers, interacts with timeout-ms)
+    layers = <0>; // Layers where combo is active (bitmask; 0 for default layer only)
+};
+```
+
+**Key Differences and Interactions:**
+- **Hold-Tap:** Timing focuses on single-key hold/tap resolution; `require-prior-idle-ms` can block the entire behavior if not met, overriding `tapping-term-ms`.
+- **Sticky-Key:** Timing controls release duration; `quick-release` and `lazy` interact to balance responsiveness vs. reliability (e.g., lazy prevents menu activation).
+- **Combo:** Timing ensures simultaneous press within `timeout-ms`; `require-prior-idle-ms` adds a "cooldown" to avoid spam, potentially conflicting with `timeout-ms` if too high.
+- **Cross-Behavior:** All `-ms` properties are in milliseconds; adjust based on typing speed/hardware latency. Defaults prioritize usability but may need tuning for fast typists.

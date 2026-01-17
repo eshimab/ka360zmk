@@ -130,9 +130,7 @@
             #binding-cells = <1>;
             bindings = <&kp>;
             release-after-ms = <500>;
-
-            //delete-property/ quick-release;
-
+            /delete-property/ quick-release;
             lazy;
             ignore-modifiers;
         };
@@ -641,10 +639,10 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_r_72x73 {
+        combo_r_42x43 {
             bindings = <&sk RG(RALT)>;
-            key-positions = <73 72>;
-            timeout-ms = <150>;
+            key-positions = <42 43>;
+            timeout-ms = <250>;
             require-prior-idle-ms = <50>;
             layers = <4>;
         };
@@ -657,18 +655,18 @@
             layers = <4>;
         };
 
-        combo_r_42x43 {
+        combo_r_72x73 {
             bindings = <&sk RG(RALT)>;
-            key-positions = <42 43>;
-            timeout-ms = <250>;
+            key-positions = <73 72>;
+            timeout-ms = <150>;
             require-prior-idle-ms = <50>;
             layers = <4>;
         };
 
-        combo_r_62x63 {
+        combo_r_30x31 {
             bindings = <&sk RG(RALT)>;
-            key-positions = <62 63>;
-            timeout-ms = <150>;
+            key-positions = <30 31>;
+            timeout-ms = <250>;
             require-prior-idle-ms = <50>;
             layers = <4>;
         };
@@ -681,10 +679,10 @@
             layers = <4>;
         };
 
-        combo_r_30x31 {
+        combo_r_62x63 {
             bindings = <&sk RG(RALT)>;
-            key-positions = <30 31>;
-            timeout-ms = <250>;
+            key-positions = <62 63>;
+            timeout-ms = <150>;
             require-prior-idle-ms = <50>;
             layers = <4>;
         };
