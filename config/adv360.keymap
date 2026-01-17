@@ -687,15 +687,9 @@
             layers = <4>;
         };
 
-
-
-
-
-
-
     };
 
-    };
+};
 
     keymap {
         compatible = "zmk,keymap";
