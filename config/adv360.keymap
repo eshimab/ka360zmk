@@ -26,17 +26,6 @@
         #include "macros.dtsi"
         #include "version.dtsi"
 
-        skq: sticky_key_quick_release {
-            compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
-            bindings = <&kp>;
-            release-after-ms = <500>;
-
-            /delete-property/ quick-release;
-
-            ignore-modifiers;
-        };
-
         htmod61: htmod61 {
             label = "HTMOD61";
             compatible = "zmk,behavior-hold-tap";
@@ -136,6 +125,15 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        skl: sticky_key_lazy {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <500>;
+            /delete-property/ quick-release;
+            ignore-modifiers;
+        };
+
         htmod72: htmod72 {
             label = "HTMOD72";
             compatible = "zmk,behavior-hold-tap";
@@ -144,7 +142,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
-            bindings = <&kp>, <&v72>;
+            bindings = <&mcskl_rgui>, <&v72>;
         };
 
         v72: v72 {
@@ -184,7 +182,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; // blanced =
-            bindings = <&kp>, <&v74>;
+            bindings = <&mcskl_rshift>, <&v74>;
         };
 
         v74: v74 {
@@ -610,6 +608,19 @@
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
+
+        mcskl_rgui: mc_skl_rgui {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&skq RGUI>;
+        };
+
+        mcskl_rshift: mc_skl_rshift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&skq RSHIFT>;
+        };
+
         mc_rcmdx2: mc_rcmdx2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
