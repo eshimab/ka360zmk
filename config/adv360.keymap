@@ -683,6 +683,8 @@
 
         combo_r_30x31 {
             bindings = <&skl RG(RALT)>50>;
+            key-positions = <30 31>;
+            timeout-ms = <250>;
             require-prior-idle-ms = <50>;
             layers = <4>;
         };
