@@ -699,16 +699,31 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        td_gt_gtt: td_gt_gtt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_GT_GTT";
+            #binding-cells = <0>;
+            bindings = <&kp>, <&gtt>;
+        };
+
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
-        //mcskl_rgui: mc_skl_rgui {
-        //    compatible = "zmk,behavior-macro";
-        //    #binding-cells = <0>;
-        //    bindings = <&skl RGUI>;
-        //};
+
+        gtt: gtt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings 
+                = <&macro_press &kp RGUI>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp RGUI>
+                ;
+        };
+        
         //mcskl_rshift: mc_skl_rshift {
         //    compatible = "zmk,behavior-macro";
         //    #binding-cells = <0>;
