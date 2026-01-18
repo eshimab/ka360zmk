@@ -719,17 +719,17 @@
 
     macros {
 
-        mcskl_rgui: mc_skl_rgui {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&skl RGUI>;
-        };
+        //mcskl_rgui: mc_skl_rgui {
+        //    compatible = "zmk,behavior-macro";
+        //    #binding-cells = <0>;
+        //    bindings = <&skl RGUI>;
+        //};
 
-        mcskl_rshift: mc_skl_rshift {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&skl RSHIFT>;
-        };
+        //mcskl_rshift: mc_skl_rshift {
+        //    compatible = "zmk,behavior-macro";
+        //    #binding-cells = <0>;
+        //    bindings = <&skl RSHIFT>;
+        //};
 
         mc_rcmdx2: mc_rcmdx2 {
             compatible = "zmk,behavior-macro";
