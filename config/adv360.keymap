@@ -713,6 +713,16 @@
 
     macros {
 
+        gt: gt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings 
+                = <&macro_press &kp RGUI>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp RGUI>
+                ;
+        };
+ 
         gtt: gtt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
