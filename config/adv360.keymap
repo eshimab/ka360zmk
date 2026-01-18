@@ -31,7 +31,9 @@
             #binding-cells = <1>;
             bindings = <&kp>;
             release-after-ms = <500>;
+
             /delete-property/ quick-release;
+
             lazy;
             ignore-modifiers;
         };
@@ -869,7 +871,7 @@
 &n_n0_astrk  &n_n1_under  &n_n2_eq  &n_n3_Lbrc  &n_n4_Lpar  &n_n5_Lbrk  &trans                                      &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
 &trans       &trans       &trans    &trans      &trans      &trans      &trans                                      &trans  &trans      &trans      &trans      &trans       &trans       &trans
 &trans       &trans       &trans    &trans      &trans      &trans      &trans  &trans  &trans      &trans  &trans  &trans  &trans      &trans      &trans      &trans       &trans       &trans
-&trans       &trans       &trans    &trans      &trans      &trans                      &tog 4      &tog 4                  &trans      &trans      &trans      &trans       &trans       &trans
+&trans       &trans       &trans    &trans      &trans      &trans                      &tog 5      &tog 5                  &trans      &trans      &trans      &trans       &trans       &trans
 &trans       &trans       &trans    &trans      &trans                  &trans  &trans  &trans      &trans  &trans  &trans              &trans      &trans      &trans       &trans       &trans
             >;
         };
