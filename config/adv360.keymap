@@ -677,7 +677,7 @@
 
         htmod56: htmod56 {
             label = "HTMOD56";
-            tapping-term-ms = <100>; // time to determine hold vs tap
+            tapping-term-ms = <150>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
 
@@ -690,7 +690,7 @@
 
         htmod57: htmod57 {
             label = "HTMOD57";
-            tapping-term-ms = <100>; // time to determine hold vs tap
+            tapping-term-ms = <150>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
 
@@ -732,6 +732,7 @@
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
+
         mcskl_rgui: mc_skl_rgui {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -757,6 +758,7 @@
             bindings = <&kp SPACE &sk RIGHT_SHIFT>;
             label = "MC_SPC_SHIFT";
         };
+
     };
 
     combos {
