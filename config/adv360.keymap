@@ -22,19 +22,30 @@
 &sk { quick-release; };
 
 / {
+
     behaviors {
+
         #include "macros.dtsi"
         #include "version.dtsi"
+
+        htmod43: htmod43 {
+            label = "HTMOD43";
+            tapping-term-ms = <160>; // time to determine hold vs tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            //quick-tap-ms = <150>;
+            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            flavor = "tap-preferred"; //
+            bindings = <&sk>, <&kp>;
+        };
 
         htmod61: htmod61 {
             label = "HTMOD61";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <185>; // time to determine hold vs tap
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
+            tapping-term-ms = <170>; // time to determine hold vs tap
             flavor = "tap-preferred"; // blanced =
-            bindings = <&kp>, <&v61>;
+            bindings = <&sk>, <&v61>;
         };
 
         v61: v61 {
@@ -677,9 +688,7 @@
             tapping-term-ms = <160>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-
             //quick-tap-ms = <150>;
-
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
             bindings = <&sk>, <&kp>;
