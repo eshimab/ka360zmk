@@ -880,7 +880,7 @@
 &n_n0_astrk  &n_n1_under  &n_n2_eq  &n_n3_Lbrc  &n_n4_Lpar  &n_n5_Lbrk  &trans                                      &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
 &trans       &trans       &trans    &trans      &trans      &trans      &trans                                      &trans  &trans      &trans      &trans      &trans       &trans       &trans
 &trans       &trans       &trans    &trans      &trans      &trans      &trans  &trans  &trans      &trans  &trans  &trans  &trans      &trans      &trans      &trans       &trans       &trans
-&trans       &trans       &trans    &trans      &trans      &trans                      &tog 5      &tog 5                  &trans      &trans      &trans      &trans       &trans       &trans
+&trans       &trans       &trans    &trans      &trans      &trans                      &tog 6      &tog 6                  &trans      &trans      &trans      &trans       &trans       &trans
 &trans       &trans       &trans    &trans      &trans                  &trans  &trans  &trans      &trans  &trans  &trans              &trans      &trans      &trans       &trans       &trans
             >;
         };
@@ -890,18 +890,18 @@
 &kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans                                      &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
 &trans   &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans   &trans
 &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
-&trans   &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &trans  &trans  &trans  &trans  &trans                  &tog 7      &tog 7                  &trans  &trans  &trans  &trans  &trans   &trans
 &trans   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans   &trans
             >;
         };
 
         layer_mod {
             bindings = <
-&bootloader   &none         &none         &kp LC(UP_ARROW)  &kp LS(LG(N4))  &kp LG(LS(N5))  &trans                                            &trans           &bl BL_TOG  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &bootloader
-&none         &none         &none         &none             &none           &none           &none                                             &none            &none       &none       &none         &none         &none  &none
-&none         &none         &none         &none             &none           &none           &none   &none  &none      &none  &rgb_ug RGB_HUI  &none            &none       &none       &none         &none         &none  &none
-&none         &none         &none         &none             &trans          &none                          &none      &none                                    &none       &none       &none         &none         &none  &none
-&out OUT_USB  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &none                           &none   &none  &none      &none  &bl BL_TOG       &rgb_ug RGB_TOG              &none       &none         &none         &none  &none
+&bootloader   &none         &none         &kp LC(UP_ARROW)  &kp LS(LG(N4))  &kp LG(LS(N5))  &trans                                              &trans           &bl BL_TOG  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none  &bootloader
+&none         &none         &none         &none             &none           &none           &none                                               &none            &none       &none       &none         &none         &none  &none
+&none         &none         &none         &none             &none           &none           &none   &none  &none       &none   &rgb_ug RGB_HUI  &none            &none       &none       &none         &none         &none  &none
+&none         &none         &none         &none             &trans          &none                          &tog 8      &tog 8                                    &none       &none       &none         &none         &none  &none
+&out OUT_USB  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &none                           &none   &none  &none       &none   &bl BL_TOG       &rgb_ug RGB_TOG              &none       &none         &none         &none  &none
             >;
         };
     };
