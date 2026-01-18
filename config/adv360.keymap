@@ -762,30 +762,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_r_42x43 {
-            bindings = <&sk RG(RALT)>;
-            key-positions = <42 43>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <0>;
-            layers = <4>;
-        };
-
-        combo_r_56x57 {
-            bindings = <&sk RG(RALT)>;
-            key-positions = <56 57>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <0>;
-            layers = <4>;
-        };
-
-        combo_r_72x73 {
-            bindings = <&sk RG(RALT)>;
-            key-positions = <73 72>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <0>;
-            layers = <4>;
-        };
-
         combo_r_10x11 {
             bindings = <&sk RG(RALT)>;
             key-positions = <10 11>;
@@ -802,6 +778,22 @@
             layers = <4>;
         };
 
+        combo_r_42x43 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <42 43>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <0>;
+            layers = <4>;
+        };
+
+        combo_r_56x57 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <56 57>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <0>;
+            layers = <4>;
+        };
+
         combo_r_62x63 {
             bindings = <&sk RG(RALT)>;
             key-positions = <62 63>;
@@ -809,6 +801,15 @@
             require-prior-idle-ms = <0>;
             layers = <4>;
         };
+
+        combo_r_72x73 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <73 72>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <0>;
+            layers = <4>;
+        };
+
     };
 
     keymap {
