@@ -609,7 +609,7 @@
 
         htmod10: htmod10 {
             label = "HTMOD10";
-            tapping-term-ms = <75>; // time to determine hold vs tap
+            tapping-term-ms = <130>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             //quick-tap-ms = <150>;
@@ -619,7 +619,7 @@
         };
         htmod11: htmod11 {
             label = "HTMOD11";
-            tapping-term-ms = <75>; // time to determine hold vs tap
+            tapping-term-ms = <130>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             //quick-tap-ms = <150>;
@@ -630,7 +630,7 @@
 
         htmod24: htmod24 {
             label = "HTMOD24";
-            tapping-term-ms = <50>; // time to determine hold vs tap
+            tapping-term-ms = <140>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             //quick-tap-ms = <150>;
@@ -640,7 +640,7 @@
         };
         htmod25: htmod25 {
             label = "HTMOD25";
-            tapping-term-ms = <50>; // time to determine hold vs tap
+            tapping-term-ms = <140>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             //quick-tap-ms = <150>;
@@ -651,25 +651,20 @@
 
         htmod42: htmod42 {
             label = "HTMOD42";
-            tapping-term-ms = <125>; // time to determine hold vs tap
+            tapping-term-ms = <160>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-
             //quick-tap-ms = <150>;
-
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
             bindings = <&sk>, <&kp>;
         };
-
         htmod43: htmod43 {
             label = "HTMOD43";
-            tapping-term-ms = <125>; // time to determine hold vs tap
+            tapping-term-ms = <160>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-
             //quick-tap-ms = <150>;
-
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
             bindings = <&sk>, <&kp>;
@@ -677,25 +672,20 @@
 
         htmod56: htmod56 {
             label = "HTMOD56";
-            tapping-term-ms = <150>; // time to determine hold vs tap
+            tapping-term-ms = <180>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-
             //quick-tap-ms = <150>;
-
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
             bindings = <&sk>, <&kp>;
         };
-
         htmod57: htmod57 {
             label = "HTMOD57";
-            tapping-term-ms = <150>; // time to determine hold vs tap
+            tapping-term-ms = <180>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-
             //quick-tap-ms = <150>;
-
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
             bindings = <&sk>, <&kp>;
@@ -703,12 +693,10 @@
 
         htmod72t: htmod72t {
             label = "HTMOD72T";
-            tapping-term-ms = <75>; // time to determine hold vs tap
+            tapping-term-ms = <200>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-
             //quick-tap-ms = <150>;
-
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
             bindings = <&sk>, <&v72>;
@@ -716,12 +704,10 @@
 
         htmod73t: htmod73t {
             label = "HTMOD73T";
-            tapping-term-ms = <75>; // time to determine hold vs tap
+            tapping-term-ms = <200>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-
             //quick-tap-ms = <150>;
-
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
             bindings = <&sk>, <&v72>;
