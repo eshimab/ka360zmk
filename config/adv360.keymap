@@ -687,7 +687,7 @@
 
         htmod56: htmod56 {
             label = "HTMOD56";
-            tapping-term-ms = <180>; // time to determine hold vs tap
+            tapping-term-ms = <170>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
 
@@ -700,7 +700,7 @@
 
         htmod57: htmod57 {
             label = "HTMOD57";
-            tapping-term-ms = <180>; // time to determine hold vs tap
+            tapping-term-ms = <170>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
 
@@ -713,7 +713,7 @@
 
         htmod72t: htmod72t {
             label = "HTMOD72T";
-            tapping-term-ms = <200>; // time to determine hold vs tap
+            tapping-term-ms = <180>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
 
@@ -726,7 +726,7 @@
 
         htmod73t: htmod73t {
             label = "HTMOD73T";
-            tapping-term-ms = <200>; // time to determine hold vs tap
+            tapping-term-ms = <180>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
 
