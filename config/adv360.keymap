@@ -22,9 +22,7 @@
 &sk { quick-release; };
 
 / {
-
     behaviors {
-
         #include "macros.dtsi"
         #include "version.dtsi"
 
@@ -33,7 +31,9 @@
             tapping-term-ms = <160>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
+
             //quick-tap-ms = <150>;
+
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
             bindings = <&sk>, <&kp>;
@@ -683,12 +683,14 @@
             bindings = <&sk>, <&kp>;
         };
 
-        htmod43: htmod43 {
-            label = "HTMOD43";
+        htmod43t: htmod43t {
+            label = "HTMOD43T";
             tapping-term-ms = <160>; // time to determine hold vs tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
+
             //quick-tap-ms = <150>;
+
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
             bindings = <&sk>, <&kp>;
@@ -875,7 +877,7 @@
             bindings = <
 &v_astrk_n0           &v_under_n1        &v_eq_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                             &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8           &v_colon_n9         &v_minus_n0        &mc_rcmdx2
 &kp EXCL              &kp Q              &kp W             &kp E            &kp R            &kp T       &none                                                              &none      &kp Y       &kp U            &kp I                &kp O               &kp P              &kp HASH
-&v_dqt_astrk          &kp A              &kp S             &kp D            &kp F            &kp G       &none     &kp LEFT  &kp RIGHT             &kp DOWN      &kp UP     &none      &kp H       &kp J            &htmod42 RALT K      &htmod43 RCTRL L    &kp SQT            &kp SEMICOLON
+&v_dqt_astrk          &kp A              &kp S             &kp D            &kp F            &kp G       &none     &kp LEFT  &kp RIGHT             &kp DOWN      &kp UP     &none      &kp H       &kp J            &htmod42 RALT K      &htmod43t RCTRL L   &kp SQT            &kp SEMICOLON
 &td_Lshift_capswords  &kp Z              &kp X             &kp C            &kp V            &kp B                           &td_nums_fn           &td_nums_fn                         &kp N       &kp M            &htmod56 RALT COMMA  &htmod57 RCTRL DOT  &v_qmark_x         &sk RSHIFT
 &caps_word            &htmod61 LSHIFT 0  &htmod62 LCTRL 0  &htmod63 LGUI 0  &htmod64 LALT 0              &kp BSPC  &kp ESC   &mt LEFT_GUI TAB      &mt RGUI TAB  &kp ENTER  &kp SPACE              &htmod71 RALT 0  &htmod72t RALT 0     &htmod73t RCTRL 0   &htmod74 RSHIFT 0  &sk LG(RIGHT_SHIFT)
             >;
