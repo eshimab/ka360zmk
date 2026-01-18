@@ -704,7 +704,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_GT_GTT";
             #binding-cells = <0>;
-            bindings = <&kp>, <&gtt>;
+            bindings = <&gt>, <&gtt>;
         };
     };
 
