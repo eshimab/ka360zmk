@@ -686,8 +686,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V_HASH_TILDE";
             bindings = <&kp HASH>, <&kp TILDE>;
-
-            keep-mods = <0>;
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
