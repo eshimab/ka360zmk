@@ -547,15 +547,6 @@
             tapping-term-ms = <75>;
         };
 
-        v_minus_excl: v_minus_excl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "V_MINUS_EXCL";
-            bindings = <&kp MINUS>, <&kp EXCL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
         n_n0_astrk: n_n0_astrk {
             compatible = "zmk,behavior-mod-morph";
             label = "N_N0_ASTRK";
@@ -695,6 +686,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V_HASH_TILDE";
             bindings = <&kp HASH>, <&kp TILDE>;
+
             keep-mods = <0>;
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
