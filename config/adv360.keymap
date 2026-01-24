@@ -577,7 +577,14 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V58";
             bindings = <&kp SEMICOLON>, <&kp QMARK>;
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
 
+        v44: v44 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V44";
+            bindings = <&kp SQT>, <&kp EXCL>;
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
