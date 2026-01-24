@@ -747,6 +747,13 @@
             bindings = <&kp RGUI &kp RGUI>;
             label = "MC_RCMDX2";
         };
+
+        mc_togNum_ESC: mc_togNum_ESC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 6 &kp ESC>;
+            label = "MC_TOGNUM_ESC";
+        };
     };
 
     combos {
@@ -880,7 +887,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans      &kp N4      &kp N5      &kp N6       &trans       &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans      &kp N1      &kp N2      &kp N3       &trans       &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &tog 7      &tog 7                  &tog 7      &kp N0      &trans      &trans       &trans       &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans              &trans      &trans      &trans       &trans       &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &tog 7      &trans  &trans  &trans              &trans      &trans      &trans       &trans       &trans
             >;
         };
 
