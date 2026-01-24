@@ -754,6 +754,28 @@
             bindings = <&tog 6 &kp ESC>;
             label = "MC_TOGNUM_ESC";
         };
+
+        mc_togKey_ESC: mc_togKey_ESC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 7 &kp ESC>;
+            label = "MC_TOGNUM_ESC";
+        };
+
+        mc_togKey_ENTR: mc_togKey_ENTER {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 7 &kp ENTER>;
+            label = "MC_TOGNUM_ESC";
+        };
+
+        mc_togKey_SPACE: mc_togKey_SPACE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 7 &kp SPACE>;
+            label = "MC_TOGNUM_ESC";
+        };
+
     };
 
     combos {
