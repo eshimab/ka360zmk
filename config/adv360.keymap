@@ -121,7 +121,7 @@
         v71: v71 {
             compatible = "zmk,behavior-mod-morph";
             label = "V71";
-            bindings = <&kp GRAVE>, <&kp BACKSLASH>;
+            bindings = <&kp GRAVE>, <&kp TILDE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -181,18 +181,18 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_under_n1: v_under_n1 {
+        v01_n1: v01_n1 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_UNDER_N1";
+            label = "V01_N1";
             bindings = <&kp UNDER>, <&kp N1>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        n_n1_under: n_n1_under {
+        n01_n1: n01_n1 {
             compatible = "zmk,behavior-mod-morph";
-            label = "N_N1_UNDER";
+            label = "N01_N1";
             bindings = <&kp N1>, <&kp UNDER>;
 
             #binding-cells = <0>;
@@ -573,10 +573,10 @@
             hold-trigger-key-positions = <67 68>;
         };
 
-        v_minus_qmark: v_minus_qmark {
+        v58: v58 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_MINUS_QMARK";
-            bindings = <&kp MINUS>, <&kp QMARK>;
+            label = "V58";
+            bindings = <&kp SEMICOLON>, <&kp QMARK>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
@@ -857,41 +857,41 @@
 
         L_nvimGR {
             bindings = <
-&kp GRAVE             &v_under_n1  &v_eq_n2       &v_Lbrc_n3  &v_Lpar_n4  &v_Lbrk_n5  &trans                                                                       &trans             &v_Rbrk_n6      &v_Rpar_n7    &v_Rbrc_n8  &v_colon_n9    &v_minus_n0    &none
-&kp ASTRK             &kp B        &kp L          &kp D       &kp W       &kp Z       &sl 8                                                                        &sl 8              &g_quote_under  &kp F         &kp O       &kp U          &kp J          &kp SEMI
-&kp DOUBLE_QUOTES     &kp N        &kp R          &kp T       &kp S       &kp G       &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &kp Y           &kp H         &kp A       &kp E          &kp I          &g_comma_qmark
-&td_Lshift_capswords  &kp Q        &kp X          &kp M       &kp C       &kp V                                   &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &kp K           &kp P         &kp DOT     &g_minus_dblq  &g_slash_less  &td_Rshift_Ralt
-&kp TAB               &kp EXCL     &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans            &kp ESC   &sk LEFT_CONTROL      &sk RIGHT_CONTROL  &trans  &trans                             &v_pct_tilde  &v72        &v73           &kp AT         &td_nums_fn
+&kp GRAVE             &v01_n1   &v_eq_n2       &v_Lbrc_n3  &v_Lpar_n4  &v_Lbrk_n5  &trans                                                                       &trans             &v_Rbrk_n6      &v_Rpar_n7    &v_Rbrc_n8  &v_colon_n9    &v_minus_n0    &none
+&kp ASTRK             &kp B     &kp L          &kp D       &kp W       &kp Z       &sl 8                                                                        &sl 8              &g_quote_under  &kp F         &kp O       &kp U          &kp J          &kp SEMI
+&kp DOUBLE_QUOTES     &kp N     &kp R          &kp T       &kp S       &kp G       &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &kp Y           &kp H         &kp A       &kp E          &kp I          &g_comma_qmark
+&td_Lshift_capswords  &kp Q     &kp X          &kp M       &kp C       &kp V                                   &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &kp K           &kp P         &kp DOT     &g_minus_dblq  &g_slash_less  &td_Rshift_Ralt
+&kp TAB               &kp EXCL  &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans            &kp ESC   &sk LEFT_CONTROL      &sk RIGHT_CONTROL  &trans  &trans                             &v_pct_tilde  &v72        &v73           &kp AT         &td_nums_fn
             >;
         };
 
         nvim_test {
             bindings = <
-&v_astrk_n0           &v_under_n1        &v_eq_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                             &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8            &v_colon_n9          &v_minus_n0        &mc_rcmdx2
+&v_astrk_n0           &v01_n1            &v_eq_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                             &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8            &v_colon_n9          &v_minus_n0        &mc_rcmdx2
 &kp EXCL              &kp Q              &kp W             &kp E            &kp R            &kp T       &none                                                              &none      &kp Y       &kp U            &kp I                 &kp O                &kp P              &kp HASH
 &v_dqt_astrk          &kp A              &kp S             &kp D            &kp F            &kp G       &none     &kp LEFT  &kp RIGHT             &kp DOWN      &kp UP     &none      &kp H       &kp J            &htmod42t RALT K      &htmod43t RCTRL L    &kp SQT            &kp SEMICOLON
-&td_Lshift_capswords  &kp Z              &kp X             &kp C            &kp V            &kp B                           &td_nums_fn           &td_nums_fn                         &kp N       &kp M            &htmod56t RALT COMMA  &htmod57t RCTRL DOT  &v_minus_qmark     &sk RSHIFT
+&td_Lshift_capswords  &kp Z              &kp X             &kp C            &kp V            &kp B                           &td_nums_fn           &td_nums_fn                         &kp N       &kp M            &htmod56t RALT COMMA  &htmod57t RCTRL DOT  &v58               &sk RSHIFT
 &caps_word            &htmod61 LSHIFT 0  &htmod62 LCTRL 0  &htmod63 LGUI 0  &htmod64 LALT 0              &kp BSPC  &kp ESC   &mt LEFT_GUI TAB      &mt RGUI TAB  &kp ENTER  &kp SPACE              &htmod71 RALT 0  &htmod72t RALT 0      &htmod73t RCTRL 0    &htmod74 RSHIFT 0  &sk LG(RIGHT_SHIFT)
             >;
         };
 
         L_nvimQW {
             bindings = <
-&v_astrk_n0           &v_under_n1  &v_eq_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                            &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8       &v_colon_n9       &v_minus_n0     &mc_rcmdx2
-&kp EXCL              &kp Q        &kp W             &kp E            &kp R            &kp T       &none                                                             &none      &kp Y       &kp U            &kp I            &kp O             &kp P           &v_hash_tilde
-&v_dqt_astrk          &kp A        &kp S             &kp D            &kp F            &kp G       &none     &kp LEFT  &kp RIGHT             &kp DOWN     &kp UP     &none      &kp H       &kp J            &kp K            &kp L             &kp SQT         &kp SEMICOLON
-&td_Lshift_capswords  &kp Z        &kp X             &kp C            &kp V            &kp B                           &td_kp_fn             &td_nums_fn                        &kp N       &kp M            &kp COMMA        &kp PERIOD        &v_minus_qmark  &sk RSHIFT
-&caps_word            &sk LSHIFT   &htmod62 LCTRL 0  &htmod63 LGUI 0  &htmod64 LALT 0              &kp BSPC  &kp ESC   &mt LEFT_GUI TAB      &td_gt_gtt   &kp ENTER  &kp SPACE              &htmod71 RALT 0  &htmod72 RGUI 0  &htmod73 RCTRL 0  &sk RSHIFT      &sk LG(RIGHT_SHIFT)
+&v_astrk_n0           &v01_n1     &v_eq_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                            &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8       &v_colon_n9       &v_minus_n0  &mc_rcmdx2
+&kp EXCL              &kp Q       &kp W             &kp E            &kp R            &kp T       &none                                                             &none      &kp Y       &kp U            &kp I            &kp O             &kp P        &v_hash_tilde
+&v_dqt_astrk          &kp A       &kp S             &kp D            &kp F            &kp G       &none     &kp LEFT  &kp RIGHT             &kp DOWN     &kp UP     &none      &kp H       &kp J            &kp K            &kp L             &kp SQT      &kp SEMICOLON
+&td_Lshift_capswords  &kp Z       &kp X             &kp C            &kp V            &kp B                           &td_kp_fn             &td_nums_fn                        &kp N       &kp M            &kp COMMA        &kp PERIOD        &v58         &sk RSHIFT
+&caps_word            &sk LSHIFT  &htmod62 LCTRL 0  &htmod63 LGUI 0  &htmod64 LALT 0              &kp BSPC  &kp ESC   &mt LEFT_GUI TAB      &td_gt_gtt   &kp ENTER  &kp SPACE              &htmod71 RALT 0  &htmod72 RGUI 0  &htmod73 RCTRL 0  &sk RSHIFT   &sk LG(RIGHT_SHIFT)
             >;
         };
 
         L_nvimNum {
             bindings = <
-&n_n0_astrk  &n_n1_under  &n_n2_eq  &n_n3_Lbrc  &n_n4_Lpar  &n_n5_Lbrk  &trans                                            &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
-&trans       &trans       &trans    &trans      &trans      &trans      &trans                                            &trans  &trans      &trans      &trans      &trans       &trans       &trans
-&trans       &trans       &trans    &trans      &trans      &trans      &trans  &trans        &trans      &trans  &trans  &trans  &trans      &trans      &trans      &trans       &trans       &trans
-&trans       &trans       &trans    &trans      &trans      &trans                            &to 5       &to 5                   &trans      &trans      &trans      &trans       &trans       &trans
-&trans       &trans       &trans    &trans      &trans                  &trans  &mc_toNv_ESC  &trans      &trans  &trans  &trans              &trans      &trans      &trans       &trans       &trans
+&n_n0_astrk  &n01_n1  &n_n2_eq  &n_n3_Lbrc  &n_n4_Lpar  &n_n5_Lbrk  &trans                                            &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
+&trans       &trans   &trans    &trans      &trans      &trans      &trans                                            &trans  &trans      &trans      &trans      &trans       &trans       &trans
+&trans       &trans   &trans    &trans      &trans      &trans      &trans  &trans        &trans      &trans  &trans  &trans  &trans      &trans      &trans      &trans       &trans       &trans
+&trans       &trans   &trans    &trans      &trans      &trans                            &to 5       &to 5                   &trans      &trans      &trans      &trans       &trans       &trans
+&trans       &trans   &trans    &trans      &trans                  &trans  &mc_toNv_ESC  &trans      &trans  &trans  &trans              &trans      &trans      &trans       &trans       &trans
             >;
         };
 
