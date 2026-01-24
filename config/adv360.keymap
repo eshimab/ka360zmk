@@ -26,18 +26,6 @@
         #include "macros.dtsi"
         #include "version.dtsi"
 
-        skl: sticky_key_lazy {
-            compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
-            bindings = <&kp>;
-            release-after-ms = <500>;
-
-            /delete-property/ quick-release;
-
-            lazy;
-            ignore-modifiers;
-        };
-
         htmod61: htmod61 {
             label = "HTMOD61";
             compatible = "zmk,behavior-hold-tap";
@@ -181,180 +169,179 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v01_n1: v01_n1 {
+        v01: v01 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V01_N1";
+            label = "v01";
             bindings = <&kp UNDER>, <&kp N1>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        n01_n1: n01_n1 {
+        n01: n01 {
             compatible = "zmk,behavior-mod-morph";
-            label = "N01_N1";
+            label = "n01";
             bindings = <&kp N1>, <&kp UNDER>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        v02_n2: v02_n2 {
+        v02: v02 {
             compatible = "zmk,behavior-mod-morph";
-            label = "v02_n2";
+            label = "v02";
             bindings = <&kp EQUAL>, <&kp N2>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        n_n2_eq: n_n2_eq {
+        n02: n02 {
             compatible = "zmk,behavior-mod-morph";
-            label = "N_N2_EQ";
+            label = "n02";
             bindings = <&kp N2>, <&kp EQUAL>;
-
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        v_Lbrc_n3: v_Lbrc_n3 {
+        v03: v03 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_LBRC_N3";
+            label = "v03";
             bindings = <&kp LEFT_BRACE>, <&kp N3>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        n_n3_Lbrc: n_n3_Lbrc {
+        n03: n03 {
             compatible = "zmk,behavior-mod-morph";
-            label = "N_N3_LBRC";
+            label = "n03";
             bindings = <&kp N3>, <&kp LBRC>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_Lpar_n4: v_Lpar_n4 {
+        v04: v04 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_LPAR_N4";
+            label = "v04";
             bindings = <&kp LPAR>, <&kp N4>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        n_n4_Lpar: n_n4_Lpar {
+        n04: n04 {
             compatible = "zmk,behavior-mod-morph";
-            label = "N_N4_LPAR";
+            label = "n04";
             bindings = <&kp N4>, <&kp LPAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_Lbrk_n5: v_Lbrk_n5 {
+        v05: v05 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_LBRK_N5";
+            label = "v05";
             bindings = <&kp LEFT_BRACKET>, <&kp N5>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        n_n5_Lbrk: n_n5_Lbrk {
+        n05: n05 {
             compatible = "zmk,behavior-mod-morph";
-            label = "N_N5_LBRK";
+            label = "n05";
             bindings = <&kp N5>, <&kp LEFT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_Rbrk_n6: v_Rbrk_n6 {
+        v08: v08 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_RBRK_N6";
+            label = "v08";
             bindings = <&kp RIGHT_BRACKET>, <&kp N6>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        n_n6_Rbrk: n_n6_Rbrk {
+        n08: n08 {
             compatible = "zmk,behavior-mod-morph";
-            label = "N_N6_RBRK";
+            label = "n08";
             bindings = <&kp N6>, <&kp RIGHT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_Rpar_n7: v_Rpar_n7 {
+        v09: v09 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_RPAR_N7";
+            label = "v09";
             bindings = <&kp RPAR>, <&kp N7>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        n_n7_Rpar: n_n7_Rpar {
+        n09: n09 {
             compatible = "zmk,behavior-mod-morph";
-            label = "N_N7_RPAR";
+            label = "n09";
             bindings = <&kp N7>, <&kp RPAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_Rbrc_n8: v_Rbrc_n8 {
+        v10: v10 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_RBRC_N8";
+            label = "v10";
             bindings = <&kp RBRC>, <&kp N8>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        n_n8_Rbrc: n_n8_Rbrc {
+        n10: n10 {
             compatible = "zmk,behavior-mod-morph";
-            label = "N_N8_RBRC";
+            label = "n10";
             bindings = <&kp N8>, <&kp RBRC>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_colon_n9: v_colon_n9 {
+        v11: v11 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_COLON_N9";
+            label = "v11";
             bindings = <&kp COLON>, <&kp N9>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        n_n9_colon: n_n9_colon {
+        n11: n11 {
             compatible = "zmk,behavior-mod-morph";
-            label = "N_N9_COLON";
+            label = "n11";
             bindings = <&kp N9>, <&kp COLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_minus_n0: v_minus_n0 {
+        v12: v12 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_MINUS_N0";
+            label = "v12";
             bindings = <&kp MINUS>, <&kp N0>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        n_n0_minus: n_n0_minus {
+        n12: n12 {
             compatible = "zmk,behavior-mod-morph";
-            label = "N_N0_MINUS";
+            label = "n12";
             bindings = <&kp N0>, <&kp MINUS>;
 
             #binding-cells = <0>;
@@ -547,11 +534,10 @@
             tapping-term-ms = <75>;
         };
 
-        n_n0_astrk: n_n0_astrk {
+        n00: n_n0_astrk {
             compatible = "zmk,behavior-mod-morph";
-            label = "N_N0_ASTRK";
+            label = "n00";
             bindings = <&kp N0>, <&kp ASTRK>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -596,7 +582,7 @@
             #binding-cells = <2>;
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
-            bindings = <&sk>, <&v_Rbrc_n8>;
+            bindings = <&sk>, <&v10>;
         };
 
         htmod11t: htmod11t {
@@ -606,7 +592,7 @@
             #binding-cells = <2>;
             require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
             flavor = "tap-preferred"; //
-            bindings = <&sk>, <&v_colon_n9>;
+            bindings = <&sk>, <&v11>;
         };
 
         htmod24t: htmod24t {
@@ -864,7 +850,7 @@
 
         L_nvimGR {
             bindings = <
-&kp GRAVE             &v01_n1   &v02_n2       &v_Lbrc_n3  &v_Lpar_n4  &v_Lbrk_n5  &trans                                                                       &trans             &v_Rbrk_n6      &v_Rpar_n7    &v_Rbrc_n8  &v_colon_n9    &v_minus_n0    &none
+&kp GRAVE             &v01   &v02       &v03  &v04  &v05  &trans                                                                       &trans             &v08      &v09    &v10  &v11    &v12    &none
 &kp ASTRK             &kp B     &kp L          &kp D       &kp W       &kp Z       &sl 8                                                                        &sl 8              &g_quote_under  &kp F         &kp O       &kp U          &kp J          &kp SEMI
 &kp DOUBLE_QUOTES     &kp N     &kp R          &kp T       &kp S       &kp G       &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &kp Y           &kp H         &kp A       &kp E          &kp I          &g_comma_qmark
 &td_Lshift_capswords  &kp Q     &kp X          &kp M       &kp C       &kp V                                   &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &kp K           &kp P         &kp DOT     &g_minus_dblq  &g_slash_less  &td_Rshift_Ralt
@@ -874,7 +860,7 @@
 
         nvim_test {
             bindings = <
-&v_astrk_n0           &v01_n1            &v02_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                             &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8            &v_colon_n9          &v_minus_n0        &mc_rcmdx2
+&v_astrk_n0           &v01            &v02          &v03       &v04       &v05  &trans                                                             &trans     &v08  &v09       &v10            &v11          &v12        &mc_rcmdx2
 &kp EXCL              &kp Q              &kp W             &kp E            &kp R            &kp T       &none                                                              &none      &kp Y       &kp U            &kp I                 &kp O                &kp P              &kp HASH
 &v_dqt_astrk          &kp A              &kp S             &kp D            &kp F            &kp G       &none     &kp LEFT  &kp RIGHT             &kp DOWN      &kp UP     &none      &kp H       &kp J            &htmod42t RALT K      &htmod43t RCTRL L    &kp SQT            &kp SEMICOLON
 &td_Lshift_capswords  &kp Z              &kp X             &kp C            &kp V            &kp B                           &td_nums_fn           &td_nums_fn                         &kp N       &kp M            &htmod56t RALT COMMA  &htmod57t RCTRL DOT  &v58               &sk RSHIFT
@@ -884,7 +870,7 @@
 
         L_nvimQW {
             bindings = <
-&v_astrk_n0           &v01_n1     &v02_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                            &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8       &v_colon_n9       &v_minus_n0  &mc_rcmdx2
+&v_astrk_n0           &v01     &v02          &v03       &v04       &v05  &trans                                                            &trans     &v08  &v09       &v10       &v11       &v12  &mc_rcmdx2
 &kp EXCL              &kp Q       &kp W             &kp E            &kp R            &kp T       &none                                                             &none      &kp Y       &kp U            &kp I            &kp O             &kp P        &v_hash_tilde
 &v_dqt_astrk          &kp A       &kp S             &kp D            &kp F            &kp G       &none     &kp LEFT  &kp RIGHT             &kp DOWN     &kp UP     &none      &kp H       &kp J            &kp K            &kp L             &kp SQT      &kp SEMICOLON
 &td_Lshift_capswords  &kp Z       &kp X             &kp C            &kp V            &kp B                           &td_kp_fn             &td_nums_fn                        &kp N       &kp M            &kp COMMA        &kp PERIOD        &v58         &sk RSHIFT
@@ -894,7 +880,7 @@
 
         L_nvimNum {
             bindings = <
-&n_n0_astrk  &n01_n1  &n_n2_eq  &n_n3_Lbrc  &n_n4_Lpar  &n_n5_Lbrk  &trans                                            &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
+&n00  &n01  &n02  &n03  &n04  &n05  &trans                                            &trans  &n08  &n09  &n10  &n11  &n12  &trans
 &trans       &trans   &trans    &trans      &trans      &trans      &trans                                            &trans  &trans      &trans      &trans      &trans       &trans       &trans
 &trans       &trans   &trans    &trans      &trans      &trans      &trans  &trans        &trans      &trans  &trans  &trans  &trans      &trans      &trans      &trans       &trans       &trans
 &trans       &trans   &trans    &trans      &trans      &trans                            &to 5       &to 5                   &trans      &trans      &trans      &trans       &trans       &trans
@@ -904,7 +890,7 @@
 
         keypad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                   &trans          &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                   &trans          &n08  &n09  &n10  &n11  &n12  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                   &trans          &trans      &kp N4      &kp N5      &kp N6       &trans       &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans         &trans          &trans      &kp N1      &kp N2      &kp N3       &trans       &trans
 &trans  &trans  &trans  &trans  &trans  &trans                        &to 5       &to 5                                  &to 5       &kp N0      &trans      &trans       &trans       &trans
