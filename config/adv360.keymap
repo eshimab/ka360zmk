@@ -352,7 +352,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "g58";
             bindings = <&kp SLASH>, <&kp LESS_THAN>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -361,7 +360,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "g45";
             bindings = <&kp COMMA>, <&kp QMARK>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -370,7 +368,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "g57";
             bindings = <&kp MINUS>, <&kp DOUBLE_QUOTES>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -379,7 +376,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "g22";
             bindings = <&kp SQT>, <&kp UNDER>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
