@@ -775,7 +775,6 @@
             bindings = <&tog 7 &kp SPACE>;
             label = "MC_TOGNUM_ESC";
         };
-
     };
 
     combos {
@@ -895,21 +894,21 @@
 
         L_nvimNum {
             bindings = <
-&n_n0_astrk  &n_n1_under  &n_n2_eq  &n_n3_Lbrc  &n_n4_Lpar  &n_n5_Lbrk  &trans                                      &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
-&trans       &trans       &trans    &trans      &trans      &trans      &trans                                      &trans  &trans      &trans      &trans      &trans       &trans       &trans
-&trans       &trans       &trans    &trans      &trans      &trans      &trans  &trans  &trans      &trans  &trans  &trans  &trans      &trans      &trans      &trans       &trans       &trans
-&trans       &trans       &trans    &trans      &trans      &trans                      &tog 6      &tog 6                  &trans      &trans      &trans      &trans       &trans       &trans
-&trans       &trans       &trans    &trans      &trans                  &trans  &trans  &trans      &trans  &trans  &trans              &trans      &trans      &trans       &trans       &trans
+&n_n0_astrk  &n_n1_under  &n_n2_eq  &n_n3_Lbrc  &n_n4_Lpar  &n_n5_Lbrk  &trans                                              &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
+&trans       &trans       &trans    &trans      &trans      &trans      &trans                                              &trans  &trans      &trans      &trans      &trans       &trans       &trans
+&trans       &trans       &trans    &trans      &trans      &trans      &trans  &trans          &trans      &trans  &trans  &trans  &trans      &trans      &trans      &trans       &trans       &trans
+&trans       &trans       &trans    &trans      &trans      &trans                              &tog 6      &tog 6                  &trans      &trans      &trans      &trans       &trans       &trans
+&trans       &trans       &trans    &trans      &trans                  &trans  &mc_togNum_ESC  &trans      &trans  &trans  &trans              &trans      &trans      &trans       &trans       &trans
             >;
         };
 
         keypad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                              &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                              &trans  &trans      &kp N4      &kp N5      &kp N6       &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans  &trans  &trans  &trans      &kp N1      &kp N2      &kp N3       &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &tog 7      &tog 7                  &tog 7      &kp N0      &trans      &trans       &trans       &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &mc_togNum_ESC  &tog 7      &trans  &trans  &trans              &trans      &trans      &trans       &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                       &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                       &trans  &trans      &kp N4      &kp N5      &kp N6       &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans  &trans           &trans  &trans      &kp N1      &kp N2      &kp N3       &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &tog 7      &tog 7                           &tog 7      &kp N0      &trans      &trans       &trans       &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &mc_togKey_ESC  &tog 7      &trans  &mc_togKey_ENTR  &trans              &trans      &trans      &trans       &trans       &trans
             >;
         };
 
