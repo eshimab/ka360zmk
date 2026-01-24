@@ -432,106 +432,6 @@
             bindings = <&gt>, <&gtt>;
         };
 
-        htmod10t: htmod10t {
-            label = "HTMOD10T";
-            tapping-term-ms = <130>; // time to determine hold vs tap
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
-            flavor = "tap-preferred"; //
-            bindings = <&sk>, <&v10>;
-        };
-
-        htmod11t: htmod11t {
-            label = "HTMOD11T";
-            tapping-term-ms = <130>; // time to determine hold vs tap
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
-            flavor = "tap-preferred"; //
-            bindings = <&sk>, <&v11>;
-        };
-
-        htmod24t: htmod24t {
-            label = "HTMOD24T";
-            tapping-term-ms = <140>; // time to determine hold vs tap
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
-            flavor = "tap-preferred"; //
-            bindings = <&sk>, <&kp>;
-        };
-
-        htmod25t: htmod25t {
-            label = "HTMOD25T";
-            tapping-term-ms = <140>; // time to determine hold vs tap
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
-            flavor = "tap-preferred"; //
-            bindings = <&sk>, <&kp>;
-        };
-
-        htmod42t: htmod42t {
-            label = "HTMOD42T";
-            tapping-term-ms = <160>; // time to determine hold vs tap
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
-            flavor = "tap-preferred"; //
-            bindings = <&sk>, <&kp>;
-        };
-
-        htmod43t: htmod43t {
-            label = "HTMOD43T";
-            tapping-term-ms = <160>; // time to determine hold vs tap
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
-            flavor = "tap-preferred"; //
-            bindings = <&sk>, <&kp>;
-        };
-
-        htmod56t: htmod56t {
-            label = "HTMOD56T";
-            tapping-term-ms = <170>; // time to determine hold vs tap
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
-            flavor = "tap-preferred"; //
-            bindings = <&sk>, <&kp>;
-        };
-
-        htmod57t: htmod57t {
-            label = "HTMOD57T";
-            tapping-term-ms = <170>; // time to determine hold vs tap
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
-            flavor = "tap-preferred"; //
-            bindings = <&sk>, <&kp>;
-        };
-
-        htmod72t: htmod72t {
-            label = "HTMOD72T";
-            tapping-term-ms = <180>; // time to determine hold vs tap
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
-            flavor = "tap-preferred"; //
-            bindings = <&sk>, <&v72>;
-        };
-
-        htmod73t: htmod73t {
-            label = "HTMOD73T";
-            tapping-term-ms = <180>; // time to determine hold vs tap
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            require-prior-idle-ms = <0>; // prevent hold during fast typing (default = <0>)
-            flavor = "tap-preferred"; //
-            bindings = <&sk>, <&v72>;
-        };
-
         g58: g58 {
             compatible = "zmk,behavior-mod-morph";
             label = "g58";
@@ -539,6 +439,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         g45: g45 {
             compatible = "zmk,behavior-mod-morph";
             label = "g45";
@@ -546,6 +447,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         g57: g57 {
             compatible = "zmk,behavior-mod-morph";
             label = "g57";
@@ -553,6 +455,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         g22: g22 {
             compatible = "zmk,behavior-mod-morph";
             label = "g22";
