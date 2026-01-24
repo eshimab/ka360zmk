@@ -199,9 +199,9 @@
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        v_eq_n2: v_eq_n2 {
+        v02_n2: v02_n2 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_EQ_N2";
+            label = "v02_n2";
             bindings = <&kp EQUAL>, <&kp N2>;
 
             #binding-cells = <0>;
@@ -864,7 +864,7 @@
 
         L_nvimGR {
             bindings = <
-&kp GRAVE             &v01_n1   &v_eq_n2       &v_Lbrc_n3  &v_Lpar_n4  &v_Lbrk_n5  &trans                                                                       &trans             &v_Rbrk_n6      &v_Rpar_n7    &v_Rbrc_n8  &v_colon_n9    &v_minus_n0    &none
+&kp GRAVE             &v01_n1   &v02_n2       &v_Lbrc_n3  &v_Lpar_n4  &v_Lbrk_n5  &trans                                                                       &trans             &v_Rbrk_n6      &v_Rpar_n7    &v_Rbrc_n8  &v_colon_n9    &v_minus_n0    &none
 &kp ASTRK             &kp B     &kp L          &kp D       &kp W       &kp Z       &sl 8                                                                        &sl 8              &g_quote_under  &kp F         &kp O       &kp U          &kp J          &kp SEMI
 &kp DOUBLE_QUOTES     &kp N     &kp R          &kp T       &kp S       &kp G       &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &kp Y           &kp H         &kp A       &kp E          &kp I          &g_comma_qmark
 &td_Lshift_capswords  &kp Q     &kp X          &kp M       &kp C       &kp V                                   &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &kp K           &kp P         &kp DOT     &g_minus_dblq  &g_slash_less  &td_Rshift_Ralt
@@ -874,7 +874,7 @@
 
         nvim_test {
             bindings = <
-&v_astrk_n0           &v01_n1            &v_eq_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                             &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8            &v_colon_n9          &v_minus_n0        &mc_rcmdx2
+&v_astrk_n0           &v01_n1            &v02_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                             &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8            &v_colon_n9          &v_minus_n0        &mc_rcmdx2
 &kp EXCL              &kp Q              &kp W             &kp E            &kp R            &kp T       &none                                                              &none      &kp Y       &kp U            &kp I                 &kp O                &kp P              &kp HASH
 &v_dqt_astrk          &kp A              &kp S             &kp D            &kp F            &kp G       &none     &kp LEFT  &kp RIGHT             &kp DOWN      &kp UP     &none      &kp H       &kp J            &htmod42t RALT K      &htmod43t RCTRL L    &kp SQT            &kp SEMICOLON
 &td_Lshift_capswords  &kp Z              &kp X             &kp C            &kp V            &kp B                           &td_nums_fn           &td_nums_fn                         &kp N       &kp M            &htmod56t RALT COMMA  &htmod57t RCTRL DOT  &v58               &sk RSHIFT
@@ -884,7 +884,7 @@
 
         L_nvimQW {
             bindings = <
-&v_astrk_n0           &v01_n1     &v_eq_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                            &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8       &v_colon_n9       &v_minus_n0  &mc_rcmdx2
+&v_astrk_n0           &v01_n1     &v02_n2          &v_Lbrc_n3       &v_Lpar_n4       &v_Lbrk_n5  &trans                                                            &trans     &v_Rbrk_n6  &v_Rpar_n7       &v_Rbrc_n8       &v_colon_n9       &v_minus_n0  &mc_rcmdx2
 &kp EXCL              &kp Q       &kp W             &kp E            &kp R            &kp T       &none                                                             &none      &kp Y       &kp U            &kp I            &kp O             &kp P        &v_hash_tilde
 &v_dqt_astrk          &kp A       &kp S             &kp D            &kp F            &kp G       &none     &kp LEFT  &kp RIGHT             &kp DOWN     &kp UP     &none      &kp H       &kp J            &kp K            &kp L             &kp SQT      &kp SEMICOLON
 &td_Lshift_capswords  &kp Z       &kp X             &kp C            &kp V            &kp B                           &td_kp_fn             &td_nums_fn                        &kp N       &kp M            &kp COMMA        &kp PERIOD        &v58         &sk RSHIFT
