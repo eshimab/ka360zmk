@@ -348,45 +348,36 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v_pct_tilde: v_pct_tilde {
+        g58: g58 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V_PCT_TILDE";
-            bindings = <&kp PERCENT>, <&kp TILDE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        g_slash_less: g_slash_less {
-            compatible = "zmk,behavior-mod-morph";
-            label = "G_SLASH_LESS";
+            label = "g58";
             bindings = <&kp SLASH>, <&kp LESS_THAN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        g_comma_qmark: g_comma_qmark {
+        g45: g45 {
             compatible = "zmk,behavior-mod-morph";
-            label = "G_COMMA_QMARK";
+            label = "g45";
             bindings = <&kp COMMA>, <&kp QMARK>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        g_minus_dblq: g_minus_dblq {
+        g57: g57 {
             compatible = "zmk,behavior-mod-morph";
-            label = "G_MINUS_DBLQ";
+            label = "g57";
             bindings = <&kp MINUS>, <&kp DOUBLE_QUOTES>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        g_quote_under: g_quote_under {
+        g22: g22 {
             compatible = "zmk,behavior-mod-morph";
-            label = "G_QUOTE_UNDER";
+            label = "g22";
             bindings = <&kp SQT>, <&kp UNDER>;
 
             #binding-cells = <0>;
@@ -851,10 +842,10 @@
         L_nvimGR {
             bindings = <
 &kp GRAVE             &v01   &v02       &v03  &v04  &v05  &trans                                                                       &trans             &v08      &v09    &v10  &v11    &v12    &none
-&kp ASTRK             &kp B     &kp L          &kp D       &kp W       &kp Z       &sl 8                                                                        &sl 8              &g_quote_under  &kp F         &kp O       &kp U          &kp J          &kp SEMI
-&kp DOUBLE_QUOTES     &kp N     &kp R          &kp T       &kp S       &kp G       &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &kp Y           &kp H         &kp A       &kp E          &kp I          &g_comma_qmark
-&td_Lshift_capswords  &kp Q     &kp X          &kp M       &kp C       &kp V                                   &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &kp K           &kp P         &kp DOT     &g_minus_dblq  &g_slash_less  &td_Rshift_Ralt
-&kp TAB               &kp EXCL  &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans            &kp ESC   &sk LEFT_CONTROL      &sk RIGHT_CONTROL  &trans  &trans                             &v_pct_tilde  &v72        &v73           &kp AT         &td_nums_fn
+&kp ASTRK             &kp B     &kp L          &kp D       &kp W       &kp Z       &sl 8                                                                        &sl 8              &g22  &kp F         &kp O       &kp U          &kp J          &kp SEMI
+&kp DOUBLE_QUOTES     &kp N     &kp R          &kp T       &kp S       &kp G       &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &kp Y           &kp H         &kp A       &kp E          &kp I          &g45
+&td_Lshift_capswords  &kp Q     &kp X          &kp M       &kp C       &kp V                                   &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &kp K           &kp P         &kp DOT     &g57  &g58  &td_Rshift_Ralt
+&kp TAB               &kp EXCL  &kp BACKSLASH  &kp PLUS    &kp MINUS               &trans            &kp ESC   &sk LEFT_CONTROL      &sk RIGHT_CONTROL  &trans  &trans                             &htmod71 &v72        &v73           &kp AT         &td_nums_fn
             >;
         };
 
