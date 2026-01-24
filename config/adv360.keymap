@@ -748,31 +748,24 @@
             label = "MC_RCMDX2";
         };
 
-        mc_togNum_ESC: mc_togNum_ESC {
+        mc_toNv_ESC: mc_togKey_ESC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 6 &kp ESC>;
+            bindings = <&to 5 &kp ESC>;
             label = "MC_TOGNUM_ESC";
         };
 
-        mc_togKey_ESC: mc_togKey_ESC {
+        mc_toNv_ENTR: mc_togKey_ENTER {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 7 &kp ESC>;
+            bindings = <&to 5 &kp ENTER>;
             label = "MC_TOGNUM_ESC";
         };
 
-        mc_togKey_ENTR: mc_togKey_ENTER {
+        mc_toNv_SPACE: mc_togKey_SPACE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 7 &kp ENTER>;
-            label = "MC_TOGNUM_ESC";
-        };
-
-        mc_togKey_SPACE: mc_togKey_SPACE {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 7 &kp SPACE>;
+            bindings = <&to 5 &kp SPACE>;
             label = "MC_TOGNUM_ESC";
         };
     };
@@ -894,31 +887,31 @@
 
         L_nvimNum {
             bindings = <
-&n_n0_astrk  &n_n1_under  &n_n2_eq  &n_n3_Lbrc  &n_n4_Lpar  &n_n5_Lbrk  &trans                                              &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
-&trans       &trans       &trans    &trans      &trans      &trans      &trans                                              &trans  &trans      &trans      &trans      &trans       &trans       &trans
-&trans       &trans       &trans    &trans      &trans      &trans      &trans  &trans          &trans      &trans  &trans  &trans  &trans      &trans      &trans      &trans       &trans       &trans
-&trans       &trans       &trans    &trans      &trans      &trans                              &tog 6      &tog 6                  &trans      &trans      &trans      &trans       &trans       &trans
-&trans       &trans       &trans    &trans      &trans                  &trans  &mc_togNum_ESC  &trans      &trans  &trans  &trans              &trans      &trans      &trans       &trans       &trans
+&n_n0_astrk  &n_n1_under  &n_n2_eq  &n_n3_Lbrc  &n_n4_Lpar  &n_n5_Lbrk  &trans                                            &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
+&trans       &trans       &trans    &trans      &trans      &trans      &trans                                            &trans  &trans      &trans      &trans      &trans       &trans       &trans
+&trans       &trans       &trans    &trans      &trans      &trans      &trans  &trans        &trans      &trans  &trans  &trans  &trans      &trans      &trans      &trans       &trans       &trans
+&trans       &trans       &trans    &trans      &trans      &trans                            &to 5       &to 5                   &trans      &trans      &trans      &trans       &trans       &trans
+&trans       &trans       &trans    &trans      &trans                  &trans  &mc_toNv_ESC  &trans      &trans  &trans  &trans              &trans      &trans      &trans       &trans       &trans
             >;
         };
 
         keypad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                       &trans  &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                       &trans  &trans      &kp N4      &kp N5      &kp N6       &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans      &trans  &trans           &trans  &trans      &kp N1      &kp N2      &kp N3       &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &tog 7      &tog 7                           &tog 7      &kp N0      &trans      &trans       &trans       &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &mc_togKey_ESC  &tog 7      &trans  &mc_togKey_ENTR  &trans              &trans      &trans      &trans       &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                   &trans          &n_n6_Rbrk  &n_n7_Rpar  &n_n8_Rbrc  &n_n9_colon  &n_n0_minus  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                   &trans          &trans      &kp N4      &kp N5      &kp N6       &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans         &trans          &trans      &kp N1      &kp N2      &kp N3       &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans                        &to 5       &to 5                                  &to 5       &kp N0      &trans      &trans       &trans       &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &mc_toNv_ESC  &trans      &trans  &mc_toNv_ENTR  &mc_toNv_SPACE              &trans      &trans      &trans       &trans       &trans
             >;
         };
 
         L_fn2 {
             bindings = <
-&kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans                                      &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
-&trans   &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans   &trans
-&trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
-&trans   &trans  &trans  &trans  &trans  &trans                  &tog 8      &tog 8                  &trans  &trans  &trans  &trans  &trans   &trans
-&trans   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans   &trans
+&kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans                                                   &trans          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
+&trans   &trans  &trans  &trans  &trans  &trans  &trans                                                   &trans          &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans         &trans          &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &trans  &trans  &trans  &trans  &trans                        &to 5       &to 5                                  &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &trans  &trans  &trans  &trans          &trans  &mc_toNv_ESC  &trans      &trans  &mc_toNv_ENTR  &mc_toNv_SPACE          &trans  &trans  &trans  &trans   &trans
             >;
         };
 
