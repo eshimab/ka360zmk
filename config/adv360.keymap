@@ -624,7 +624,7 @@
 &kp ASTRK             &kp B     &kp L          &kp D     &kp W      &kp Z  &sl 8                                                                        &sl 8              &g22   &kp F                         &kp O    &kp U  &kp J   &kp SEMI
 &kp DOUBLE_QUOTES     &kp N     &kp R          &kp T     &kp S      &kp G  &sk LEFT_COMMAND  &kp LEFT  &kp RIGHT             &kp DOWN           &kp UP  &sk RIGHT_COMMAND  &kp Y  &kp H                         &kp A    &kp E  &kp I   &g45
 &td_Lshift_capswords  &kp Q     &kp X          &kp M     &kp C      &kp V                              &sk LEFT_COMMAND      &sk RIGHT_COMMAND                             &kp K  &kp P                         &kp DOT  &g57   &g58    &sk RSHIFT
-&caps_word            &kp EXCL  &kp BACKSLASH  &kp PLUS  &kp MINUS         &trans            &trans    &sk LEFT_CONTROL      &sk RIGHT_CONTROL  &trans  &trans                    &htmod71 RIGHT_ALT undefined  &v72     &v73   &kp AT  &none
+&caps_word            &kp EXCL  &kp BACKSLASH  &kp PLUS  &kp MINUS         &trans            &trans    &sk LEFT_CONTROL      &sk RIGHT_CONTROL  &trans  &trans                    &htmod71 RIGHT_ALT 0  &v72     &v73   &kp AT  &none
             >;
         };
 
