@@ -522,21 +522,6 @@
             label = "MC_TONV";
         };
 
-        /*
-        mc_toNv_ENTR: mc_togKey_ENTER {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ENTER &to 5>;
-            label = "MC_TOGNUM_ESC";
-        };
-
-        mc_toNv_SPACE: mc_togKey_SPACE {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE &to 5>;
-            label = "MC_TOGNUM_ESC";
-        };
-        */
     };
 
     combos {
