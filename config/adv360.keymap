@@ -511,13 +511,18 @@
             label = "MC_RCMDX2";
         };
 
-        mc_toNv_ESC: mc_togKey_ESC {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESC &to 5>;
-            label = "MC_TOGNUM_ESC";
+        mc_toNv: mc_toNv {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&to 5>;
+            label = "MC_TONV";
         };
 
+        /*
         mc_toNv_ENTR: mc_togKey_ENTER {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -531,6 +536,7 @@
             bindings = <&kp SPACE &to 5>;
             label = "MC_TOGNUM_ESC";
         };
+        */
     };
 
     combos {
