@@ -912,6 +912,55 @@
             bindings = <&kp SPACE>;
             key-positions = <71 72 73>;
         };
+
+        combo_r_10x11 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <0>;
+            layers = <4>;
+        };
+
+        combo_r_24x25 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <0>;
+            layers = <4>;
+        };
+
+        combo_r_42x43 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <0>;
+            layers = <4>;
+        };
+
+        combo_r_56x57 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <0>;
+            layers = <4>;
+        };
+
+        combo_r_62x63 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <0>;
+            layers = <4>;
+        };
+
+        combo_r_72x73 {
+            bindings = <&sk RG(RALT)>;
+            key-positions = <>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <0>;
+            layers = <4>;
+        };
+
     };
 
     macros {
