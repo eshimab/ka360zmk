@@ -26,6 +26,14 @@
         #include "macros.dtsi"
         #include "version.dtsi"
 
+        sec_hold_tap_mods_here: sec_hold_tap_mods_here{
+            compatible = "zmk,behavior-mod-morph";
+            label = "sec_hold_tap_mods_here";
+            bindings = <&kp N0>, <&kp N0>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         htmod61: htmod61 {
             label = "HTMOD61";
             compatible = "zmk,behavior-hold-tap";
@@ -169,11 +177,18 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        sec_number_row_begins_here: sec_number_row_begins_here {
+            compatible = "zmk,behavior-mod-morph";
+            label = "sec_number_row_begins_here";
+            bindings = <&kp N0>, <&kp N0>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         v00: v00 {
             compatible = "zmk,behavior-mod-morph";
             label = "v00";
             bindings = <&kp N0>, <&kp N0>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -367,11 +382,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v27: v27 {
+        sec_right_side_mods_here:sec_right_side_mods_here {
             compatible = "zmk,behavior-mod-morph";
-            label = "V27";
-            bindings = <&kp TILDE>, <&kp TILDE>;
-
+            label = "sec_right_side_mods_here";
+            bindings = <&kp N0>, <&kp N0>;
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -380,7 +394,22 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V28";
             bindings = <&kp DOUBLE_QUOTES>, <&kp ASTRK>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
+        sec_left_side_mods_here:sec_left_side_mods_here {
+            compatible = "zmk,behavior-mod-morph";
+            label = "sec_left_side_mods_here";
+            bindings = <&kp N0>, <&kp N0>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        v27: v27 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V27";
+            bindings = <&kp TILDE>, <&kp TILDE>;
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -389,7 +418,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V44";
             bindings = <&kp SQT>, <&kp EXCL>;
-
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
@@ -398,9 +426,16 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V58";
             bindings = <&kp SEMICOLON>, <&kp QMARK>;
-
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        sec_tap_dance_mods_here:sec_tap_dance_mods_here{
+            compatible = "zmk,behavior-mod-morph";
+            label = "sec_tap_dance_mods_here";
+            bindings = <&kp N0>, <&kp N0>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         tdl_nums_fn: tdl_nums_fn {
@@ -436,6 +471,14 @@
             label = "TD_GT_GTT";
             #binding-cells = <0>;
             bindings = <&gt>, <&gtt>;
+        };
+
+        sec_graphite_mods_here:sec_graphite_mods_here {
+            compatible = "zmk,behavior-mod-morph";
+            label = "sec_graphite_mods_here";
+            bindings = <&kp N0>, <&kp N0>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         g58: g58 {
