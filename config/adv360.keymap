@@ -521,7 +521,6 @@
 
             label = "MC_TONV";
         };
-
     };
 
     combos {
@@ -651,7 +650,7 @@
 
         keypad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans          &n08    &n09    &n10    &n11    &n12    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans          &trans  &n09    &n10    &n11    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans          &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans          &trans          &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                        &to 5       &to 5                                   &to 5   &kp N0  &trans  &trans  &trans  &trans
