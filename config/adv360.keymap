@@ -518,9 +518,8 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&to 5>;
-
-            label = "MC_TONV";
         };
+
     };
 
     combos {
