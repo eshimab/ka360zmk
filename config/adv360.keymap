@@ -570,7 +570,11 @@
         mc_allmod: mc_allmod {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk RIGHT_GUI>;
+            bindings = 
+                <&sk RIGHT_GUI>,
+                <&sk RSHIFT>,
+                <&sk RALT>,
+                <&sk RCTRL>;
             label = "MC_ALLMOD";
         };
     };
