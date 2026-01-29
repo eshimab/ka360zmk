@@ -529,6 +529,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
         };
+
+        htallmod: htallmod {
+            label = "HTALLMOD";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>; // time to determine hold vs tap
+            flavor = "tap-preferred"; // blanced =
+            bindings = <&sk>, <&mc_allmod>;
+        };
+
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
