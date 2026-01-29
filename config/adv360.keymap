@@ -371,6 +371,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "sec_left_side_mods_here";
             bindings = <&kp N0>, <&kp N0>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -379,6 +380,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "v00";
             bindings = <&kp N0>, <&kp N0>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -387,6 +389,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "n00";
             bindings = <&kp N0>, <&kp ASTRK>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -404,6 +407,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "sec_right_side_mods_here";
             bindings = <&kp N0>, <&kp N0>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -561,6 +565,13 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&to 5>;
+        };
+
+        mc_allmod: mc_allmod {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk RIGHT_GUI>;
+            label = "MC_ALLMOD";
         };
     };
 
