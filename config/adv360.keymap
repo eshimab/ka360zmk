@@ -30,7 +30,7 @@
             compatible = "zmk,behavior-caps-word";
             label = "caps_word_all";
             bindings = <0>;
-            continiue-list = <UNDERSCORE MINUS SPACE>;
+            continue-list = <UNDERSCORE MINUS SPACE>;
             mods = <(MOD_LSFT)>;
         };
 
