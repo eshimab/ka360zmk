@@ -29,7 +29,7 @@
         cw_all: cw_all {
             compatible = "zmk,behavior-caps-word";
             label = "cw_all";
-            binding-cells = <0>;
+            //#binding-cells = <0>;
             continue-list = <UNDERSCORE MINUS SPACE>;
         };
 
