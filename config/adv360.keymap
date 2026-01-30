@@ -49,7 +49,6 @@
         };
 
         v61: v61 {
-            label = "V61";
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp TILDE>, <&kp TILDE>;
 
@@ -84,7 +83,6 @@
 
         v63: v63 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V63";
             bindings = <&kp PIPE>, <&kp PERCENT>;
 
             #binding-cells = <0>;
@@ -92,7 +90,6 @@
         };
 
         htmod64: htmod64 {
-            label = "HTMOD64";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
@@ -102,7 +99,6 @@
 
         v64: v64 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V64";
             bindings = <&kp SLASH>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
@@ -110,7 +106,6 @@
         };
 
         htmod71: htmod71 {
-            label = "HTMOD71";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
@@ -120,7 +115,6 @@
 
         v71: v71 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V71";
             bindings = <&kp PLUS>, <&kp TILDE>;
 
             #binding-cells = <0>;
