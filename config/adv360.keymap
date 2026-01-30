@@ -28,14 +28,12 @@
 
         cw_all: cw_all {
             compatible = "zmk,behavior-caps-word";
-            label = "cw_all";
             #binding-cells = <0>;
             continue-list = <UNDERSCORE MINUS SPACE>;
         };
 
         sec_hold_tap_mods_here: sec_hold_tap_mods_here {
             compatible = "zmk,behavior-mod-morph";
-            label = "sec_hold_tap_mods_here";
             bindings = <&kp N0>, <&kp N0>;
 
             #binding-cells = <0>;
@@ -43,7 +41,6 @@
         };
 
         htmod61: htmod61 {
-            label = "HTMOD61";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
@@ -70,9 +67,8 @@
         };
 
         v62: v62 {
-            label = "V62";
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp PLUS>, <&kp AT>;
+            bindings = <&kp AMPS>, <&kp AT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -89,7 +85,7 @@
         v63: v63 {
             compatible = "zmk,behavior-mod-morph";
             label = "V63";
-            bindings = <&kp MINUS>, <&kp PERCENT>;
+            bindings = <&kp PIPE>, <&kp PERCENT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -125,7 +121,7 @@
         v71: v71 {
             compatible = "zmk,behavior-mod-morph";
             label = "V71";
-            bindings = <&kp GRAVE>, <&kp TILDE>;
+            bindings = <&kp PLUS>, <&kp TILDE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -143,7 +139,7 @@
         v72: v72 {
             label = "V72";
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp PIPE>, <&kp CARET>;
+            bindings = <&kp MINUS>, <&kp CARET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -161,7 +157,7 @@
         v73: v73 {
             label = "V73";
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp AMPS>, <&kp DOLLAR>;
+            bindings = <&kp UNDER>, <&kp DOLLAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -197,7 +193,7 @@
         v01: v01 {
             compatible = "zmk,behavior-mod-morph";
             label = "v01";
-            bindings = <&kp UNDER>, <&kp N1>;
+            bindings = <&kp GRAVE>, <&kp N1>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
@@ -206,7 +202,7 @@
         n01: n01 {
             compatible = "zmk,behavior-mod-morph";
             label = "n01";
-            bindings = <&kp N1>, <&kp UNDER>;
+            bindings = <&kp N1>, <&kp GRAVE>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
