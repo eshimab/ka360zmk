@@ -29,7 +29,7 @@
         cw_all: cw_all {
             compatible = "zmk,behavior-caps-word";
             #binding-cells = <0>;
-            continue-list = <UNDERSCORE MINUS SPACE BSPC>;
+            continue-list = <UNDER MINUS SPACE BSPC>;
         };
 
         sec_hold_tap_mods_here: sec_hold_tap_mods_here {
