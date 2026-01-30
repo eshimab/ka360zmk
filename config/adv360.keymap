@@ -26,6 +26,14 @@
         #include "macros.dtsi"
         #include "version.dtsi"
 
+        cw_all : caps_word_all {
+            compatible = "zmk,behavior-caps-word";
+            label = "caps_word_all";
+            bindings = <0>;
+            continiue-list = <UNDERSCORE MINUS SPACE>;
+            mods = <(MOD_LSFT)>;
+        };
+
         sec_hold_tap_mods_here: sec_hold_tap_mods_here {
             compatible = "zmk,behavior-mod-morph";
             label = "sec_hold_tap_mods_here";
