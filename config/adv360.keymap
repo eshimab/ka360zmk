@@ -183,18 +183,29 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        v01: v01 {
+        v00: v00 {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp EXCL>, <&kp N1>;
-
+            bindings = <&kp N0>, <&kp N0>;
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
+        n00: n00 {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp N1>, <&kp EXCL>;
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        v01: v01 {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp EXCL>, <&kp N1>;
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
         n01: n01 {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp N1>, <&kp EXCL>;
-
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
