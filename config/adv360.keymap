@@ -678,11 +678,11 @@
 
         L_fn2 {
             bindings = <
-&kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans                                                    &trans          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
-&trans   &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans          &trans  &trans  &trans  &trans  &trans   &trans
-&trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans          &trans          &trans  &trans  &trans  &trans  &trans   &trans
-&trans   &trans  &trans  &trans  &trans  &trans                        &to 0       &to 0                                   &trans  &trans  &trans  &trans  &trans   &trans
-&trans   &trans  &trans  &trans  &trans          &trans  &mc_toNv ESC  &trans      &trans  &mc_toNv ENTER  &mc_toNv SPACE          &trans  &trans  &trans  &trans   &trans
+&kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans                                      &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
+&trans   &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans   &trans
             >;
         };
 
