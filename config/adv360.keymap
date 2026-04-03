@@ -593,9 +593,10 @@
             #binding-cells = <2>;
             bindings =
                 <&macro_param_1to1>,
-                <&macro_press &tog MACRO_PLACEHOLDER>,
-                <&macro_param_2to1>,
-                <&macro_press &kp MACRO_PLACEHOLDER>;
+                <&macro_press>,
+                <&tog MACRO_PLACEHOLDER &macro_param_2to1>,
+                <&macro_press>,
+                <&kp MACRO_PLACEHOLDER>;
         };
 
         mc_allmod: mc_allmod {
@@ -654,11 +655,11 @@
 
         L_keypad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                             &trans  &trans      &kp N1  &kp N2  &kp N3    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                             &trans  &trans      &kp N4  &kp N5  &kp N6    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans                           &trans          &trans  &kp DOLLAR  &kp N7  &kp N8  &kp N9    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans                        &tog 3      &tog 3                                                   &trans      &kp N0  &trans  &trans    &kp UP    &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &mc_toNv ESC  &trans      &mc_toNvSk LS(LA(LC(LEFT_GUI)))  &mc_toNv ENTER  &trans              &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                              &trans  &trans      &kp N1  &kp N2  &kp N3    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                              &trans  &trans      &kp N4  &kp N5  &kp N6    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans      &trans                           &trans          &trans  &kp DOLLAR  &kp N7  &kp N8  &kp N9    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                         &tog 3      &tog 3                                                   &trans      &kp N0  &trans  &trans    &kp UP    &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &mc_tog 3 ESC  &trans      &mc_toNvSk LS(LA(LC(LEFT_GUI)))  &mc_toNv ENTER  &trans              &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
         };
 
