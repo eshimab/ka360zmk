@@ -632,11 +632,11 @@
 
         L_office {
             bindings = <
-&n00        &n01               &n02              &n03              &n04             &n05   &trans                                                       &trans     &n08   &n09             &n10              &n11              &n12        &none
-&v14        &trans             &trans            &trans             &trans           &trans   &none                                                        &none      &trans &trans             &trans              &trans              &trans        &none
-&v28        &trans              &trans             &trans            &trans             &trans &none     &kp LEFT  &kp RIGHT       &kp DOWN      &kp UP     &none      &trans  &trans            &trans              &trans              &v44        &none
-&sk LSHIFT  &trans             &trans              &trans              &trans             &trans                      &tdl_kp_fn      &tdl_nums_fn                        &trans  &trans             &trans         &trans &sk RSHIFT  &sk RSHIFT
-&caps_word  &trans  &trans  &htmod63 LCTRL 0  &trans         &kp BSPC  &kp ESC   &kp TAB         &kp RA(TAB)   &kp ENTER  &kp SPACE         &trans  &htmod72 RCTRL 0  &trans  &sk RSHIFT  &none
+&n00        &n01    &n02    &n03              &n04    &n05    &trans                                                       &trans     &n08    &n09    &n10              &n11    &n12    &none
+&v14        &trans  &trans  &trans            &trans  &trans  &trans                                                       &trans     &trans  &trans  &trans            &trans  &trans  &trans
+&trans      &trans  &trans  &trans            &trans  &trans  &trans    &kp LEFT  &kp RIGHT       &kp DOWN      &kp UP     &trans     &trans  &trans  &trans            &trans  &trans  &trans
+&sk LSHIFT  &trans  &trans  &trans            &trans  &trans                      &tdl_kp_fn      &tdl_nums_fn                        &trans  &trans  &trans            &trans  &trans  &trans
+&caps_word  &trans  &trans  &htmod63 LCTRL 0  &trans          &kp BSPC  &kp ESC   &kp TAB         &kp RA(TAB)   &kp ENTER  &kp SPACE          &trans  &htmod72 RCTRL 0  &trans  &trans  &trans
             >;
         };
 
