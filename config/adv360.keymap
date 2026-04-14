@@ -678,7 +678,7 @@
 
         L_office {
             bindings = <
-&n00    &n01    &n02    &n03              &n04    &n05    &trans                                           &trans  &n08    &n09    &n10              &n11    &n12    &RG(L)
+&n00    &n01    &n02    &n03              &n04    &n05    &trans                                           &trans  &n08    &n09    &n10              &n11    &n12    &kp RG(L)
 &trans  &trans  &trans  &trans            &trans  &trans  &trans                                           &trans  &trans  &trans  &trans            &trans  &trans  &trans
 &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans      &trans       &trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp PRINTSCREEN
 &trans  &trans  &trans  &trans            &trans  &trans                  &trans      &none                        &trans  &trans  &trans            &trans  &trans  &trans
@@ -688,11 +688,11 @@
 
         L_keypad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans      &trans  &trans  &trans    &trans    &trans
-&trans  &kp DOLLAR  &kp N7  &kp N8  &kp N9  &trans  &trans                                      &trans  &trans      &trans  &trans  &trans    &trans    &trans
-&trans  &kp N0  &kp N4  &kp N5  &kp N6  &kp PERCENT  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans &trans &trans   &trans    &trans
-&trans  &kp PERIOD  &kp N1  &kp N2  &kp N3  &trans                  &tog 3      &trans                  &trans      &trans  &trans  &trans    &kp UP    &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans              &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT
+&trans  &trans      &trans  &trans  &trans  &trans       &trans                                      &trans  &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &kp DOLLAR  &kp N7  &kp N8  &kp N9  &trans       &trans                                      &trans  &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &kp N0      &kp N4  &kp N5  &kp N6  &kp PERCENT  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &kp PERIOD  &kp N1  &kp N2  &kp N3  &trans                       &tog 3      &trans                  &trans  &trans  &trans  &trans    &kp UP    &trans
+&trans  &trans      &trans  &trans  &trans               &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
         };
 
