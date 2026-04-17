@@ -611,12 +611,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <2>;
-            bindings =
-                <&macro_param_1to1>,
-                <&macro_press>,
-                <&tog MACRO_PLACEHOLDER &macro_param_2to1>,
-                <&macro_press>,
-                <&kp MACRO_PLACEHOLDER>;
+            bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
         };
 
         mc_togSk: mc_togSk {
@@ -624,12 +619,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <2>;
-            bindings =
-                <&macro_param_1to1>,
-                <&macro_press>,
-                <&tog MACRO_PLACEHOLDER &macro_param_2to1>,
-                <&macro_press>,
-                <&sk MACRO_PLACEHOLDER>;
+            bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &sk MACRO_PLACEHOLDER>;
         };
 
         mc_allmod: mc_allmod {
@@ -688,11 +678,11 @@
 
         L_keypad {
             bindings = <
-&trans             &trans      &trans  &trans  &trans  &trans       &trans                                                          &trans             &trans  &trans  &trans  &trans    &trans             &trans
-&trans             &kp DOLLAR  &kp N7  &kp N8  &kp N9  &trans       &trans                                                          &trans             &trans  &trans  &trans  &trans    &trans             &trans
-&trans             &kp N0      &kp N4  &kp N5  &kp N6  &kp PERCENT  &trans  &trans           &trans      &trans  &trans             &trans             &trans  &trans  &trans  &trans    &trans             &trans
-&mc_togSk 3 LSHFT  &kp PERIOD  &kp N1  &kp N2  &kp N3  &trans                                &tog 3      &tog 3                                        &trans  &trans  &trans  &trans    &mc_togSk 3 RSHFT  &kp UP
-&trans             &trans      &trans  &trans  &trans               &trans  &mc_togKp 3 ESC  &trans      &trans  &mc_togKp 3 ENTER  &mc_togKp 3 SPACE          &trans  &trans  &kp LEFT  &kp DOWN           &kp RIGHT
+&trans             &trans      &trans  &trans  &trans  &trans       &trans                                                          &trans             &trans  &trans  &trans  &trans  &trans             &trans
+&trans             &kp DOLLAR  &kp N7  &kp N8  &kp N9  &trans       &trans                                                          &trans             &trans  &trans  &trans  &trans  &trans             &trans
+&trans             &kp N0      &kp N4  &kp N5  &kp N6  &kp PERCENT  &trans  &trans           &trans      &trans  &trans             &trans             &trans  &trans  &trans  &trans  &trans             &trans
+&mc_togSk 3 LSHFT  &kp PERIOD  &kp N1  &kp N2  &kp N3  &trans                                &tog 3      &tog 3                                        &trans  &trans  &trans  &trans  &mc_togSk 3 RSHFT  &trans
+&trans             &trans      &trans  &trans  &trans               &trans  &mc_togKp 3 ESC  &trans      &trans  &mc_togKp 3 ENTER  &mc_togKp 3 SPACE          &trans  &trans  &trans  &trans             &trans
             >;
         };
 
