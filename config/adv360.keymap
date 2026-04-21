@@ -25,10 +25,10 @@
         #include "macros.dtsi"
         #include "version.dtsi"
 
-        cw_all: cw_all {
+        cw_office: cw_office {
             compatible = "zmk,behavior-caps-word";
             #binding-cells = <0>;
-            continue-list = <UNDER MINUS SPACE BSPC>;
+            continue-list = <MINUS BSPC DEL>;
         };
 
         sec_hold_tap_mods_here: sec_hold_tap_mods_here {
@@ -162,7 +162,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
             flavor = "tap-preferred"; // blanced =
-            bindings = <&sk>, <&caps_word>;
+            bindings = <&sk>, <&cw_office>;
         };
 
         v74: v74 {
@@ -545,7 +545,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&caps_word>;
+            bindings = <&mo>, <&cw_office>;
 
             label = "HTMOD60";
         };
@@ -694,7 +694,7 @@
 
         L_office {
             bindings = <
-&n00    &n01    &n02    &n03    &n04    &n05    &trans                                               &trans  &n08    &n09    &n10    &n11    &n12    &kp RG(L)
+&n00    &n01    &n02    &n03    &n04    &n05    &trans                                               &trans  &n08    &n09    &n10    &n11    &n12    &none
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PRINTSCREEN
 &trans  &trans  &trans  &trans  &trans  &trans                  &none       &tog 3                           &trans  &trans  &trans  &trans  &trans  &trans
