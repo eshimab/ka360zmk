@@ -16,8 +16,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE>; };
-
 &sk { quick-release; };
 
 / {
