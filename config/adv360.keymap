@@ -18,6 +18,8 @@
 
 &sk { quick-release; };
 
+&caps_word { continue-list = <DELETE>; };
+
 / {
     behaviors {
         #include "macros.dtsi"
