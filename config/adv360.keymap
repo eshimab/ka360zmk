@@ -558,6 +558,15 @@
 
             label = "HTMOD_MOD";
         };
+
+        htmod73o: htmod73o {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTMOD73O";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mc_kpsk>, <&v73>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -664,6 +673,14 @@
 
             label = "ATTT";
         };
+
+        mc_kpsk: mc_kpsk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&to 2>, <&macro_tap>, <&sk RCTRL>;
+
+            label = "MC_KPSK";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -703,11 +720,11 @@
 
         L_keypad {
             bindings = <
-&trans             &trans     &trans      &trans  &trans  &trans      &trans                                                          &trans             &trans  &trans  &trans  &trans  &trans             &trans
-&trans             &trans     &kp N7      &kp N8  &kp N9  &kp DOLLAR  &trans                                                          &trans             &trans  &trans  &trans  &trans  &trans             &trans
-&trans             &kp PLUS   &kp N4      &kp N5  &kp N6  &kp MINUS   &trans  &trans           &trans      &trans  &trans             &trans             &trans  &trans  &trans  &trans  &trans             &trans
-&mc_togSk 3 LSHFT  &kp ASTRK  &kp N1      &kp N2  &kp N3  &kp SPACE                            &tog 3      &tog 3                                        &trans  &trans  &trans  &trans  &mc_togSk 3 RSHFT  &trans
-&trans             &trans     &kp PERIOD  &kp N0  &trans              &trans  &mc_togKp 3 ESC  &trans      &trans  &mc_togKp 3 ENTER  &mc_togKp 3 SPACE          &trans  &trans  &trans  &trans             &trans
+&trans             &trans      &trans      &trans  &trans  &trans     &trans                                                          &trans             &trans  &trans  &trans  &trans         &trans             &trans
+&trans             &kp DOLLAR  &kp N7      &kp N8  &kp N9  &kp UNDER  &trans                                                          &trans             &trans  &trans  &trans  &trans         &trans             &trans
+&trans             &kp PLUS    &kp N4      &kp N5  &kp N6  &kp MINUS  &trans  &trans           &trans      &trans  &trans             &trans             &trans  &trans  &trans  &trans         &trans             &trans
+&mc_togSk 3 LSHFT  &kp ASTRK   &kp N1      &kp N2  &kp N3  &kp SPACE                           &tog 3      &tog 3                                        &trans  &trans  &trans  &trans         &mc_togSk 3 RSHFT  &trans
+&trans             &trans      &kp PERIOD  &kp N0  &trans             &trans  &mc_togKp 3 ESC  &trans      &trans  &mc_togKp 3 ENTER  &mc_togKp 3 SPACE          &trans  &trans  &htmod73o 0 0  &trans             &trans
             >;
         };
 
