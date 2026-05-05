@@ -567,6 +567,13 @@
             flavor = "tap-preferred";
             bindings = <&mc_kpsk>, <&v73>;
         };
+
+        tgOff: tgOff {
+            compatible = "zmk,behavior-key-toggle";
+            label = "TGOFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
