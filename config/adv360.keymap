@@ -567,6 +567,13 @@
             flavor = "tap-preferred";
             bindings = <&mc_kpsk>, <&v73>;
         };
+
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
