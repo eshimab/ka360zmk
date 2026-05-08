@@ -636,7 +636,8 @@
             tap-ms = <0>;
             #binding-cells = <1>;
             bindings = 
-                <&to 2>;
+                <&macro_tap>,
+                <&to 2>,
                 <&macro_param_1to1 &sk MACRO_PLACEHOLDER>;
         };
 
@@ -646,7 +647,8 @@
             tap-ms = <0>;
             #binding-cells = <0>;
             bindings = 
-                <&to 2>;
+                <&macro_tap>,
+                <&to 2>,
                 <&v73>;
         };
 
