@@ -554,7 +554,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&tdl_mod_office>;
+            bindings = <&mc_togSk>, <&tdl_mod_office>;
 
             label = "HTMOD_MOD";
         };
