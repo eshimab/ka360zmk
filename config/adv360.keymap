@@ -641,11 +641,11 @@
         };
 
         mc_toOfc73: mc_toOfc73 {
-            compatible = "zmk,behavior-macro-two-param";
+            compatible = "zmk,behavior-macro";
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&to 2 &v73>;
+            bindings = <&macro_tap>, <&to 2>, <&macro_tap>, <&v73>;
         };
 
         mc_allmod: mc_allmod {
