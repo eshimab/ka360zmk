@@ -627,9 +627,9 @@
             tap-ms = <0>;
             #binding-cells = <1>;
             bindings =
-                <&macro_param_1to1 &sk MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&to 2>;
+                <&to 2>,
+                <&macro_param_1to1 &sk MACRO_PLACEHOLDER>;
         };
 
         mc_toOfc73: mc_toOfc73 {
