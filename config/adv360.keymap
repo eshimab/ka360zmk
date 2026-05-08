@@ -565,7 +565,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
-            bindings = <&mc_togSk>, <&v73>;
+            bindings = <&mc_togOfcSk>, <&v73>;
         };
     };
 
@@ -628,6 +628,26 @@
             tap-ms = <0>;
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &sk MACRO_PLACEHOLDER>;
+        };
+
+        mc_toOfcSk: mc_togOfcSk {
+            compatible = "zmk,behavior-macro-two-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings = 
+                <&to 2>;
+                <&macro_param_1to1 &sk MACRO_PLACEHOLDER>;
+        };
+
+        mc_toOfc73: mc_togOfc73 {
+            compatible = "zmk,behavior-macro-two-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = 
+                <&to 2>;
+                <&v73>;
         };
 
         mc_allmod: mc_allmod {
