@@ -621,14 +621,6 @@
                 <&to 2 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
         };
 
-        mc_toOfc73: mc_toOfc73 {
-            compatible = "zmk,behavior-macro";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&to 2>, <&macro_tap>, <&v73>;
-        };
-
         mc_allmod: mc_allmod {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
