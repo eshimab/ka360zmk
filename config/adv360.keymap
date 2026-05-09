@@ -555,13 +555,13 @@
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
             label = "HTMOD_MC";
-            bindings = <&mc_togTest>, <&v73>;
+            bindings = <&mc_testTogUnder>, <&v73>;
         };
 
-        v73x: v73x {
+        testTogHt: testTogHt {
             compatible = "zmk,behavior-mod-morph";
-            label = "V73X";
-            bindings = <&kp UNDER>, <&kp DOLLAR>;
+            label = "TESTTOGHT";
+            bindings = <&mc_testTogUnder>, <&mc_testTogDollar>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -696,11 +696,20 @@
             label = "MC_OFCSK";
         };
 
-        mc_togTest: mc_togTest {
+        mc_testTogUnder: mc_testTogUnder {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
-            label = "MC_TOGTEST";
+            bindings = <&macro_tap>, <&tog 3>, <&macro_tap>, <&kp UNDER>;
+
+            label = "MC_TESTTOGUNDER";
+        };
+
+        mc_testTogDollar: mc_testTogDollar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&tog 3>, <&macro_tap>, <&kp DOLLAR>;
+
+            label = "MC_TESTTOGDOLLAR";
         };
     };
 
