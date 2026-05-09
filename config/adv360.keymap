@@ -719,6 +719,17 @@
 
             label = "MC_TESTTOGSK";
         };
+
+        mc_testTogUnder2: mc_testTogUnder2 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&kp UNDER>;
+
+            label = "MC_TESTTOGUNDER2";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -758,11 +769,11 @@
 
         L_keypad {
             bindings = <
-&trans             &trans     &kp EQUAL   &trans  &trans  &trans      &trans                                                          &trans             &trans  &trans            &trans            &trans            &trans             &trans
-&trans             &kp UNDER  &kp N7      &kp N8  &kp N9  &kp DOLLAR  &trans                                                          &trans             &trans  &trans            &trans            &trans            &trans             &trans
-&trans             &kp PLUS   &kp N4      &kp N5  &kp N6  &kp MINUS   &trans  &trans           &trans      &trans  &trans             &trans             &trans  &trans            &trans            &trans            &trans             &trans
-&mc_togSk 3 LSHFT  &kp ASTRK  &kp N1      &kp N2  &kp N3  &kp SPACE                            &tog 3      &tog 3                                        &trans  &trans            &trans            &trans            &mc_togSk 3 RSHFT  &trans
-&trans             &trans     &kp PERIOD  &kp N0  &trans              &trans  &mc_togKp 3 ESC  &trans      &trans  &mc_togKp 3 ENTER  &mc_togKp 3 SPACE          &mc_togSk 3 RALT  &mc_togSk 3 RGUI  &mc_testTogUnder  &mc_togSk 3 RSHFT  &trans
+&trans             &trans     &kp EQUAL   &trans  &trans  &trans      &trans                                                          &trans             &trans  &trans            &trans            &trans               &trans             &trans
+&trans             &kp UNDER  &kp N7      &kp N8  &kp N9  &kp DOLLAR  &trans                                                          &trans             &trans  &trans            &trans            &trans               &trans             &trans
+&trans             &kp PLUS   &kp N4      &kp N5  &kp N6  &kp MINUS   &trans  &trans           &trans      &trans  &trans             &trans             &trans  &trans            &trans            &trans               &trans             &trans
+&mc_togSk 3 LSHFT  &kp ASTRK  &kp N1      &kp N2  &kp N3  &kp SPACE                            &tog 3      &tog 3                                        &trans  &trans            &trans            &trans               &mc_togSk 3 RSHFT  &trans
+&trans             &trans     &kp PERIOD  &kp N0  &trans              &trans  &mc_togKp 3 ESC  &trans      &trans  &mc_togKp 3 ENTER  &mc_togKp 3 SPACE          &mc_togSk 3 RALT  &mc_togSk 3 RGUI  &mc_testTogUnder2 3  &mc_togSk 3 RSHFT  &trans
             >;
         };
 
