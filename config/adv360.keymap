@@ -548,6 +548,24 @@
 
             label = "HTMOD60";
         };
+
+        htmod_mc: htmod_mc {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            label = "HTMOD_MC";
+            bindings = <&mc_togTest>, <&v73>;
+        };
+
+        v73x: v73x {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V73X";
+            bindings = <&kp UNDER>, <&kp DOLLAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -672,9 +690,17 @@
                 <&macro_tap>,
                 <&kp UNDER>,
                 <&macro_tap>,
-                <&sk RSHIFT>;
+                <&sk RSHIFT>,
+                <&macro_press>;
 
             label = "MC_OFCSK";
+        };
+
+        mc_togTest: mc_togTest {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "MC_TOGTEST";
         };
     };
 
@@ -715,11 +741,11 @@
 
         L_keypad {
             bindings = <
-&trans             &trans     &kp EQUAL   &trans  &trans  &trans      &trans                                                          &trans             &trans  &trans            &trans            &trans  &trans             &trans
-&trans             &kp UNDER  &kp N7      &kp N8  &kp N9  &kp DOLLAR  &trans                                                          &trans             &trans  &trans            &trans            &trans  &trans             &trans
-&trans             &kp PLUS   &kp N4      &kp N5  &kp N6  &kp MINUS   &trans  &trans           &trans      &trans  &trans             &trans             &trans  &trans            &trans            &trans  &trans             &trans
-&mc_togSk 3 LSHFT  &kp ASTRK  &kp N1      &kp N2  &kp N3  &kp SPACE                            &tog 3      &tog 3                                        &trans  &trans            &trans            &trans  &mc_togSk 3 RSHFT  &trans
-&trans             &trans     &kp PERIOD  &kp N0  &trans              &trans  &mc_togKp 3 ESC  &trans      &trans  &mc_togKp 3 ENTER  &mc_togKp 3 SPACE          &mc_togSk 3 RALT  &mc_togSk 3 RGUI  &none   &mc_togSk 3 RSHFT  &trans
+&trans             &trans     &kp EQUAL   &trans  &trans  &trans      &trans                                                          &trans             &trans  &trans            &trans            &trans             &trans             &trans
+&trans             &kp UNDER  &kp N7      &kp N8  &kp N9  &kp DOLLAR  &trans                                                          &trans             &trans  &trans            &trans            &trans             &trans             &trans
+&trans             &kp PLUS   &kp N4      &kp N5  &kp N6  &kp MINUS   &trans  &trans           &trans      &trans  &trans             &trans             &trans  &trans            &trans            &trans             &trans             &trans
+&mc_togSk 3 LSHFT  &kp ASTRK  &kp N1      &kp N2  &kp N3  &kp SPACE                            &tog 3      &tog 3                                        &trans  &trans            &trans            &trans             &mc_togSk 3 RSHFT  &trans
+&trans             &trans     &kp PERIOD  &kp N0  &trans              &trans  &mc_togKp 3 ESC  &trans      &trans  &mc_togKp 3 ENTER  &mc_togKp 3 SPACE          &mc_togSk 3 RALT  &mc_togSk 3 RGUI  &mc_togSk 3 RCTRL  &mc_togSk 3 RSHFT  &trans
             >;
         };
 
