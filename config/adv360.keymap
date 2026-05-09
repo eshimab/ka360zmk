@@ -662,6 +662,20 @@
 
             label = "MC_KPSK";
         };
+
+        mc_OfcSk: mc_OfcSk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&tog 3>,
+                <&macro_tap>,
+                <&kp UNDER>,
+                <&macro_tap>,
+                <&sk RSHIFT>;
+
+            label = "MC_OFCSK";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
