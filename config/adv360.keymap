@@ -566,6 +566,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        testTogMod2: testTogMod2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TESTTOGMOD2";
+            bindings = <&mc_testTogUnder2 3>, <&mc_testTogDollar2 3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        testTogHt2: testTogHt2 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            label = "TESTTOGHT2";
+            bindings = <&mc_testTogSk>, <&testTogMod>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -729,6 +747,25 @@
                 <&kp UNDER>;
 
             label = "MC_TESTTOGUNDER2";
+        };
+
+        mc_testTogDollar2: mc_testTogDollar2 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&kp DOLLAR>;
+
+            label = "MC_TESTTOGDOLLAR2";
+        };
+
+        mc_testTogSk2: mc_testTogSk2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&tog 3>, <&macro_tap>, <&sk RCTRL>;
+
+            label = "MC_TESTTOGSK2";
         };
     };
 
