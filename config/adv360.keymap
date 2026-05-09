@@ -549,18 +549,18 @@
             label = "HTMOD60";
         };
 
-        htmod_mc: htmod_mc {
+        testTogHt: testTogHt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
-            label = "HTMOD_MC";
+            label = "TESTTOGHT";
             bindings = <&mc_testTogUnder>, <&v73>;
         };
 
-        testTogHt: testTogHt {
+        testTogMod: testTogMod {
             compatible = "zmk,behavior-mod-morph";
-            label = "TESTTOGHT";
+            label = "TESTTOGMOD";
             bindings = <&mc_testTogUnder>, <&mc_testTogDollar>;
 
             #binding-cells = <0>;
@@ -710,6 +710,14 @@
             bindings = <&macro_tap>, <&tog 3>, <&macro_tap>, <&kp DOLLAR>;
 
             label = "MC_TESTTOGDOLLAR";
+        };
+
+        mc_testTogSk: mc_testTogSk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&tog 3>, <&macro_tap>, <&sk RCTRL>;
+
+            label = "MC_TESTTOGSK";
         };
     };
 
