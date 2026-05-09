@@ -555,7 +555,7 @@
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
             label = "TESTTOGHT";
-            bindings = <&mc_testTogUnder>, <&v73>;
+            bindings = <&mc_testTogSk>, <&testTogMod>;
         };
 
         testTogMod: testTogMod {
