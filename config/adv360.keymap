@@ -806,9 +806,13 @@
         };
 
         mc_testTogSk2a: mc_testTogSk2a {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &sk MACRO_PLACEHOLDER>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&sk RCTRL>;
+
             label = "MC_TESTTOGSK2A";
         };
     };
