@@ -659,6 +659,71 @@
             label = "KPAD71HT";
             bindings = <&mc_kpad71holdSk>, <&mc_kpad71tapKp>;
         };
+
+        caps61ht: caps61ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mc_caps61holdSk>, <&mc_caps61tapKp>;
+        };
+
+        caps62ht: caps62ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mc_caps62holdSk>, <&mc_caps62tapKp>;
+        };
+
+        caps63ht: caps63ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mc_caps63holdSk>, <&mc_caps63tapKp>;
+        };
+
+        caps64ht: caps64ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mc_caps64holdSk>, <&mc_caps64tapKp>;
+        };
+
+        caps71ht: caps71ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mc_caps71holdSk>, <&mc_caps71tapKp>;
+        };
+
+        caps72ht: caps72ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mc_caps72holdSk>, <&mc_caps72tapKp>;
+        };
+
+        caps73ht: caps73ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mc_caps73holdSk>, <&mc_caps73tapKp>;
+        };
+
+        caps74ht: caps74ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mc_caps74holdSk>, <&mc_caps74tapKp>;
+        };
+
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
