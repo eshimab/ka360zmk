@@ -1050,6 +1050,7 @@
                 <&macro_tap>,
                 <&tog 3 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
             label = "MC_KPAD72HOLDSK";
+    };
 
     };
 
