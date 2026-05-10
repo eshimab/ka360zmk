@@ -639,7 +639,7 @@
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
             label = "O73HT";
-            bindings = <&mc_o73hold>, <&mc_o73tap>;
+            bindings = <&mc_kpad73holdSk>, <&mc_kpad73tap>;
         };
     };
 
@@ -852,20 +852,24 @@
             label = "MC_TESTTOGSK2A";
         };
 
-        mc_o73tap: mc_o73tap {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog 4 &kp UNDER>;
+        mc_kpad73tap: mc_kpad73tap {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
-            label = "MC_O73TAP";
+            label = "MC_KPAD73TAP";
         };
 
-        mc_o73hold: mc_o73hold {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog 4>, <&macro_tap>, <&sk RCTRL>;
+        mc_kpad73holdSk: mc_kpad73holdSk {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
 
-            label = "MC_O73HOLD";
+            label = "MC_KPAD73HOLDSK";
         };
 
         mc_togTog: mc_togTog {
@@ -873,6 +877,26 @@
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &tog MACRO_PLACEHOLDER>;
             label = "MC_TOGTOG";
+        };
+
+        mc_kpad72tapKp: mc_kpad72tapKp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "MC_KPAD72TAPKP";
+        };
+
+        mc_kpad72holdSk: mc_kpad72holdSk {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
+
+            label = "MC_KPAD72HOLDSK";
         };
     };
 
@@ -913,21 +937,21 @@
 
         letterMods {
             bindings = <
-&mc_togKp 3 N0             &mc_togKp 3 N1  &mc_togKp 3 N2  &mc_togKp 3 N3  &mc_togKp 3 N4  &mc_togKp 3 N5  &trans                                                                  &trans             &mc_togKp 3 N6  &mc_togKp 3 N7  &mc_togKp 3 N8  &mc_togKp 3 N9  &mc_togKp 3 N0     &trans
-&mc_togKp 3 HASH           &kp LS(Q)       &kp RS(W)       &kp RS(E)       &kp RS(R)       &kp RS(T)       &trans                                                                  &trans             &kp LS(Y)       &kp LS(U)       &kp LS(I)       &kp LS(O)       &kp LS(P)          &trans
-&mc_togKp 3 DOUBLE_QUOTES  &kp RS(A)       &kp RS(S)       &kp RS(D)       &kp RS(F)       &kp RS(G)       &trans  &trans           &trans      &trans          &trans             &trans             &kp LS(H)       &kp LS(J)       &kp LS(K)       &kp LS(L)       &kp N0             &trans
-&mc_togSk 3 LSHFT          &kp LS(Z)       &kp RS(X)       &kp RS(C)       &kp RS(V)       &kp RS(B)                                &tog 3      &mc_togTog 3 4                                        &kp LS(N)       &kp LS(M)       &trans          &trans          &mc_togSk 3 RSHFT  &trans
-&trans                     &trans          &trans          &trans          &trans                          &trans  &mc_togKp 3 ESC  &trans      &trans          &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &trans          &trans          &trans          &trans             &trans
+&mc_togKp 3 N0             &mc_togKp 3 N1  &mc_togKp 3 N2  &mc_togKp 3 N3  &mc_togKp 3 N4  &mc_togKp 3 N5  &trans                                                                  &trans             &mc_togKp 3 N6  &mc_togKp 3 N7  &mc_togKp 3 N8     &mc_togKp 3 N9   &mc_togKp 3 N0     &trans
+&mc_togKp 3 HASH           &kp LS(Q)       &kp RS(W)       &kp RS(E)       &kp RS(R)       &kp RS(T)       &trans                                                                  &trans             &kp LS(Y)       &kp LS(U)       &kp LS(I)          &kp LS(O)        &kp LS(P)          &trans
+&mc_togKp 3 DOUBLE_QUOTES  &kp RS(A)       &kp RS(S)       &kp RS(D)       &kp RS(F)       &kp RS(G)       &trans  &trans           &trans      &trans          &trans             &trans             &kp LS(H)       &kp LS(J)       &kp LS(K)          &kp LS(L)        &kp N0             &trans
+&mc_togSk 3 LSHFT          &kp LS(Z)       &kp RS(X)       &kp RS(C)       &kp RS(V)       &kp RS(B)                                &tog 3      &mc_togTog 3 4                                        &kp LS(N)       &kp LS(M)       &mc_togKp 3 COMMA  &mc_togKp 3 DOT  &mc_togSk 3 RSHFT  &trans
+&trans                     &trans          &trans          &trans          &trans                          &trans  &mc_togKp 3 ESC  &trans      &trans          &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &trans          &trans             &trans           &trans             &trans
             >;
         };
 
         L_keypad {
             bindings = <
-&trans             &trans             &kp EQUAL   &trans  &trans  &trans      &trans                                                          &trans             &trans  &trans            &trans            &trans      &trans             &trans
-&trans             &mc_TogKpUndShift  &kp N7      &kp N8  &kp N9  &kp DOLLAR  &trans                                                          &trans             &trans  &trans            &trans            &trans      &trans             &trans
-&trans             &kp PLUS           &kp N4      &kp N5  &kp N6  &kp MINUS   &trans  &trans           &trans      &trans  &trans             &trans             &trans  &trans            &trans            &trans      &trans             &trans
-&mc_togSk 4 LSHFT  &kp ASTRK          &kp N1      &kp N2  &kp N3  &kp SPACE                            &tog 4      &tog 4                                        &trans  &trans            &trans            &trans      &mc_togSk 4 RSHFT  &trans
-&trans             &trans             &kp PERIOD  &kp N0  &trans              &trans  &mc_togKp 4 ESC  &trans      &trans  &mc_togKp 4 ENTER  &mc_togKp 4 SPACE          &mc_togSk 4 RALT  &mc_togSk 4 RGUI  &o73ht 4 4  &mc_togSk 4 RSHFT  &trans
+&trans             &trans             &kp EQUAL   &trans  &trans  &trans      &trans                                                          &trans             &trans  &trans            &trans            &trans              &trans             &trans
+&trans             &mc_TogKpUndShift  &kp N7      &kp N8  &kp N9  &kp DOLLAR  &trans                                                          &trans             &trans  &trans            &trans            &trans              &trans             &trans
+&trans             &kp PLUS           &kp N4      &kp N5  &kp N6  &kp MINUS   &trans  &trans           &trans      &trans  &trans             &trans             &trans  &trans            &trans            &trans              &trans             &trans
+&mc_togSk 4 LSHFT  &kp ASTRK          &kp N1      &kp N2  &kp N3  &kp SPACE                            &tog 4      &tog 4                                        &trans  &trans            &trans            &trans              &mc_togSk 4 RSHFT  &trans
+&trans             &trans             &kp PERIOD  &kp N0  &trans              &trans  &mc_togKp 4 ESC  &trans      &trans  &mc_togKp 4 ENTER  &mc_togKp 4 SPACE          &mc_togSk 4 RALT  &mc_togSk 4 RGUI  &o73ht RCTRL UNDER  &mc_togSk 4 RSHFT  &trans
             >;
         };
 
