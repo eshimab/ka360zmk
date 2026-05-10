@@ -855,7 +855,7 @@
         mc_o73tap: mc_o73tap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog 4>;
+            bindings = <&macro_tap>, <&tog 4 &kp UNDER>;
 
             label = "MC_O73TAP";
         };
