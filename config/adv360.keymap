@@ -853,23 +853,17 @@
         };
 
         mc_o73tap: mc_o73tap {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&kp UNDER>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&tog 4>;
 
             label = "MC_O73TAP";
         };
 
         mc_o73hold: mc_o73hold {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&sk RCTRL>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&tog 4>, <&macro_tap>, <&sk RCTRL>;
 
             label = "MC_O73HOLD";
         };
