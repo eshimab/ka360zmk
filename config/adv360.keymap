@@ -896,7 +896,7 @@
             label = "MC_KPAD72HOLDSK";
         };
 
-        mc_kpad73tapKp: mc_kpad73tapKp {
+        mc_kpad71tapKp: mc_kpad71tapKp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -904,7 +904,7 @@
                 <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MC_KPAD72TAPKP";
         };
-        mc_kpad73holdSk: mc_kpad73holdSk {
+        mc_kpad71holdSk: mc_kpad71holdSk {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
