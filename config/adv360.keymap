@@ -639,7 +639,7 @@
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
             label = "O73HT";
-            bindings = <&mc_testTogSk2a>, <&testTogMod2a>;
+            bindings = <&mc_o73hold>, <&mc_o73tap>;
         };
     };
 
@@ -859,6 +859,14 @@
 
             label = "MC_O73TAP";
         };
+
+        mc_o73hold: mc_o73hold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&tog 4>, <&macro_tap>, <&sk RCTRL>;
+
+            label = "MC_O73HOLD";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -872,7 +880,7 @@
 &v14          &v15q              &kp W             &kp E            &kp R            &kp T  &none                                                                      &none            &kp Y  &kp U            &kp I            &kp O             &kp P              &kp DELETE
 &v28          &kp A              &kp S             &kp D            &kp F            &kp G  &none            &kp LEFT  &kp RIGHT      &kp DOWN              &kp UP     &none            &kp H  &kp J            &kp K            &kp L             &v44               &none
 &sk LSHIFT    &vLshift           &kp X             &kp C            &kp V            &kp B                             &tog 1         &tog 4                                            &kp N  &kp M            &kp COMMA        &kp PERIOD        &htmodRS 3 RSHIFT  &mo 6
-&htmod60 5 0  &htmod61 LSHIFT 0  &htmod62 LCTRL 0  &htmod63 LGUI 0  &htmod64 LALT 0         &kp BSPC         &kp ESC   &kp TAB        &sk LS(RA(RC(RGUI)))  &kp ENTER  &kp SPACE               &htmod71 RALT 0  &htmod72 RGUI 0  &testTogHt2a 3 0  &htmod74 RSHFT 0   &mo 5
+&htmod60 5 0  &htmod61 LSHIFT 0  &htmod62 LCTRL 0  &htmod63 LGUI 0  &htmod64 LALT 0         &kp BSPC         &kp ESC   &kp TAB        &sk LS(RA(RC(RGUI)))  &kp ENTER  &kp SPACE               &htmod71 RALT 0  &htmod72 RGUI 0  &htmod73 RCTRL 0  &htmod74 RSHFT 0   &mo 5
             >;
         };
 
@@ -908,11 +916,11 @@
 
         L_keypad {
             bindings = <
-&trans             &trans             &kp EQUAL   &trans  &trans  &trans      &trans                                                          &trans             &trans  &trans            &trans            &trans            &trans             &trans
-&trans             &mc_TogKpUndShift  &kp N7      &kp N8  &kp N9  &kp DOLLAR  &trans                                                          &trans             &trans  &trans            &trans            &trans            &trans             &trans
-&trans             &kp PLUS           &kp N4      &kp N5  &kp N6  &kp MINUS   &trans  &trans           &trans      &trans  &trans             &trans             &trans  &trans            &trans            &trans            &trans             &trans
-&mc_togSk 4 LSHFT  &kp ASTRK          &kp N1      &kp N2  &kp N3  &kp SPACE                            &tog 4      &tog 4                                        &trans  &trans            &trans            &trans            &mc_togSk 4 RSHFT  &trans
-&trans             &trans             &kp PERIOD  &kp N0  &trans              &trans  &mc_togKp 4 ESC  &trans      &trans  &mc_togKp 4 ENTER  &mc_togKp 4 SPACE          &mc_togSk 4 RALT  &mc_togSk 4 RGUI  &testTogHt2a 4 0  &mc_togSk 4 RSHFT  &trans
+&trans             &trans             &kp EQUAL   &trans  &trans  &trans      &trans                                                          &trans             &trans  &trans            &trans            &trans      &trans             &trans
+&trans             &mc_TogKpUndShift  &kp N7      &kp N8  &kp N9  &kp DOLLAR  &trans                                                          &trans             &trans  &trans            &trans            &trans      &trans             &trans
+&trans             &kp PLUS           &kp N4      &kp N5  &kp N6  &kp MINUS   &trans  &trans           &trans      &trans  &trans             &trans             &trans  &trans            &trans            &trans      &trans             &trans
+&mc_togSk 4 LSHFT  &kp ASTRK          &kp N1      &kp N2  &kp N3  &kp SPACE                            &tog 4      &tog 4                                        &trans  &trans            &trans            &trans      &mc_togSk 4 RSHFT  &trans
+&trans             &trans             &kp PERIOD  &kp N0  &trans              &trans  &mc_togKp 4 ESC  &trans      &trans  &mc_togKp 4 ENTER  &mc_togKp 4 SPACE          &mc_togSk 4 RALT  &mc_togSk 4 RGUI  &o73ht 0 0  &mc_togSk 4 RSHFT  &trans
             >;
         };
 
