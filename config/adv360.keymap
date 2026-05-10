@@ -615,13 +615,13 @@
             label = "HTMODRS";
         };
 
-        vLshift: vLshift {
+        v47_LS: v47_LS {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&sk LSHFT>, <&kp Z>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
-            label = "VLSHIFT";
+            label = "V47_LS";
         };
 
         v15q: v15q {
@@ -867,6 +867,13 @@
 
             label = "MC_O73HOLD";
         };
+
+        mc_togTog: mc_togTog {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &tog MACRO_PLACEHOLDER>;
+            label = "MC_TOGTOG";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -879,7 +886,7 @@
 &v00          &v01               &v02              &v03             &v04             &v05   &tdl_mod_office                                                            &tdl_mod_office  &v08   &v09             &v10             &v11              &v12               &mc_rcmdx2
 &v14          &v15q              &kp W             &kp E            &kp R            &kp T  &none                                                                      &none            &kp Y  &kp U            &kp I            &kp O             &kp P              &kp DELETE
 &v28          &kp A              &kp S             &kp D            &kp F            &kp G  &none            &kp LEFT  &kp RIGHT      &kp DOWN              &kp UP     &none            &kp H  &kp J            &kp K            &kp L             &v44               &none
-&sk LSHIFT    &vLshift           &kp X             &kp C            &kp V            &kp B                             &tog 1         &tog 4                                            &kp N  &kp M            &kp COMMA        &kp PERIOD        &htmodRS 3 RSHIFT  &mo 6
+&sk LSHIFT    &v47_LS            &kp X             &kp C            &kp V            &kp B                             &tog 1         &tog 4                                            &kp N  &kp M            &kp COMMA        &kp PERIOD        &htmodRS 3 RSHIFT  &mo 6
 &htmod60 5 0  &htmod61 LSHIFT 0  &htmod62 LCTRL 0  &htmod63 LGUI 0  &htmod64 LALT 0         &kp BSPC         &kp ESC   &kp TAB        &sk LS(RA(RC(RGUI)))  &kp ENTER  &kp SPACE               &htmod71 RALT 0  &htmod72 RGUI 0  &htmod73 RCTRL 0  &htmod74 RSHFT 0   &mo 5
             >;
         };
@@ -906,11 +913,11 @@
 
         letterMods {
             bindings = <
-&trans  &trans     &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(Q)  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(Z)  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&mc_togKp 3 N0             &mc_togKp 3 N1  &mc_togKp 3 N2  &mc_togKp 3 N3  &mc_togKp 3 N4  &mc_togKp 3 N5  &trans                                                                  &trans             &mc_togKp 3 N6  &mc_togKp 3 N7  &mc_togKp 3 N8  &mc_togKp 3 N9  &mc_togKp 3 N0     &trans
+&mc_togKp 3 HASH           &kp LS(Q)       &kp RS(W)       &kp RS(E)       &kp RS(R)       &kp RS(T)       &trans                                                                  &trans             &kp LS(Y)       &kp LS(U)       &kp LS(I)       &kp LS(O)       &kp LS(P)          &trans
+&mc_togKp 3 DOUBLE_QUOTES  &kp RS(A)       &kp RS(S)       &kp RS(D)       &kp RS(F)       &kp RS(G)       &trans  &trans           &trans      &trans          &trans             &trans             &kp LS(H)       &kp LS(J)       &kp LS(K)       &kp LS(L)       &kp N0             &trans
+&mc_togSk 3 LSHFT          &kp LS(Z)       &kp RS(X)       &kp RS(C)       &kp RS(V)       &kp RS(B)                                &tog 3      &mc_togTog 3 4                                        &kp LS(N)       &kp LS(M)       &trans          &trans          &mc_togSk 3 RSHFT  &trans
+&trans                     &trans          &trans          &trans          &trans                          &trans  &mc_togKp 3 ESC  &trans      &trans          &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &trans          &trans          &trans          &trans             &trans
             >;
         };
 
