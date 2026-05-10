@@ -885,19 +885,119 @@
             bindings =
                 <&macro_tap>,
                 <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
             label = "MC_KPAD72TAPKP";
         };
-
         mc_kpad72holdSk: mc_kpad72holdSk {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
                 <&tog 4 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
-
             label = "MC_KPAD72HOLDSK";
         };
+
+        mc_kpad73tapKp: mc_kpad73tapKp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MC_KPAD72TAPKP";
+        };
+        mc_kpad73holdSk: mc_kpad73holdSk {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
+            label = "MC_KPAD72HOLDSK";
+        };
+
+        mc_kpad74tapKp: mc_kpad74tapKp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MC_KPAD72TAPKP";
+        };
+        mc_kpad74holdSk: mc_kpad74holdSk {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
+            label = "MC_KPAD72HOLDSK";
+        };
+
+        mc_kpad61tapKp: mc_kpad61tapKp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MC_KPAD72TAPKP";
+        };
+        mc_kpad61holdSk: mc_kpad61holdSk {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
+            label = "MC_KPAD72HOLDSK";
+        };
+
+        mc_kpad62tapKp: mc_kpad62tapKp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MC_KPAD72TAPKP";
+        };
+        mc_kpad62holdSk: mc_kpad62holdSk {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
+            label = "MC_KPAD72HOLDSK";
+        };
+
+        mc_kpad63tapKp: mc_kpad63tapKp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MC_KPAD72TAPKP";
+        };
+        mc_kpad63holdSk: mc_kpad63holdSk {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
+            label = "MC_KPAD72HOLDSK";
+        };
+
+        mc_kpad64tapKp: mc_kpad64tapKp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MC_KPAD72TAPKP";
+        };
+        mc_kpad64holdSk: mc_kpad64holdSk {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&tog 4 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
+            label = "MC_KPAD72HOLDSK";
+        };
+
     };
 
     combos { compatible = "zmk,combos"; };
