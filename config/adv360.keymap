@@ -1432,6 +1432,17 @@
 
             label = "MC_BTSEL3";
         };
+
+        mc_LSF10: mc_LSF10 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &to MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&kp LS(F10)>;
+
+            label = "MC_LSF10";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -1464,7 +1475,7 @@
 &n00    &n01    &n02    &n03    &n04    &n05    &trans                                               &trans  &n08    &n09    &n10    &n11    &n12    &kp PRINTSCREEN
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &kp DEL
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tdlOfc_bt_bt2_bt3
-&trans  &trans  &trans  &trans  &trans  &trans                  &none       &tog 4                           &trans  &trans  &trans  &trans  &trans  &tog 4
+&trans  &trans  &trans  &trans  &trans  &trans                  &none       &tog 4                           &trans  &trans  &trans  &trans  &trans  &mc_LSF10 2
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &td_at_att_attt  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
