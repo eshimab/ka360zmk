@@ -1428,7 +1428,7 @@
             bindings =
                 <&macro_param_1to1 &to MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&bt BT_SEL 2>;
+                <&bt BT_SEL 3>;
 
             label = "MC_BTSEL3";
         };
