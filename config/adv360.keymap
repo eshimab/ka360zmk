@@ -792,6 +792,15 @@
             #binding-cells = <0>;
             bindings = <&mc_btsel1 2>, <&mc_btsel2 2>, <&mc_btsel3 2>;
         };
+
+        mdCtrl_PS_DEL: mdCtrl_PS_DEL {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MDCTRL_PS_DEL";
+            bindings = <&mc_toOfcKp PRINTSCREEN>, <&mc_toOfcKp DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -1443,6 +1452,16 @@
 
             label = "MC_LSF10";
         };
+
+        mc_toOfcKp: mc_toOfcKp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&to 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "MC_TOOFCKP";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -1472,31 +1491,31 @@
 
         L_office {
             bindings = <
-&n00    &n01    &n02    &n03    &n04    &n05    &trans                                               &trans  &n08    &n09    &n10    &n11    &n12    &kp DEL
+&n00    &n01    &n02    &n03    &n04    &n05    &trans                                               &trans  &n08    &n09    &n10    &n11    &n12    &mdCtrl_PS_DEL
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &tdlOfc_bt_bt2_bt3
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mc_LSF10 2
-&trans  &trans  &trans  &trans  &trans  &trans                  &none       &tog 4                           &trans  &trans  &trans  &trans  &trans  &kp PRINTSCREEN
+&trans  &trans  &trans  &trans  &trans  &trans                  &none       &tog 4                           &trans  &trans  &trans  &trans  &trans  &mc_toOfcKp PRINTSCREEN
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &td_at_att_attt  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         letterMods {
             bindings = <
-&mc_togKp 3 N0             &mc_togKp 3 N1       &mc_togKp 3 N2      &mc_togKp 3 N3     &mc_togKp 3 N4      &mc_togKp 3 N5  &trans                                                                                &trans             &mc_togKp 3 N6  &mc_togKp 3 N7     &mc_togKp 3 N8         &mc_togKp 3 N9       &mc_togKp 3 N0     &trans
-&mc_togKp 3 HASH           &kp LS(Q)            &kp RS(W)           &kp RS(E)          &kp RS(R)           &kp RS(T)       &trans                                                                                &trans             &kp LS(Y)       &kp LS(U)          &kp LS(I)              &kp LS(O)            &kp LS(P)          &trans
-&mc_togKp 3 DOUBLE_QUOTES  &kp RS(A)            &kp RS(S)           &kp RS(D)          &kp RS(F)           &kp RS(G)       &trans  &mc_togKp 3 LEFT  &mc_togKp 3 RIGHT      &mc_togKp 3 DOWN  &mc_togKp 3 UP     &trans             &kp LS(H)       &kp LS(J)          &kp LS(K)              &kp LS(L)            &mc_togKp 3 APOS   &trans
-&mc_togSk 3 LSHFT          &kp LS(Z)            &kp RS(X)           &kp RS(C)          &kp RS(V)           &kp RS(B)                                 &tog 3                 &mc_togTog 3 4                                          &kp LS(N)       &kp LS(M)          &mc_togKp 3 COMMA      &mc_togKp 3 DOT      &mc_togSk 3 RSHFT  &trans
-&capsHtMo 5 3              &capsHt LSHFT GRAVE  &capsHt LCTRL PIPE  &capsHt LGUI AMPS  &capsHt LALT SLASH                  &trans  &mc_togKp 3 ESC   &mc_togKp 3 TAB        &trans            &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &capsHt RALT PLUS  &capsHtSkO RGUI MINUS  &capsHt LCTRL UNDER  &mc_togSk 3 RSHFT  &capsHtMo 5 3
+&mc_togKp 3 N0             &mc_togKp 3 N1       &mc_togKp 3 N2      &mc_togKp 3 N3     &mc_togKp 3 N4      &mc_togKp 3 N5  &trans                                                                           &trans             &mc_togKp 3 N6  &mc_togKp 3 N7     &mc_togKp 3 N8         &mc_togKp 3 N9       &mc_togKp 3 N0     &trans
+&mc_togKp 3 HASH           &kp LS(Q)            &kp RS(W)           &kp RS(E)          &kp RS(R)           &kp RS(T)       &trans                                                                           &trans             &kp LS(Y)       &kp LS(U)          &kp LS(I)              &kp LS(O)            &kp LS(P)          &trans
+&mc_togKp 3 DOUBLE_QUOTES  &kp RS(A)            &kp RS(S)           &kp RS(D)          &kp RS(F)           &kp RS(G)       &trans  &trans           &trans               &trans          &trans             &trans             &kp LS(H)       &kp LS(J)          &kp LS(K)              &kp LS(L)            &mc_togKp 3 APOS   &trans
+&mc_togSk 3 LSHFT          &kp LS(Z)            &kp RS(X)           &kp RS(C)          &kp RS(V)           &kp RS(B)                                &tog 3               &mc_togTog 3 4                                        &kp LS(N)       &kp LS(M)          &mc_togKp 3 COMMA      &mc_togKp 3 DOT      &mc_togSk 3 RSHFT  &trans
+&capsHtMo 5 3              &capsHt LSHFT GRAVE  &capsHt LCTRL PIPE  &capsHt LGUI AMPS  &capsHt LALT SLASH                  &trans  &mc_togKp 3 ESC  &mc_togKp 3 TAB      &trans          &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &capsHt RALT PLUS  &capsHtSkO RGUI MINUS  &capsHt LCTRL UNDER  &mc_togSk 3 RSHFT  &capsHtMo 5 3
             >;
         };
 
         L_keypad {
             bindings = <
-&trans                     &mc_togKp 4 EXCL     &mc_togKp 4 EQUAL     &mc_togKp 4 LBRC    &mc_togKp 4 LPAR       &mc_togKp 4 LBKT  &trans                                                                                &trans             &mc_togKp 4 RBKT  &mc_togKp 4 RPAR   &mc_togKp 4 RBRC    &mc_togKp 4 COLON    &trans             &trans
-&mc_togKp 4 HASH           &mc_TogKpUndShift    &kp N7                &kp N8              &kp N9                 &kp DOLLAR        &trans                                                                                &trans             &mc_togKp 4 Y     &mc_togKp 4 U      &mc_togKp 4 I       &mc_togKp 4 O        &mc_togKp 4 P      &trans
-&mc_togKp 4 DOUBLE_QUOTES  &kp PLUS             &kp N4                &kp N5              &kp N6                 &kp MINUS         &trans  &mc_togKp 4 LEFT  &mc_togKp 4 RIGHT      &mc_togKp 4 DOWN  &mc_togKp 4 UP     &trans             &mc_togKp 4 H     &mc_togKp 4 J      &mc_togKp 4 K       &mc_togKp 4 L        &mc_togKp 4 APOS   &trans
-&mc_togSk 4 LSHFT          &kp ASTRK            &kp N1                &kp N2              &kp N3                 &kp SPACE                                   &tog 4                 &tog 4                                                  &mc_togKp 4 N     &mc_togKp 4 M      &mc_togKp 4 COMMA   &mc_togKp 4 DOT      &mc_togSk 4 RSHFT  &trans
-&kpadHtMo 5 4              &kpadHt LSHFT GRAVE  &kpadHtSkO LCTRL DOT  &kpadHtSkO LGUI N0  &kpadHtSkO RALT SLASH                    &trans  &mc_togKp 4 ESC   &mc_togKp 4 TAB        &trans            &mc_togKp 4 ENTER  &mc_togKp 4 SPACE                    &kpadHt RALT PLUS  &kpadHt RGUI MINUS  &kpadHt RCTRL UNDER  &mc_togSk 4 RSHFT  &kpadHtMo 5 4
+&trans                     &mc_togKp 4 EXCL     &mc_togKp 4 EQUAL     &mc_togKp 4 LBRC    &mc_togKp 4 LPAR       &mc_togKp 4 LBKT  &trans                                                                   &trans             &mc_togKp 4 RBKT  &mc_togKp 4 RPAR   &mc_togKp 4 RBRC    &mc_togKp 4 COLON    &trans             &trans
+&mc_togKp 4 HASH           &mc_TogKpUndShift    &kp N7                &kp N8              &kp N9                 &kp DOLLAR        &trans                                                                   &trans             &mc_togKp 4 Y     &mc_togKp 4 U      &mc_togKp 4 I       &mc_togKp 4 O        &mc_togKp 4 P      &trans
+&mc_togKp 4 DOUBLE_QUOTES  &kp PLUS             &kp N4                &kp N5              &kp N6                 &kp MINUS         &trans  &trans           &trans               &trans  &trans             &trans             &mc_togKp 4 H     &mc_togKp 4 J      &mc_togKp 4 K       &mc_togKp 4 L        &mc_togKp 4 APOS   &trans
+&mc_togSk 4 LSHFT          &kp ASTRK            &kp N1                &kp N2              &kp N3                 &kp SPACE                                  &tog 4               &tog 4                                        &mc_togKp 4 N     &mc_togKp 4 M      &mc_togKp 4 COMMA   &mc_togKp 4 DOT      &mc_togSk 4 RSHFT  &trans
+&kpadHtMo 5 4              &kpadHt LSHFT GRAVE  &kpadHtSkO LCTRL DOT  &kpadHtSkO LGUI N0  &kpadHtSkO RALT SLASH                    &trans  &mc_togKp 4 ESC  &mc_togKp 4 TAB      &trans  &mc_togKp 4 ENTER  &mc_togKp 4 SPACE                    &kpadHt RALT PLUS  &kpadHt RGUI MINUS  &kpadHt RCTRL UNDER  &mc_togSk 4 RSHFT  &kpadHtMo 5 4
             >;
         };
 
