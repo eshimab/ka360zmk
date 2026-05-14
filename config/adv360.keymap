@@ -801,6 +801,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
+
+        mdLCbutton: mdLCbutton {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MDLCBUTTON";
+            bindings = <&mc_LSF10 2>, <&mc_toOfcLC 2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        tdlOfcShiftF: tdlOfcShiftF {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDLOFCSHIFTF";
+            #binding-cells = <0>;
+            bindings = <&mc_toOfcLC F10>, <&mc_toOfcLC F6>;
+
+            tapping-term-ms = <180>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -1462,6 +1480,18 @@
 
             label = "MC_TOOFCKP";
         };
+
+        mc_toOfcLC: mc_toOfcLC {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&to 2>,
+                <&macro_tap>,
+                <&sk LEFT_SHIFT &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "MC_TOOFCLC";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -1491,9 +1521,9 @@
 
         L_office {
             bindings = <
-&n00    &n01    &n02    &n03    &n04    &n05    &trans                                               &trans  &n08    &n09    &n10    &n11    &n12    &mdCtrl_PS_DEL
+&n00    &n01    &n02    &n03    &n04    &n05    &trans                                               &trans  &n08    &n09    &n10    &n11    &n12    &tdlOfc_bt_bt2_bt3
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &tdlOfc_bt_bt2_bt3
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mc_LSF10 2
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tdlOfcShiftF
 &trans  &trans  &trans  &trans  &trans  &trans                  &none       &tog 4                           &trans  &trans  &trans  &trans  &trans  &mc_toOfcKp PRINTSCREEN
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &td_at_att_attt  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
