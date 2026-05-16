@@ -579,30 +579,12 @@
             label = "HTMODRS";
         };
 
-        v47_LS: v47_LS {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&sk LSHFT>, <&kp Z>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-            label = "V47_LS";
-        };
-
-        v15q: v15q {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp N0>, <&kp Q>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-            label = "V15Q";
-        };
-
         capsHtSkO: capsHtSkO {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
-            bindings = <&mc_caps74holdSk>, <&kp>;
+            bindings = <&capsMcHoldSk>, <&kp>;
         };
 
         kpadHt: kpadHt {
@@ -651,9 +633,9 @@
             bindings = <&mc_kpadHoldMo>, <&tog>;
         };
 
-        tdlOfc_bt_bt2_bt3: tdlOfc_bt_bt2_bt3 {
+        ofcTd_bt_bt2_bt3: ofcTd_bt_bt2_bt3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TDLOFC_BT_BT2_BT3";
+            label = "OFCTD_BT_BT2_BT3";
             #binding-cells = <0>;
             bindings = <&mc_btsel1 2>, <&mc_btsel2 2>, <&mc_btsel3 2>;
         };
@@ -1067,7 +1049,7 @@
         L_office {
             bindings = <
 &n00    &n01    &n02    &n03    &n04    &n05    &trans                                               &trans  &n08    &n09    &n10    &n11    &n12    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &tdlOfc_bt_bt2_bt3
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &ofcTd_bt_bt2_bt3
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tdlOfcShiftF
 &trans  &trans  &trans  &trans  &trans  &trans                  &none       &tog 4                           &trans  &trans  &trans  &trans  &trans  &mc_toOfcKp PRINTSCREEN
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &td_at_att_attt  &trans  &trans          &trans  &trans  &trans  &trans  &trans
