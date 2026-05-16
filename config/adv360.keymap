@@ -540,15 +540,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        testTogHt2: testTogHt2 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "tap-preferred";
-            label = "TESTTOGHT2";
-            bindings = <&mc_testTogSk2>, <&testTogMod2>;
-        };
-
         testTogMod2a: testTogMod2a {
             compatible = "zmk,behavior-mod-morph";
             label = "TESTTOGMOD2A";
@@ -558,15 +549,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        testTogHt2a: testTogHt2a {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "tap-preferred";
-            label = "TESTTOGHT2A";
-            bindings = <&mc_testTogSk2a>, <&testTogMod2a>;
         };
 
         htmodRS: htmodRS {
@@ -665,6 +647,15 @@
             bindings = <&mc_toOfcLC F10>, <&mc_toOfcLC F6>;
 
             tapping-term-ms = <180>;
+        };
+
+        layerHt: layerHt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYERHT";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <185>;
         };
     };
 
@@ -1062,7 +1053,7 @@
 &mc_togKp 3 HASH           &kp LS(Q)            &kp RS(W)           &kp RS(E)          &kp RS(R)           &kp RS(T)       &trans                                                                           &trans             &kp LS(Y)       &kp LS(U)          &kp LS(I)              &kp LS(O)            &kp LS(P)          &trans
 &mc_togKp 3 DOUBLE_QUOTES  &kp RS(A)            &kp RS(S)           &kp RS(D)          &kp RS(F)           &kp RS(G)       &trans  &trans           &trans               &trans          &trans             &trans             &kp LS(H)       &kp LS(J)          &kp LS(K)              &kp LS(L)            &mc_togKp 3 APOS   &trans
 &mc_togSk 3 LSHFT          &kp LS(Z)            &kp RS(X)           &kp RS(C)          &kp RS(V)           &kp RS(B)                                &tog 3               &mc_togTog 3 4                                        &kp LS(N)       &kp LS(M)          &mc_togKp 3 COMMA      &mc_togKp 3 DOT      &mc_togSk 3 RSHFT  &trans
-&capsHtMo 5 3              &capsHt LSHFT GRAVE  &capsHt LCTRL PIPE  &capsHt LGUI AMPS  &capsHt LALT SLASH                  &trans  &mc_togKp 3 ESC  &mc_togKp 3 TAB      &trans          &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &capsHt RALT PLUS  &capsHtSkO RGUI MINUS  &capsHt LCTRL UNDER  &mc_togSk 3 RSHFT  &capsHtMo 5 3
+&layerHt 5 3               &capsHt LSHFT GRAVE  &capsHt LCTRL PIPE  &capsHt LGUI AMPS  &capsHt LALT SLASH                  &trans  &mc_togKp 3 ESC  &mc_togKp 3 TAB      &trans          &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &capsHt RALT PLUS  &capsHtSkO RGUI MINUS  &capsHt LCTRL UNDER  &mc_togSk 3 RSHFT  &capsHtMo 5 3
             >;
         };
 
