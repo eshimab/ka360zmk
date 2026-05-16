@@ -620,7 +620,7 @@
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
             label = "CAPSHT";
-            bindings = <&mc_capsHoldSk>, <&mc_capsTapKp>;
+            bindings = <&capsMcHoldSk>, <&capsMcTapKp>;
         };
 
         kpadHtSkO: kpadHtSkO {
@@ -802,7 +802,7 @@
             label = "MC_KPSK";
         };
 
-        mc_TogKpUndShift: mc_TogKpUndShift {
+        kpadMcTogUndShift: mc_TogKpUndShift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -905,7 +905,7 @@
             label = "MC_TOGTOG";
         };
 
-        mc_capsHoldSk: mc_capsHoldSk {
+        capsMcHoldSk: mc_capsHoldSk {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -915,7 +915,7 @@
             label = "MC_CAPSHOLDSK";
         };
 
-        mc_capsTapKp: mc_capsTapKp {
+        capsMcTapKp: mc_capsTapKp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -1087,7 +1087,7 @@
         L_keypad {
             bindings = <
 &kp N0                     &kp N1               &mc_togKp 4 EQUAL     &kp N3              &kp N4                 &kp N5      &trans                                                                   &trans             &kp N6         &kp N7             &kp N8              &kp N9               &kp N0             &mc_togKp 4 DEL
-&mc_togKp 4 HASH           &mc_TogKpUndShift    &kp N7                &kp N8              &kp N9                 &kp DOLLAR  &trans                                                                   &trans             &mc_togKp 4 Y  &mc_togKp 4 U      &mc_togKp 4 I       &mc_togKp 4 O        &mc_togKp 4 P      &trans
+&mc_togKp 4 HASH           &kpadMcTogUndShift   &kp N7                &kp N8              &kp N9                 &kp DOLLAR  &trans                                                                   &trans             &mc_togKp 4 Y  &mc_togKp 4 U      &mc_togKp 4 I       &mc_togKp 4 O        &mc_togKp 4 P      &trans
 &mc_togKp 4 DOUBLE_QUOTES  &kp PLUS             &kp N4                &kp N5              &kp N6                 &kp MINUS   &trans  &trans           &trans               &trans  &trans             &trans             &mc_togKp 4 H  &mc_togKp 4 J      &mc_togKp 4 K       &mc_togKp 4 L        &mc_togKp 4 APOS   &trans
 &mc_togSk 4 LSHFT          &kp ASTRK            &kp N1                &kp N2              &kp N3                 &kp SPACE                            &tog 4               &tog 4                                        &mc_togKp 4 N  &mc_togKp 4 M      &mc_togKp 4 COMMA   &mc_togKp 4 DOT      &mc_togSk 4 RSHFT  &trans
 &kpadHtMo 5 4              &kpadHt LSHFT GRAVE  &kpadHtSkO LCTRL DOT  &kpadHtSkO LGUI N0  &kpadHtSkO RALT SLASH              &trans  &mc_togKp 4 ESC  &mc_togKp 4 TAB      &trans  &mc_togKp 4 ENTER  &mc_togKp 4 SPACE                 &kpadHt RALT PLUS  &kpadHt RGUI MINUS  &kpadHt RCTRL UNDER  &mc_togSk 4 RSHFT  &kpadHtMo 5 4
