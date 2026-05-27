@@ -438,6 +438,15 @@
             bindings = <&sk>, <&tog>;
         };
 
+        htMo0607Tg: htMo0607Tg {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&tdToNzTgOfc>;
+        };
+    };
+
         sec_ofc_caps_kpad_here: sec_ofc_caps_kpad_here {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -493,15 +502,6 @@
             tapping-term-ms = <180>;
             bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
         };
-
-        htMo0607Tg: htMo0607Tg {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&tdToNzTgOfc>;
-        };
-    };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
