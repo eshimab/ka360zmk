@@ -430,19 +430,12 @@
             bindings = <&mo>, <&tog>;
         };
 
-        htTgSk: htTgSk {
+        htSkTg: htSkTg {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
             bindings = <&sk>, <&tog>;
-        };
-
-        htMoTg: htMoTg {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <185>;
-            bindings = <&mo>, <&tog>;
         };
 
         sec_ofc_caps_kpad_here: sec_ofc_caps_kpad_here {
@@ -788,7 +781,7 @@
 &mc_togKp 3 HASH           &kp LS(Q)                &kp RS(W)               &kp RS(E)              &kp RS(R)               &kp RS(T)       &trans                                                                        &trans             &kp LS(Y)       &kp LS(U)              &kp LS(I)              &kp LS(O)                &kp LS(P)          &trans
 &mc_togKp 3 DOUBLE_QUOTES  &kp RS(A)                &kp RS(S)               &kp RS(D)              &kp RS(F)               &kp RS(G)       &trans  &trans           &trans               &trans       &trans             &trans             &kp LS(H)       &kp LS(J)              &kp LS(K)              &kp LS(L)                &mc_togKp 3 APOS   &trans
 &mc_togSk 3 LSHFT          &kp LS(Z)                &kp RS(X)               &kp RS(C)              &kp RS(V)               &kp RS(B)                                &tog 3               &mcTgTg 3 4                                        &kp LS(N)       &kp LS(M)              &mc_togKp 3 COMMA      &mc_togKp 3 DOT          &mc_togSk 3 RSHFT  &trans
-&htMoTg 5 3                &capsHtSkKp LSHFT GRAVE  &capsHtSkKp LCTRL PIPE  &capsHtSkKp LGUI AMPS  &capsHtSkKp LALT SLASH                  &trans  &mc_togKp 3 ESC  &mc_togKp 3 TAB      &trans       &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &capsHtSkKp RALT PLUS  &capsHtSkO RGUI MINUS  &capsHtSkKp LCTRL UNDER  &htTgSk RSHFT 3    &htMoTg 5 3
+&htMoTg 5 3                &capsHtSkKp LSHFT GRAVE  &capsHtSkKp LCTRL PIPE  &capsHtSkKp LGUI AMPS  &capsHtSkKp LALT SLASH                  &trans  &mc_togKp 3 ESC  &mc_togKp 3 TAB      &trans       &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &capsHtSkKp RALT PLUS  &capsHtSkO RGUI MINUS  &capsHtSkKp LCTRL UNDER  &htSkTg RSHFT 3    &htMoTg 5 3
             >;
         };
 
