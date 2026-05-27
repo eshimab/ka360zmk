@@ -49,7 +49,6 @@
         };
 
         htSkKpV62: htSkKpV62 {
-            label = "HTSKKPV62";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
@@ -114,7 +113,6 @@
         };
 
         htSkKpV72: htSkKpV72 {
-            label = "HTSKKPV72";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
@@ -123,7 +121,6 @@
         };
 
         v72tap: v72tap {
-            label = "V72TAP";
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp MINUS>, <&kp CARET>;
 
@@ -132,7 +129,6 @@
         };
 
         htSkKpV73: htSkKpV73 {
-            label = "HTSKKPV73";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
@@ -141,7 +137,6 @@
         };
 
         v73tap: v73tap {
-            label = "V73TAP";
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp UNDER>, <&kp DOLLAR>;
 
@@ -150,7 +145,6 @@
         };
 
         htSkKpV74: htSkKpV74 {
-            label = "HTSKKPV74";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
@@ -160,7 +154,6 @@
 
         v74hold: v74hold {
             compatible = "zmk,behavior-mod-morph";
-            label = "V74HOLD";
             bindings = <&mo 5>, <&sk RSHFT>;
 
             #binding-cells = <0>;
@@ -168,7 +161,6 @@
         };
 
         v74tap: v74tap {
-            label = "V74TAP";
             compatible = "zmk,behavior-mod-morph";
             bindings = <&tog 3>, <&sk RSHFT>;
 
@@ -178,7 +170,6 @@
 
         sec_number_row_begins_here: sec_number_row_begins_here {
             compatible = "zmk,behavior-mod-morph";
-            label = "sec_number_row_begins_here";
             bindings = <&kp N0>, <&kp N0>;
 
             #binding-cells = <0>;
@@ -203,7 +194,6 @@
 
         v02: v02 {
             compatible = "zmk,behavior-mod-morph";
-            label = "v02";
             bindings = <&kp EQUAL>, <&kp N2>;
 
             #binding-cells = <0>;
@@ -212,7 +202,6 @@
 
         n02: n02 {
             compatible = "zmk,behavior-mod-morph";
-            label = "n02";
             bindings = <&kp N2>, <&kp EQUAL>;
 
             #binding-cells = <0>;
@@ -221,7 +210,6 @@
 
         v03: v03 {
             compatible = "zmk,behavior-mod-morph";
-            label = "v03";
             bindings = <&kp LEFT_BRACE>, <&kp N3>;
 
             #binding-cells = <0>;
@@ -230,7 +218,6 @@
 
         n03: n03 {
             compatible = "zmk,behavior-mod-morph";
-            label = "n03";
             bindings = <&kp N3>, <&kp LBRC>;
 
             #binding-cells = <0>;
@@ -239,7 +226,6 @@
 
         v04: v04 {
             compatible = "zmk,behavior-mod-morph";
-            label = "v04";
             bindings = <&kp LPAR>, <&kp N4>;
 
             #binding-cells = <0>;
@@ -248,7 +234,6 @@
 
         n04: n04 {
             compatible = "zmk,behavior-mod-morph";
-            label = "n04";
             bindings = <&kp N4>, <&kp LPAR>;
 
             #binding-cells = <0>;
@@ -257,7 +242,6 @@
 
         v05: v05 {
             compatible = "zmk,behavior-mod-morph";
-            label = "v05";
             bindings = <&kp LEFT_BRACKET>, <&kp N5>;
 
             #binding-cells = <0>;
@@ -266,7 +250,6 @@
 
         n05: n05 {
             compatible = "zmk,behavior-mod-morph";
-            label = "n05";
             bindings = <&kp N5>, <&kp LEFT_BRACKET>;
 
             #binding-cells = <0>;
@@ -275,7 +258,6 @@
 
         v08: v08 {
             compatible = "zmk,behavior-mod-morph";
-            label = "v08";
             bindings = <&kp RIGHT_BRACKET>, <&kp N6>;
 
             #binding-cells = <0>;
@@ -284,7 +266,6 @@
 
         n08: n08 {
             compatible = "zmk,behavior-mod-morph";
-            label = "n08";
             bindings = <&kp N6>, <&kp RIGHT_BRACKET>;
 
             #binding-cells = <0>;
@@ -293,7 +274,6 @@
 
         v09: v09 {
             compatible = "zmk,behavior-mod-morph";
-            label = "v09";
             bindings = <&kp RPAR>, <&kp N7>;
 
             #binding-cells = <0>;
@@ -302,7 +282,6 @@
 
         n09: n09 {
             compatible = "zmk,behavior-mod-morph";
-            label = "n09";
             bindings = <&kp N7>, <&kp RPAR>;
 
             #binding-cells = <0>;
@@ -311,7 +290,6 @@
 
         v10: v10 {
             compatible = "zmk,behavior-mod-morph";
-            label = "v10";
             bindings = <&kp RBRC>, <&kp N8>;
 
             #binding-cells = <0>;
@@ -320,7 +298,6 @@
 
         n10: n10 {
             compatible = "zmk,behavior-mod-morph";
-            label = "n10";
             bindings = <&kp N8>, <&kp RBRC>;
 
             #binding-cells = <0>;
@@ -329,7 +306,6 @@
 
         v11: v11 {
             compatible = "zmk,behavior-mod-morph";
-            label = "v11";
             bindings = <&kp COLON>, <&kp N9>;
 
             #binding-cells = <0>;
@@ -338,7 +314,6 @@
 
         n11: n11 {
             compatible = "zmk,behavior-mod-morph";
-            label = "n11";
             bindings = <&kp N9>, <&kp COLON>;
 
             #binding-cells = <0>;
@@ -347,7 +322,6 @@
 
         v12: v12 {
             compatible = "zmk,behavior-mod-morph";
-            label = "v12";
             bindings = <&kp N0>, <&kp N0>;
 
             #binding-cells = <0>;
@@ -356,7 +330,6 @@
 
         n12: n12 {
             compatible = "zmk,behavior-mod-morph";
-            label = "n12";
             bindings = <&kp N0>, <&kp N0>;
 
             #binding-cells = <0>;
@@ -365,7 +338,6 @@
 
         sec_left_side_mods_here: sec_left_side_mods_here {
             compatible = "zmk,behavior-mod-morph";
-            label = "sec_left_side_mods_here";
             bindings = <&kp N0>, <&kp N0>;
 
             #binding-cells = <0>;
@@ -374,7 +346,6 @@
 
         v00: v00 {
             compatible = "zmk,behavior-mod-morph";
-            label = "v00";
             bindings = <&kp N0>, <&kp N0>;
 
             #binding-cells = <0>;
@@ -383,7 +354,6 @@
 
         n00: n00 {
             compatible = "zmk,behavior-mod-morph";
-            label = "n00";
             bindings = <&kp N0>, <&kp ASTRK>;
 
             #binding-cells = <0>;
@@ -400,7 +370,6 @@
 
         v28: v28 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V28";
             bindings = <&kp DOUBLE_QUOTES>, <&kp SEMI>;
 
             #binding-cells = <0>;
@@ -409,7 +378,6 @@
 
         sec_right_side_mods_here: sec_right_side_mods_here {
             compatible = "zmk,behavior-mod-morph";
-            label = "sec_right_side_mods_here";
             bindings = <&kp N0>, <&kp N0>;
 
             #binding-cells = <0>;
@@ -418,7 +386,6 @@
 
         v27: v27 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V27";
             bindings = <&kp TILDE>, <&kp TILDE>;
 
             #binding-cells = <0>;
@@ -435,7 +402,6 @@
 
         v58: v58 {
             compatible = "zmk,behavior-mod-morph";
-            label = "V58";
             bindings = <&kp SEMICOLON>, <&kp QMARK>;
 
             #binding-cells = <0>;
@@ -444,7 +410,6 @@
 
         sec_tap_dance_mods_here: sec_tap_dance_mods_here {
             compatible = "zmk,behavior-mod-morph";
-            label = "sec_tap_dance_mods_here";
             bindings = <&kp N0>, <&kp N0>;
 
             #binding-cells = <0>;
@@ -453,21 +418,18 @@
 
         tdl_nums_fn: tdl_nums_fn {
             compatible = "zmk,behavior-tap-dance";
-            label = "TDL_NUMS_FN";
             #binding-cells = <0>;
             bindings = <&tog 1>, <&sl 5>;
         };
 
         tdToNzTgOfc: tdToNzTgOfc {
             compatible = "zmk,behavior-tap-dance";
-            label = "TDTONZTGOFC";
             #binding-cells = <0>;
             bindings = <&to 0>, <&tog 2>;
         };
 
         tdl_bt1_bt2_bt3: tdl_bt1_bt2_bt3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TDL_BT1_BT2_BT3";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 1>, <&bt BT_SEL 2>, <&bt BT_SEL 3>;
         };
@@ -482,7 +444,6 @@
 
         sec_generic_htmod_here: sec_generic_htmod_here {
             compatible = "zmk,behavior-mod-morph";
-            label = "sec_generic_htmod_here";
             bindings = <&kp N0>, <&kp N0>;
 
             #binding-cells = <0>;
