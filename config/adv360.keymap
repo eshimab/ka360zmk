@@ -573,9 +573,7 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&to 0>;
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 0>;
         };
 
         mcTgKp: mcTgKp {
@@ -608,25 +606,20 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_param_1to1 &sk MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&to 0>;
+                <&macro_param_1to1 &sk MACRO_PLACEHOLDER &to 0>;
         };
 
         mcToOfcSkRC: mcToOfcSkRC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&to 2>, <&macro_tap>, <&sk RCTRL>;
+            bindings = <&macro_tap>, <&to 2 &sk RCTRL>;
         };
 
         kpadMcTogKpUndSkRS: kpadMcTogKpUndSkRS {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&tog 4>,
-                <&macro_tap>,
-                <&kp UNDER &sk RSHIFT>;
+            bindings = <&macro_tap>, <&tog 4 &kp UNDER &sk RSHIFT>;
         };
 
         mcTgTg: mcTgTg {
@@ -711,9 +704,8 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_param_1to1 &to MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&bt BT_SEL 3>;
+                <&macro_param_1to1 &to MACRO_PLACEHOLDER &bt BT_SEL 3>;
         };
 
         mcToKpLSF10: mcToKpLSF10 {
