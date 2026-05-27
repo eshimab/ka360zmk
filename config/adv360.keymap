@@ -538,9 +538,7 @@
                 <&macro_press>,
                 <&kp RALT>,
                 <&macro_tap>,
-                <&kp TAB>,
-                <&macro_tap>,
-                <&kp TAB>,
+                <&kp TAB &kp TAB>,
                 <&macro_release>,
                 <&kp RALT>;
         };
