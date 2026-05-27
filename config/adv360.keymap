@@ -32,15 +32,15 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        htmod61: htmod61 {
+        htSkKpV61: htSkKpV61 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
             flavor = "tap-preferred"; // blanced =
-            bindings = <&sk>, <&v61>;
+            bindings = <&sk>, <&v61tap>;
         };
 
-        v61: v61 {
+        v61tap: v61tap {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp GRAVE>, <&kp TILDE>;
 
@@ -48,16 +48,16 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        htmod62: htmod62 {
-            label = "HTMOD62";
+        htSkKpV62: htSkKpV62 {
+            label = "HTSKKPV62";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
             flavor = "tap-preferred"; // blanced =
-            bindings = <&sk>, <&v62>;
+            bindings = <&sk>, <&v62tap>;
         };
 
-        v62: v62 {
+        v62tap: v62tap {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp PIPE>, <&kp AT>;
 
@@ -65,15 +65,15 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        htmod63: htmod63 {
+        htSkKpV63: htSkKpV63 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
             flavor = "tap-preferred"; //
-            bindings = <&sk>, <&v63>;
+            bindings = <&sk>, <&v63tap>;
         };
 
-        v63: v63 {
+        v63tap: v63tap {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp AMPS>, <&kp PERCENT>;
 
@@ -81,15 +81,15 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        htmod64: htmod64 {
+        htSkKpV64: htSkKpV64 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
             flavor = "tap-preferred"; //
-            bindings = <&sk>, <&v64>;
+            bindings = <&sk>, <&v64tap>;
         };
 
-        v64: v64 {
+        v64tap: v64tap {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp SLASH>, <&kp BACKSLASH>;
 
@@ -97,15 +97,15 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        htmod71: htmod71 {
+        htSkKpV71: htSkKpV71 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
             flavor = "tap-preferred"; //
-            bindings = <&sk>, <&v71>;
+            bindings = <&sk>, <&v71tap>;
         };
 
-        v71: v71 {
+        v71tap: v71tap {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp PLUS>, <&kp ASTRK>;
 
@@ -113,17 +113,17 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        htmod72: htmod72 {
-            label = "HTMOD72";
+        htSkKpV72: htSkKpV72 {
+            label = "HTSKKPV72";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
             flavor = "tap-preferred"; //
-            bindings = <&sk>, <&v72>;
+            bindings = <&sk>, <&v72tap>;
         };
 
-        v72: v72 {
-            label = "V72";
+        v72tap: v72tap {
+            label = "V72TAP";
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp MINUS>, <&kp CARET>;
 
@@ -131,17 +131,17 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        htmod73: htmod73 {
-            label = "HTMOD73";
+        htSkKpV73: htSkKpV73 {
+            label = "HTSKKPV73";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
             flavor = "tap-preferred"; // blanced =
-            bindings = <&sk>, <&v73>;
+            bindings = <&sk>, <&v73tap>;
         };
 
-        v73: v73 {
-            label = "V73";
+        v73tap: v73tap {
+            label = "V73TAP";
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp UNDER>, <&kp DOLLAR>;
 
@@ -149,8 +149,8 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        htmod74: htmod74 {
-            label = "HTMOD74";
+        htSkKpV74: htSkKpV74 {
+            label = "HTSKKPV74";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>; // time to determine hold vs tap
@@ -967,11 +967,11 @@
 
         L_nvimQW {
             bindings = <
-&v00         &v01               &v02              &v03             &v04             &v05   &ht0607TgMo 6 0                                                   &ht0607TgMo 6 0  &v08   &v09             &v10             &v11              &v12              &kp DEL
-&v14         &kp Q              &kp W             &kp E            &kp R            &kp T  &none                                                             &none            &kp Y  &kp U            &kp I            &kp O             &kp P             &none
-&v28         &kp A              &kp S             &kp D            &kp F            &kp G  &none            &kp LEFT  &kp RIGHT      &kp DOWN     &kp UP     &none            &kp H  &kp J            &kp K            &kp L             &v44              &none
-&sk LSHIFT   &kp Z              &kp X             &kp C            &kp V            &kp B                             &tog 1         &tog 4                                   &kp N  &kp M            &kp COMMA        &kp PERIOD        &sk RSHFT         &mo 6
-&htMoTg 5 3  &htmod61 LSHIFT 0  &htmod62 LCTRL 0  &htmod63 LGUI 0  &htmod64 LALT 0         &kp BSPC         &kp ESC   &kp TAB        &mc_allMods  &kp ENTER  &kp SPACE               &htmod71 RALT 0  &htmod72 RGUI 0  &htmod73 RCTRL 0  &htmod74 RSHFT 3  &mo 5
+&v00         &v01                 &v02                &v03               &v04               &v05   &ht0607TgMo 6 0                                                   &ht0607TgMo 6 0  &v08   &v09               &v10               &v11                &v12                &kp DEL
+&v14         &kp Q                &kp W               &kp E              &kp R              &kp T  &none                                                             &none            &kp Y  &kp U              &kp I              &kp O               &kp P               &none
+&v28         &kp A                &kp S               &kp D              &kp F              &kp G  &none            &kp LEFT  &kp RIGHT      &kp DOWN     &kp UP     &none            &kp H  &kp J              &kp K              &kp L               &v44                &none
+&sk LSHIFT   &kp Z                &kp X               &kp C              &kp V              &kp B                             &tog 1         &tog 4                                   &kp N  &kp M              &kp COMMA          &kp PERIOD          &sk RSHFT           &mo 6
+&htMoTg 5 3  &htSkKpV61 LSHIFT 0  &htSkKpV62 LCTRL 0  &htSkKpV63 LGUI 0  &htSkKpV64 LALT 0         &kp BSPC         &kp ESC   &kp TAB        &mc_allMods  &kp ENTER  &kp SPACE               &htSkKpV71 RALT 0  &htSkKpV72 RGUI 0  &htSkKpV73 RCTRL 0  &htSkKpV74 RSHFT 3  &mo 5
             >;
         };
 
