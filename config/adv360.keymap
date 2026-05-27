@@ -498,14 +498,14 @@
             label = "HTMOTG";
         };
 
-        htMoSk: htMoSk {
+        htTgSk: htTgSk {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&sk>;
+            bindings = <&sk>, <&tog>;
 
-            label = "HTMOSK";
+            label = "HTTGSK";
         };
 
         capsHtSkO: capsHtSkO {
@@ -965,7 +965,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        L_nvimQW {
+        L_nvim {
             bindings = <
 &v00         &v01                 &v02                &v03               &v04               &v05   &ht0607TgMo 6 0                                                   &ht0607TgMo 6 0  &v08   &v09               &v10               &v11                &v12                &kp DEL
 &v14         &kp Q                &kp W               &kp E              &kp R              &kp T  &none                                                             &none            &kp Y  &kp U              &kp I              &kp O               &kp P               &none
@@ -975,7 +975,7 @@
             >;
         };
 
-        L_nvimNum {
+        lyr_nums {
             bindings = <
 &trans  &n01    &n02    &n03    &n04    &n05    &trans                                      &trans  &n08    &n09    &n10    &n11    &n12    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -985,7 +985,7 @@
             >;
         };
 
-        L_office {
+        lyr_ofc {
             bindings = <
 &n00    &n01    &n02    &n03    &n04    &n05    &trans                                               &trans  &n08    &n09    &n10    &n11    &n12    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &ofcTd_bt_bt2_bt3
@@ -995,17 +995,17 @@
             >;
         };
 
-        letterMods {
+        lyr_caps {
             bindings = <
 &mc_togKp 3 N0             &mc_togKp 3 N1           &mc_togKp 3 N2          &mc_togKp 3 N3         &mc_togKp 3 N4          &mc_togKp 3 N5  &trans                                                                           &trans             &mc_togKp 3 N6  &mc_togKp 3 N7         &mc_togKp 3 N8         &mc_togKp 3 N9           &mc_togKp 3 N0     &mc_togKp 3 DEL
 &mc_togKp 3 HASH           &kp LS(Q)                &kp RS(W)               &kp RS(E)              &kp RS(R)               &kp RS(T)       &trans                                                                           &trans             &kp LS(Y)       &kp LS(U)              &kp LS(I)              &kp LS(O)                &kp LS(P)          &trans
 &mc_togKp 3 DOUBLE_QUOTES  &kp RS(A)                &kp RS(S)               &kp RS(D)              &kp RS(F)               &kp RS(G)       &trans  &trans           &trans               &trans          &trans             &trans             &kp LS(H)       &kp LS(J)              &kp LS(K)              &kp LS(L)                &mc_togKp 3 APOS   &trans
 &mc_togSk 3 LSHFT          &kp LS(Z)                &kp RS(X)               &kp RS(C)              &kp RS(V)               &kp RS(B)                                &tog 3               &mc_togTog 3 4                                        &kp LS(N)       &kp LS(M)              &mc_togKp 3 COMMA      &mc_togKp 3 DOT          &mc_togSk 3 RSHFT  &trans
-&layrHtMoTg 5 3            &capsHtSkKp LSHFT GRAVE  &capsHtSkKp LCTRL PIPE  &capsHtSkKp LGUI AMPS  &capsHtSkKp LALT SLASH                  &trans  &mc_togKp 3 ESC  &mc_togKp 3 TAB      &trans          &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &capsHtSkKp RALT PLUS  &capsHtSkO RGUI MINUS  &capsHtSkKp LCTRL UNDER  &mc_togSk 3 RSHFT  &layrHtMoTg 5 3
+&layrHtMoTg 5 3            &capsHtSkKp LSHFT GRAVE  &capsHtSkKp LCTRL PIPE  &capsHtSkKp LGUI AMPS  &capsHtSkKp LALT SLASH                  &trans  &mc_togKp 3 ESC  &mc_togKp 3 TAB      &trans          &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &capsHtSkKp RALT PLUS  &capsHtSkO RGUI MINUS  &capsHtSkKp LCTRL UNDER  &htTgSk RSHFT 3    &layrHtMoTg 5 3
             >;
         };
 
-        L_keypad {
+        lyr_kpad {
             bindings = <
 &kp N0                     &kp N1                      &mc_togKp 4 EQUAL         &kp N3                  &kp N4                     &kp N5      &trans                                                                   &trans             &kp N6         &kp N7                    &kp N8                     &kp N9                      &kp N0             &mc_togKp 4 DEL
 &mc_togKp 4 HASH           &kpadMcTogUndShift          &kp N7                    &kp N8                  &kp N9                     &kp DOLLAR  &trans                                                                   &trans             &mc_togKp 4 Y  &mc_togKp 4 U             &mc_togKp 4 I              &mc_togKp 4 O               &mc_togKp 4 P      &trans
@@ -1015,7 +1015,7 @@
             >;
         };
 
-        L_fn2 {
+        lyr_fn {
             bindings = <
 &kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans                                      &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
 &trans   &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans   &trans
@@ -1025,7 +1025,7 @@
             >;
         };
 
-        L_mod {
+        lyr_mod {
             bindings = <
 &bootloader   &trans        &trans        &kp LC(UP_ARROW)  &kp LS(LG(N4))  &kp LG(LS(N5))  &trans                                      &trans  &bl BL_TOG  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans  &bootloader
 &trans        &trans        &trans        &trans            &trans          &trans          &trans                                      &trans  &trans      &trans      &trans        &trans        &trans  &trans
