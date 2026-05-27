@@ -363,18 +363,16 @@
 
         v58: v58 {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp SEMICOLON>, <&kp QMARK>;
-
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
+            bindings = <&kp SEMICOLON>, <&kp QMARK>;
         };
 
         sec_tap_dance_mods_here: sec_tap_dance_mods_here {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp N0>, <&kp N0>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp N0>, <&kp N0>;
         };
 
         tdl_nums_fn: tdl_nums_fn {
@@ -398,17 +396,15 @@
         td_at1_to_at4: td_at1_to_at4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&at1>, <&at2>, <&at3>, <&at4>;
-
             tapping-term-ms = <185>;
+            bindings = <&at1>, <&at2>, <&at3>, <&at4>;
         };
 
         sec_generic_htmod_here: sec_generic_htmod_here {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp N0>, <&kp N0>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp N0>, <&kp N0>;
         };
 
         htAllModSk: htAllModSk {
@@ -444,18 +440,16 @@
 
         layrHtMoTg: layrHtMoTg {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&tog>;
-
             #binding-cells = <2>;
             tapping-term-ms = <185>;
+            bindings = <&mo>, <&tog>;
         };
 
         sec_caps_and_kpad_here: sec_caps_and_kpad_here {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp N0>, <&kp N0>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp N0>, <&kp N0>;
         };
 
         capsHtSkO: capsHtSkO {
@@ -499,19 +493,16 @@
 
         mdCtrl_PS_DEL: mdCtrl_PS_DEL {
             compatible = "zmk,behavior-mod-morph";
-            label = "MDCTRL_PS_DEL";
-            bindings = <&mcToOfcKp PRINTSCREEN>, <&mcToOfcKp DEL>;
-
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
+            bindings = <&mcToOfcKp PRINTSCREEN>, <&mcToOfcKp DEL>;
         };
 
         tdlOfcShiftF: tdlOfcShiftF {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
-
             tapping-term-ms = <180>;
+            bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
         };
 
         htMo0607Tg: htMo0607Tg {
