@@ -650,7 +650,7 @@
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_release>,
-                <&kp RALT>,
+                <&kp RALT>;
         };
 
         mc_rcmdx2: mc_rcmdx2 {
