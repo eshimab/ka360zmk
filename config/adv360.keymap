@@ -522,7 +522,7 @@
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
             label = "KPADHTSKKP";
-            bindings = <&mc_kpadHoldSk>, <&mc_kpadTapKp>;
+            bindings = <&kpadMcHoldSk>, <&kpadMcTapKp>;
         };
 
         capsHtSkKp: capsHtSkKp {
@@ -539,7 +539,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
-            bindings = <&mc_kpadHoldSk>, <&kp>;
+            bindings = <&kpadMcHoldSk>, <&kp>;
 
             label = "KPADHTSKKPRAW";
         };
@@ -548,13 +548,13 @@
             compatible = "zmk,behavior-tap-dance";
             label = "OFCTD_BT_BT2_BT3";
             #binding-cells = <0>;
-            bindings = <&mc_btsel1 2>, <&mc_btsel2 2>, <&mc_btsel3 2>;
+            bindings = <&mcToBtSel1 2>, <&mcToBtSel2 2>, <&mcToBtSel3 2>;
         };
 
         mdCtrl_PS_DEL: mdCtrl_PS_DEL {
             compatible = "zmk,behavior-mod-morph";
             label = "MDCTRL_PS_DEL";
-            bindings = <&mc_toOfcKp PRINTSCREEN>, <&mc_toOfcKp DEL>;
+            bindings = <&mcToOfcKp PRINTSCREEN>, <&mcToOfcKp DEL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -563,7 +563,7 @@
         mdLCbutton: mdLCbutton {
             compatible = "zmk,behavior-mod-morph";
             label = "MDLCBUTTON";
-            bindings = <&mc_LSF10 2>, <&mc_toOfcLC 2>;
+            bindings = <&mcToKpLSF10 2>, <&mcToOfcSkLSKp 2>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -573,7 +573,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TDLOFCSHIFTF";
             #binding-cells = <0>;
-            bindings = <&mc_toOfcLC F10>, <&mc_toOfcLC F6>;
+            bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
 
             tapping-term-ms = <180>;
         };
@@ -819,11 +819,11 @@
             label = "MC_TESTTOGSK2A";
         };
 
-        mc_togTog: mc_togTog {
+        mcTgTg: mcTgTg {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &tog MACRO_PLACEHOLDER>;
-            label = "MC_TOGTOG";
+            label = "MCTGTG";
         };
 
         capsMcHoldSk: mc_capsHoldSk {
@@ -846,54 +846,54 @@
             label = "MC_CAPSTAPKP";
         };
 
-        mc_kpadHoldSk: mc_kpadHoldSk {
+        kpadMcHoldSk: kpadMcHoldSk {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
                 <&tog 4 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
 
-            label = "MC_KPADHOLDSK";
+            label = "KPADMCHOLDSK";
         };
 
-        mc_kpadTapKp: mc_kpadTapKp {
+        kpadMcTapKp: kpadMcTapKp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
                 <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
-            label = "MC_KPADTAPKP";
+            label = "KPADMCTAPKP";
         };
 
-        mc_capsHoldMo: mc_capsHoldMo {
+        capsMcHoldMo: capsMcHoldMo {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
                 <&tog 3 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
 
-            label = "MC_CAPSHOLDMO";
+            label = "CAPSMCHOLDMO";
         };
 
-        mc_kpadHoldMo: mc_kpadHoldMo {
+        kpadMcHoldMo: kpadMcHoldMo {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
                 <&tog 4 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
 
-            label = "MC_KPADHOLDMO";
+            label = "KPADMCHOLDMO";
         };
 
-        mc_allMods: mc_allMods {
+        mcToNvimSkAllMods: mcToNvimSkAllMods {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 0 &sk RS(RA(RC(RGUI)))>;
-            label = "MC_ALLMODS";
+            label = "MCTONVIMSKALLMODS";
         };
 
-        mc_btsel1: mc_btsel1 {
+        mcToBtSel1: mcToBtSel1 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -901,10 +901,10 @@
                 <&macro_tap>,
                 <&bt BT_SEL 1>;
 
-            label = "MC_BTSEL1";
+            label = "MCTOBTSEL1";
         };
 
-        mc_btsel2: mc_btsel2 {
+        mcToBtSel2: mcToBtSel2 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -912,10 +912,10 @@
                 <&macro_tap>,
                 <&bt BT_SEL 2>;
 
-            label = "MC_BTSEL2";
+            label = "MCTOBTSEL2";
         };
 
-        mc_btsel3: mc_btsel3 {
+        mcToBtSel3: mcToBtSel3 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -923,10 +923,10 @@
                 <&macro_tap>,
                 <&bt BT_SEL 3>;
 
-            label = "MC_BTSEL3";
+            label = "MCTOBTSEL3";
         };
 
-        mc_LSF10: mc_LSF10 {
+        mcToKpLSF10: mcToKpLSF10 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -934,20 +934,20 @@
                 <&macro_tap>,
                 <&kp LS(F10)>;
 
-            label = "MC_LSF10";
+            label = "MCTOKPLSF10";
         };
 
-        mc_toOfcKp: mc_toOfcKp {
+        mcToOfcKp: mcToOfcKp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
                 <&to 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
-            label = "MC_TOOFCKP";
+            label = "MCTOOFCKP";
         };
 
-        mc_toOfcLC: mc_toOfcLC {
+        mcToOfcSkLSKp: mcToOfcSkLSKp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -956,7 +956,7 @@
                 <&macro_tap>,
                 <&sk LEFT_SHIFT &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
-            label = "MC_TOOFCLC";
+            label = "MCTOOFCSKLSKP";
         };
     };
 
@@ -967,11 +967,11 @@
 
         L_nvim {
             bindings = <
-&v00         &v01                 &v02                &v03               &v04               &v05   &ht0607TgMo 6 0                                                   &ht0607TgMo 6 0  &v08   &v09               &v10               &v11                &v12                &kp DEL
-&v14         &kp Q                &kp W               &kp E              &kp R              &kp T  &none                                                             &none            &kp Y  &kp U              &kp I              &kp O               &kp P               &none
-&v28         &kp A                &kp S               &kp D              &kp F              &kp G  &none            &kp LEFT  &kp RIGHT      &kp DOWN     &kp UP     &none            &kp H  &kp J              &kp K              &kp L               &v44                &none
-&sk LSHIFT   &kp Z                &kp X               &kp C              &kp V              &kp B                             &tog 1         &tog 4                                   &kp N  &kp M              &kp COMMA          &kp PERIOD          &sk RSHFT           &mo 6
-&htMoTg 5 3  &htSkKpV61 LSHIFT 0  &htSkKpV62 LCTRL 0  &htSkKpV63 LGUI 0  &htSkKpV64 LALT 0         &kp BSPC         &kp ESC   &kp TAB        &mc_allMods  &kp ENTER  &kp SPACE               &htSkKpV71 RALT 0  &htSkKpV72 RGUI 0  &htSkKpV73 RCTRL 0  &htSkKpV74 RSHFT 3  &mo 5
+&v00         &v01                 &v02                &v03               &v04               &v05   &ht0607TgMo 6 0                                                          &ht0607TgMo 6 0  &v08   &v09               &v10               &v11                &v12                &kp DEL
+&v14         &kp Q                &kp W               &kp E              &kp R              &kp T  &none                                                                    &none            &kp Y  &kp U              &kp I              &kp O               &kp P               &none
+&v28         &kp A                &kp S               &kp D              &kp F              &kp G  &none            &kp LEFT  &kp RIGHT      &kp DOWN            &kp UP     &none            &kp H  &kp J              &kp K              &kp L               &v44                &none
+&sk LSHIFT   &kp Z                &kp X               &kp C              &kp V              &kp B                             &tog 1         &tog 4                                          &kp N  &kp M              &kp COMMA          &kp PERIOD          &sk RSHFT           &mo 6
+&htMoTg 5 3  &htSkKpV61 LSHIFT 0  &htSkKpV62 LCTRL 0  &htSkKpV63 LGUI 0  &htSkKpV64 LALT 0         &kp BSPC         &kp ESC   &kp TAB        &mcToNvimSkAllMods  &kp ENTER  &kp SPACE               &htSkKpV71 RALT 0  &htSkKpV72 RGUI 0  &htSkKpV73 RCTRL 0  &htSkKpV74 RSHFT 3  &mo 5
             >;
         };
 
@@ -990,18 +990,18 @@
 &n00    &n01    &n02    &n03    &n04    &n05    &trans                                               &trans  &n08    &n09    &n10    &n11    &n12    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &ofcTd_bt_bt2_bt3
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tdlOfcShiftF
-&trans  &trans  &trans  &trans  &trans  &trans                  &none       &tog 4                           &trans  &trans  &trans  &trans  &trans  &mc_toOfcKp PRINTSCREEN
+&trans  &trans  &trans  &trans  &trans  &trans                  &none       &tog 4                           &trans  &trans  &trans  &trans  &trans  &mcToOfcKp PRINTSCREEN
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &td_at_att_attt  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         lyr_caps {
             bindings = <
-&mc_togKp 3 N0             &mc_togKp 3 N1           &mc_togKp 3 N2          &mc_togKp 3 N3         &mc_togKp 3 N4          &mc_togKp 3 N5  &trans                                                                           &trans             &mc_togKp 3 N6  &mc_togKp 3 N7         &mc_togKp 3 N8         &mc_togKp 3 N9           &mc_togKp 3 N0     &mc_togKp 3 DEL
-&mc_togKp 3 HASH           &kp LS(Q)                &kp RS(W)               &kp RS(E)              &kp RS(R)               &kp RS(T)       &trans                                                                           &trans             &kp LS(Y)       &kp LS(U)              &kp LS(I)              &kp LS(O)                &kp LS(P)          &trans
-&mc_togKp 3 DOUBLE_QUOTES  &kp RS(A)                &kp RS(S)               &kp RS(D)              &kp RS(F)               &kp RS(G)       &trans  &trans           &trans               &trans          &trans             &trans             &kp LS(H)       &kp LS(J)              &kp LS(K)              &kp LS(L)                &mc_togKp 3 APOS   &trans
-&mc_togSk 3 LSHFT          &kp LS(Z)                &kp RS(X)               &kp RS(C)              &kp RS(V)               &kp RS(B)                                &tog 3               &mc_togTog 3 4                                        &kp LS(N)       &kp LS(M)              &mc_togKp 3 COMMA      &mc_togKp 3 DOT          &mc_togSk 3 RSHFT  &trans
-&layrHtMoTg 5 3            &capsHtSkKp LSHFT GRAVE  &capsHtSkKp LCTRL PIPE  &capsHtSkKp LGUI AMPS  &capsHtSkKp LALT SLASH                  &trans  &mc_togKp 3 ESC  &mc_togKp 3 TAB      &trans          &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &capsHtSkKp RALT PLUS  &capsHtSkO RGUI MINUS  &capsHtSkKp LCTRL UNDER  &htTgSk RSHFT 3    &layrHtMoTg 5 3
+&mc_togKp 3 N0             &mc_togKp 3 N1           &mc_togKp 3 N2          &mc_togKp 3 N3         &mc_togKp 3 N4          &mc_togKp 3 N5  &trans                                                                        &trans             &mc_togKp 3 N6  &mc_togKp 3 N7         &mc_togKp 3 N8         &mc_togKp 3 N9           &mc_togKp 3 N0     &mc_togKp 3 DEL
+&mc_togKp 3 HASH           &kp LS(Q)                &kp RS(W)               &kp RS(E)              &kp RS(R)               &kp RS(T)       &trans                                                                        &trans             &kp LS(Y)       &kp LS(U)              &kp LS(I)              &kp LS(O)                &kp LS(P)          &trans
+&mc_togKp 3 DOUBLE_QUOTES  &kp RS(A)                &kp RS(S)               &kp RS(D)              &kp RS(F)               &kp RS(G)       &trans  &trans           &trans               &trans       &trans             &trans             &kp LS(H)       &kp LS(J)              &kp LS(K)              &kp LS(L)                &mc_togKp 3 APOS   &trans
+&mc_togSk 3 LSHFT          &kp LS(Z)                &kp RS(X)               &kp RS(C)              &kp RS(V)               &kp RS(B)                                &tog 3               &mcTgTg 3 4                                        &kp LS(N)       &kp LS(M)              &mc_togKp 3 COMMA      &mc_togKp 3 DOT          &mc_togSk 3 RSHFT  &trans
+&layrHtMoTg 5 3            &capsHtSkKp LSHFT GRAVE  &capsHtSkKp LCTRL PIPE  &capsHtSkKp LGUI AMPS  &capsHtSkKp LALT SLASH                  &trans  &mc_togKp 3 ESC  &mc_togKp 3 TAB      &trans       &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &capsHtSkKp RALT PLUS  &capsHtSkO RGUI MINUS  &capsHtSkKp LCTRL UNDER  &htTgSk RSHFT 3    &layrHtMoTg 5 3
             >;
         };
 
