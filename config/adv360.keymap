@@ -632,7 +632,9 @@
         mcTgTg: mcTgTg {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &tog MACRO_PLACEHOLDER>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &tog MACRO_PLACEHOLDER>;
         };
 
         capsMcHoldSk: mc_capsHoldSk {
@@ -693,9 +695,8 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_param_1to1 &to MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&bt BT_SEL 1>;
+                <&macro_param_1to1 &to MACRO_PLACEHOLDER &bt BT_SEL 1>;
         };
 
         mcToLyrBtSel2: mcToLyrBtSel2 {
@@ -720,9 +721,8 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_param_1to1 &to MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&kp LS(F10)>;
+                <&macro_param_1to1 &to MACRO_PLACEHOLDER &kp LS(F10)>;
         };
 
         mcToOfcKp: mcToOfcKp {
