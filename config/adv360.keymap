@@ -574,14 +574,6 @@
                 <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &sk MACRO_PLACEHOLDER>;
         };
 
-        mcSkToNv: mcSkToNv {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&macro_param_1to1 &sk MACRO_PLACEHOLDER &to 0>;
-        };
-
         mcToOfcSkRC: mcToOfcSkRC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
