@@ -518,8 +518,6 @@
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
             bindings = <&sk>, <&tog>;
-
-            label = "HTTGSK";
         };
 
         layrHtMoTg: layrHtMoTg {
