@@ -438,7 +438,7 @@
             bindings = <&sk>, <&tog>;
         };
 
-        layrHtMoTg: layrHtMoTg {
+        htMoTg: htMoTg {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <185>;
@@ -788,7 +788,7 @@
 &mc_togKp 3 HASH           &kp LS(Q)                &kp RS(W)               &kp RS(E)              &kp RS(R)               &kp RS(T)       &trans                                                                        &trans             &kp LS(Y)       &kp LS(U)              &kp LS(I)              &kp LS(O)                &kp LS(P)          &trans
 &mc_togKp 3 DOUBLE_QUOTES  &kp RS(A)                &kp RS(S)               &kp RS(D)              &kp RS(F)               &kp RS(G)       &trans  &trans           &trans               &trans       &trans             &trans             &kp LS(H)       &kp LS(J)              &kp LS(K)              &kp LS(L)                &mc_togKp 3 APOS   &trans
 &mc_togSk 3 LSHFT          &kp LS(Z)                &kp RS(X)               &kp RS(C)              &kp RS(V)               &kp RS(B)                                &tog 3               &mcTgTg 3 4                                        &kp LS(N)       &kp LS(M)              &mc_togKp 3 COMMA      &mc_togKp 3 DOT          &mc_togSk 3 RSHFT  &trans
-&layrHtMoTg 5 3            &capsHtSkKp LSHFT GRAVE  &capsHtSkKp LCTRL PIPE  &capsHtSkKp LGUI AMPS  &capsHtSkKp LALT SLASH                  &trans  &mc_togKp 3 ESC  &mc_togKp 3 TAB      &trans       &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &capsHtSkKp RALT PLUS  &capsHtSkO RGUI MINUS  &capsHtSkKp LCTRL UNDER  &htTgSk RSHFT 3    &layrHtMoTg 5 3
+&htMoTg 5 3                &capsHtSkKp LSHFT GRAVE  &capsHtSkKp LCTRL PIPE  &capsHtSkKp LGUI AMPS  &capsHtSkKp LALT SLASH                  &trans  &mc_togKp 3 ESC  &mc_togKp 3 TAB      &trans       &mc_togKp 3 ENTER  &mc_togKp 3 SPACE                  &capsHtSkKp RALT PLUS  &capsHtSkO RGUI MINUS  &capsHtSkKp LCTRL UNDER  &htTgSk RSHFT 3    &htMoTg 5 3
             >;
         };
 
@@ -798,7 +798,7 @@
 &mc_togKp 4 HASH           &kpadMcTogKpUndSkRS         &kp N7                    &kp N8                  &kp N9                     &kp DOLLAR  &trans                                                                   &trans             &mc_togKp 4 Y  &mc_togKp 4 U             &mc_togKp 4 I              &mc_togKp 4 O               &mc_togKp 4 P      &trans
 &mc_togKp 4 DOUBLE_QUOTES  &kp PLUS                    &kp N4                    &kp N5                  &kp N6                     &kp MINUS   &trans  &trans           &trans               &trans  &trans             &trans             &mc_togKp 4 H  &mc_togKp 4 J             &mc_togKp 4 K              &mc_togKp 4 L               &mc_togKp 4 APOS   &trans
 &mc_togSk 4 LSHFT          &kp ASTRK                   &kp N1                    &kp N2                  &kp N3                     &kp SPACE                            &tog 4               &tog 4                                        &mc_togKp 4 N  &mc_togKp 4 M             &mc_togKp 4 COMMA          &mc_togKp 4 DOT             &mc_togSk 4 RSHFT  &trans
-&layrHtMoTg 5 4            &kpadHtSkKpRaw LSHFT GRAVE  &kpadHtSkKpRaw LCTRL DOT  &kpadHtSkKpRaw LGUI N0  &kpadHtSkKpRaw RALT SLASH              &trans  &mc_togKp 4 ESC  &mc_togKp 4 TAB      &trans  &mc_togKp 4 ENTER  &mc_togKp 4 SPACE                 &kpadHtSkKpRaw RALT PLUS  &kpadHtSkKpRaw RGUI MINUS  &kpadHtSkKpRaw RCTRL UNDER  &mc_togSk 4 RSHFT  &layrHtMoTg 5 4
+&htMoTg 5 4                &kpadHtSkKpRaw LSHFT GRAVE  &kpadHtSkKpRaw LCTRL DOT  &kpadHtSkKpRaw LGUI N0  &kpadHtSkKpRaw RALT SLASH              &trans  &mc_togKp 4 ESC  &mc_togKp 4 TAB      &trans  &mc_togKp 4 ENTER  &mc_togKp 4 SPACE                 &kpadHtSkKpRaw RALT PLUS  &kpadHtSkKpRaw RGUI MINUS  &kpadHtSkKpRaw RCTRL UNDER  &mc_togSk 4 RSHFT  &htMoTg 5 4
             >;
         };
 
