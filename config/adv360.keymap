@@ -162,6 +162,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "V74HOLD";
             bindings = <&mo 5>, <&sk RSHFT>;
+
             #binding-cells = <0>;
             mods = <(MOD_RCTL|MOD_RGUI|MOD_RALT)>;
         };
@@ -384,6 +385,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "n00";
             bindings = <&kp N0>, <&kp ASTRK>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -391,6 +393,7 @@
         v14: v14 {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp HASH>, <&kp QMARK>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -443,6 +446,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "sec_tap_dance_mods_here";
             bindings = <&kp N0>, <&kp N0>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -479,6 +483,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "sec_generic_htmod_here";
             bindings = <&kp N0>, <&kp N0>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -525,6 +530,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYRHTMOTG";
             bindings = <&mo>, <&tog>;
+
             #binding-cells = <2>;
             tapping-term-ms = <185>;
         };
@@ -533,6 +539,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "sec_caps_and_kpad_here";
             bindings = <&kp N0>, <&kp N0>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -593,6 +600,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MDLCBUTTON";
             bindings = <&mcToKpLSF10 2>, <&mcToOfcSkLSKp 2>;
+
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
@@ -602,6 +610,7 @@
             label = "TDLOFCSHIFTF";
             #binding-cells = <0>;
             bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
+
             tapping-term-ms = <180>;
         };
 
@@ -619,7 +628,7 @@
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
-        at: gt {
+        at: at {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -668,7 +677,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RGUI &kp RGUI>;
-            label = "MC_RCMDX2";
         };
 
         mc_toNv: mc_toNv {
@@ -700,7 +708,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk RIGHT_GUI &sk RSHIFT &sk RALT &sk RCTRL>;
-            label = "MC_ALLMOD";
         };
 
         mc_toNvSk: mc_toNvSk {
@@ -710,24 +717,18 @@
                 <&macro_param_1to1 &sk MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&to 0>;
-
-            label = "MC_TONVSK";
         };
 
         mc_atab_hold: mc_atab_hold {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&macro_press>;
-
-            label = "MC_ATAB_HOLD";
         };
 
-        mc_kpsk: mc_kpsk {
+        mcToOfcSkRC: mcToOfcSkRC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&to 2>, <&macro_tap>, <&sk RCTRL>;
-
-            label = "MC_KPSK";
         };
 
         kpadMcTogUndShift: mc_TogKpUndShift {
@@ -740,32 +741,24 @@
                 <&kp UNDER>,
                 <&macro_tap>,
                 <&sk RSHIFT>;
-
-            label = "MC_TOGKPUNDSHIFT";
         };
 
         mc_testTogUnder: mc_testTogUnder {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&tog 4>, <&macro_tap>, <&kp UNDER>;
-
-            label = "MC_TESTTOGUNDER";
         };
 
         mc_testTogDollar: mc_testTogDollar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&tog 4>, <&macro_tap>, <&kp DOLLAR>;
-
-            label = "MC_TESTTOGDOLLAR";
         };
 
         mc_testTogSk: mc_testTogSk {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&tog 4>, <&macro_tap>, <&sk RCTRL>;
-
-            label = "MC_TESTTOGSK";
         };
 
         mc_testTogUnder2: mc_testTogUnder2 {
@@ -775,8 +768,6 @@
                 <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&kp UNDER>;
-
-            label = "MC_TESTTOGUNDER2";
         };
 
         mc_testTogDollar2: mc_testTogDollar2 {
@@ -786,8 +777,6 @@
                 <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&kp DOLLAR>;
-
-            label = "MC_TESTTOGDOLLAR2";
         };
 
         mc_testTogSk2: mc_testTogSk2 {
@@ -797,22 +786,18 @@
                 <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&sk RCTRL>;
-
-            label = "MC_TESTTOGSK2";
         };
 
         mc_testTogUnder2a: mc_testTogUnder2a {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
-            label = "MC_TESTTOGUNDER2A";
         };
 
         mc_testTogDollar2a: mc_testTogDollar2a {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
-            label = "MC_TESTTOGDOLLAR2A";
         };
 
         mc_testTogSk2a: mc_testTogSk2a {
@@ -822,15 +807,12 @@
                 <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&sk RCTRL>;
-
-            label = "MC_TESTTOGSK2A";
         };
 
         mcTgTg: mcTgTg {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &tog MACRO_PLACEHOLDER>;
-            label = "MCTGTG";
         };
 
         capsMcHoldSk: mc_capsHoldSk {
@@ -839,8 +821,6 @@
             bindings =
                 <&macro_tap>,
                 <&tog 3 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
-
-            label = "MC_CAPSHOLDSK";
         };
 
         capsMcTapKp: mc_capsTapKp {
@@ -849,8 +829,6 @@
             bindings =
                 <&macro_tap>,
                 <&tog 3 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
-            label = "MC_CAPSTAPKP";
         };
 
         kpadMcHoldSk: kpadMcHoldSk {
@@ -859,8 +837,6 @@
             bindings =
                 <&macro_tap>,
                 <&tog 4 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
-
-            label = "KPADMCHOLDSK";
         };
 
         kpadMcTapKp: kpadMcTapKp {
@@ -869,8 +845,6 @@
             bindings =
                 <&macro_tap>,
                 <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
-            label = "KPADMCTAPKP";
         };
 
         capsMcHoldMo: capsMcHoldMo {
@@ -879,8 +853,6 @@
             bindings =
                 <&macro_tap>,
                 <&tog 3 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
-
-            label = "CAPSMCHOLDMO";
         };
 
         kpadMcHoldMo: kpadMcHoldMo {
@@ -889,15 +861,12 @@
             bindings =
                 <&macro_tap>,
                 <&tog 4 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
-
-            label = "KPADMCHOLDMO";
         };
 
         mcToNvimSkAllMods: mcToNvimSkAllMods {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 0 &sk RS(RA(RC(RGUI)))>;
-            label = "MCTONVIMSKALLMODS";
         };
 
         mcToBtSel1: mcToBtSel1 {
@@ -907,8 +876,6 @@
                 <&macro_param_1to1 &to MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&bt BT_SEL 1>;
-
-            label = "MCTOBTSEL1";
         };
 
         mcToBtSel2: mcToBtSel2 {
@@ -918,8 +885,6 @@
                 <&macro_param_1to1 &to MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&bt BT_SEL 2>;
-
-            label = "MCTOBTSEL2";
         };
 
         mcToBtSel3: mcToBtSel3 {
@@ -929,8 +894,6 @@
                 <&macro_param_1to1 &to MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&bt BT_SEL 3>;
-
-            label = "MCTOBTSEL3";
         };
 
         mcToKpLSF10: mcToKpLSF10 {
@@ -940,8 +903,6 @@
                 <&macro_param_1to1 &to MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&kp LS(F10)>;
-
-            label = "MCTOKPLSF10";
         };
 
         mcToOfcKp: mcToOfcKp {
@@ -950,8 +911,6 @@
             bindings =
                 <&macro_tap>,
                 <&to 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
-            label = "MCTOOFCKP";
         };
 
         mcToOfcSkLSKp: mcToOfcSkLSKp {
@@ -962,8 +921,6 @@
                 <&to 2>,
                 <&macro_tap>,
                 <&sk LEFT_SHIFT &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
-            label = "MCTOOFCSKLSKP";
         };
     };
 
