@@ -381,6 +381,13 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        v14: v14 {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp HASH>, <&kp QMARK>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         v28: v28 {
             compatible = "zmk,behavior-mod-morph";
             label = "V28";
@@ -478,14 +485,6 @@
             tapping-term-ms = <250>; // time to determine hold vs tap
             flavor = "tap-preferred"; // blanced =
             bindings = <&sk>, <&mc_allmod>;
-        };
-
-        v14: v14 {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp HASH>, <&kp QMARK>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         htMoTg: htMoTg {
@@ -638,6 +637,22 @@
                 <&kp RALT>;
         };
 
+        attt: attt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&to 2>,
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+        };
+
         mc_rcmdx2: mc_rcmdx2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -694,25 +709,6 @@
             bindings = <&kt LALT>, <&macro_press>;
 
             label = "MC_ATAB_HOLD";
-        };
-
-        attt: attt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&to 2>,
-                <&macro_press>,
-                <&kp RALT>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp RALT>;
-
-            label = "ATTT";
         };
 
         mc_kpsk: mc_kpsk {
