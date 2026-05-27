@@ -481,7 +481,6 @@
 
         layrHtMoTg: layrHtMoTg {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYRHTMOTG";
             bindings = <&mo>, <&tog>;
 
             #binding-cells = <2>;
@@ -490,7 +489,6 @@
 
         sec_caps_and_kpad_here: sec_caps_and_kpad_here {
             compatible = "zmk,behavior-mod-morph";
-            label = "sec_caps_and_kpad_here";
             bindings = <&kp N0>, <&kp N0>;
 
             #binding-cells = <0>;
@@ -519,7 +517,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
-            label = "CAPSHTSKKP";
             bindings = <&capsMcHoldSk>, <&capsMcTapKp>;
         };
 
@@ -529,13 +526,10 @@
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
             bindings = <&kpadMcHoldSk>, <&kp>;
-
-            label = "KPADHTSKKPRAW";
         };
 
         ofcTd_bt_bt2_bt3: ofcTd_bt_bt2_bt3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "OFCTD_BT_BT2_BT3";
             #binding-cells = <0>;
             bindings = <&mcToBtSel1 2>, <&mcToBtSel2 2>, <&mcToBtSel3 2>;
         };
@@ -549,18 +543,8 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        mdLCbutton: mdLCbutton {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MDLCBUTTON";
-            bindings = <&mcToKpLSF10 2>, <&mcToOfcSkLSKp 2>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
         tdlOfcShiftF: tdlOfcShiftF {
             compatible = "zmk,behavior-tap-dance";
-            label = "TDLOFCSHIFTF";
             #binding-cells = <0>;
             bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
 
