@@ -376,7 +376,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "n00";
             bindings = <&kp N0>, <&kp ASTRK>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -651,6 +650,7 @@
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_release>,
+                <&kp RALT>,
         };
 
         mc_rcmdx2: mc_rcmdx2 {
