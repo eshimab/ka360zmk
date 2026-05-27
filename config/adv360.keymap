@@ -397,7 +397,11 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <185>;
-            bindings = <&at1>, <&at2>, <&at3>, <&at4>;
+            bindings =
+                <&mcToOfcAt1>,
+                <&mcToOfcAt2>,
+                <&mcToOfcAt3>,
+                <&mcToOfcAt4>;
         };
 
         sec_generic_htmod_here: sec_generic_htmod_here {
@@ -405,21 +409,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             bindings = <&kp N0>, <&kp N0>;
-        };
-
-        htAllModSk: htAllModSk {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            bindings = <&mcSkAllMod>, <&sk>;
-        };
-
-        htSkKpAllMod: htSkKpAllMod {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>; // time to determine hold vs tap
-            flavor = "tap-preferred"; // blanced =
-            bindings = <&sk>, <&mcSkAllMod>;
         };
 
         htMoTg: htMoTg {
@@ -503,7 +492,7 @@
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
-        at1: at1 {
+        mcToOfcAt1: mcToOfcAt1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -517,7 +506,7 @@
                 <&kp RALT>;
         };
 
-        at2: at2 {
+        mcToOfcAt2: mcToOfcAt2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -531,7 +520,7 @@
                 <&kp RALT>;
         };
 
-        at3: at3 {
+        mcToOfcAt3: mcToOfcAt3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -545,7 +534,7 @@
                 <&kp RALT>;
         };
 
-        at4: at4 {
+        mcToOfcAt4: mcToOfcAt4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -565,15 +554,7 @@
             bindings = <&macro_tap>, <&kp RGUI &kp RGUI>;
         };
 
-        mcKpToNv: mcKpToNv {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 0>;
-        };
-
-        mcTgKp: mcTgKp {
+        mcTgLyrKp: mcTgLyrKp {
             compatible = "zmk,behavior-macro-two-param";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -583,7 +564,7 @@
                 <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
         };
 
-        mcTgSk: mcTgSk {
+        mcTgLyrSk: mcTgLyrSk {
             compatible = "zmk,behavior-macro-two-param";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -591,12 +572,6 @@
             bindings =
                 <&macro_tap>,
                 <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &sk MACRO_PLACEHOLDER>;
-        };
-
-        mcSkAllMod: mcSkAllMod {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk RIGHT_GUI &sk RSHIFT &sk RALT &sk RCTRL>;
         };
 
         mcSkToNv: mcSkToNv {
@@ -675,10 +650,12 @@
                 <&tog 4 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
         };
 
-        mcToNvSkAllMods: mcToNvSkAllMods {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 0 &sk RS(RA(RC(RGUI)))>;
+        mcToLyrSkAllMods: mcToLyrSkAllMods {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &to MACRO_PLACEHOLDER &sk RS(RA(RC(RGUI)))>;
         };
 
         mcToLyrBtSel1: mcToLyrBtSel1 {
@@ -737,11 +714,11 @@
 
         L_nvim {
             bindings = <
-&v00         &v01                 &v02                &v03               &v04               &v05   &htMo0607Tg 6 0                                                        &htMo0607Tg 6 0  &v08   &v09               &v10               &v11                &v12                &kp DEL
-&v14         &kp Q                &kp W               &kp E              &kp R              &kp T  &none                                                                  &none            &kp Y  &kp U              &kp I              &kp O               &kp P               &none
-&v28         &kp A                &kp S               &kp D              &kp F              &kp G  &none            &kp LEFT  &kp RIGHT      &kp DOWN          &kp UP     &none            &kp H  &kp J              &kp K              &kp L               &v44                &none
-&sk LSHIFT   &kp Z                &kp X               &kp C              &kp V              &kp B                             &tog 1         &tog 4                                        &kp N  &kp M              &kp COMMA          &kp PERIOD          &sk RSHFT           &mo 6
-&htMoTg 5 3  &htSkKpV61 LSHIFT 0  &htSkKpV62 LCTRL 0  &htSkKpV63 LGUI 0  &htSkKpV64 LALT 0         &kp BSPC         &kp ESC   &kp TAB        &mcToNvSkAllMods  &kp ENTER  &kp SPACE               &htSkKpV71 RALT 0  &htSkKpV72 RGUI 0  &htSkKpV73 RCTRL 0  &htSkKpV74 RSHFT 3  &mo 5
+&v00         &v01                 &v02                &v03               &v04               &v05   &htMo0607Tg 6 0                                                           &htMo0607Tg 6 0  &v08   &v09               &v10               &v11                &v12                &kp DEL
+&v14         &kp Q                &kp W               &kp E              &kp R              &kp T  &none                                                                     &none            &kp Y  &kp U              &kp I              &kp O               &kp P               &none
+&v28         &kp A                &kp S               &kp D              &kp F              &kp G  &none            &kp LEFT  &kp RIGHT      &kp DOWN             &kp UP     &none            &kp H  &kp J              &kp K              &kp L               &v44                &none
+&sk LSHIFT   &kp Z                &kp X               &kp C              &kp V              &kp B                             &tog 1         &tog 4                                           &kp N  &kp M              &kp COMMA          &kp PERIOD          &sk RSHFT           &mo 6
+&htMoTg 5 3  &htSkKpV61 LSHIFT 0  &htSkKpV62 LCTRL 0  &htSkKpV63 LGUI 0  &htSkKpV64 LALT 0         &kp BSPC         &kp ESC   &kp TAB        &mcToLyrSkAllMods 0  &kp ENTER  &kp SPACE               &htSkKpV71 RALT 0  &htSkKpV72 RGUI 0  &htSkKpV73 RCTRL 0  &htSkKpV74 RSHFT 3  &mo 5
             >;
         };
 
@@ -767,21 +744,21 @@
 
         lyr_caps {
             bindings = <
-&mcTgKp 3 N0             &mcTgKp 3 N1             &mcTgKp 3 N2            &mcTgKp 3 N3           &mcTgKp 3 N4            &mcTgKp 3 N5  &trans                                                                  &trans           &mcTgKp 3 N6  &mcTgKp 3 N7           &mcTgKp 3 N8           &mcTgKp 3 N9             &mcTgKp 3 N0     &mcTgKp 3 DEL
-&mcTgKp 3 HASH           &kp LS(Q)                &kp RS(W)               &kp RS(E)              &kp RS(R)               &kp RS(T)     &trans                                                                  &trans           &kp LS(Y)     &kp LS(U)              &kp LS(I)              &kp LS(O)                &kp LS(P)        &trans
-&mcTgKp 3 DOUBLE_QUOTES  &kp RS(A)                &kp RS(S)               &kp RS(D)              &kp RS(F)               &kp RS(G)     &trans  &trans         &trans             &trans       &trans           &trans           &kp LS(H)     &kp LS(J)              &kp LS(K)              &kp LS(L)                &mcTgKp 3 APOS   &trans
-&mcTgSk 3 LSHFT          &kp LS(Z)                &kp RS(X)               &kp RS(C)              &kp RS(V)               &kp RS(B)                            &tog 3             &mcTgTg 3 4                                    &kp LS(N)     &kp LS(M)              &mcTgKp 3 COMMA        &mcTgKp 3 DOT            &mcTgSk 3 RSHFT  &trans
-&htMoTg 5 3              &capsHtSkKp LSHFT GRAVE  &capsHtSkKp LCTRL PIPE  &capsHtSkKp LGUI AMPS  &capsHtSkKp LALT SLASH                &trans  &mcTgKp 3 ESC  &mcTgKp 3 TAB      &trans       &mcTgKp 3 ENTER  &mcTgKp 3 SPACE                &capsHtSkKp RALT PLUS  &capsHtSkO RGUI MINUS  &capsHtSkKp LCTRL UNDER  &htSkTg RSHFT 3  &htMoTg 5 3
+&mcTgLyrKp 3 N0             &mcTgLyrKp 3 N1          &mcTgLyrKp 3 N2         &mcTgLyrKp 3 N3        &mcTgLyrKp 3 N4         &mcTgLyrKp 3 N5  &trans                                                                           &trans              &mcTgLyrKp 3 N6  &mcTgLyrKp 3 N7        &mcTgLyrKp 3 N8        &mcTgLyrKp 3 N9          &mcTgLyrKp 3 N0     &mcTgLyrKp 3 DEL
+&mcTgLyrKp 3 HASH           &kp LS(Q)                &kp RS(W)               &kp RS(E)              &kp RS(R)               &kp RS(T)        &trans                                                                           &trans              &kp LS(Y)        &kp LS(U)              &kp LS(I)              &kp LS(O)                &kp LS(P)           &trans
+&mcTgLyrKp 3 DOUBLE_QUOTES  &kp RS(A)                &kp RS(S)               &kp RS(D)              &kp RS(F)               &kp RS(G)        &trans  &trans            &trans                &trans       &trans              &trans              &kp LS(H)        &kp LS(J)              &kp LS(K)              &kp LS(L)                &mcTgLyrKp 3 APOS   &trans
+&mcTgLyrSk 3 LSHFT          &kp LS(Z)                &kp RS(X)               &kp RS(C)              &kp RS(V)               &kp RS(B)                                  &tog 3                &mcTgTg 3 4                                          &kp LS(N)        &kp LS(M)              &mcTgLyrKp 3 COMMA     &mcTgLyrKp 3 DOT         &mcTgLyrSk 3 RSHFT  &trans
+&htMoTg 5 3                 &capsHtSkKp LSHFT GRAVE  &capsHtSkKp LCTRL PIPE  &capsHtSkKp LGUI AMPS  &capsHtSkKp LALT SLASH                   &trans  &mcTgLyrKp 3 ESC  &mcTgLyrKp 3 TAB      &trans       &mcTgLyrKp 3 ENTER  &mcTgLyrKp 3 SPACE                   &capsHtSkKp RALT PLUS  &capsHtSkO RGUI MINUS  &capsHtSkKp LCTRL UNDER  &htSkTg RSHFT 3     &htMoTg 5 3
             >;
         };
 
         lyr_kpad {
             bindings = <
-&kp N0                   &kp N1                      &mcTgKp 4 EQUAL           &kp N3                  &kp N4                     &kp N5      &trans                                                             &trans           &kp N6       &kp N7                    &kp N8                     &kp N9                      &kp N0           &mcTgKp 4 DEL
-&mcTgKp 4 HASH           &mcTgKpadKpUndSkRS          &kp N7                    &kp N8                  &kp N9                     &kp DOLLAR  &trans                                                             &trans           &mcTgKp 4 Y  &mcTgKp 4 U               &mcTgKp 4 I                &mcTgKp 4 O                 &mcTgKp 4 P      &trans
-&mcTgKp 4 DOUBLE_QUOTES  &kp PLUS                    &kp N4                    &kp N5                  &kp N6                     &kp MINUS   &trans  &trans         &trans             &trans  &trans           &trans           &mcTgKp 4 H  &mcTgKp 4 J               &mcTgKp 4 K                &mcTgKp 4 L                 &mcTgKp 4 APOS   &trans
-&mcTgSk 4 LSHFT          &kp ASTRK                   &kp N1                    &kp N2                  &kp N3                     &kp SPACE                          &tog 4             &tog 4                                    &mcTgKp 4 N  &mcTgKp 4 M               &mcTgKp 4 COMMA            &mcTgKp 4 DOT               &mcTgSk 4 RSHFT  &trans
-&htMoTg 5 4              &kpadHtSkKpRaw LSHFT GRAVE  &kpadHtSkKpRaw LCTRL DOT  &kpadHtSkKpRaw LGUI N0  &kpadHtSkKpRaw RALT SLASH              &trans  &mcTgKp 4 ESC  &mcTgKp 4 TAB      &trans  &mcTgKp 4 ENTER  &mcTgKp 4 SPACE               &kpadHtSkKpRaw RALT PLUS  &kpadHtSkKpRaw RGUI MINUS  &kpadHtSkKpRaw RCTRL UNDER  &mcTgSk 4 RSHFT  &htMoTg 5 4
+&kp N0                      &kp N1                      &mcTgLyrKp 4 EQUAL        &kp N3                  &kp N4                     &kp N5      &trans                                                                      &trans              &kp N6          &kp N7                    &kp N8                     &kp N9                      &kp N0              &mcTgLyrKp 4 DEL
+&mcTgLyrKp 4 HASH           &mcTgKpadKpUndSkRS          &kp N7                    &kp N8                  &kp N9                     &kp DOLLAR  &trans                                                                      &trans              &mcTgLyrKp 4 Y  &mcTgLyrKp 4 U            &mcTgLyrKp 4 I             &mcTgLyrKp 4 O              &mcTgLyrKp 4 P      &trans
+&mcTgLyrKp 4 DOUBLE_QUOTES  &kp PLUS                    &kp N4                    &kp N5                  &kp N6                     &kp MINUS   &trans  &trans            &trans                &trans  &trans              &trans              &mcTgLyrKp 4 H  &mcTgLyrKp 4 J            &mcTgLyrKp 4 K             &mcTgLyrKp 4 L              &mcTgLyrKp 4 APOS   &trans
+&mcTgLyrSk 4 LSHFT          &kp ASTRK                   &kp N1                    &kp N2                  &kp N3                     &kp SPACE                             &tog 4                &tog 4                                          &mcTgLyrKp 4 N  &mcTgLyrKp 4 M            &mcTgLyrKp 4 COMMA         &mcTgLyrKp 4 DOT            &mcTgLyrSk 4 RSHFT  &trans
+&htMoTg 5 4                 &kpadHtSkKpRaw LSHFT GRAVE  &kpadHtSkKpRaw LCTRL DOT  &kpadHtSkKpRaw LGUI N0  &kpadHtSkKpRaw RALT SLASH              &trans  &mcTgLyrKp 4 ESC  &mcTgLyrKp 4 TAB      &trans  &mcTgLyrKp 4 ENTER  &mcTgLyrKp 4 SPACE                  &kpadHtSkKpRaw RALT PLUS  &kpadHtSkKpRaw RGUI MINUS  &kpadHtSkKpRaw RCTRL UNDER  &mcTgLyrSk 4 RSHFT  &htMoTg 5 4
             >;
         };
 
