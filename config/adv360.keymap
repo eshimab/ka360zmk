@@ -41,10 +41,9 @@
 
         v61tap: v61tap {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp GRAVE>, <&kp TILDE>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp GRAVE>, <&kp TILDE>;
         };
 
         htSkKpV62: htSkKpV62 {
