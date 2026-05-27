@@ -428,7 +428,6 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&tdToNzTgOfc>;
         };
-    };
 
     sec_ofc_caps_kpad_here: sec_ofc_caps_kpad_here {
         compatible = "zmk,behavior-mod-morph";
@@ -481,6 +480,7 @@
         #binding-cells = <0>;
         tapping-term-ms = <180>;
         bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
+    };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
