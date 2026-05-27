@@ -491,7 +491,6 @@
 
         htAllModSk: htAllModSk {
             compatible = "zmk,behavior-hold-tap";
-            label = "HTALLMODSK";
             bindings = <&mc_allmod>, <&sk>;
 
             #binding-cells = <2>;
@@ -499,7 +498,6 @@
         };
 
         htSkKpAllMod: htSkKpAllMod {
-            label = "HTSKKPALLMOD";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <250>; // time to determine hold vs tap
@@ -513,8 +511,6 @@
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&tog>;
-
-            label = "HTMOTG";
         };
 
         htTgSk: htTgSk {
