@@ -435,7 +435,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "sec_tap_dance_mods_here";
             bindings = <&kp N0>, <&kp N0>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -466,6 +465,14 @@
             label = "TD_AT_ATT_ATTT";
             #binding-cells = <0>;
             bindings = <&at>, <&att>, <&attt>;
+        };
+
+        sec_generic_htmod_here: sec_generic_htmod_here {
+            compatible = "zmk,behavior-mod-morph";
+            label = "sec_generic_htmod_here";
+            bindings = <&kp N0>, <&kp N0>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         htAllModSk: htAllModSk {
