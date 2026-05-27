@@ -724,15 +724,6 @@
                 <&kp UNDER>;
         };
 
-        mc_testTogDollar2: mc_testTogDollar2 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&kp DOLLAR>;
-        };
-
         mc_testTogSk2: mc_testTogSk2 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -743,12 +734,6 @@
         };
 
         mc_testTogUnder2a: mc_testTogUnder2a {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
-        };
-
-        mc_testTogDollar2a: mc_testTogDollar2a {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
