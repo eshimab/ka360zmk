@@ -447,61 +447,58 @@
         };
     };
 
-        sec_ofc_caps_kpad_here: sec_ofc_caps_kpad_here {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&kp N0>, <&kp N0>;
-        };
+    sec_ofc_caps_kpad_here: sec_ofc_caps_kpad_here {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        bindings = <&kp N0>, <&kp N0>;
+    };
 
-        capsHtSkO: capsHtSkO {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "tap-preferred";
-            bindings = <&capsMcHoldSk>, <&kp>;
-        };
+    capsHtSkO: capsHtSkO {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <170>;
+        flavor = "tap-preferred";
+        bindings = <&mcHoldTgCapsSk>, <&kp>;
+    };
 
-        kpadHtSkKp: kpadHtSkKp {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "tap-preferred";
-            label = "KPADHTSKKP";
-            bindings = <&kpadMcHoldSk>, <&kpadMcTapKp>;
-        };
+    kpadHtSkKp: kpadHtSkKp {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <170>;
+        flavor = "tap-preferred";
+        label = "KPADHTSKKP";
+        bindings = <&mcHoldTgKpadSk>, <&mcTapTgKpadKp>;
+    };
 
-        capsHtSkKp: capsHtSkKp {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "tap-preferred";
-            bindings = <&capsMcHoldSk>, <&capsMcTapKp>;
-        };
+    capsHtSkKp: capsHtSkKp {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <170>;
+        flavor = "tap-preferred";
+        bindings = <&mcHoldTgCapsSk>, <&mcTapTgCapsKp>;
+    };
 
-        kpadHtSkKpRaw: kpadHtSkKpRaw {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "tap-preferred";
-            bindings = <&kpadMcHoldSk>, <&kp>;
-        };
+    kpadHtSkKpRaw: kpadHtSkKpRaw {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <170>;
+        flavor = "tap-preferred";
+        bindings = <&mcHoldTgKpadSk>, <&kp>;
+    };
 
-        ofcTd_bt_bt2_bt3: ofcTd_bt_bt2_bt3 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings =
-                <&mcToLyrBtSel1 2>,
-                <&mcToLyrBtSel2 2>,
-                <&mcToLyrBtSel3 2>;
-        };
+    ofcTd_bt_bt2_bt3: ofcTd_bt_bt2_bt3 {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        bindings = <&mcToLyrBtSel1 2>, <&mcToLyrBtSel2 2>, <&mcToLyrBtSel3 2>;
+    };
 
-        ofcTdShiftF: ofcTdShiftF {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
-        };
+    ofcTdShiftF: ofcTdShiftF {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <180>;
+        bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
+    };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
@@ -616,7 +613,7 @@
             bindings = <&macro_tap>, <&to 2 &sk RCTRL>;
         };
 
-        kpadMcTogKpUndSkRS: kpadMcTogKpUndSkRS {
+        mcTgKpadKpUndSkRS: mcTgKpadKpUndSkRS {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&tog 4 &kp UNDER &sk RSHIFT>;
@@ -630,7 +627,7 @@
                 <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &tog MACRO_PLACEHOLDER>;
         };
 
-        capsMcHoldSk: mc_capsHoldSk {
+        mcHoldTgCapsSk: mcHoldTgCapsSk {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -638,7 +635,7 @@
                 <&tog 3 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
         };
 
-        capsMcTapKp: mc_capsTapKp {
+        mcTapTgCapsKp: mcTapTgCapsKp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -646,7 +643,7 @@
                 <&tog 3 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
 
-        kpadMcHoldSk: kpadMcHoldSk {
+        mcHoldTgKpadSk: mcHoldTgKpadSk {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -654,7 +651,7 @@
                 <&tog 4 &macro_param_1to1 &sk MACRO_PLACEHOLDER>;
         };
 
-        kpadMcTapKp: kpadMcTapKp {
+        mcTapTgKpadKp: mcTapTgKpadKp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -662,7 +659,7 @@
                 <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
 
-        capsMcHoldMo: capsMcHoldMo {
+        mcHoldTgCapsMo: mcHoldTgCapsMo {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -670,7 +667,7 @@
                 <&tog 3 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
         };
 
-        kpadMcHoldMo: kpadMcHoldMo {
+        mcHoldTgKpadMo: mcHoldTgKpadMo {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -708,7 +705,7 @@
                 <&macro_param_1to1 &to MACRO_PLACEHOLDER &bt BT_SEL 3>;
         };
 
-        mcToKpLSF10: mcToKpLSF10 {
+        mcToLyrKpLSF10: mcToLyrKpLSF10 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -781,7 +778,7 @@
         lyr_kpad {
             bindings = <
 &kp N0                   &kp N1                      &mcTgKp 4 EQUAL           &kp N3                  &kp N4                     &kp N5      &trans                                                             &trans           &kp N6       &kp N7                    &kp N8                     &kp N9                      &kp N0           &mcTgKp 4 DEL
-&mcTgKp 4 HASH           &kpadMcTogKpUndSkRS         &kp N7                    &kp N8                  &kp N9                     &kp DOLLAR  &trans                                                             &trans           &mcTgKp 4 Y  &mcTgKp 4 U               &mcTgKp 4 I                &mcTgKp 4 O                 &mcTgKp 4 P      &trans
+&mcTgKp 4 HASH           &mcTgKpadKpUndSkRS          &kp N7                    &kp N8                  &kp N9                     &kp DOLLAR  &trans                                                             &trans           &mcTgKp 4 Y  &mcTgKp 4 U               &mcTgKp 4 I                &mcTgKp 4 O                 &mcTgKp 4 P      &trans
 &mcTgKp 4 DOUBLE_QUOTES  &kp PLUS                    &kp N4                    &kp N5                  &kp N6                     &kp MINUS   &trans  &trans         &trans             &trans  &trans           &trans           &mcTgKp 4 H  &mcTgKp 4 J               &mcTgKp 4 K                &mcTgKp 4 L                 &mcTgKp 4 APOS   &trans
 &mcTgSk 4 LSHFT          &kp ASTRK                   &kp N1                    &kp N2                  &kp N3                     &kp SPACE                          &tog 4             &tog 4                                    &mcTgKp 4 N  &mcTgKp 4 M               &mcTgKp 4 COMMA            &mcTgKp 4 DOT               &mcTgSk 4 RSHFT  &trans
 &htMoTg 5 4              &kpadHtSkKpRaw LSHFT GRAVE  &kpadHtSkKpRaw LCTRL DOT  &kpadHtSkKpRaw LGUI N0  &kpadHtSkKpRaw RALT SLASH              &trans  &mcTgKp 4 ESC  &mcTgKp 4 TAB      &trans  &mcTgKp 4 ENTER  &mcTgKp 4 SPACE               &kpadHtSkKpRaw RALT PLUS  &kpadHtSkKpRaw RGUI MINUS  &kpadHtSkKpRaw RCTRL UNDER  &mcTgSk 4 RSHFT  &htMoTg 5 4
