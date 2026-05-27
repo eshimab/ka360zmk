@@ -673,6 +673,25 @@
                 <&kp RALT>;
         };
 
+        at4: at4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&to 2>,
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp RALT>;
+        };
+
         mc_rcmdx2: mc_rcmdx2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
