@@ -56,10 +56,9 @@
 
         v62tap: v62tap {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp PIPE>, <&kp AT>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp PIPE>, <&kp AT>;
         };
 
         htSkKpV63: htSkKpV63 {
@@ -72,10 +71,9 @@
 
         v63tap: v63tap {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp AMPS>, <&kp PERCENT>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp AMPS>, <&kp PERCENT>;
         };
 
         htSkKpV64: htSkKpV64 {
@@ -88,10 +86,9 @@
 
         v64tap: v64tap {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp SLASH>, <&kp BACKSLASH>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
         };
 
         htSkKpV71: htSkKpV71 {
@@ -104,10 +101,9 @@
 
         v71tap: v71tap {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp PLUS>, <&kp ASTRK>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp PLUS>, <&kp ASTRK>;
         };
 
         htSkKpV72: htSkKpV72 {
@@ -120,10 +116,9 @@
 
         v72tap: v72tap {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp MINUS>, <&kp CARET>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp MINUS>, <&kp CARET>;
         };
 
         htSkKpV73: htSkKpV73 {
@@ -136,10 +131,9 @@
 
         v73tap: v73tap {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp UNDER>, <&kp DOLLAR>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp UNDER>, <&kp DOLLAR>;
         };
 
         htSkKpV74: htSkKpV74 {
@@ -152,58 +146,51 @@
 
         v74hold: v74hold {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&mo 5>, <&sk RSHFT>;
-
             #binding-cells = <0>;
             mods = <(MOD_RCTL|MOD_RGUI|MOD_RALT)>;
+            bindings = <&mo 5>, <&sk RSHFT>;
         };
 
         v74tap: v74tap {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&tog 3>, <&sk RSHFT>;
-
             #binding-cells = <0>;
             mods = <(MOD_RCTL|MOD_RGUI|MOD_RALT)>;
+            bindings = <&tog 3>, <&sk RSHFT>;
         };
 
         sec_number_row_begins_here: sec_number_row_begins_here {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp N0>, <&kp N0>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp N0>, <&kp N0>;
         };
 
         v01: v01 {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp EXCL>, <&kp N1>;
-
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
+            bindings = <&kp EXCL>, <&kp N1>;
         };
 
         n01: n01 {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp N1>, <&kp EXCL>;
-
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
+            bindings = <&kp N1>, <&kp EXCL>;
         };
 
         v02: v02 {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp EQUAL>, <&kp N2>;
-
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
+            bindings = <&kp EQUAL>, <&kp N2>;
         };
 
         n02: n02 {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp N2>, <&kp EQUAL>;
-
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
+            bindings = <&kp N2>, <&kp EQUAL>;
         };
 
         v03: v03 {
