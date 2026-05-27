@@ -26,9 +26,8 @@
 
         sec_hold_tap_mods_here: sec_hold_tap_mods_here {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp N0>, <&kp N0>;
-
             #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp N0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
