@@ -158,6 +158,14 @@
             bindings = <&v74hold>, <&v74tap>;
         };
 
+        v74hold: v74hold {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V74HOLD";
+            bindings = <&mo 5>, <&sk RSHFT>;
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RGUI|MOD_RALT)>;
+        };
+
         v74tap: v74tap {
             label = "V74TAP";
             compatible = "zmk,behavior-mod-morph";
@@ -513,6 +521,22 @@
             label = "HTTGSK";
         };
 
+        layrHtMoTg: layrHtMoTg {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYRHTMOTG";
+            bindings = <&mo>, <&tog>;
+            #binding-cells = <2>;
+            tapping-term-ms = <185>;
+        };
+
+        sec_caps_and_kpad_here: sec_caps_and_kpad_here {
+            compatible = "zmk,behavior-mod-morph";
+            label = "sec_caps_and_kpad_here";
+            bindings = <&kp N0>, <&kp N0>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         capsHtSkO: capsHtSkO {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -569,7 +593,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MDLCBUTTON";
             bindings = <&mcToKpLSF10 2>, <&mcToOfcSkLSKp 2>;
-
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
@@ -579,26 +602,7 @@
             label = "TDLOFCSHIFTF";
             #binding-cells = <0>;
             bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
-
             tapping-term-ms = <180>;
-        };
-
-        layrHtMoTg: layrHtMoTg {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYRHTMOTG";
-            bindings = <&mo>, <&tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <185>;
-        };
-
-        v74hold: v74hold {
-            compatible = "zmk,behavior-mod-morph";
-            label = "V74HOLD";
-            bindings = <&mo 5>, <&sk RSHFT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_RGUI|MOD_RALT)>;
         };
 
         ht0607TgMo: ht0607TgMo {
