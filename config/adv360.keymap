@@ -381,13 +381,13 @@
             bindings = <&to 0>, <&tog 2>;
         };
 
-        tdBtSel_1_2: tdBtSel_1_2 {
+        tdToLyrBtSel_1_2: tdToLyrBtSel_1_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&bt BT_SEL 2>;
+            bindings = <&mcToLyrBtSel1 2>, <&mcToLyrBtSel2 2>;
         };
 
-        tdAt_1_to_4: tdAt_1_to_4 {
+        tdToOfcTdAt_1_to_4: tdToOfcTdAt_1_to_4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <185>;
@@ -429,58 +429,52 @@
             bindings = <&mo>, <&tdToNzTgOfc>;
         };
 
-    sec_ofc_caps_kpad_here: sec_ofc_caps_kpad_here {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        bindings = <&kp N0>, <&kp N0>;
-    };
+        sec_ofc_caps_kpad_here: sec_ofc_caps_kpad_here {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp N0>, <&kp N0>;
+        };
 
-    capsHtSkO: capsHtSkO {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <170>;
-        flavor = "tap-preferred";
-        bindings = <&mcHoldTgCapsSk>, <&kp>;
-    };
+        capsHtSkO: capsHtSkO {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mcHoldTgCapsSk>, <&kp>;
+        };
 
-    kpadHtSkKp: kpadHtSkKp {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <170>;
-        flavor = "tap-preferred";
-        label = "KPADHTSKKP";
-        bindings = <&mcHoldTgKpadSk>, <&mcTapTgKpadKp>;
-    };
+        kpadHtSkKp: kpadHtSkKp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            label = "KPADHTSKKP";
+            bindings = <&mcHoldTgKpadSk>, <&mcTapTgKpadKp>;
+        };
 
-    capsHtSkKp: capsHtSkKp {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <170>;
-        flavor = "tap-preferred";
-        bindings = <&mcHoldTgCapsSk>, <&mcTapTgCapsKp>;
-    };
+        capsHtSkKp: capsHtSkKp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mcHoldTgCapsSk>, <&mcTapTgCapsKp>;
+        };
 
-    kpadHtSkKpRaw: kpadHtSkKpRaw {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <170>;
-        flavor = "tap-preferred";
-        bindings = <&mcHoldTgKpadSk>, <&kp>;
-    };
+        kpadHtSkKpRaw: kpadHtSkKpRaw {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mcHoldTgKpadSk>, <&kp>;
+        };
 
-    ofcTd_bt_bt2_bt3: ofcTd_bt_bt2_bt3 {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        bindings = <&mcToLyrBtSel1 2>, <&mcToLyrBtSel2 2>, <&mcToLyrBtSel3 2>;
-    };
-
-    ofcTdShiftF: ofcTdShiftF {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <180>;
-        bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
-    };
+        tdToOfcShiftF: tdToOfcShiftF {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -730,11 +724,11 @@
 
         lyr_ofc {
             bindings = <
-&n00    &n01    &n02    &n03    &n04    &n05    &trans                                            &trans  &n08    &n09    &n10    &n11    &n12    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                            &trans  &trans  &trans  &trans  &trans  &trans  &tdBtSel_1_2
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &ofcTdShiftF
-&trans  &trans  &trans  &trans  &trans  &trans                  &none       &tog 4                        &trans  &trans  &trans  &trans  &trans  &mcToOfcKp PRINTSCREEN
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &tdAt_1_to_4  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&n00    &n01    &n02    &n03    &n04    &n05    &trans                                                   &trans  &n08    &n09    &n10    &n11    &n12    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                   &trans  &trans  &trans  &trans  &trans  &trans  &tdToLyrBtSel_1_2
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tdToOfcShiftF
+&trans  &trans  &trans  &trans  &trans  &trans                  &none       &tog 4                               &trans  &trans  &trans  &trans  &trans  &mcToOfcKp PRINTSCREEN
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &tdToOfcTdAt_1_to_4  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
