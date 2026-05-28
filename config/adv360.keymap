@@ -487,7 +487,7 @@
         kpadHtSkTdSlashDate: kpadHtSkTdSlashDate {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <180>;
             flavor = "tap-preferred";
             bindings = <&mcHoldTgKpadSk>, <&kpadTdSlashDate>;
         };
@@ -495,7 +495,7 @@
         kpadTdSlashDate: kpadTdSlashDate {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp FSLH>, <&mcKpadDate>;
+            bindings = <&kp FSLH>, <&mcKpadSlashDate>;
 
             tapping-term-ms = <160>;
         };
@@ -511,7 +511,7 @@
         kpadHtSkTdDotDate: kpadHtSkTdDotDate {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <180>;
             flavor = "tap-preferred";
             bindings = <&mcHoldTgKpadSk>, <&kpadTdDotDate>;
         };
@@ -744,20 +744,16 @@
             label = "MCKPAD808";
         };
 
-        mcKpadDate: mcKpadDate {
+        mcKpadSlashDate: mcKpadSlashDate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp N0 &kp N5 &kp SLASH &kp N2>;
-
-            label = "MCKPADDATE";
         };
 
         mcKpadDotDate: mcKpadDotDate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp N0 &kp N5 &kp DOT &kp N2>;
-
-            label = "MCKPADDOTDATE";
         };
     };
 
