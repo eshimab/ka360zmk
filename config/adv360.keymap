@@ -497,7 +497,7 @@
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&mcKpadSlashDate>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <225>;
         };
 
         kpadTdDotDate: kpadTdDotDate {
@@ -505,7 +505,7 @@
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&mcKpadDotDate>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <225>;
         };
 
         kpadHtSkTdDotDate: kpadHtSkTdDotDate {
