@@ -443,20 +443,20 @@
             bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
         };
 
-        capsHtSkTgKp: capsHtSkTgKp {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "tap-preferred";
-            bindings = <&mcHoldTgCapsSk>, <&mcTapTgCapsKp>;
-        };
-
         capsHtSkKp: capsHtSkKp {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
             bindings = <&mcHoldTgCapsSk>, <&kp>;
+        };
+
+        capsHtSkTgKp: capsHtSkTgKp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mcHoldTgCapsSk>, <&mcTapTgCapsKp>;
         };
 
         kpadHtSkKp: kpadHtSkKp {
