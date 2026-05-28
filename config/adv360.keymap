@@ -436,6 +436,21 @@
             bindings = <&kp N0>, <&kp N0>;
         };
 
+        tdToOfcShiftF: tdToOfcShiftF {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
+        };
+
+        capsHtSkKp: capsHtSkKp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&mcHoldTgCapsSk>, <&mcTapTgCapsKp>;
+        };
+
         capsHtSkO: capsHtSkO {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -453,14 +468,6 @@
             bindings = <&mcHoldTgKpadSk>, <&mcTapTgKpadKp>;
         };
 
-        capsHtSkKp: capsHtSkKp {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "tap-preferred";
-            bindings = <&mcHoldTgCapsSk>, <&mcTapTgCapsKp>;
-        };
-
         kpadHtSkKpRaw: kpadHtSkKpRaw {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -469,19 +476,18 @@
             bindings = <&mcHoldTgKpadSk>, <&kp>;
         };
 
-        tdToOfcShiftF: tdToOfcShiftF {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&mcToOfcSkLSKp F10>, <&mcToOfcSkLSKp F6>;
-        };
-
         kpadTdSpc808: kpadTdSpc808 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&mcKpad808>;
-
             tapping-term-ms = <180>;
+            bindings = <&kp SPACE>, <&mcKpad808>;
+        };
+
+        kpadTdSlashDate: kpadTdSlashDate {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <225>;
+            bindings = <&kp FSLH>, <&mcKpadSlashDate>;
         };
 
         kpadHtSkTdSlashDate: kpadHtSkTdSlashDate {
@@ -492,20 +498,11 @@
             bindings = <&mcHoldTgKpadSk>, <&kpadTdSlashDate>;
         };
 
-        kpadTdSlashDate: kpadTdSlashDate {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH>, <&mcKpadSlashDate>;
-
-            tapping-term-ms = <225>;
-        };
-
         kpadTdDotDate: kpadTdDotDate {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&mcKpadDotDate>;
-
             tapping-term-ms = <225>;
+            bindings = <&kp DOT>, <&mcKpadDotDate>;
         };
 
         kpadHtSkTdDotDate: kpadHtSkTdDotDate {
