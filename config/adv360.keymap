@@ -502,7 +502,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <225>;
-            bindings = <&kp DOT>, <&mcKpadDotDate>;
+            bindings = <&kp DOT>, <&mcDateDotEnd>;
         };
 
         kpadHtSkTdDotDate: kpadHtSkTdDotDate {
@@ -747,10 +747,18 @@
             bindings = <&macro_tap>, <&kp N0 &kp N5 &kp SLASH &kp N2>;
         };
 
-        mcKpadDotDate: mcKpadDotDate {
+        mcDateDotEnd: mcKpadDotDate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp N0 &kp N5 &kp DOT &kp N2>;
+            bindings = <&macro_tap>, <&kp DOT &kp N2 &kp N6>;
+        };
+
+        mcDateSlashEnd: mcDateSlashEnd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp SLASH &kp N2 &kp N6>;
+
+            label = "MCDATESLASHEND";
         };
     };
 
@@ -801,7 +809,7 @@
 
         lyr_kpad {
             bindings = <
-&kp N0                      &kp N1                     &mcTgLyrKp 4 EQUAL          &kp N3                 &kp N4                       &kp N5         &trans                                                                      &trans              &kp N6          &kp N7                   &kp N8                    &kp N9                     &kp N0              &mcTgLyrKp 4 DEL
+&kp N0                      &kp N1                     &mcTgLyrKp 4 EQUAL          &mcKpadSlashDate       &mcDateSlashEnd              &kp N5         &trans                                                                      &trans              &kp N6          &kp N7                   &kp N8                    &kp N9                     &kp N0              &mcTgLyrKp 4 DEL
 &mcTgLyrKp 4 HASH           &mcTgKpadKpUndSkRS         &kp N7                      &kp N8                 &kp N9                       &kp DOLLAR     &trans                                                                      &trans              &mcTgLyrKp 4 Y  &mcTgLyrKp 4 U           &mcTgLyrKp 4 I            &mcTgLyrKp 4 O             &mcTgLyrKp 4 P      &trans
 &mcTgLyrKp 4 DOUBLE_QUOTES  &kp PLUS                   &kp N4                      &kp N5                 &kp N6                       &kp MINUS      &trans  &trans            &trans                &trans  &trans              &trans              &mcTgLyrKp 4 H  &mcTgLyrKp 4 J           &mcTgLyrKp 4 K            &mcTgLyrKp 4 L             &mcTgLyrKp 4 APOS   &trans
 &mcTgLyrSk 4 LSHFT          &kp ASTRK                  &kp N1                      &kp N2                 &kp N3                       &kpadTdSpc808                            &tog 4                &tog 4                                          &mcTgLyrKp 4 N  &mcTgLyrKp 4 M           &mcTgLyrKp 4 COMMA        &mcTgLyrKp 4 DOT           &mcTgLyrSk 4 RSHFT  &trans
