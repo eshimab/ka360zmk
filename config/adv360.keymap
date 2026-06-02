@@ -424,7 +424,7 @@
         htMoLyrTdToNvTgOfc: htMoLyrTdToNvTgOfc {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <160>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&tdToNzTgOfc>;
         };
