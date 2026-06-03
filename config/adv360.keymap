@@ -770,7 +770,7 @@
         mcDateSlashEnd: mcDateSlashEnd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp SLASH &kp N2 &kp N6 &kp SPACE &tog 4>;
+            bindings = <&macro_tap>, <&kp SLASH &kp N2 &kp N6>;
 
             label = "MCDATESLASHEND";
         };
