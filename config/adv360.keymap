@@ -384,7 +384,7 @@
         tdToLyrBtSel_1_2: tdToLyrBtSel_1_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mcToLyrBtSel1 2>, <&mcToLyrBtSel2 2>;
+            bindings = <&mcToLyrBtSel3 2>, <&mcToLyrBtSel2 2>;
         };
 
         tdToOfcTdAt_1_to_4: tdToOfcTdAt_1_to_4 {
