@@ -771,7 +771,9 @@
         mcKpad808: mcKpad808 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp N8 &kp N0 &kp N8 &kp MINUS>;
+            bindings =
+                <&macro_tap>,
+                <&kp PLUS &kp N1 &kp SPACE &kp LPAR &kp N8 &kp N0 &kp N8 &kp RPAR &kp SPACE>;
 
             label = "MCKPAD808";
         };
@@ -779,7 +781,7 @@
         mcKpadSlashDate: mcKpadSlashDate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp N0 &kp N6 &kp SLASH &kp N3 &kp N0>;
+            bindings = <&macro_tap>, <&kp N0 &kp N7 &kp SLASH &kp N0>;
         };
 
         mcDateDotEnd: mcKpadDotDate {
