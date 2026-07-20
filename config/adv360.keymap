@@ -573,7 +573,7 @@
             compatible = "zmk,behavior-sticky-key";
             bindings = <&kp>;
             #binding-cells = <1>;
-            release-after-ms = <1000>;
+            release-after-ms = <999>;
             lazy;
             ignore-modifiers;
             quick-release;
