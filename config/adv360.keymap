@@ -809,7 +809,7 @@
         mcKpadSlashDate: mcKpadSlashDate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp N0 &kp N7 &kp SLASH &kp N2>;
+            bindings = <&macro_tap>, <&kp N0 &kp N7 &kp SLASH &kp N3 &kp N0>;
         };
 
         mcDateDotEnd: mcKpadDotDate {
