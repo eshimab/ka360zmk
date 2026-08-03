@@ -260,7 +260,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&kp N7>, <&kp RPAR>;
+            bindings = <&kp KP_NUMBER_7>, <&kp RPAR>;
         };
 
         v10: v10 {
