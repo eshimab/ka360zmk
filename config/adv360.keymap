@@ -659,7 +659,7 @@
             #binding-cells = <2>;
             bindings =
                 <&macro_tap>,
-                <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &skl MACRO_PLACEHOLDER>;
+                <&macro_param_1to1 &tog MACRO_PLACEHOLDER &macro_param_2to1 &sk MACRO_PLACEHOLDER>;
         };
 
         mcToOfcSkRC: mcToOfcSkRC {
