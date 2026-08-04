@@ -576,9 +576,81 @@
             quick-release;
         };
 
-        c07: c07 {
+        c09: c09 {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp N7>, <&mcTgLyrKp 3 RPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        c01: c01 {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp N1>, <&mcTgLyrKp 3 EXCL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        c02: c02 {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp N2>, <&mcTgLyrKp 3 EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        c03: c03 {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp N3>, <&mcTgLyrKp 3 LBRC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        c04: c04 {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp N4>, <&mcTgLyrKp 3 LPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        c05: c05 {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp N5>, <&mcTgLyrKp 3 LBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        c08: c08 {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp N6>, <&mcTgLyrKp 3 RBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        c10: c10 {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp N8>, <&mcTgLyrKp 3 RBRC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        c11: c11 {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp N9>, <&mcTgLyrKp 3 COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        c12: c12 {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp N0>, <&mcTgLyrKp 3 N0>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -916,11 +988,11 @@
 
         lyr_caps {
             bindings = <
-&mcTgLyrKp 3 N0             &mcTgLyrKp 3 N1            &mcTgLyrKp 3 N2           &mcTgLyrKp 3 N3          &mcTgLyrKp 3 N4           &mcTgLyrKp 3 N5  &trans                                                                           &trans              &mcTgLyrKp 3 N6  &c07                     &mcTgLyrMm10 3          &mcTgLyrMm11 3             &mcTgLyrKp 3 N0     &capsTdLyrF2Del
-&mcTgLyrKp 3 HASH           &kp LS(Q)                  &kp RS(W)                 &kp RS(E)                &kp RS(R)                 &kp RS(T)        &trans                                                                           &trans              &kp LS(Y)        &kp LS(U)                &kp LS(I)               &kp LS(O)                  &kp LS(P)           &trans
-&mcTgLyrKp 3 DOUBLE_QUOTES  &kp RS(A)                  &kp RS(S)                 &kp RS(D)                &kp RS(F)                 &kp RS(G)        &trans  &trans            &trans                &trans       &trans              &trans              &kp LS(H)        &kp LS(J)                &kp LS(K)               &kp LS(L)                  &mcTgLyrKp 3 APOS   &trans
-&mcTgLyrSk 3 LSHFT          &kp LS(Z)                  &kp RS(X)                 &kp RS(C)                &kp RS(V)                 &kp RS(B)                                  &tog 3                &mcTgTg 3 4                                          &kp LS(N)        &kp LS(M)                &mcTgLyrKp 3 COMMA      &mcTgLyrKp 3 DOT           &mcTgLyrSk 3 RSHFT  &trans
-&htMoTg 5 3                 &capsHtSkTgKp LSHFT GRAVE  &capsHtSkTgKp LCTRL PIPE  &capsHtSkTgKp LGUI AMPS  &capsHtSkTgKp LALT SLASH                   &trans  &mcTgLyrKp 3 TAB  &mcTgLyrKp 3 ESC      &trans       &mcTgLyrKp 3 ENTER  &mcTgLyrKp 3 SPACE                   &capsHtSkTgKp RALT PLUS  &capsHtSkKp RGUI MINUS  &capsHtSkTgKp LCTRL UNDER  &htSkTg RSHFT 3     &htMoTg 5 3
+&mcTgLyrKp 3 N0             &c01                       &c02                      &c03                     &c04                      &c05       &trans                                                                           &trans              &c08       &c09                     &c10                    &c11                       &c12                &capsTdLyrF2Del
+&mcTgLyrKp 3 HASH           &kp LS(Q)                  &kp RS(W)                 &kp RS(E)                &kp RS(R)                 &kp RS(T)  &trans                                                                           &trans              &kp LS(Y)  &kp LS(U)                &kp LS(I)               &kp LS(O)                  &kp LS(P)           &trans
+&mcTgLyrKp 3 DOUBLE_QUOTES  &kp RS(A)                  &kp RS(S)                 &kp RS(D)                &kp RS(F)                 &kp RS(G)  &trans  &trans            &trans                &trans       &trans              &trans              &kp LS(H)  &kp LS(J)                &kp LS(K)               &kp LS(L)                  &mcTgLyrKp 3 APOS   &trans
+&mcTgLyrSk 3 LSHFT          &kp LS(Z)                  &kp RS(X)                 &kp RS(C)                &kp RS(V)                 &kp RS(B)                            &tog 3                &mcTgTg 3 4                                          &kp LS(N)  &kp LS(M)                &mcTgLyrKp 3 COMMA      &mcTgLyrKp 3 DOT           &mcTgLyrSk 3 RSHFT  &trans
+&htMoTg 5 3                 &capsHtSkTgKp LSHFT GRAVE  &capsHtSkTgKp LCTRL PIPE  &capsHtSkTgKp LGUI AMPS  &capsHtSkTgKp LALT SLASH             &trans  &mcTgLyrKp 3 TAB  &mcTgLyrKp 3 ESC      &trans       &mcTgLyrKp 3 ENTER  &mcTgLyrKp 3 SPACE             &capsHtSkTgKp RALT PLUS  &capsHtSkKp RGUI MINUS  &capsHtSkTgKp LCTRL UNDER  &htSkTg RSHFT 3     &htMoTg 5 3
             >;
         };
 
