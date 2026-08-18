@@ -971,7 +971,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        L_nvim {
+        L_main {
             bindings = <
 &v00            &v01                  &v02                &v03               &v04               &v05   &htMoLyrTdToNvTgOfc 6 0                                                           &htMoLyrTdToNvTgOfc 6 0  &v08   &v09               &v10               &v11                &v12                &kp DEL
 &v14            &kp Q                 &kp W               &kp E              &kp R              &kp T  &none                                                                             &none                    &kp Y  &kp U              &kp I              &kp O               &kp P               &none
@@ -981,7 +981,7 @@
             >;
         };
 
-        lyr_nums {
+        lyr_nvim {
             bindings = <
 &trans  &n01    &n02    &n03    &n04    &n05    &trans                                      &trans  &n08    &n09    &n10    &n11    &n12    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
