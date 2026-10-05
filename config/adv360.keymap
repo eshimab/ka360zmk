@@ -904,7 +904,7 @@
         mcKpadSlashDate: mcKpadSlashDate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp N1 &kp N0 &kp SLASH &kp N0 &kp N2>;
+            bindings = <&macro_tap>, <&kp N1 &kp N0 &kp SLASH &kp N0>;
         };
 
         mcDateDotEnd: mcKpadDotDate {
