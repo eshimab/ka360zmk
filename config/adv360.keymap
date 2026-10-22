@@ -671,9 +671,9 @@
             bindings = <&mo>, <&v60tap>;
         };
 
-        kpadHtSkTgTg: kpadHtSkTgTg {
+        kpadHtSkTg: kpadHtSkTg {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&kpadHtSkKp>, <&mcTgTg>;
+            bindings = <&mcHoldTgKpadSk>, <&mcTapTgKpadTg>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
@@ -1040,11 +1040,11 @@
 
         lyr_kpad {
             bindings = <
-&kp N0                      &mcTgLyrKp 4 N1         &kp EQUAL                   &mcKpadSlashDate  &mcDateSlashEnd              &none                 &trans                                                                      &trans              &mcTgLyrKp 4 N6  &mcTgLyrMm09 4  &mcTgLyrMm10 4      &mcTgLyrMm11 4    &mcTgLyrKp 4 N0     &kpadTdLyrF2Del
-&mcTgLyrKp 4 HASH           &kp ASTRK               &kp N7                      &kp N8            &kp N9                       &kpadTdDollarDotDate  &trans                                                                      &trans              &mcTgLyrKp 4 Y   &mcTgLyrKp 4 U  &mcTgLyrKp 4 I      &mcTgLyrKp 4 O    &mcTgLyrKp 4 P      &trans
-&mcTgLyrKp 4 DOUBLE_QUOTES  &kp PLUS                &kp N4                      &kp N5            &kp N6                       &kpadTdDashSlashDate  &trans  &trans            &trans                &trans  &trans              &trans              &mcTgLyrKp 4 H   &mcTgLyrKp 4 J  &mcTgLyrKp 4 K      &mcTgLyrKp 4 L    &mcTgLyrKp 4 APOS   &trans
-&mcTgLyrSk 4 LSHFT          &mcTgLyrSk 4 LSHIFT     &kp N1                      &kp N2            &kp N3                       &kpadTdSpc808                                   &tog 4                &tog 4                                          &mcTgLyrKp 4 N   &mcTgLyrKp 4 M  &mcTgLyrKp 4 COMMA  &mcTgLyrKp 4 DOT  &mcTgLyrSk 4 RSHFT  &trans
-&htMoTg 5 4                 &kpadHtSkTgTg LSHIFT 3  &kpadHtSkTdDotDate LCTRL 0  &none             &kpadHtSkTdSlashDate RALT 0                        &trans  &mcTgLyrKp 4 TAB  &mcTgLyrKp 4 ESC      &trans  &mcTgLyrKp 4 ENTER  &mcTgLyrKp 4 SPACE                   &none           &none               &none             &mcTgLyrSk 4 RSHFT  &htMoTg 5 4
+&kp N0                      &mcTgLyrKp 4 N1       &kp EQUAL                   &mcKpadSlashDate  &mcDateSlashEnd              &none                 &trans                                                                      &trans              &mcTgLyrKp 4 N6  &mcTgLyrMm09 4  &mcTgLyrMm10 4      &mcTgLyrMm11 4    &mcTgLyrKp 4 N0       &kpadTdLyrF2Del
+&mcTgLyrKp 4 HASH           &kp ASTRK             &kp N7                      &kp N8            &kp N9                       &kpadTdDollarDotDate  &trans                                                                      &trans              &mcTgLyrKp 4 Y   &mcTgLyrKp 4 U  &mcTgLyrKp 4 I      &mcTgLyrKp 4 O    &mcTgLyrKp 4 P        &trans
+&mcTgLyrKp 4 DOUBLE_QUOTES  &kp PLUS              &kp N4                      &kp N5            &kp N6                       &kpadTdDashSlashDate  &trans  &trans            &trans                &trans  &trans              &trans              &mcTgLyrKp 4 H   &mcTgLyrKp 4 J  &mcTgLyrKp 4 K      &mcTgLyrKp 4 L    &mcTgLyrKp 4 APOS     &trans
+&mcTgLyrSk 4 LSHFT          &mcTgLyrSk 4 LSHIFT   &kp N1                      &kp N2            &kp N3                       &kpadTdSpc808                                   &tog 4                &tog 4                                          &mcTgLyrKp 4 N   &mcTgLyrKp 4 M  &mcTgLyrKp 4 COMMA  &mcTgLyrKp 4 DOT  &mcTgLyrSk 4 RSHFT    &trans
+&htMoTg 5 4                 &kpadHtSkTg LSHIFT 3  &kpadHtSkTdDotDate LCTRL 0  &none             &kpadHtSkTdSlashDate RALT 0                        &trans  &mcTgLyrKp 4 TAB  &mcTgLyrKp 4 ESC      &trans  &mcTgLyrKp 4 ENTER  &mcTgLyrKp 4 SPACE                   &none           &none               &none             &kpadHtSkTg RSHIFT 3  &htMoTg 5 4
             >;
         };
 
