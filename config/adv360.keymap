@@ -998,6 +998,13 @@
 
             label = "MCTAPTGKPADTG";
         };
+
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "NEW_MACRO";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
